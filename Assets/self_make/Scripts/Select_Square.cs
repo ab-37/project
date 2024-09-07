@@ -119,7 +119,7 @@ public class Select_Square : MonoBehaviour
         rightKey = KeyCode.RightArrow;
         selectKey = KeyCode.Z;
         currentPos = Vector2Int.zero;
-        squareLength = 3;
+        squareLength = 240;
 
     }
     private void Update()
