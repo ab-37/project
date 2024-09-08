@@ -14,7 +14,8 @@ public class Select_Square : MonoBehaviour
     private KeyCode selectKey;
     private Vector2Int currentPos;
     private Vector3 realPos;
-    private int squareLength; //length of the side of one square
+    public Vector3 gridOrigin;
+    public int squareLength; //length of the side of one square
 
     //key input handlers
     private Vector2Int directionHandler()
@@ -68,7 +69,7 @@ public class Select_Square : MonoBehaviour
     private void updatePos(Vector2Int newPos)
     {
         currentPos = newPos;
-        realPos = (Vector3)(Vector2)(currentPos * squareLength);
+        realPos = ((Vector3)(Vector2)(currentPos * squareLength)) + gridOrigin;
         transform.position = realPos;
         Debug.Log(currentPos);
     }
@@ -119,7 +120,8 @@ public class Select_Square : MonoBehaviour
         rightKey = KeyCode.RightArrow;
         selectKey = KeyCode.Z;
         currentPos = Vector2Int.zero;
-        squareLength = 240;
+        //squareLength = 240;
+        updatePos(Vector2Int.zero);
 
     }
     private void Update()
@@ -137,7 +139,7 @@ public class Select_Square : MonoBehaviour
             deselect();
         }
         selectState = newSelectState;
-        if (newDirection != Vector2.zero)
+        if (newDirection != Vector2Int.zero)
         {
             //Debug.Log(newDirection);
             moveSelectSquare(newDirection);
