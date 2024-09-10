@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -13,11 +14,16 @@ public class Select_Square : MonoBehaviour
     private KeyCode rightKey;
     private KeyCode selectKey;
     private int currentPos;
+    //private int lastPos;
     private Vector3 unitVectorX;
     private Vector3 unitVectorY;
     private Vector3 realPos;
     public Vector3 gridOrigin;
     public int squareLength; //length of the side of one square
+    private List<int> selectedPositions = new List<int>();
+
+    private Grid_Number_Script gridNumber;
+    private Selected_Squares selectedSquares;
 
     //key input handlers
     private int directionHandler()
@@ -56,24 +62,60 @@ public class Select_Square : MonoBehaviour
         return -1;
     }
     */
-
-    //selecting and deselecting
-    private void select()
-    {
-        Debug.Log("Selected"); //placeholder code
+    //selecting or deselecting a square
+    private void trySelect(int newPos) {
+        if (selectedSquares.isSquareSelected(newPos)) {
+            //backtrack
+            selectedSquares.deselectSquare(currentPos);
+            selectedPositions.RemoveAt(selectedPositions.Count() - 1);
+            return;
+        }
+        //add cell
+        selectedPositions.Add(currentPos);
+        selectedSquares.selectSquare(newPos);
     }
-    private void deselect()
+
+    //press or release select
+    private void selectPress(int pos)
     {
-        Debug.Log("Deselected"); //placeholder code
+        //Debug.Log("Select"); //placeholder code
+        if (pos % 2 == 1) {
+            //selected a sign
+            Debug.Log("Select Failed");
+            return;
+        }
+        selectState = true;
+        selectedSquares.selectSquare(pos);
+    }
+    private void selectRelease()
+    {
+        if (currentPos % 2 == 1 && selectedPositions.Count() == 0) {
+            //selected a sign
+            return;
+        }
+        //Debug.Log("Deselect"); //placeholder code
+        //placeholder code
+        selectedPositions.Add(currentPos);
+        string outputString = "Expression: ";
+        foreach (int pos in selectedPositions) {
+            outputString += gridNumber.getGridContent(pos);
+            outputString += " ";
+        }
+        Debug.Log(outputString);
+
+        selectState = false;
+        selectedSquares.deselectAllSquares();
+        selectedPositions.Clear();
     }
 
     //moving square
     private void updatePos(int newPos)
     {
+        //lastPos = currentPos;
         currentPos = newPos;
         realPos = gridOrigin + ((currentPos % 3) * unitVectorX) + ((currentPos / 3) * unitVectorY);
         transform.position = realPos;
-        Debug.Log(currentPos);
+        //Debug.Log(currentPos);
     }
     /*
     private Vector2Int fixPosOOB(Vector2Int pos) //out of bounds
@@ -102,12 +144,19 @@ public class Select_Square : MonoBehaviour
 
     private bool isInvalidMovement(int newPos, int dir) {
         if (newPos > 8 || newPos < 0) {
+            //up or down OOB
             return true;
         }
         if (newPos % 3 == 0 && dir == 1) {
+            //right OOB
             return true;
         }
         if (newPos % 3 == 2 && dir == -1) {
+            //left OOB
+            return true;
+        }
+        if (selectedSquares.isSquareSelected(newPos) && selectedPositions.LastOrDefault() != newPos) {
+            //already selected, selectedPositions[0] won't be 0
             return true;
         }
         return false;
@@ -123,7 +172,7 @@ public class Select_Square : MonoBehaviour
         } 
         if (selectState)
         {
-            Debug.Log("do select stuff");
+            trySelect(newPos);
         }
         updatePos(newPos);
     }
@@ -141,8 +190,12 @@ public class Select_Square : MonoBehaviour
         unitVectorX = squareLength * Vector3.right;
         unitVectorY = squareLength * Vector3.up;
         currentPos = 4;
+        //lastPos = -1;
         //squareLength = 240;
         updatePos(currentPos);
+
+        gridNumber = gameObject.transform.parent.Find("Background/Grid Numbers").gameObject.GetComponent<Grid_Number_Script>();
+        selectedSquares = gameObject.transform.parent.Find("Selected Squares").gameObject.GetComponent<Selected_Squares>();
 
     }
     private void Update()
@@ -150,6 +203,7 @@ public class Select_Square : MonoBehaviour
         int newDirection = directionHandler();
 
         //handle select key
+        /*
         bool newSelectState = Input.GetKey(selectKey);
         if (newSelectState && !selectState)
         {
@@ -160,6 +214,13 @@ public class Select_Square : MonoBehaviour
             deselect();
         }
         selectState = newSelectState;
+        */
+        if (Input.GetKeyDown(selectKey)) {
+            selectPress(currentPos);
+        }
+        if (Input.GetKeyUp(selectKey)) {
+            selectRelease();
+        }
         if (newDirection != 0)
         {
             //Debug.Log(newDirection);
