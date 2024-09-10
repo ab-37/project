@@ -12,30 +12,32 @@ public class Select_Square : MonoBehaviour
     private KeyCode leftKey;
     private KeyCode rightKey;
     private KeyCode selectKey;
-    private Vector2Int currentPos;
+    private int currentPos;
+    private Vector3 unitVectorX;
+    private Vector3 unitVectorY;
     private Vector3 realPos;
     public Vector3 gridOrigin;
     public int squareLength; //length of the side of one square
 
     //key input handlers
-    private Vector2Int directionHandler()
+    private int directionHandler()
     {
-        Vector2Int dir = new Vector2Int(0, 0);
+        int dir = 0;
         if (Input.GetKeyDown(upKey))
         {
-            dir.y = 1;
+            dir = 3;
         }
         else if (Input.GetKeyDown(downKey))
         {
-            dir.y = -1;
+            dir = -3;
         }
         else if (Input.GetKeyDown(leftKey))
         {
-            dir.x = -1;
+            dir = -1;
         }
         else if (Input.GetKeyDown(rightKey))
         {
-            dir.x = 1;
+            dir = 1;
         }
         return dir;
     }
@@ -66,13 +68,14 @@ public class Select_Square : MonoBehaviour
     }
 
     //moving square
-    private void updatePos(Vector2Int newPos)
+    private void updatePos(int newPos)
     {
         currentPos = newPos;
-        realPos = ((Vector3)(Vector2)(currentPos * squareLength)) + gridOrigin;
+        realPos = gridOrigin + ((currentPos % 3) * unitVectorX) + ((currentPos / 3) * unitVectorY);
         transform.position = realPos;
         Debug.Log(currentPos);
     }
+    /*
     private Vector2Int fixPosOOB(Vector2Int pos) //out of bounds
     {
         Vector2Int newPos = pos;
@@ -95,13 +98,29 @@ public class Select_Square : MonoBehaviour
         //Debug.Log(newPos);
         return newPos;
     }
-    private void moveSelectSquare(Vector2Int dir)
-    {
+    */
 
-        Vector2Int newPos = currentPos + dir;
+    private bool isInvalidMovement(int newPos, int dir) {
+        if (newPos > 8 || newPos < 0) {
+            return true;
+        }
+        if (newPos % 3 == 0 && dir == 1) {
+            return true;
+        }
+        if (newPos % 3 == 2 && dir == -1) {
+            return true;
+        }
+        return false;
+    }
+    private void moveSelectSquare(int dir)
+    {
+        int newPos = currentPos + dir;
         //Debug.Log(newPos);
-        newPos = fixPosOOB(newPos);
+        //newPos = fixPosOOB(newPos);
         //Debug.Log(newPos);
+        if (isInvalidMovement(newPos, dir)) {
+            return;
+        } 
         if (selectState)
         {
             Debug.Log("do select stuff");
@@ -119,14 +138,16 @@ public class Select_Square : MonoBehaviour
         leftKey = KeyCode.LeftArrow;
         rightKey = KeyCode.RightArrow;
         selectKey = KeyCode.Z;
-        currentPos = Vector2Int.zero;
+        unitVectorX = squareLength * Vector3.right;
+        unitVectorY = squareLength * Vector3.up;
+        currentPos = 4;
         //squareLength = 240;
-        updatePos(Vector2Int.zero);
+        updatePos(currentPos);
 
     }
     private void Update()
     {
-        Vector2Int newDirection = directionHandler();
+        int newDirection = directionHandler();
 
         //handle select key
         bool newSelectState = Input.GetKey(selectKey);
@@ -139,7 +160,7 @@ public class Select_Square : MonoBehaviour
             deselect();
         }
         selectState = newSelectState;
-        if (newDirection != Vector2Int.zero)
+        if (newDirection != 0)
         {
             //Debug.Log(newDirection);
             moveSelectSquare(newDirection);
