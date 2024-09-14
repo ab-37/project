@@ -12,7 +12,7 @@ public class Grid_Number_Script : MonoBehaviour
     private int[] gridNumber = { 1, 3, 5, 7, 9 };
     private char[] gridSign = { '+', '-', '*', '/' };
     */
-    private string[] gridContent = {"1", "+", "3", "-", "5", "*", "7", "/", "9"};
+    private string[] gridContent = {"2", "+", "4", "-", "6", "*", "8", "/", "10"};
 
     //private GameObject gridFather;
     public string getGridContent(int square) {

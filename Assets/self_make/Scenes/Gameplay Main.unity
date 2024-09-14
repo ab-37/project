@@ -574,9 +574,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridOrigin: {x: -240, y: -240, z: 50}
   squareLength: 240
-  selectedPositions: 
-  gridNumber: {fileID: 0}
-  selectedSquares: {fileID: 0}
 --- !u!4 &165429876
 Transform:
   m_ObjectHideFlags: 0

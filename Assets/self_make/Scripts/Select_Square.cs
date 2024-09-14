@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
@@ -47,21 +49,76 @@ public class Select_Square : MonoBehaviour
         }
         return dir;
     }
-    /*
-    //obsolete, doesn't work outside Update() function
-    private int selectKeyHandler()
-    {
-        if (Input.GetKeyDown(selectKey))
-        {
-            return 1; //down
+
+    //calculate result
+    private int calculateResult() {
+        //pos to number and sign
+        List<int> numbers = new List<int>();
+        List<string> signs = new List<string>();
+        int i;
+        foreach (int pos in selectedPositions) {
+            if (pos % 2 == 0) {
+                //number
+                //i is used as a temp variable
+                if (int.TryParse(gridNumber.getGridContent(pos), out i)) {
+                    numbers.Add(i);
+                }
+                else {
+                    Debug.Log("Error: Parsing int failed");
+                }
+            }
+            else {
+                //sign
+                signs.Add(gridNumber.getGridContent(pos));
+            }
         }
-        if (Input.GetKeyUp(selectKey))
-        {
-            return 0; //up
+        if (numbers.Count() == signs.Count()) {
+            //last sign not followed by anything, delete last sign
+            signs.RemoveAt(signs.Count() - 1);
         }
-        return -1;
+
+        //process mult and div
+        i = 0; //i is used as an iterator
+        while (i < signs.Count()) {
+            if (signs[i] == "*") {
+                numbers[i] *= numbers[i + 1];
+                numbers.RemoveAt(i + 1);
+                signs.RemoveAt(i);
+            }
+            else if (signs[i] == "/") {
+                numbers[i] /= numbers[i + 1];
+                numbers.RemoveAt(i + 1);
+                signs.RemoveAt(i);
+            }
+            else {
+                ++i;
+            }
+        }
+        //process add and sub
+        while (signs.Any()) {
+            if (signs[0] == "+") {
+                numbers[0] += numbers[1];
+            }
+            else {
+                numbers[0] -= numbers[1];
+            }
+            numbers.RemoveAt(1);
+            signs.RemoveAt(0);
+        }
+
+        return numbers[0];
     }
-    */
+    
+    //output expression
+    private string expressionToString() {
+        string outputString = "";
+        foreach (int pos in selectedPositions) {
+            outputString += gridNumber.getGridContent(pos);
+            outputString += " ";
+        }
+        return outputString;
+    }
+
     //selecting or deselecting a square
     private void trySelect(int newPos) {
         if (selectedSquares.isSquareSelected(newPos)) {
@@ -70,38 +127,36 @@ public class Select_Square : MonoBehaviour
             selectedPositions.RemoveAt(selectedPositions.Count() - 1);
             return;
         }
-        //add cell
+        //add previous cell
         selectedPositions.Add(currentPos);
         selectedSquares.selectSquare(newPos);
     }
 
     //press or release select
-    private void selectPress(int pos)
+    private void selectPress()
     {
-        //Debug.Log("Select"); //placeholder code
-        if (pos % 2 == 1) {
+        //Debug.Log("Select"); //debug code
+        if (currentPos % 2 == 1) {
             //selected a sign
             Debug.Log("Select Failed");
             return;
         }
         selectState = true;
-        selectedSquares.selectSquare(pos);
+        selectedSquares.selectSquare(currentPos);
     }
     private void selectRelease()
     {
+        //Debug.Log("Deselect"); //debug code
         if (currentPos % 2 == 1 && selectedPositions.Count() == 0) {
             //selected a sign
             return;
         }
-        //Debug.Log("Deselect"); //placeholder code
-        //placeholder code
-        selectedPositions.Add(currentPos);
-        string outputString = "Expression: ";
-        foreach (int pos in selectedPositions) {
-            outputString += gridNumber.getGridContent(pos);
-            outputString += " ";
-        }
-        Debug.Log(outputString);
+
+        selectedPositions.Add(currentPos); //add last cell
+        //int result = calculateResult(); //may be used in the future
+        
+        //debug code
+        Debug.Log("Expression: " + expressionToString() + " = " + calculateResult());
 
         selectState = false;
         selectedSquares.deselectAllSquares();
@@ -117,30 +172,6 @@ public class Select_Square : MonoBehaviour
         transform.position = realPos;
         //Debug.Log(currentPos);
     }
-    /*
-    private Vector2Int fixPosOOB(Vector2Int pos) //out of bounds
-    {
-        Vector2Int newPos = pos;
-        if (newPos.x > 1)
-        {
-            newPos.x = 1;
-        }
-        else if (newPos.x < -1)
-        {
-            newPos.x = -1;
-        }
-        if (newPos.y > 1)
-        {
-            newPos.y = 1;
-        }
-        else if (newPos.y < -1)
-        {
-            newPos.y = -1;
-        }
-        //Debug.Log(newPos);
-        return newPos;
-    }
-    */
 
     private bool isInvalidMovement(int newPos, int dir) {
         if (newPos > 8 || newPos < 0) {
@@ -164,9 +195,7 @@ public class Select_Square : MonoBehaviour
     private void moveSelectSquare(int dir)
     {
         int newPos = currentPos + dir;
-        //Debug.Log(newPos);
-        //newPos = fixPosOOB(newPos);
-        //Debug.Log(newPos);
+
         if (isInvalidMovement(newPos, dir)) {
             return;
         } 
@@ -202,23 +231,10 @@ public class Select_Square : MonoBehaviour
     {
         int newDirection = directionHandler();
 
-        //handle select key
-        /*
-        bool newSelectState = Input.GetKey(selectKey);
-        if (newSelectState && !selectState)
-        {
-            select();
-        }
-        else if (!newSelectState && selectState)
-        {
-            deselect();
-        }
-        selectState = newSelectState;
-        */
         if (Input.GetKeyDown(selectKey)) {
-            selectPress(currentPos);
+            selectPress();
         }
-        if (Input.GetKeyUp(selectKey)) {
+        if (Input.GetKeyUp(selectKey) && selectState == true) {
             selectRelease();
         }
         if (newDirection != 0)
