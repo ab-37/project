@@ -146,14 +146,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 43379340}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 440, y: 490, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 838278429}
   - {fileID: 1765409801}
-  m_Father: {fileID: 1522327589}
+  m_Father: {fileID: 1938458308}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &52456461
 GameObject:
@@ -519,6 +519,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 159795848}
+  - component: {fileID: 159795849}
   m_Layer: 0
   m_Name: Goal
   m_TagString: Untagged
@@ -534,15 +535,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 159795847}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -560, y: 340, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1948400730}
   - {fileID: 1247985425}
-  m_Father: {fileID: 1522327589}
+  m_Father: {fileID: 1938458308}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &159795849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159795847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8cb83a940f9b09468e109632f295327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &165429874
 GameObject:
   m_ObjectHideFlags: 0
@@ -5662,14 +5675,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533444933}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -560, y: 110, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1618176143}
   - {fileID: 1060555336}
-  m_Father: {fileID: 1522327589}
+  m_Father: {fileID: 1938458308}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &562904241
 GameObject:
@@ -11664,7 +11677,7 @@ GameObject:
   - component: {fileID: 1247985427}
   - component: {fileID: 1247985426}
   m_Layer: 0
-  m_Name: Goal_Number
+  m_Name: Goal Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12067,9 +12080,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 533444934}
-  - {fileID: 43379341}
-  - {fileID: 159795848}
   - {fileID: 490404515}
   - {fileID: 1127831205}
   m_Father: {fileID: 1938458308}
@@ -12876,6 +12886,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2099759407}
+  - {fileID: 533444934}
+  - {fileID: 43379341}
+  - {fileID: 159795848}
   - {fileID: 1522327589}
   - {fileID: 147347038}
   - {fileID: 429566291}
@@ -12893,7 +12906,7 @@ GameObject:
   - component: {fileID: 1948400730}
   - component: {fileID: 1948400729}
   m_Layer: 0
-  m_Name: Goal_Square
+  m_Name: Goal Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

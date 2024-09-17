@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Selected_Squares : MonoBehaviour
+public class Selected_Squares_Script : MonoBehaviour
 {
     private GameObject[] tileObject = new GameObject[9];
     private bool[] isSelected = new bool[9];
