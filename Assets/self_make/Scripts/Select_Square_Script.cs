@@ -28,6 +28,7 @@ public class Select_Square_Script : MonoBehaviour
     private Grid_Numbers_Script gridNumbersScript;
     private Selected_Squares_Script selectedSquaresScript;
     private Goal_Script goalScript;
+    private Function_Word_Script functionWordScript;
 
     //key input handlers
     private int directionHandler()
@@ -129,11 +130,19 @@ public class Select_Square_Script : MonoBehaviour
             //backtrack
             selectedSquaresScript.deselectSquare(currentPos);
             selectedPositions.RemoveAt(selectedPositions.Count() - 1);
-            return;
         }
+        else
+        {    // 如果該方塊未被選擇，則添加當前選擇的方塊到列表
+            selectedPositions.Add(currentPos);
+            selectedSquaresScript.selectSquare(newPos);
+        }
+
+        // 每次選擇或取消選擇後，更新表達式並顯示
+        functionWordScript.UpdateWordText(expressionToString());  // 更新文字顯示
+
         //add previous cell
-        selectedPositions.Add(currentPos);
-        selectedSquaresScript.selectSquare(newPos);
+        /*selectedPositions.Add(currentPos);
+        selectedSquaresScript.selectSquare(newPos);*/
     }
 
     //reset grid by pressing reset
@@ -153,6 +162,8 @@ public class Select_Square_Script : MonoBehaviour
         }
         selectState = true;
         selectedSquaresScript.selectSquare(currentPos);
+
+        string expression = expressionToString();
     }
     private void selectRelease()
     {
@@ -170,7 +181,11 @@ public class Select_Square_Script : MonoBehaviour
         
         //debug code
         Debug.Log("Expression: " + expressionToString() + " = " + result);
-        
+        string expression = expressionToString();
+
+        // 每次選擇或取消選擇後，更新表達式並顯示
+        functionWordScript.UpdateWordText(expression);
+
         if (goalScript.isGoal(result)) {
             Debug.Log("Correct!");
             resetGrid(); //placeholder code, should be new grid
@@ -224,6 +239,7 @@ public class Select_Square_Script : MonoBehaviour
         if (selectState)
         {
             trySelect(newPos);
+
         }
         updatePos(newPos);
     }
@@ -249,7 +265,7 @@ public class Select_Square_Script : MonoBehaviour
         gridNumbersScript = gameObject.transform.parent.Find("Background/Grid Numbers").gameObject.GetComponent<Grid_Numbers_Script>();
         selectedSquaresScript = gameObject.transform.parent.Find("Selected Squares").gameObject.GetComponent<Selected_Squares_Script>();
         goalScript = gameObject.transform.parent.Find("Background/Goal").gameObject.GetComponent<Goal_Script>();
-
+        functionWordScript= gameObject.transform.parent.Find("Background/Function Word").gameObject.GetComponent<Function_Word_Script> ();
     }
     private void Update()
     {
