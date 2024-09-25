@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
+using Unity.VisualScripting.ReorderableList.Element_Adder_Menu;
 using UnityEngine;
 
 public class Select_Square_Script : MonoBehaviour
@@ -54,33 +55,39 @@ public class Select_Square_Script : MonoBehaviour
     }
 
     //calculate result
-    private int calculateResult() {
+    private int calculateResult(string expression) {
+        List<string> expressionList = expression.Split(' ').ToList();
         //pos to number and sign
         List<int> numbers = new List<int>();
         List<string> signs = new List<string>();
         int i;
-        foreach (int pos in selectedPositions) {
-            if (pos % 2 == 0) {
+        foreach (string element in expressionList) {
+            //Debug.Log(element);
+            if (int.TryParse(element, out i)) {
                 //number
                 //i is used as a temp variable
+                numbers.Add(i);
+                //legacy code
+                /*
                 if (int.TryParse(gridNumbersScript.getGridContent(pos), out i)) {
                     numbers.Add(i);
                 }
                 else {
                     Debug.Log("Error: Parsing int failed");
                 }
+                */
             }
             else {
                 //sign
-                signs.Add(gridNumbersScript.getGridContent(pos));
+                signs.Add(element);
             }
         }
-        /*
+        
         if (numbers.Count() == signs.Count()) {
             //last sign not followed by anything, delete last sign
             signs.RemoveAt(signs.Count() - 1);
         }
-        */
+        
 
         //process mult and div
         i = 0; //i is used as an iterator
@@ -91,7 +98,14 @@ public class Select_Square_Script : MonoBehaviour
                 signs.RemoveAt(i);
             }
             else if (signs[i] == "/") {
-                numbers[i] /= numbers[i + 1];
+                if (numbers[i + 1] == 0) {
+                    //divide by 0, defaults value to 0
+                    Debug.Log("Divide by zero!");
+                    numbers[i] = 0;
+                }
+                else {
+                    numbers[i] /= numbers[i + 1];
+                }
                 numbers.RemoveAt(i + 1);
                 signs.RemoveAt(i);
             }
@@ -121,7 +135,13 @@ public class Select_Square_Script : MonoBehaviour
             outputString += gridNumbersScript.getGridContent(pos);
             outputString += " ";
         }
+        //debug code
+        //Debug.Log(outputString + "[End]");
         return outputString;
+    }
+
+    private string concatExpressionToLastCell(string expression, int newPos) {
+        return expression + gridNumbersScript.getGridContent(newPos);
     }
 
     //selecting or deselecting a square
@@ -131,18 +151,23 @@ public class Select_Square_Script : MonoBehaviour
             selectedSquaresScript.deselectSquare(currentPos);
             selectedPositions.RemoveAt(selectedPositions.Count() - 1);
         }
+        
         else
-        {    // 如果該方塊未被選擇，則添加當前選擇的方塊到列表
+        {
+            //add previous cell
             selectedPositions.Add(currentPos);
             selectedSquaresScript.selectSquare(newPos);
         }
-
-        // 每次選擇或取消選擇後，更新表達式並顯示
-        functionWordScript.UpdateWordText(expressionToString());  // 更新文字顯示
-
+        
+        /*
         //add previous cell
-        /*selectedPositions.Add(currentPos);
-        selectedSquaresScript.selectSquare(newPos);*/
+        selectedPositions.Add(currentPos);
+        selectedSquaresScript.selectSquare(newPos);
+        */
+        //update function word
+        string expression = concatExpressionToLastCell(expressionToString(), newPos);
+        int result = calculateResult(expression);
+        functionWordScript.UpdateWordText(expression, result);
     }
 
     //reset grid by pressing reset
@@ -162,8 +187,11 @@ public class Select_Square_Script : MonoBehaviour
         }
         selectState = true;
         selectedSquaresScript.selectSquare(currentPos);
+        string expression = gridNumbersScript.getGridContent(currentPos);
+        int result = int.Parse(expression);
+        functionWordScript.UpdateWordText(expression, result);
 
-        string expression = expressionToString();
+        //string expression = expressionToString();
     }
     private void selectRelease()
     {
@@ -177,14 +205,13 @@ public class Select_Square_Script : MonoBehaviour
             selectedPositions.Add(currentPos); //add last cell
         }
         int realUpdatePos = selectedPositions.LastOrDefault();
-        int result = calculateResult();
         
-        //debug code
-        Debug.Log("Expression: " + expressionToString() + " = " + result);
         string expression = expressionToString();
+        int result = calculateResult(expression);
+        //debug code
+        Debug.Log("Expression: " + expression + "= " + result);
 
-        // 每次選擇或取消選擇後，更新表達式並顯示
-        functionWordScript.UpdateWordText(expression);
+        functionWordScript.UpdateWordText(expression, result);
 
         if (goalScript.isGoal(result)) {
             Debug.Log("Correct!");

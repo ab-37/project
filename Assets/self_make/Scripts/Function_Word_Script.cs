@@ -8,16 +8,18 @@ using UnityEngine.UI;
 public class Function_Word_Script : MonoBehaviour
 {
 
-    private Selected_Squares_Script SelectedSquaresScript;
+    //private Selected_Squares_Script SelectedSquaresScript;
+    private TextMeshProUGUI expressionTextMesh;
+    private TextMeshProUGUI resultTextMesh;
 
     private float AutoSetSize(TextMeshProUGUI textMesh, string word)
     {
         return textMesh.fontSize - word.Length * textMesh.fontSize/100;
     }
 
-    public void UpdateWordText(string expression)
+    public void UpdateWordText(string expression, int result)
     {
-        
+        /*
         foreach (Transform child in gameObject.transform)
         {
             int childNameInt = int.Parse(child.name);
@@ -32,17 +34,23 @@ public class Function_Word_Script : MonoBehaviour
                     break;
                 case 1:
 
-                    //textMesh.text = ""+result;
+                    textMesh.text = result.ToString();
                     break;
             }
         }
+        */
+        expressionTextMesh.text = expression;
+        expressionTextMesh.fontSize = AutoSetSize(expressionTextMesh, expression);
+        resultTextMesh.text = result.ToString();
     }
-    void Start()
+    private void Start()
     {
-      
+        expressionTextMesh = gameObject.transform.Find("Expression").GetComponent<TextMeshProUGUI>();
+        resultTextMesh = gameObject.transform.Find("Result").GetComponent<TextMeshProUGUI>();
+        UpdateWordText("", 0);
     }
 
-    void Update()
+    private void Update()
     {
         
     }
