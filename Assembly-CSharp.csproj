@@ -74,6 +74,7 @@
     <Compile Include="Assets\Space Shooter Template FREE\Scripts\DirectMoving.cs" />
     <Compile Include="Assets\self_make\Scripts\Goal_Script.cs" />
     <Compile Include="Assets\Space Shooter Template FREE\Scripts\PlayerMoving.cs" />
+    <Compile Include="Assets\self_make\Scripts\Remaining_Script.cs" />
     <Compile Include="Assets\Space Shooter Template FREE\Scripts\PlayerShooting.cs" />
     <Compile Include="Assets\Space Shooter Template FREE\Scripts\Bonus.cs" />
     <Compile Include="Assets\Space Shooter Template FREE\Scripts\FollowThePath.cs" />

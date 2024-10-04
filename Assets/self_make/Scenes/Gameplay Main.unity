@@ -5660,6 +5660,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 533444934}
+  - component: {fileID: 533444935}
   m_Layer: 0
   m_Name: Remaining
   m_TagString: Untagged
@@ -5684,6 +5685,18 @@ Transform:
   - {fileID: 1060555336}
   m_Father: {fileID: 1938458308}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &533444935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533444933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 264e6118efb59344791565c9d6752f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &562904241
 GameObject:
   m_ObjectHideFlags: 0
@@ -6151,7 +6164,7 @@ GameObject:
   - component: {fileID: 1060555338}
   - component: {fileID: 1060555337}
   m_Layer: 0
-  m_Name: Rem_Number
+  m_Name: Steps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12364,7 +12377,7 @@ GameObject:
   - component: {fileID: 1618176145}
   - component: {fileID: 1618176144}
   m_Layer: 0
-  m_Name: Rem_Title
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

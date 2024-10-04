@@ -30,6 +30,7 @@ public class Select_Square_Script : MonoBehaviour
     private Selected_Squares_Script selectedSquaresScript;
     private Goal_Script goalScript;
     private Function_Word_Script functionWordScript;
+    private Remaining_Script remainingScript;
 
     //key input handlers
     private int directionHandler()
@@ -174,6 +175,7 @@ public class Select_Square_Script : MonoBehaviour
     private void resetGrid() {
         gridNumbersScript.resetGrid();
         goalScript.setGoalNumber(23); //placeholder code, should be a generated number
+        remainingScript.setOriginalSteps(3); //placeholder code, should be a generated number
     }
 
     //press or release select
@@ -182,7 +184,12 @@ public class Select_Square_Script : MonoBehaviour
         //Debug.Log("Select"); //debug code
         if (currentPos % 2 == 1) {
             //selected a sign
-            Debug.Log("Select Failed");
+            Debug.Log("Select failed, selected a sign");
+            return;
+        }
+        if (!remainingScript.hasSteps()) {
+            //no more steps remaining
+            Debug.Log("Select failed, no more steps");
             return;
         }
         selectState = true;
@@ -205,6 +212,11 @@ public class Select_Square_Script : MonoBehaviour
             selectedPositions.Add(currentPos); //add last cell
         }
         int realUpdatePos = selectedPositions.LastOrDefault();
+
+        //decrement step only if 3+ squares selected
+        if (selectedPositions.Count() > 2) {
+            remainingScript.decrementStep();
+        }
         
         string expression = expressionToString();
         int result = calculateResult(expression);
@@ -292,7 +304,8 @@ public class Select_Square_Script : MonoBehaviour
         gridNumbersScript = gameObject.transform.parent.Find("Background/Grid Numbers").gameObject.GetComponent<Grid_Numbers_Script>();
         selectedSquaresScript = gameObject.transform.parent.Find("Selected Squares").gameObject.GetComponent<Selected_Squares_Script>();
         goalScript = gameObject.transform.parent.Find("Background/Goal").gameObject.GetComponent<Goal_Script>();
-        functionWordScript= gameObject.transform.parent.Find("Background/Function Word").gameObject.GetComponent<Function_Word_Script> ();
+        functionWordScript = gameObject.transform.parent.Find("Background/Function Word").gameObject.GetComponent<Function_Word_Script> ();
+        remainingScript = gameObject.transform.parent.Find("Background/Remaining").gameObject.GetComponent<Remaining_Script>();
     }
     private void Update()
     {
