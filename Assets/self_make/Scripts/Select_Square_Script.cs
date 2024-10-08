@@ -17,6 +17,7 @@ public class Select_Square_Script : MonoBehaviour
     private KeyCode rightKey;
     private KeyCode selectKey;
     private KeyCode resetKey;
+    private KeyCode newQuestionKey;
     private int currentPos;
     //private int lastPos;
     private Vector3 unitVectorX;
@@ -31,6 +32,7 @@ public class Select_Square_Script : MonoBehaviour
     private Goal_Script goalScript;
     private Function_Word_Script functionWordScript;
     private Remaining_Script remainingScript;
+    private Randomizer_Script randomizerScript;
 
     //key input handlers
     private int directionHandler()
@@ -178,6 +180,11 @@ public class Select_Square_Script : MonoBehaviour
         remainingScript.setOriginalSteps(3); //placeholder code, should be a generated number
     }
 
+    //new grid by pressing new question
+    private void newGrid() {
+        resetGrid(); //placeholder code
+    }
+
     //press or release select
     private void selectPress()
     {
@@ -294,6 +301,7 @@ public class Select_Square_Script : MonoBehaviour
         rightKey = KeyCode.RightArrow;
         selectKey = KeyCode.Z;
         resetKey = KeyCode.R;
+        newQuestionKey = KeyCode.Space;
         unitVectorX = squareLength * Vector3.right;
         unitVectorY = squareLength * Vector3.up;
         currentPos = 4;
@@ -306,6 +314,7 @@ public class Select_Square_Script : MonoBehaviour
         goalScript = gameObject.transform.parent.Find("Background/Goal").gameObject.GetComponent<Goal_Script>();
         functionWordScript = gameObject.transform.parent.Find("Background/Function Word").gameObject.GetComponent<Function_Word_Script> ();
         remainingScript = gameObject.transform.parent.Find("Background/Remaining").gameObject.GetComponent<Remaining_Script>();
+        randomizerScript = gameObject.transform.parent.Find("Randomizer").gameObject.GetComponent<Randomizer_Script>();
     }
     private void Update()
     {
@@ -313,6 +322,9 @@ public class Select_Square_Script : MonoBehaviour
 
         if (Input.GetKeyDown(resetKey)) {
             resetGrid();
+        }
+        if (Input.GetKeyDown(newQuestionKey)) {
+            newGrid();
         }
 
         if (Input.GetKeyDown(selectKey)) {

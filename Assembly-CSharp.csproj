@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Assets\Space Shooter Template FREE\Scripts\Boundary.cs" />
     <Compile Include="Assets\Space Shooter Template FREE\Scripts\RepeatingBackground.cs" />
+    <Compile Include="Assets\self_make\Scripts\Randomizer_Script.cs" />
     <Compile Include="Assets\self_make\Scripts\Grid_Numbers_Script.cs" />
     <Compile Include="Assets\self_make\Scripts\Selected_Squares_Script.cs" />
     <Compile Include="Assets\Space Shooter Template FREE\Scripts\Projectile.cs" />
