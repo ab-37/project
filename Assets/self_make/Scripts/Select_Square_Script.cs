@@ -182,6 +182,7 @@ public class Select_Square_Script : MonoBehaviour
 
     //new grid by pressing new question
     private void newGrid() {
+        Debug.Log(randomizerScript.generateRandomPath(2, 5)); //placeholder code
         resetGrid(); //placeholder code
     }
 
@@ -290,10 +291,7 @@ public class Select_Square_Script : MonoBehaviour
         updatePos(newPos);
     }
     
-
-
-    private void Start()
-    {
+    private void Awake() {
         selectState = false;
         upKey = KeyCode.UpArrow;
         downKey = KeyCode.DownArrow;
@@ -307,7 +305,6 @@ public class Select_Square_Script : MonoBehaviour
         currentPos = 4;
         //lastPos = -1;
         //squareLength = 240;
-        updatePos(currentPos);
 
         gridNumbersScript = gameObject.transform.parent.Find("Background/Grid Numbers").gameObject.GetComponent<Grid_Numbers_Script>();
         selectedSquaresScript = gameObject.transform.parent.Find("Selected Squares").gameObject.GetComponent<Selected_Squares_Script>();
@@ -315,6 +312,12 @@ public class Select_Square_Script : MonoBehaviour
         functionWordScript = gameObject.transform.parent.Find("Background/Function Word").gameObject.GetComponent<Function_Word_Script> ();
         remainingScript = gameObject.transform.parent.Find("Background/Remaining").gameObject.GetComponent<Remaining_Script>();
         randomizerScript = gameObject.transform.parent.Find("Randomizer").gameObject.GetComponent<Randomizer_Script>();
+    }
+
+    private void Start()
+    {
+        updatePos(currentPos);
+        newGrid();
     }
     private void Update()
     {

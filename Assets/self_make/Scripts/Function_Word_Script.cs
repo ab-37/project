@@ -43,10 +43,13 @@ public class Function_Word_Script : MonoBehaviour
         expressionTextMesh.fontSize = AutoSetSize(expressionTextMesh, expression);
         resultTextMesh.text = result.ToString();
     }
-    private void Start()
-    {
+
+    private void Awake() {
         expressionTextMesh = gameObject.transform.Find("Expression").GetComponent<TextMeshProUGUI>();
         resultTextMesh = gameObject.transform.Find("Result").GetComponent<TextMeshProUGUI>();
+    }
+    private void Start()
+    {
         UpdateWordText("", 0);
     }
 

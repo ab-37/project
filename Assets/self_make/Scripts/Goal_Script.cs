@@ -23,10 +23,13 @@ public class Goal_Script : MonoBehaviour
         return goalNumber == num;
     }
 
-    private void Start()
-    {
+    private void Awake() {
         numberTransform = gameObject.transform.Find("Goal Number");
         numberTextMesh = numberTransform.GetComponent<TextMeshProUGUI>();
+    }
+    
+    private void Start()
+    {
         setGoalNumber(23);
     }
 

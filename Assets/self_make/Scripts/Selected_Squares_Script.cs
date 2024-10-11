@@ -27,12 +27,16 @@ public class Selected_Squares_Script : MonoBehaviour
         isSelected[square] = true;
         updateSquare(square);
     }
-    private void Start()
-    {
+    private void Awake() {
         for (int i = 0 ; i < 9 ; ++i) {
             //get child objects
             tileObject[i] = gameObject.transform.GetChild(i).gameObject;
         }
+    }
+    
+    private void Start()
+    {
+        
         deselectAllSquares();
     }
 

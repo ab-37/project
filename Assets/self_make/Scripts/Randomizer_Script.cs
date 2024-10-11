@@ -8,6 +8,38 @@ using UnityEngine;
 
 public class Randomizer_Script : MonoBehaviour
 {
+    //all possible paths
+    private static string[][] pathArray = {
+        new string[] {"012", "014", "452"}, //3 squares
+        new string[] {"01254", "01258", "01436", "01476", "01478", "01458", "01452", "45210"}, //5 squares
+        new string[] {"0125436", "0125476", "0125478", "0125876", "0125874", "0143678", "0147852", "0145876", "4521036"}, //7 squares
+        new string[] {"012543678", "012587634", "012587436", "014367852", "452103678"} //9 squares
+    };
+
+    //all possible rotations and flips
+    private static string[] pathFilter = {
+        "012345678", //no rotation
+        "630741852", //90 clockwise
+        "258147036", //90 counterclockwise
+        "876543210", //180
+        "210543876", //horizontal flip
+        "678345012", //vertical flip
+        "852741630", //90 clockwise, horizontal flip
+        "036147258", //90 counterclockwise, horizontal flip
+    };
+
+    //generate 1 random path
+    public string generateRandomPath(int stepsLowBoundInclusive, int stepsHighBoundInclusive) {
+        int pathLengthMinus2 = UnityEngine.Random.Range(stepsLowBoundInclusive, stepsHighBoundInclusive + 1) - 2; //length of path - 3
+        int pathIndex = UnityEngine.Random.Range(0, pathArray[pathLengthMinus2].Length); //index of path
+        int filterIndex = UnityEngine.Random.Range(0, pathFilter.Length); //index of filter
+        string path = "";
+        foreach (char c in pathArray[pathLengthMinus2][pathIndex]) {
+            //Debug.Log(pathFilter[filterIndex][int.Parse(c.ToString())].ToString());
+            path += pathFilter[filterIndex][int.Parse(c.ToString())].ToString();
+        }
+        return path;
+    }
     /*
     private int targetLowBound, targetHighBound; //range of target number
     private int[] numbersLowBound = new int[5], numbersHighBound = new int[5]; //range of number in each square
@@ -69,8 +101,7 @@ public class Randomizer_Script : MonoBehaviour
         totalSteps = neededSteps + extraSteps;
     }
     */
-    private void Start()
-    {
+    private void Awake() {
         /*
         targetLowBound = 10;
         targetHighBound = 99;
@@ -89,6 +120,12 @@ public class Randomizer_Script : MonoBehaviour
         stepsHighBound = 2;
         extraSteps = 1;
         */
+        //createRandomPath(2, 5);
+    }
+
+    private void Start()
+    {
+        
     }
 
     private void Update()

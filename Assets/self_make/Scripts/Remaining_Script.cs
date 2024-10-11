@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Remaining_Script : MonoBehaviour
@@ -34,12 +35,14 @@ public class Remaining_Script : MonoBehaviour
         return currentSteps > 0;
     }
 
-    // Start is called before the first frame update
-    private void Start()
-    {
+    private void Awake() {
         titleTransform = gameObject.transform.Find("Title");
         stepsTransform = gameObject.transform.Find("Steps");
         stepsTextMesh = stepsTransform.GetComponent<TextMeshProUGUI>();
+    }
+    
+    private void Start()
+    {
         setOriginalSteps(3);
     }
 

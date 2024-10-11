@@ -45,7 +45,10 @@ public class Grid_Numbers_Script : MonoBehaviour
         gridContent[pos] = value;
         updateGrid();
     }
-
+    
+    private void Awake() {
+        
+    }
     private void Start()
     {
         resetGrid();
