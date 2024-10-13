@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
@@ -182,7 +183,10 @@ public class Select_Square_Script : MonoBehaviour
 
     //new grid by pressing new question
     private void newGrid() {
-        Debug.Log(randomizerScript.generateRandomPath(2, 5)); //placeholder code
+        string pathString = randomizerScript.generateRandomPath(2, 5);
+        Debug.Log("first path"+pathString); //placeholder code
+        int lastPoint = randomizerScript.getLastPointFromPath(pathString);
+        Debug.Log("second path:"+randomizerScript.generateRandomPathFrom(2,5,lastPoint)); //placeholder code
         resetGrid(); //placeholder code
     }
 

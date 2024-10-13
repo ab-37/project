@@ -28,18 +28,80 @@ public class Randomizer_Script : MonoBehaviour
         "036147258", //90 counterclockwise, horizontal flip
     };
 
+    public string generateRandomPathFrom(int stepsLowBoundInclusive, int stepsHighBoundInclusive, int startPoint)
+    {
+        if (startPoint != 0 && startPoint != 2 && startPoint != 4 && startPoint != 6 && startPoint != 8)
+        {
+            Debug.LogError("Invalid starting point. Must be 0, 2, 4, 6, or 8.");
+            return "";
+        }
+
+        string path = "";
+        int currentPoint = startPoint;
+        int pathLengthMinus2 = UnityEngine.Random.Range(stepsLowBoundInclusive, stepsHighBoundInclusive + 1) - 2; //length of path - 3
+        int pathIndex;
+
+        if (startPoint == 4)
+            pathIndex = pathArray[pathLengthMinus2].Length-1;//chose '4' first
+        else
+            pathIndex = UnityEngine.Random.Range(0, pathArray[pathLengthMinus2].Length-1); //without '4' first
+
+
+        //chose where is it from first
+        switch (currentPoint){
+            case 0:
+
+                foreach (char c in pathArray[pathLengthMinus2][pathIndex])
+                {
+                    path += pathFilter[0+ (int)UnityEngine.Random.Range(0,1)*7][int.Parse(c.ToString())].ToString();
+                }
+                break;
+            case 2:
+                foreach (char c in pathArray[pathLengthMinus2][pathIndex])
+                {
+                    path += pathFilter[2 + (int)UnityEngine.Random.Range(0, 1) * 2][int.Parse(c.ToString())].ToString();
+                }
+                break;
+            case 4:
+                    path = pathArray[pathLengthMinus2][pathIndex];
+                break;
+            case 6:
+                foreach (char c in pathArray[pathLengthMinus2][pathIndex])
+                {
+                    path += pathFilter[1 + (int)UnityEngine.Random.Range(0, 1) * 4][int.Parse(c.ToString())].ToString();
+                }
+                break;
+            case 8:
+                foreach (char c in pathArray[pathLengthMinus2][pathIndex])
+                {
+                    path += pathFilter[3 + (int)UnityEngine.Random.Range(0, 1) * 3][int.Parse(c.ToString())].ToString();
+                }
+                break;
+        }
+        return path;
+    }
+
+    //find path final location
+    public int getLastPointFromPath(string path)
+    {
+        return int.Parse(path[path.Length - 1].ToString());
+    }
     //generate 1 random path
     public string generateRandomPath(int stepsLowBoundInclusive, int stepsHighBoundInclusive) {
         int pathLengthMinus2 = UnityEngine.Random.Range(stepsLowBoundInclusive, stepsHighBoundInclusive + 1) - 2; //length of path - 3
         int pathIndex = UnityEngine.Random.Range(0, pathArray[pathLengthMinus2].Length); //index of path
         int filterIndex = UnityEngine.Random.Range(0, pathFilter.Length); //index of filter
+
         string path = "";
+
         foreach (char c in pathArray[pathLengthMinus2][pathIndex]) {
-            //Debug.Log(pathFilter[filterIndex][int.Parse(c.ToString())].ToString());
+            Debug.Log(pathFilter[filterIndex][int.Parse(c.ToString())].ToString());
             path += pathFilter[filterIndex][int.Parse(c.ToString())].ToString();
         }
         return path;
+
     }
+    
     /*
     private int targetLowBound, targetHighBound; //range of target number
     private int[] numbersLowBound = new int[5], numbersHighBound = new int[5]; //range of number in each square
@@ -52,7 +114,7 @@ public class Randomizer_Script : MonoBehaviour
     private List<string> solution;
     private int totalSteps;
     */
-    
+
     /*
     private bool findPath(ref string path, int pos, int remEquationSteps) {
         if (remEquationSteps == 0) {
