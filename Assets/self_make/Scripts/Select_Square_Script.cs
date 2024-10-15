@@ -184,9 +184,12 @@ public class Select_Square_Script : MonoBehaviour
     //new grid by pressing new question
     private void newGrid() {
         string pathString = randomizerScript.generateRandomPath(2, 5);
-        Debug.Log("first path"+pathString); //placeholder code
-        int lastPoint = randomizerScript.getLastPointFromPath(pathString);
-        Debug.Log("second path:"+randomizerScript.generateRandomPathFrom(2,5,lastPoint)); //placeholder code
+        //Debug.Log("first path"+pathString); //placeholder code
+        string pathString2 = randomizerScript.generateRandomPath(2, 5, pathString);
+        Debug.Log(pathString + ", " + pathString2); //placeholder code
+        
+        //int lastPoint = randomizerScript.getLastPointFromPath(pathString);
+        //Debug.Log("second path:"+randomizerScript.generateRandomPathFrom(2,5,lastPoint)); //placeholder code
         resetGrid(); //placeholder code
     }
 

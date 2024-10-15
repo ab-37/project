@@ -7,7 +7,7 @@ using UnityEditor;
 using UnityEngine;
 
 public class Randomizer_Script : MonoBehaviour
-{
+{   
     //all possible paths
     private static string[][] pathArray = {
         new string[] {"012", "014", "452"}, //3 squares
@@ -28,6 +28,21 @@ public class Randomizer_Script : MonoBehaviour
         "036147258", //90 counterclockwise, horizontal flip
     };
 
+    //shuffle array
+    private void shuffleArray<T>(ref T[] arr) {
+        //fisher-yates shuffle algorithm
+        int rng;
+        T temp;
+        int n = arr.Length;
+        while (n > 1) {
+            rng = UnityEngine.Random.Range(0, n--);
+            temp = arr[n];
+            arr[n] = arr[rng];
+            arr[rng] = temp;
+        }
+    }
+
+    /*
     public string generateRandomPathFrom(int stepsLowBoundInclusive, int stepsHighBoundInclusive, int startPoint)
     {
         if (startPoint != 0 && startPoint != 2 && startPoint != 4 && startPoint != 6 && startPoint != 8)
@@ -38,7 +53,7 @@ public class Randomizer_Script : MonoBehaviour
 
         string path = "";
         int currentPoint = startPoint;
-        int pathLengthMinus2 = UnityEngine.Random.Range(stepsLowBoundInclusive, stepsHighBoundInclusive + 1) - 2; //length of path - 3
+        int pathLengthMinus2 = UnityEngine.Random.Range(stepsLowBoundInclusive, stepsHighBoundInclusive + 1) - 2; //length of path - 2
         int pathIndex;
 
         if (startPoint == 4)
@@ -80,27 +95,84 @@ public class Randomizer_Script : MonoBehaviour
         }
         return path;
     }
+    */
 
     //find path final location
+    /*
     public int getLastPointFromPath(string path)
     {
         return int.Parse(path[path.Length - 1].ToString());
     }
-    //generate 1 random path
-    public string generateRandomPath(int stepsLowBoundInclusive, int stepsHighBoundInclusive) {
-        int pathLengthMinus2 = UnityEngine.Random.Range(stepsLowBoundInclusive, stepsHighBoundInclusive + 1) - 2; //length of path - 3
-        int pathIndex = UnityEngine.Random.Range(0, pathArray[pathLengthMinus2].Length); //index of path
-        int filterIndex = UnityEngine.Random.Range(0, pathFilter.Length); //index of filter
+    */
 
+    //check if the new path is valid
+    private bool isValidPath(string lastPath, string newPath) {
+        if (!newPath.Contains(lastPath[lastPath.Length - 1])) {
+            //doesn't contain the last square from the last path
+            return false;
+        }
+        if (!newPath.EndsWith(newPath[0].ToString())) {
+            //new path doesn't start from the end of the last path
+            return true;
+        }
+        if ((lastPath + newPath).Distinct().Count() == lastPath.Length + newPath.Length - 1) {
+            //last path and new path only share one square, i.e. end of last path and start of new path
+            //that means it can be done with just one path instead of two
+            return false;
+        }
+        return true;
+    }
+
+    //get path from variables
+    private string getPath(int pathLengthMinus2, int pathIndex, int filterIndex) {
         string path = "";
-
         foreach (char c in pathArray[pathLengthMinus2][pathIndex]) {
-            Debug.Log(pathFilter[filterIndex][int.Parse(c.ToString())].ToString());
+            //Debug.Log(pathFilter[filterIndex][int.Parse(c.ToString())].ToString()); //debug code
             path += pathFilter[filterIndex][int.Parse(c.ToString())].ToString();
         }
         return path;
-
     }
+
+    //generate first path
+    public string generateRandomPath(int stepsLowBoundInclusive, int stepsHighBoundInclusive) {
+        int pathLengthMinus2 = UnityEngine.Random.Range(stepsLowBoundInclusive, stepsHighBoundInclusive + 1) - 2; //length of path - 2
+        int pathIndex = UnityEngine.Random.Range(0, pathArray[pathLengthMinus2].Length); 
+        int filterIndex = UnityEngine.Random.Range(0, pathFilter.Length);
+        return getPath(pathLengthMinus2, pathIndex, filterIndex);
+    }
+
+    //generate second path, overloading last function
+    public string generateRandomPath(int stepsLowBoundInclusive, int stepsHighBoundInclusive, string lastPath) {
+        int pathLengthMinus2 = UnityEngine.Random.Range(stepsLowBoundInclusive, stepsHighBoundInclusive + 1) - 2; //length of path - 2
+        int pathIndex; //index of path
+        int filterIndex; //index of filter
+        string path = "";
+        
+        shuffleArray(ref pathArray[pathLengthMinus2]);
+        shuffleArray(ref pathFilter);
+
+        bool pathFound = false;
+        //since the arrays are shuffled, we can iterate one by one
+        for (pathIndex = 0 ; pathIndex < pathArray[pathLengthMinus2].Length ; ++pathIndex) {
+            for (filterIndex = 0 ; filterIndex < pathFilter.Length ; ++filterIndex) {
+
+                path = getPath(pathLengthMinus2, pathIndex, filterIndex);
+                if (isValidPath(lastPath, path)) {
+                    pathFound = true;
+                    break;
+                }
+            }
+            if (pathFound) {
+                break;
+            }
+        }
+        if (!pathFound) {
+            Debug.Log("Error: Cannot generate a path. Last path: " + lastPath + ", new path length: " + (pathLengthMinus2 + 2).ToString());
+            return "";
+        }
+        return path;
+    }
+    
     
     /*
     private int targetLowBound, targetHighBound; //range of target number
@@ -115,54 +187,6 @@ public class Randomizer_Script : MonoBehaviour
     private int totalSteps;
     */
 
-    /*
-    private bool findPath(ref string path, int pos, int remEquationSteps) {
-        if (remEquationSteps == 0) {
-            return true;
-        }
-        path += pos.ToString();
-
-        List<int> directions = new List<int> {3, 1, -1, -3};
-        while (directions.Any()) {
-            int ind = UnityEngine.Random.Range(0, directions.Count());
-            int dir = directions[ind];
-            directions.RemoveAt(ind);
-            //...
-        }
-        //fails, backtrack
-        path.Remove(path.Length - 1);
-        return false;
-    }
-
-    //generate a random equation path
-    private string generateEquationPath(int steps) {
-        string path = "";
-        if (!findPath(ref path, UnityEngine.Random.Range(0, 5) * 2, steps)) {
-            Debug.Log("Unable to generate a maze!");
-            return "failed";
-        }
-        return path;
-    }
-    //generate a random number of minimum steps
-    private int generateNumberOfSteps() {
-        return UnityEngine.Random.Range(stepsLowBound, stepsHighBound + 1);
-    }
-    public void newRandomQuestion() {
-        bool isValidQuestion = false;
-        int neededSteps;
-        while (!isValidQuestion) {
-            //generating solution
-            solution.Clear();
-            neededSteps = generateNumberOfSteps();
-            for (int i = 0 ; i < neededSteps ; ++i) {
-                solution.Append(generateEquationPath(neededSteps));
-            }
-            //solution check
-
-        }
-        totalSteps = neededSteps + extraSteps;
-    }
-    */
     private void Awake() {
         /*
         targetLowBound = 10;
