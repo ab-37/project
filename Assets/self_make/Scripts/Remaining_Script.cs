@@ -16,14 +16,14 @@ public class Remaining_Script : MonoBehaviour
         stepsTextMesh.text = currentSteps.ToString();
     }
     //reset steps to original
-    public void resetStep() {
+    public void resetSteps() {
         currentSteps = originalSteps;
         updateSteps();
     }
     //set new origial steps (new question)
     public void setOriginalSteps(int steps) {
         originalSteps = steps;
-        resetStep();
+        resetSteps();
     }
     //decrement current steps by 1
     public void decrementStep() {
@@ -43,7 +43,7 @@ public class Remaining_Script : MonoBehaviour
     
     private void Start()
     {
-        setOriginalSteps(3);
+        //setOriginalSteps(3);
     }
 
     // Update is called once per frame

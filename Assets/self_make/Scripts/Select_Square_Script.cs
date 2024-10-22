@@ -59,7 +59,7 @@ public class Select_Square_Script : MonoBehaviour
     }
 
     //calculate result
-    private int calculateResult(string expression) {
+    public int calculateResult(string expression) {
         List<string> expressionList = expression.Split(' ').ToList();
         //pos to number and sign
         List<int> numbers = new List<int>();
@@ -174,24 +174,30 @@ public class Select_Square_Script : MonoBehaviour
         functionWordScript.UpdateWordText(expression, result);
     }
 
+    //moved to Randomizer_Script
+    /*
     //reset grid by pressing reset
-    private void resetGrid() {
-        gridNumbersScript.resetGrid();
-        goalScript.setGoalNumber(23); //placeholder code, should be a generated number
-        remainingScript.setOriginalSteps(3); //placeholder code, should be a generated number
+    public void resetGrid() {
+        //gridNumbersScript.resetGrid();
+        //goalScript.setGoalNumber(23); //placeholder code, should be a generated number
+        //remainingScript.setOriginalSteps(3); //placeholder code, should be a generated number
     }
 
     //new grid by pressing new question
-    private void newGrid() {
-        string pathString = randomizerScript.generateRandomPath(2, 5);
+    public void newGrid() {
+        
+        
+        //string pathString = randomizerScript.generateRandomPath(2, 5);
         //Debug.Log("first path"+pathString); //placeholder code
-        string pathString2 = randomizerScript.generateRandomPath(2, 5, pathString);
-        Debug.Log(pathString + ", " + pathString2); //placeholder code
+        //string pathString2 = randomizerScript.generateRandomPath(2, 5, pathString);
+        //Debug.Log(pathString + ", " + pathString2); //placeholder code
         
         //int lastPoint = randomizerScript.getLastPointFromPath(pathString);
         //Debug.Log("second path:"+randomizerScript.generateRandomPathFrom(2,5,lastPoint)); //placeholder code
-        resetGrid(); //placeholder code
+        
+        resetGrid();
     }
+    */
 
     //press or release select
     private void selectPress()
@@ -242,7 +248,7 @@ public class Select_Square_Script : MonoBehaviour
 
         if (goalScript.isGoal(result)) {
             Debug.Log("Correct!");
-            resetGrid(); //placeholder code, should be new grid
+            randomizerScript.newProblem(); //placeholder code, should be new grid
         }
         else {
             gridNumbersScript.setGridContent(realUpdatePos, result.ToString());
@@ -324,17 +330,17 @@ public class Select_Square_Script : MonoBehaviour
     private void Start()
     {
         updatePos(currentPos);
-        newGrid();
+        randomizerScript.newProblem();
     }
     private void Update()
     {
         int newDirection = directionHandler();
-
+        
         if (Input.GetKeyDown(resetKey)) {
-            resetGrid();
+            randomizerScript.resetProblem();
         }
         if (Input.GetKeyDown(newQuestionKey)) {
-            newGrid();
+            randomizerScript.newProblem();
         }
 
         if (Input.GetKeyDown(selectKey)) {

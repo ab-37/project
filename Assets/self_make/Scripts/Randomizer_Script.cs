@@ -3,13 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Unity.VisualScripting;
+using Unity.VisualScripting.AssemblyQualifiedNameParser;
 using UnityEditor;
 using UnityEngine;
 
 public class Randomizer_Script : MonoBehaviour
 {   
     //all possible paths
-    private static string[][] pathArray = {
+    private static string[][] possiblePaths = {
         new string[] {"012", "014", "452"}, //3 squares
         new string[] {"01254", "01258", "01436", "01476", "01478", "01458", "01452", "45210"}, //5 squares
         new string[] {"0125436", "0125476", "0125478", "0125876", "0125874", "0143678", "0147852", "0145876", "4521036"}, //7 squares
@@ -28,12 +30,36 @@ public class Randomizer_Script : MonoBehaviour
         "036147258", //90 counterclockwise, horizontal flip
     };
 
+    //variables needed to create new problems
+    //ALL BOUNDS ARE INCLUSIVE, +1 TO THE HIGH BOUND WHEN USING UnityEngine.Random.Range()
+    private static int goalLowBound, goalHighBound; //range of target number
+    private static int[] numbersLowBound = new int[5], numbersHighBound = new int[5]; //range of number in each square
+    private static List<string> signs = new List<string>(); //all available signs (pick 4 to use)
+    private static int pathLengthLowBound, pathLengthHighBound; //number of numbers needed to create an equation (not including signs)
+    private static int stepsLowBound, stepsHighBound; //range of minimum steps needed to complete the question
+    private static int extraSteps; //number of extra steps given on top of steps needed
+
+    //current saved problem
+    private List<string> paths = new List<string>();
+    private string[] grid = new string[9];
+    private int goal;
+    private int steps;
+
+    //private string[] grid = {"4", "+", "5", "-", "3", "*", "1", "+", "2"};
+    //private List<string> solution;
+    //private int totalSteps;
+    
+    Select_Square_Script selectSquareScript;
+    Grid_Numbers_Script gridNumbersScript;
+    Goal_Script goalScript;
+    Remaining_Script remainingScript;
+
     //shuffle array
     private void shuffleArray<T>(ref T[] arr) {
-        //fisher-yates shuffle algorithm
         int rng;
         T temp;
         int n = arr.Length;
+        //fisher-yates shuffle algorithm
         while (n > 1) {
             rng = UnityEngine.Random.Range(0, n--);
             temp = arr[n];
@@ -42,68 +68,45 @@ public class Randomizer_Script : MonoBehaviour
         }
     }
 
-    /*
-    public string generateRandomPathFrom(int stepsLowBoundInclusive, int stepsHighBoundInclusive, int startPoint)
-    {
-        if (startPoint != 0 && startPoint != 2 && startPoint != 4 && startPoint != 6 && startPoint != 8)
-        {
-            Debug.LogError("Invalid starting point. Must be 0, 2, 4, 6, or 8.");
-            return "";
+    private void shuffleSigns() {
+        int rng;
+        string temp;
+        int n = signs.Count;
+        //fisher-yates shuffle algorithm
+        while (n > 1) {
+            rng = UnityEngine.Random.Range(0, n--);
+            temp = signs[n];
+            signs[n] = signs[rng];
+            signs[rng] = temp;
+        }
+    }
+
+    //generate steps
+    private int generateSteps() {
+        return UnityEngine.Random.Range(stepsLowBound, stepsHighBound + 1);
+    }
+
+    //generate grid
+    private void generateNewGrid() {
+        shuffleSigns();
+        //generate numbers
+        for (int i = 0 ; i < 5 ; ++i) {
+            grid[i * 2] = UnityEngine.Random.Range(numbersLowBound[i], numbersHighBound[i] + 1).ToString();
         }
 
-        string path = "";
-        int currentPoint = startPoint;
-        int pathLengthMinus2 = UnityEngine.Random.Range(stepsLowBoundInclusive, stepsHighBoundInclusive + 1) - 2; //length of path - 2
-        int pathIndex;
-
-        if (startPoint == 4)
-            pathIndex = pathArray[pathLengthMinus2].Length-1;//chose '4' first
-        else
-            pathIndex = UnityEngine.Random.Range(0, pathArray[pathLengthMinus2].Length-1); //without '4' first
-
-
-        //chose where is it from first
-        switch (currentPoint){
-            case 0:
-
-                foreach (char c in pathArray[pathLengthMinus2][pathIndex])
-                {
-                    path += pathFilter[0+ (int)UnityEngine.Random.Range(0,1)*7][int.Parse(c.ToString())].ToString();
-                }
-                break;
-            case 2:
-                foreach (char c in pathArray[pathLengthMinus2][pathIndex])
-                {
-                    path += pathFilter[2 + (int)UnityEngine.Random.Range(0, 1) * 2][int.Parse(c.ToString())].ToString();
-                }
-                break;
-            case 4:
-                    path = pathArray[pathLengthMinus2][pathIndex];
-                break;
-            case 6:
-                foreach (char c in pathArray[pathLengthMinus2][pathIndex])
-                {
-                    path += pathFilter[1 + (int)UnityEngine.Random.Range(0, 1) * 4][int.Parse(c.ToString())].ToString();
-                }
-                break;
-            case 8:
-                foreach (char c in pathArray[pathLengthMinus2][pathIndex])
-                {
-                    path += pathFilter[3 + (int)UnityEngine.Random.Range(0, 1) * 3][int.Parse(c.ToString())].ToString();
-                }
-                break;
+        //throw an error if signs list has less than 4 signs
+        if (signs.Count < 4) {
+            Debug.Log("Not enough signs in list, defalts to + for all 4 signs");
+            for (int i = 0 ; i < 4 ; ++i) {
+                grid[i * 2 + 1] = "+";
+            }
+            return;
         }
-        return path;
+        //generate signs
+        for (int i = 0 ; i < 4 ; ++i) {
+            grid[i * 2 + 1] = signs[i];
+        }
     }
-    */
-
-    //find path final location
-    /*
-    public int getLastPointFromPath(string path)
-    {
-        return int.Parse(path[path.Length - 1].ToString());
-    }
-    */
 
     //check if the new path is valid
     private bool isValidPath(string lastPath, string newPath) {
@@ -126,7 +129,7 @@ public class Randomizer_Script : MonoBehaviour
     //get path from variables
     private string getPath(int pathLengthMinus2, int pathIndex, int filterIndex) {
         string path = "";
-        foreach (char c in pathArray[pathLengthMinus2][pathIndex]) {
+        foreach (char c in possiblePaths[pathLengthMinus2][pathIndex]) {
             //Debug.Log(pathFilter[filterIndex][int.Parse(c.ToString())].ToString()); //debug code
             path += pathFilter[filterIndex][int.Parse(c.ToString())].ToString();
         }
@@ -134,26 +137,26 @@ public class Randomizer_Script : MonoBehaviour
     }
 
     //generate first path
-    public string generateRandomPath(int stepsLowBoundInclusive, int stepsHighBoundInclusive) {
-        int pathLengthMinus2 = UnityEngine.Random.Range(stepsLowBoundInclusive, stepsHighBoundInclusive + 1) - 2; //length of path - 2
-        int pathIndex = UnityEngine.Random.Range(0, pathArray[pathLengthMinus2].Length); 
+    private string generateRandomPath() {
+        int pathLengthMinus2 = UnityEngine.Random.Range(pathLengthLowBound, pathLengthHighBound + 1) - 2; //length of path - 2
+        int pathIndex = UnityEngine.Random.Range(0, possiblePaths[pathLengthMinus2].Length); 
         int filterIndex = UnityEngine.Random.Range(0, pathFilter.Length);
         return getPath(pathLengthMinus2, pathIndex, filterIndex);
     }
 
     //generate second path, overloading last function
-    public string generateRandomPath(int stepsLowBoundInclusive, int stepsHighBoundInclusive, string lastPath) {
-        int pathLengthMinus2 = UnityEngine.Random.Range(stepsLowBoundInclusive, stepsHighBoundInclusive + 1) - 2; //length of path - 2
+    private string generateRandomPath(string lastPath) {
+        int pathLengthMinus2 = UnityEngine.Random.Range(pathLengthLowBound, pathLengthHighBound + 1) - 2; //length of path - 2
         int pathIndex; //index of path
         int filterIndex; //index of filter
         string path = "";
         
-        shuffleArray(ref pathArray[pathLengthMinus2]);
+        shuffleArray(ref possiblePaths[pathLengthMinus2]);
         shuffleArray(ref pathFilter);
 
         bool pathFound = false;
         //since the arrays are shuffled, we can iterate one by one
-        for (pathIndex = 0 ; pathIndex < pathArray[pathLengthMinus2].Length ; ++pathIndex) {
+        for (pathIndex = 0 ; pathIndex < possiblePaths[pathLengthMinus2].Length ; ++pathIndex) {
             for (filterIndex = 0 ; filterIndex < pathFilter.Length ; ++filterIndex) {
 
                 path = getPath(pathLengthMinus2, pathIndex, filterIndex);
@@ -172,41 +175,108 @@ public class Randomizer_Script : MonoBehaviour
         }
         return path;
     }
-    
-    
-    /*
-    private int targetLowBound, targetHighBound; //range of target number
-    private int[] numbersLowBound = new int[5], numbersHighBound = new int[5]; //range of number in each square
-    private List<string> signs; //all available signs (pick 4 to use)
-    private int equationStepsLowBound, equationStepsHighBound; //number of numbers needed to create an equation (not including signs)
-    private int stepsLowBound, stepsHighBound; //range of minimum steps needed to complete the question
-    private int extraSteps; //number of extra steps given on top of steps needed
 
-    private string[] grid = {"4", "+", "5", "-", "3", "*", "1", "+", "2"};
-    private List<string> solution;
-    private int totalSteps;
-    */
+    //generate an expression from path to feed to calculateResult in Select_Square_Script
+    private string pathToExpression(string path, ref string[] tempGrid) {
+        string expression = "";
+        foreach (char c in path) {
+            int n = c - '0';
+            expression += tempGrid[n];
+            expression += " ";
+        }
+
+        return expression;
+    }
+
+    private void generateGoal() {
+        string[] tempGrid = new string[9];
+        for (int i = 0 ; i < 9 ; ++i) {
+            tempGrid[i] = grid[i];
+        }
+        for (int i = 0 ; i < paths.Count ; ++i) {
+            //calculate the goal
+            string expression = pathToExpression(paths[i], ref tempGrid);
+            Debug.Log(expression);
+            goal = selectSquareScript.calculateResult(expression);
+            //"complete a step"
+            tempGrid[int.Parse(paths[i][paths[i].Length - 1].ToString())] = goal.ToString();
+        }
+    }
+
+    private void generateNewProblem() {
+        //generate steps needed
+        int stepsNeeded = generateSteps();
+        steps = stepsNeeded + extraSteps;
+
+        //generate grid
+        generateNewGrid();
+
+        //generate paths
+        paths.Clear();
+        paths.Add(generateRandomPath()); //first path
+        for (int i = 1 ; i < stepsNeeded ; ++i) { //second paths onwards
+            paths.Add(generateRandomPath(paths[i - 1]));
+        }
+
+        //generate goal
+        generateGoal();
+
+        //to do: goal bound check
+
+        //debug code
+        string debugLogString = "New problem:\nGoal Number is " + goal.ToString() + "\nGrid:\n";
+        for (int i = 2 ; i >= 0 ; --i) {
+            for (int j = 0 ; j < 3 ; ++j) {
+                debugLogString += grid[i * 3 + j] + " ";
+            }
+            debugLogString += "\n";
+        }
+        debugLogString += "\n";
+        for (int i = 0 ; i < paths.Count ; ++i) {
+            debugLogString += "Path " + i.ToString() + ": " + paths[i]+ "\n";
+        }
+        Debug.Log(debugLogString);
+    }
+
+    //called when reset key is pressed
+    public void resetProblem() {
+        gridNumbersScript.resetGrid();
+        remainingScript.resetSteps();
+    }
+
+    //called when new problem key is pressed
+    public void newProblem() {
+        generateNewProblem();
+        gridNumbersScript.setOriginalContent(grid);
+        goalScript.setGoalNumber(goal);
+        remainingScript.setOriginalSteps(steps);
+    }
 
     private void Awake() {
-        /*
-        targetLowBound = 10;
-        targetHighBound = 99;
+        
+        goalLowBound = 10;
+        goalHighBound = 99;
         for (int i = 0 ; i < 5 ; ++i) {
             numbersHighBound[i] = 9;
             numbersLowBound[i] = 1;
         }
         for (int i = 0 ; i < 4 ; ++i) {
-            signs.Append("+");
-            signs.Append("-");
-            signs.Append("*");
+            signs.Add("+");
+            signs.Add("-");
+            signs.Add("*");
         }
-        equationStepsLowBound = 2;
-        equationStepsHighBound = 4;
+        pathLengthLowBound = 2;
+        pathLengthHighBound = 4;
         stepsLowBound = 1;
         stepsHighBound = 2;
         extraSteps = 1;
-        */
+        
         //createRandomPath(2, 5);
+        selectSquareScript = gameObject.transform.parent.Find("Select Square").gameObject.GetComponent<Select_Square_Script>();
+        gridNumbersScript = gameObject.transform.parent.Find("Background/Grid Numbers").gameObject.GetComponent<Grid_Numbers_Script>();
+        goalScript = gameObject.transform.parent.Find("Background/Goal").gameObject.GetComponent<Goal_Script>();
+        remainingScript = gameObject.transform.parent.Find("Background/Remaining").gameObject.GetComponent<Remaining_Script>();
+
     }
 
     private void Start()

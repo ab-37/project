@@ -30,7 +30,7 @@ public class Goal_Script : MonoBehaviour
     
     private void Start()
     {
-        setGoalNumber(23);
+        //setGoalNumber(23);
     }
 
     private void Update()

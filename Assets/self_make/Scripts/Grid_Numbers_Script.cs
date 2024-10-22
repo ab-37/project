@@ -12,15 +12,17 @@ public class Grid_Numbers_Script : MonoBehaviour
     private int[] gridNumber = { 1, 3, 5, 7, 9 };
     private char[] gridSign = { '+', '-', '*', '/' };
     */
-    static private char[] choseSign = { '+', '-', '*', '/' };
+    //static private char[] choseSign = { '+', '-', '*', '/' };
     private string[] originalContent = {"4", "/", "5", "-", "3", "*", "1", "+", "2"};
     private string[] gridContent = new string[9];
 
+    /*
     private int steps;
     private int step;
     private int target;//wait for produce
     private int[] numbers=new int[5];
     private char[] signs= new char[4];
+    */
 
     //private GameObject gridFather;
     public string getGridContent(int square) {
@@ -40,7 +42,7 @@ public class Grid_Numbers_Script : MonoBehaviour
             }
         }
     }
-
+    /*
     //restet signs,step,steps,numbers
     private void resetNewNumber()
     {
@@ -65,6 +67,7 @@ public class Grid_Numbers_Script : MonoBehaviour
                 originalContent[i] = signs[i - i / 2 - 1].ToString();
         }
     }
+    */
 
     public void resetGrid() {
         for (int i = 0 ; i < 9 ; ++i) {
@@ -78,14 +81,19 @@ public class Grid_Numbers_Script : MonoBehaviour
         updateGrid();
     }
 
-
+    public void setOriginalContent(string[] grid) {
+        for (int i = 0 ; i < 9 ; ++i) {
+            originalContent[i] = grid[i];
+        }
+        resetGrid();
+    }
     
     private void Awake() {
         
     }
     private void Start()
     {
-        resetGrid();
+        //resetGrid();
     }
 
     private void Update()
