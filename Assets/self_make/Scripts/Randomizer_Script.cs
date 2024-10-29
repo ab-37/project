@@ -3,10 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
+using System.Xml;
 using Unity.VisualScripting;
 using Unity.VisualScripting.AssemblyQualifiedNameParser;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Timeline;
 
 public class Randomizer_Script : MonoBehaviour
 {   
@@ -35,6 +38,7 @@ public class Randomizer_Script : MonoBehaviour
     private static int goalLowBound, goalHighBound; //range of target number
     private static int[] numbersLowBound = new int[5], numbersHighBound = new int[5]; //range of number in each square
     private static List<string> signs = new List<string>(); //all available signs (pick 4 to use)
+    private static List<string> signsUnique = new List<string>(); //the signs list, but duplicates are removed
     private static int pathLengthLowBound, pathLengthHighBound; //number of numbers needed to create an equation (not including signs)
     private static int stepsLowBound, stepsHighBound; //range of minimum steps needed to complete the question
     private static int extraSteps; //number of extra steps given on top of steps needed
@@ -68,16 +72,16 @@ public class Randomizer_Script : MonoBehaviour
         }
     }
 
-    private void shuffleSigns() {
+    private void shuffleList<T>(ref List<T> list) {
         int rng;
-        string temp;
-        int n = signs.Count;
+        T temp;
+        int n = list.Count;
         //fisher-yates shuffle algorithm
         while (n > 1) {
             rng = UnityEngine.Random.Range(0, n--);
-            temp = signs[n];
-            signs[n] = signs[rng];
-            signs[rng] = temp;
+            temp = list[n];
+            list[n] = list[rng];
+            list[rng] = temp;
         }
     }
 
@@ -86,9 +90,10 @@ public class Randomizer_Script : MonoBehaviour
         return UnityEngine.Random.Range(stepsLowBound, stepsHighBound + 1);
     }
 
-    //generate grid
-    private void generateNewGrid() {
-        shuffleSigns();
+    
+    //generate grid (legacy, now only used in failed instances)
+    private void generateNewGridLegacy() {
+        shuffleList(ref signs);
         //generate numbers
         for (int i = 0 ; i < 5 ; ++i) {
             grid[i * 2] = UnityEngine.Random.Range(numbersLowBound[i], numbersHighBound[i] + 1).ToString();
@@ -176,6 +181,23 @@ public class Randomizer_Script : MonoBehaviour
         return path;
     }
 
+    //generate all paths needed
+    private void generatePaths(int stepsNeeded) {
+        paths.Clear();
+        if (stepsNeeded == 0) {
+            Debug.Log("Error, Steps needed is 0, generating one anyway");
+        }
+        paths.Add(generateRandomPath()); //first path
+        for (int i = 1 ; i < stepsNeeded ; ++i) { //second paths onwards
+            paths.Add(generateRandomPath(paths[i - 1]));
+        }
+        /*
+        foreach (string path in paths) {
+            Debug.Log(path);
+        }
+        */
+    }
+
     //generate an expression from path to feed to calculateResult in Select_Square_Script
     private string pathToExpression(string path, ref string[] tempGrid) {
         string expression = "";
@@ -188,7 +210,7 @@ public class Randomizer_Script : MonoBehaviour
         return expression;
     }
 
-    private void generateGoal() {
+    private int generateGoal() {
         string[] tempGrid = new string[9];
         for (int i = 0 ; i < 9 ; ++i) {
             tempGrid[i] = grid[i];
@@ -196,34 +218,16 @@ public class Randomizer_Script : MonoBehaviour
         for (int i = 0 ; i < paths.Count ; ++i) {
             //calculate the goal
             string expression = pathToExpression(paths[i], ref tempGrid);
-            Debug.Log(expression);
+            //Debug.Log(expression);
             goal = selectSquareScript.calculateResult(expression);
             //"complete a step"
             tempGrid[int.Parse(paths[i][paths[i].Length - 1].ToString())] = goal.ToString();
         }
+        return goal;
     }
 
-    private void generateNewProblem() {
-        //generate steps needed
-        int stepsNeeded = generateSteps();
-        steps = stepsNeeded + extraSteps;
-
-        //generate grid
-        generateNewGrid();
-
-        //generate paths
-        paths.Clear();
-        paths.Add(generateRandomPath()); //first path
-        for (int i = 1 ; i < stepsNeeded ; ++i) { //second paths onwards
-            paths.Add(generateRandomPath(paths[i - 1]));
-        }
-
-        //generate goal
-        generateGoal();
-
-        //to do: goal bound check
-
-        //debug code
+    //output debug log for grid
+    private void newProblemDebugLog() {
         string debugLogString = "New problem:\nGoal Number is " + goal.ToString() + "\nGrid:\n";
         for (int i = 2 ; i >= 0 ; --i) {
             for (int j = 0 ; j < 3 ; ++j) {
@@ -237,6 +241,160 @@ public class Randomizer_Script : MonoBehaviour
         }
         Debug.Log(debugLogString);
     }
+
+    /*
+    //generate a new problem (legacy)
+    private void generateNewProblemLegacy() {
+        //generate steps needed
+        int stepsNeeded = generateSteps();
+        steps = stepsNeeded + extraSteps;
+
+        //generate grid
+        generateNewGridLegacy();
+
+        //generate paths
+        generatePaths(stepsNeeded);
+
+        //generate goal
+        generateGoal();
+
+        //to do: goal bound check
+
+        //debug log
+        newProblemDebugLog();
+    }
+    */
+
+    /*
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    THIS IS THE START OF THE NEW ALGORITHM
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+    time complexity: O(n^5 * s^4)
+    n = possible numbers, s = possible signs
+    */
+
+    //generate signs that can be used
+    private void updateSignsUnique() {
+        signsUnique.Clear();
+        foreach (string sign in signs) {
+            if (!signsUnique.Contains(sign)) {
+                signsUnique.Add(sign);
+            }
+        }
+    }
+
+    //generate signs
+    private bool generateSigns(ref bool[] squaresUsed, int signSquare) {
+        if (signSquare > 3) {
+            //all signs are generated, check target
+            int g = generateGoal();
+            //to do: need to check if used signs are a subset of all signs
+            return g >= goalLowBound && g <= goalHighBound;
+        }
+        if (!squaresUsed[signSquare * 2 + 1]) {
+            //this sign is not used, generate a random sign
+            grid[signSquare * 2 + 1] = signsUnique[UnityEngine.Random.Range(0, signsUnique.Count)];
+            return generateSigns(ref squaresUsed, signSquare + 1);
+        }
+
+        //create a list with all signs that can be used in this square
+        List<int> signsIndexList = new List<int>();
+        for (int i = 0 ; i < signsUnique.Count ; ++i) {
+            signsIndexList.Add(i);
+        }
+        //shuffle the list
+        shuffleList(ref signsIndexList);
+
+        //check if the sign can be used
+        foreach (int i in signsIndexList) {
+            grid[signSquare * 2 + 1] = signsUnique[i];
+            if (generateSigns(ref squaresUsed, signSquare + 1)) {
+                return true;
+            }
+        }
+
+        //if every sign failed
+        return false;
+    }
+
+    //generate a number square
+    private bool generateNumber(ref bool[] squaresUsed, int numSquare) {
+        if (numSquare > 4) {
+            //all numbers are generated, generate signs
+            return generateSigns(ref squaresUsed, 0);
+        }
+        if (!squaresUsed[numSquare * 2]) {
+            //this square is not used, generate a random number
+            grid[numSquare * 2] = UnityEngine.Random.Range(numbersLowBound[numSquare], numbersHighBound[numSquare] + 1).ToString();
+            return generateNumber(ref squaresUsed, numSquare + 1);
+        }
+
+        //create a list with all numbers that can be used in this square
+        List<int> numbersList = new List<int>();
+        for (int i = numbersLowBound[numSquare] ; i <= numbersHighBound[numSquare] ; ++i) {
+            numbersList.Add(i);
+        }
+        //shuffle the list
+        shuffleList(ref numbersList);
+
+        //check if the number can be used
+        foreach (int n in numbersList) {
+            grid[numSquare * 2] = n.ToString();
+            if (generateNumber(ref squaresUsed, numSquare + 1)) {
+                return true;
+            }
+        }
+
+        //if every number failed
+        return false;
+    }
+
+    //generate a new grid
+    private bool generateNewGrid(ref bool[] squaresUsed) {
+        return generateNumber(ref squaresUsed, 0);
+    }
+
+    //generate a new problem
+    private void generateNewProblem() {
+        //generate steps needed
+        int stepsNeeded = generateSteps();
+        steps = stepsNeeded + extraSteps;
+
+        //generate paths
+        generatePaths(stepsNeeded);
+        
+        //check which squares are used
+        bool[] squareUsed = {false, false, false, false, false, false, false, false, false};
+        foreach (string path in paths) {
+            foreach (char c in path) {
+                int square = int.Parse(c.ToString());
+                if (!squareUsed[square]) {
+                    squareUsed[square] = true;
+                }
+            }
+        }
+
+        //generate signs that can be used
+        updateSignsUnique();
+
+        //generate numbers and signs
+        if (!generateNewGrid(ref squareUsed)) {
+            Debug.Log("Error: Cannot generate grid, falling back to legacy code");
+            generateNewGridLegacy();
+            generateGoal();
+        }
+        
+        //debug log
+        newProblemDebugLog();
+
+    }
+
+    /*
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    THIS IS THE END OF THE NEW ALGORITHM
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    */
 
     //called when reset key is pressed
     public void resetProblem() {
@@ -265,6 +423,7 @@ public class Randomizer_Script : MonoBehaviour
             signs.Add("-");
             signs.Add("*");
         }
+
         pathLengthLowBound = 2;
         pathLengthHighBound = 4;
         stepsLowBound = 1;
