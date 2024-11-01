@@ -3,13 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text.RegularExpressions;
-using System.Xml;
 using Unity.VisualScripting;
-using Unity.VisualScripting.AssemblyQualifiedNameParser;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.Timeline;
 
 public class Randomizer_Script : MonoBehaviour
 {   
@@ -35,7 +30,8 @@ public class Randomizer_Script : MonoBehaviour
 
     //variables needed to create new problems
     //ALL BOUNDS ARE INCLUSIVE, +1 TO THE HIGH BOUND WHEN USING UnityEngine.Random.Range()
-    private static int goalLowBound, goalHighBound; //range of target number
+    private static int goalLowBound, goalHighBound; //range of target number, HAS TO BE A SUBRANGE OF STEP ANSWER BOUND
+    private static int stepAnswerLowBound, stepAnswerHighBound; //range of the answer of every step
     private static int[] numbersLowBound = new int[5], numbersHighBound = new int[5]; //range of number in each square
     private static List<string> signs = new List<string>(); //all available signs (pick 4 to use)
     private static List<string> signsUnique = new List<string>(); //the signs list, but duplicates are removed
@@ -210,7 +206,7 @@ public class Randomizer_Script : MonoBehaviour
         return expression;
     }
 
-    private int generateGoal() {
+    private int generateGoalLegacy() {
         string[] tempGrid = new string[9];
         for (int i = 0 ; i < 9 ; ++i) {
             tempGrid[i] = grid[i];
@@ -284,13 +280,52 @@ public class Randomizer_Script : MonoBehaviour
         }
     }
 
+    //complete a path and fill the last square
+    private int processPath(string path, ref string[] grid) {
+        //calculate the answer
+        string expression = pathToExpression(path, ref grid);
+        //Debug.Log(expression);
+        int answer = selectSquareScript.calculateResult(expression);
+        //"complete a step"
+        grid[int.Parse(path[path.Length - 1].ToString())] = answer.ToString();
+        return answer;
+    }
+
+    //check if the problem can be used
+    private bool isValidProblem() {
+        string[] tempGrid = new string[9];
+        int lastAnswer = new int();
+        //copy grid to a temporary grid
+        for (int i = 0 ; i < 9 ; ++i) {
+            tempGrid[i] = grid[i];
+        }
+
+        //process each path
+        foreach (string path in paths) {
+            lastAnswer = processPath(path, ref tempGrid);
+            if (lastAnswer > stepAnswerHighBound || lastAnswer < stepAnswerLowBound) {
+                //answer out of bounds
+                return false;
+            }
+        }
+        //check if the goal is in bound
+        if (lastAnswer > goalHighBound || lastAnswer < goalLowBound) {
+            //out of bounds
+            return false;
+        }
+        goal = lastAnswer;
+        return true;
+    }
+
     //generate signs
     private bool generateSigns(ref bool[] squaresUsed, int signSquare) {
         if (signSquare > 3) {
             //all signs are generated, check target
-            int g = generateGoal();
             //to do: need to check if used signs are a subset of all signs
-            return g >= goalLowBound && g <= goalHighBound;
+            return isValidProblem();
+
+            //int g = generateGoal();
+            //return g >= goalLowBound && g <= goalHighBound;
         }
         if (!squaresUsed[signSquare * 2 + 1]) {
             //this sign is not used, generate a random sign
@@ -382,7 +417,7 @@ public class Randomizer_Script : MonoBehaviour
         if (!generateNewGrid(ref squareUsed)) {
             Debug.Log("Error: Cannot generate grid, falling back to legacy code");
             generateNewGridLegacy();
-            generateGoal();
+            generateGoalLegacy();
         }
         
         //debug log
@@ -414,6 +449,8 @@ public class Randomizer_Script : MonoBehaviour
         
         goalLowBound = 10;
         goalHighBound = 99;
+        stepAnswerLowBound = 1;
+        stepAnswerHighBound = 99;
         for (int i = 0 ; i < 5 ; ++i) {
             numbersHighBound[i] = 9;
             numbersLowBound[i] = 1;
