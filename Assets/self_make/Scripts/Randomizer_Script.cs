@@ -33,8 +33,8 @@ public class Randomizer_Script : MonoBehaviour
     private static int goalLowBound, goalHighBound; //range of target number, HAS TO BE A SUBRANGE OF STEP ANSWER BOUND
     private static int stepAnswerLowBound, stepAnswerHighBound; //range of the answer of every step
     private static int[] numbersLowBound = new int[5], numbersHighBound = new int[5]; //range of number in each square
-    private static List<string> signs = new List<string>(); //all available signs (pick 4 to use)
-    private static List<string> signsUnique = new List<string>(); //the signs list, but duplicates are removed
+    private static List<string> signsLegacy = new List<string>(); //(legacy) all available signs including duplicates (pick 4 to use)
+    private static List<string> signs = new List<string>(); //all available signs
     private static int pathLengthLowBound, pathLengthHighBound; //number of numbers needed to create an equation (not including signs)
     private static int stepsLowBound, stepsHighBound; //range of minimum steps needed to complete the question
     private static int extraSteps; //number of extra steps given on top of steps needed
@@ -49,10 +49,10 @@ public class Randomizer_Script : MonoBehaviour
     //private List<string> solution;
     //private int totalSteps;
     
-    Select_Square_Script selectSquareScript;
-    Grid_Numbers_Script gridNumbersScript;
-    Goal_Script goalScript;
-    Remaining_Script remainingScript;
+    private Select_Square_Script selectSquareScript;
+    private Grid_Numbers_Script gridNumbersScript;
+    private Goal_Script goalScript;
+    private Remaining_Script remainingScript;
 
     //shuffle array
     private void shuffleArray<T>(ref T[] arr) {
@@ -89,14 +89,14 @@ public class Randomizer_Script : MonoBehaviour
     
     //generate grid (legacy, now only used in failed instances)
     private void generateNewGridLegacy() {
-        shuffleList(ref signs);
+        shuffleList(ref signsLegacy);
         //generate numbers
         for (int i = 0 ; i < 5 ; ++i) {
             grid[i * 2] = UnityEngine.Random.Range(numbersLowBound[i], numbersHighBound[i] + 1).ToString();
         }
 
         //throw an error if signs list has less than 4 signs
-        if (signs.Count < 4) {
+        if (signsLegacy.Count < 4) {
             Debug.Log("Not enough signs in list, defalts to + for all 4 signs");
             for (int i = 0 ; i < 4 ; ++i) {
                 grid[i * 2 + 1] = "+";
@@ -105,7 +105,7 @@ public class Randomizer_Script : MonoBehaviour
         }
         //generate signs
         for (int i = 0 ; i < 4 ; ++i) {
-            grid[i * 2 + 1] = signs[i];
+            grid[i * 2 + 1] = signsLegacy[i];
         }
     }
 
@@ -271,14 +271,17 @@ public class Randomizer_Script : MonoBehaviour
     */
 
     //generate signs that can be used
-    private void updateSignsUnique() {
-        signsUnique.Clear();
+    /*
+    private void updateSignsLegacy() {
+        signs.Clear();
         foreach (string sign in signs) {
-            if (!signsUnique.Contains(sign)) {
-                signsUnique.Add(sign);
+            if (!signs.Contains(sign)) {
+                signs.Add(sign);
             }
         }
     }
+    */
+    
 
     //complete a path and fill the last square
     private int processPath(string path, ref string[] grid) {
@@ -329,13 +332,13 @@ public class Randomizer_Script : MonoBehaviour
         }
         if (!squaresUsed[signSquare * 2 + 1]) {
             //this sign is not used, generate a random sign
-            grid[signSquare * 2 + 1] = signsUnique[UnityEngine.Random.Range(0, signsUnique.Count)];
+            grid[signSquare * 2 + 1] = signs[UnityEngine.Random.Range(0, signs.Count)];
             return generateSigns(ref squaresUsed, signSquare + 1);
         }
 
         //create a list with all signs that can be used in this square
         List<int> signsIndexList = new List<int>();
-        for (int i = 0 ; i < signsUnique.Count ; ++i) {
+        for (int i = 0 ; i < signs.Count ; ++i) {
             signsIndexList.Add(i);
         }
         //shuffle the list
@@ -343,7 +346,7 @@ public class Randomizer_Script : MonoBehaviour
 
         //check if the sign can be used
         foreach (int i in signsIndexList) {
-            grid[signSquare * 2 + 1] = signsUnique[i];
+            grid[signSquare * 2 + 1] = signs[i];
             if (generateSigns(ref squaresUsed, signSquare + 1)) {
                 return true;
             }
@@ -403,15 +406,12 @@ public class Randomizer_Script : MonoBehaviour
         bool[] squareUsed = {false, false, false, false, false, false, false, false, false};
         foreach (string path in paths) {
             foreach (char c in path) {
-                int square = int.Parse(c.ToString());
-                if (!squareUsed[square]) {
-                    squareUsed[square] = true;
-                }
+                squareUsed[int.Parse(c.ToString())] = true;
             }
         }
 
-        //generate signs that can be used
-        updateSignsUnique();
+        //generate signs that can be used (obsolete, signsUnique is now the default)
+        //updateSignsUnique();
 
         //generate numbers and signs
         if (!generateNewGrid(ref squareUsed)) {
@@ -455,11 +455,17 @@ public class Randomizer_Script : MonoBehaviour
             numbersHighBound[i] = 9;
             numbersLowBound[i] = 1;
         }
+        
+        //obsolete code, keep for fallback functions
         for (int i = 0 ; i < 4 ; ++i) {
-            signs.Add("+");
-            signs.Add("-");
-            signs.Add("*");
+            signsLegacy.Add("+");
+            signsLegacy.Add("-");
+            signsLegacy.Add("*");
         }
+
+        signs.Add("+");
+        signs.Add("-");
+        signs.Add("*");
 
         pathLengthLowBound = 2;
         pathLengthHighBound = 4;

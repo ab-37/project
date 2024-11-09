@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Remaining_Script : MonoBehaviour
 {
-    private Transform titleTransform; //no use right now, might need it in the future
+    //private Transform titleTransform; //no use right now, might need it in the future
     private Transform stepsTransform;
     private TextMeshProUGUI stepsTextMesh;
     private int originalSteps;
@@ -19,6 +19,10 @@ public class Remaining_Script : MonoBehaviour
     public void resetSteps() {
         currentSteps = originalSteps;
         updateSteps();
+    }
+    //get current steps number
+    public int getCurrentSteps() {
+        return currentSteps;
     }
     //set new origial steps (new question)
     public void setOriginalSteps(int steps) {
@@ -36,7 +40,7 @@ public class Remaining_Script : MonoBehaviour
     }
 
     private void Awake() {
-        titleTransform = gameObject.transform.Find("Title");
+        //titleTransform = gameObject.transform.Find("Title");
         stepsTransform = gameObject.transform.Find("Steps");
         stepsTextMesh = stepsTransform.GetComponent<TextMeshProUGUI>();
     }

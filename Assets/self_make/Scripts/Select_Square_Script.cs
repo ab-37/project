@@ -32,6 +32,7 @@ public class Select_Square_Script : MonoBehaviour
     private Function_Word_Script functionWordScript;
     private Remaining_Script remainingScript;
     private Randomizer_Script randomizerScript;
+    private Score_Script scoreScript;
 
     //key input handlers
     private int directionHandler()
@@ -245,8 +246,11 @@ public class Select_Square_Script : MonoBehaviour
         functionWordScript.UpdateWordText(expression, result);
 
         if (goalScript.isGoal(result)) {
+            //correct
             Debug.Log("Correct!");
-            randomizerScript.newProblem(); //placeholder code, should be new grid
+            //add score
+            scoreScript.addScore(30 + remainingScript.getCurrentSteps() * 10);
+            randomizerScript.newProblem();
         }
         else {
             gridNumbersScript.setGridContent(realUpdatePos, result.ToString());
@@ -263,7 +267,7 @@ public class Select_Square_Script : MonoBehaviour
     {
         //lastPos = currentPos;
         currentPos = newPos;
-        realPos = gridOrigin + ((currentPos % 3) * unitVectorX) + ((currentPos / 3) * unitVectorY);
+        realPos = gridOrigin + (currentPos % 3 * unitVectorX) + (currentPos / 3 * unitVectorY);
         transform.position = realPos;
         //Debug.Log(currentPos);
     }
@@ -317,12 +321,13 @@ public class Select_Square_Script : MonoBehaviour
         //lastPos = -1;
         //squareLength = 240;
 
-        gridNumbersScript = gameObject.transform.parent.Find("Background/Grid Numbers").gameObject.GetComponent<Grid_Numbers_Script>();
-        selectedSquaresScript = gameObject.transform.parent.Find("Selected Squares").gameObject.GetComponent<Selected_Squares_Script>();
-        goalScript = gameObject.transform.parent.Find("Background/Goal").gameObject.GetComponent<Goal_Script>();
-        functionWordScript = gameObject.transform.parent.Find("Background/Function Word").gameObject.GetComponent<Function_Word_Script> ();
-        remainingScript = gameObject.transform.parent.Find("Background/Remaining").gameObject.GetComponent<Remaining_Script>();
-        randomizerScript = gameObject.transform.parent.Find("Randomizer").gameObject.GetComponent<Randomizer_Script>();
+        gridNumbersScript = gameObject.transform.parent.Find("Background/Grid Numbers").GetComponent<Grid_Numbers_Script>();
+        selectedSquaresScript = gameObject.transform.parent.Find("Selected Squares").GetComponent<Selected_Squares_Script>();
+        goalScript = gameObject.transform.parent.Find("Background/Goal").GetComponent<Goal_Script>();
+        functionWordScript = gameObject.transform.parent.Find("Background/Function Word").GetComponent<Function_Word_Script> ();
+        remainingScript = gameObject.transform.parent.Find("Background/Remaining").GetComponent<Remaining_Script>();
+        randomizerScript = gameObject.transform.parent.Find("Randomizer").GetComponent<Randomizer_Script>();
+        scoreScript = gameObject.transform.parent.Find("Background/Score").GetComponent<Score_Script>();
     }
 
     private void Start()
