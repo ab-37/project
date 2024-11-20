@@ -33,6 +33,7 @@ public class Select_Square_Script : MonoBehaviour
     private Remaining_Script remainingScript;
     private Randomizer_Script randomizerScript;
     private Score_Script scoreScript;
+    private Timer_Script timerScript;
 
     //key input handlers
     private int directionHandler()
@@ -328,6 +329,7 @@ public class Select_Square_Script : MonoBehaviour
         remainingScript = gameObject.transform.parent.Find("Background/Remaining").GetComponent<Remaining_Script>();
         randomizerScript = gameObject.transform.parent.Find("Randomizer").GetComponent<Randomizer_Script>();
         scoreScript = gameObject.transform.parent.Find("Background/Score").GetComponent<Score_Script>();
+        timerScript = gameObject.transform.parent.Find("Background/Timer").GetComponent<Timer_Script>();
     }
 
     private void Start()
@@ -338,25 +340,26 @@ public class Select_Square_Script : MonoBehaviour
     private void Update()
     {
         int newDirection = directionHandler();
-        
-        if (Input.GetKeyDown(resetKey)) {
-            randomizerScript.resetProblem();
-        }
-        if (Input.GetKeyDown(newQuestionKey)) {
-            randomizerScript.newProblem();
-        }
+        if (!timerScript.isTimeOver()) {
+            if (Input.GetKeyDown(resetKey)) {
+                randomizerScript.resetProblem();
+            }
+            if (Input.GetKeyDown(newQuestionKey)) {
+                randomizerScript.newProblem();
+            }
 
-        if (Input.GetKeyDown(selectKey)) {
-            selectPress();
-        }
-        if (Input.GetKeyUp(selectKey) && selectState == true) {
-            selectRelease();
-        }
+            if (Input.GetKeyDown(selectKey)) {
+                selectPress();
+            }
+            if (Input.GetKeyUp(selectKey) && selectState) {
+                selectRelease();
+            }
 
-        if (newDirection != 0)
-        {
-            //Debug.Log(newDirection);
-            moveSelectSquare(newDirection);
+            if (newDirection != 0)
+            {
+                //Debug.Log(newDirection);
+                moveSelectSquare(newDirection);
+            }
         }
     }
 }
