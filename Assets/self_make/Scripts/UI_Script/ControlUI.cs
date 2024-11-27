@@ -37,7 +37,7 @@ public class ControlUI : MonoBehaviour
 
     void Start()
     {
-        mainMenu = GameObject.Find("主畫面選單");
+        mainMenu = GameObject.Find("MainUI");
     }
 
     void Update()
