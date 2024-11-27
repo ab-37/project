@@ -25,6 +25,20 @@ public class Grid_Numbers_Script : MonoBehaviour
     */
 
     //private GameObject gridFather;
+
+    //hide and show numbers
+    public void hideNumbers() {
+        foreach (Transform child in gameObject.transform) {
+            child.gameObject.SetActive(false);
+        }
+    }
+    public void showNumbers() {
+        foreach (Transform child in gameObject.transform) {
+            child.gameObject.SetActive(true);
+        }
+        //updateGrid();
+    }
+
     public string getGridContent(int square) {
         return gridContent[square];
     }
@@ -89,6 +103,7 @@ public class Grid_Numbers_Script : MonoBehaviour
     }
     
     private void Awake() {
+        hideNumbers();
         
     }
     private void Start()

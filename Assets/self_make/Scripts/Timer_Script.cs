@@ -81,8 +81,10 @@ public class Timer_Script : MonoBehaviour
     }
 
     private void Start() {
+        /*
         setTime(60f);
         startTimer();
+        */
     }
 
     private void Update() {

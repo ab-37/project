@@ -5,8 +5,16 @@ using UnityEngine;
 
 public class Score_Script : MonoBehaviour
 {
+    private Transform scoreTransform;
     private TextMeshProUGUI scoreTextMesh;
     private int score;
+
+    public void hideText() {
+        scoreTransform.gameObject.SetActive(false);
+    }
+    public void showText() {
+        scoreTransform.gameObject.SetActive(true);
+    }
 
     //update text mesh
     private void updateScoreText() {
@@ -35,11 +43,14 @@ public class Score_Script : MonoBehaviour
     
 
     private void Awake() {
-        scoreTextMesh = gameObject.transform.Find("Score Text").GetComponent<TextMeshProUGUI>();
+        scoreTransform = gameObject.transform.Find("Score Text");
+        scoreTextMesh = scoreTransform.GetComponent<TextMeshProUGUI>();
+        hideText();
     }
 
     private void Start() {
-        clearScore();
+        //clearScore();
+        
     }
 
     private void Update() {

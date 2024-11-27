@@ -10,6 +10,15 @@ public class Goal_Script : MonoBehaviour
     private TextMeshProUGUI numberTextMesh;
     private int goalNumber;
 
+    //hide and show text
+    public void hideText() {
+        numberTransform.gameObject.SetActive(false);
+    }
+    public void showText() {
+        numberTransform.gameObject.SetActive(true);
+        //updateGoalNumber();
+    }
+
     private void updateGoalNumber() {
         if (numberTextMesh != null) {
             numberTextMesh.text = goalNumber.ToString();
@@ -26,6 +35,7 @@ public class Goal_Script : MonoBehaviour
     private void Awake() {
         numberTransform = gameObject.transform.Find("Goal Number");
         numberTextMesh = numberTransform.GetComponent<TextMeshProUGUI>();
+        hideText();
     }
     
     private void Start()

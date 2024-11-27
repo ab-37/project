@@ -6,12 +6,23 @@ using UnityEngine;
 
 public class Remaining_Script : MonoBehaviour
 {
-    //private Transform titleTransform; //no use right now, might need it in the future
+    private Transform titleTransform;
     private Transform stepsTransform;
     private TextMeshProUGUI stepsTextMesh;
     private int originalSteps;
     private int currentSteps;
     
+    //hide and show text
+    public void hideText() {
+        titleTransform.gameObject.SetActive(false);
+        stepsTransform.gameObject.SetActive(false);
+    }
+    public void showText() {
+        titleTransform.gameObject.SetActive(true);
+        stepsTransform.gameObject.SetActive(true);
+    }
+
+    //update the text
     private void updateSteps() {
         stepsTextMesh.text = currentSteps.ToString();
     }
@@ -40,14 +51,16 @@ public class Remaining_Script : MonoBehaviour
     }
 
     private void Awake() {
-        //titleTransform = gameObject.transform.Find("Title");
+        titleTransform = gameObject.transform.Find("Title");
         stepsTransform = gameObject.transform.Find("Steps");
         stepsTextMesh = stepsTransform.GetComponent<TextMeshProUGUI>();
+        hideText();
     }
     
     private void Start()
     {
         //setOriginalSteps(3);
+        
     }
 
     // Update is called once per frame

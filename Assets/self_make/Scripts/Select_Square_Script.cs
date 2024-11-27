@@ -26,6 +26,11 @@ public class Select_Square_Script : MonoBehaviour
     public int squareLength; //length of the side of one square
     private List<int> selectedPositions = new List<int>();
 
+    private bool isGameActive;
+    private bool isIntroDone; //true if intro has played
+    private bool isStartingGame; //true if start game coroutine is running
+    private float initialTimerSecs; //timer length
+
     private Grid_Numbers_Script gridNumbersScript;
     private Selected_Squares_Script selectedSquaresScript;
     private Goal_Script goalScript;
@@ -34,6 +39,8 @@ public class Select_Square_Script : MonoBehaviour
     private Randomizer_Script randomizerScript;
     private Score_Script scoreScript;
     private Timer_Script timerScript;
+    private Intro_Script introScript;
+    private Outro_Script outroScript;
 
     //key input handlers
     private int directionHandler()
@@ -306,6 +313,51 @@ public class Select_Square_Script : MonoBehaviour
         }
         updatePos(newPos);
     }
+
+    //START THE GAME (COROUTINE)
+    private IEnumerator startGameCoroutine(float timerLength) {
+        isStartingGame = true;
+
+        //set timer so player can check the time
+        timerScript.setTime(timerLength);
+
+        //clear the score
+        scoreScript.clearScore();
+
+        //play intro
+        //StartCoroutine(introScript.startCountdown());
+        introScript.showCountdownText();
+        for (int i = 0 ; i < 4 ; ++i) {
+            introScript.updateTextByIndex(i);
+            yield return new WaitForSeconds(1);
+        }
+        introScript.clearText();
+
+        //set everything
+        goalScript.showText();
+        gridNumbersScript.showNumbers();
+        remainingScript.showText();
+        scoreScript.showText();
+
+        //new problem
+        updatePos(currentPos);
+        randomizerScript.newProblem();
+        //start the timer
+        timerScript.startTimer();
+
+        //set game to active
+        isGameActive = true;
+        isIntroDone = true;
+        isStartingGame = false;
+    }
+    
+    //END THE GAME
+    private void EndGame() {
+        isGameActive = false;
+        gridNumbersScript.hideNumbers();
+        outroScript.showTimesUpText();
+        Debug.Log("Game Ended");
+    }
     
     private void Awake() {
         selectState = false;
@@ -330,36 +382,58 @@ public class Select_Square_Script : MonoBehaviour
         randomizerScript = gameObject.transform.parent.Find("Randomizer").GetComponent<Randomizer_Script>();
         scoreScript = gameObject.transform.parent.Find("Background/Score").GetComponent<Score_Script>();
         timerScript = gameObject.transform.parent.Find("Background/Timer").GetComponent<Timer_Script>();
+        introScript = gameObject.transform.parent.Find("Transitions/Intro").GetComponent<Intro_Script>();
+        outroScript = gameObject.transform.parent.Find("Transitions/Outro").GetComponent<Outro_Script>();
+
     }
 
     private void Start()
     {
+        isGameActive = false;
+        isIntroDone = false;
+        isStartingGame = false;
+        initialTimerSecs = 60f;
+        //startGame(60f);
+        /*
         updatePos(currentPos);
         randomizerScript.newProblem();
+        */
     }
     private void Update()
     {
-        int newDirection = directionHandler();
-        if (!timerScript.isTimeOver()) {
-            if (Input.GetKeyDown(resetKey)) {
-                randomizerScript.resetProblem();
+        if (!isIntroDone) {
+            if (!isStartingGame) {
+                StartCoroutine(startGameCoroutine(initialTimerSecs));
             }
-            if (Input.GetKeyDown(newQuestionKey)) {
-                randomizerScript.newProblem();
+            return;
+        }
+        if (isGameActive) {
+            if (timerScript.isTimeOver()) {
+                EndGame();
             }
+            else {
+                int newDirection = directionHandler();
+                if (Input.GetKeyDown(resetKey)) {
+                    randomizerScript.resetProblem();
+                }
+                if (Input.GetKeyDown(newQuestionKey)) {
+                    randomizerScript.newProblem();
+                }
 
-            if (Input.GetKeyDown(selectKey)) {
-                selectPress();
-            }
-            if (Input.GetKeyUp(selectKey) && selectState) {
-                selectRelease();
-            }
+                if (Input.GetKeyDown(selectKey)) {
+                    selectPress();
+                }
+                if (Input.GetKeyUp(selectKey) && selectState) {
+                    selectRelease();
+                }
 
-            if (newDirection != 0)
-            {
-                //Debug.Log(newDirection);
-                moveSelectSquare(newDirection);
+                if (newDirection != 0)
+                {
+                    //Debug.Log(newDirection);
+                    moveSelectSquare(newDirection);
+                }
             }
+            
         }
     }
 }
