@@ -8,14 +8,22 @@ public class Intro_Script : MonoBehaviour
     private GameObject countdownTextGameObject;
     private Transform countdownTextTransform;
     private TextMeshProUGUI countdownTextMesh;
+
+    private GameObject pressToStartTextGameObject;
     private string[] displayTexts = {"3", "2", "1", "Go!"};
 
-    //hide and show text
+    //hide and show texts
     public void showCountdownText() {
         countdownTextGameObject.SetActive(true);
     }
     public void hideCountdownText() {
         countdownTextGameObject.SetActive(false);
+    }
+    public void showPressToStartText() {
+        pressToStartTextGameObject.SetActive(true);
+    }
+    public void hidePressToStartText() {
+        pressToStartTextGameObject.SetActive(false);
     }
 
     //update the text
@@ -66,13 +74,14 @@ public class Intro_Script : MonoBehaviour
         countdownTextTransform = gameObject.transform.Find("Countdown Text");
         countdownTextGameObject = countdownTextTransform.gameObject;
         countdownTextMesh = countdownTextTransform.GetComponent<TextMeshProUGUI>();
-        
-        //hide the object initially
-        hideCountdownText();
+
+        pressToStartTextGameObject = gameObject.transform.Find("Press To Start Text").gameObject;
     }
 
     private void Start() {
-        
+        //hide the objects initially
+        hideCountdownText();
+        hidePressToStartText();
     }
 
     private void Update() {

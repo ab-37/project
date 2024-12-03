@@ -40,17 +40,19 @@ public class Score_Script : MonoBehaviour
         score = 0;
         updateScoreText();
     }
-    
+
+    //get score
+    public int getScore() {
+        return score;
+    }
 
     private void Awake() {
         scoreTransform = gameObject.transform.Find("Score Text");
         scoreTextMesh = scoreTransform.GetComponent<TextMeshProUGUI>();
-        hideText();
     }
 
     private void Start() {
-        //clearScore();
-        
+        hideText();
     }
 
     private void Update() {

@@ -35,12 +35,12 @@ public class Goal_Script : MonoBehaviour
     private void Awake() {
         numberTransform = gameObject.transform.Find("Goal Number");
         numberTextMesh = numberTransform.GetComponent<TextMeshProUGUI>();
-        hideText();
     }
     
     private void Start()
     {
         //setGoalNumber(23);
+        hideText();
     }
 
     private void Update()

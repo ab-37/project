@@ -17,7 +17,7 @@ public class Randomizer_Script : MonoBehaviour
     };
 
     //all possible rotations and flips
-    private static string[] pathFilter = {
+    private string[] pathFilter = {
         "012345678", //no rotation
         "630741852", //90 clockwise
         "258147036", //90 counterclockwise
@@ -30,14 +30,14 @@ public class Randomizer_Script : MonoBehaviour
 
     //variables needed to create new problems
     //ALL BOUNDS ARE INCLUSIVE, +1 TO THE HIGH BOUND WHEN USING UnityEngine.Random.Range()
-    private static int goalLowBound, goalHighBound; //range of target number, HAS TO BE A SUBRANGE OF STEP ANSWER BOUND
-    private static int stepAnswerLowBound, stepAnswerHighBound; //range of the answer of every step
-    private static int[] numbersLowBound = new int[5], numbersHighBound = new int[5]; //range of number in each square
-    private static List<string> signsLegacy = new List<string>(); //(legacy) all available signs including duplicates (pick 4 to use)
-    private static List<string> signs = new List<string>(); //all available signs
-    private static int pathLengthLowBound, pathLengthHighBound; //number of numbers needed to create an equation (not including signs)
-    private static int stepsLowBound, stepsHighBound; //range of minimum steps needed to complete the question
-    private static int extraSteps; //number of extra steps given on top of steps needed
+    private int goalLowBound, goalHighBound; //range of target number, HAS TO BE A SUBRANGE OF STEP ANSWER BOUND
+    private int stepAnswerLowBound, stepAnswerHighBound; //range of the answer of every step
+    private int[] numbersLowBound = new int[5], numbersHighBound = new int[5]; //range of number in each square
+    private List<string> signsLegacy = new List<string>(); //(legacy) all available signs including duplicates (pick 4 to use)
+    private List<string> signs = new List<string>(); //all available signs
+    private int pathLengthLowBound, pathLengthHighBound; //number of numbers needed to create an equation (not including signs)
+    private int stepsLowBound, stepsHighBound; //range of minimum steps needed to complete the question
+    private int extraSteps; //number of extra steps given on top of steps needed
 
     //current saved problem
     private List<string> paths = new List<string>();
@@ -445,8 +445,9 @@ public class Randomizer_Script : MonoBehaviour
         remainingScript.setOriginalSteps(steps);
     }
 
-    private void Awake() {
-        
+    //set all parameters to default value
+    //legacy code, keep for testing purposes
+    private void setDefaultParameters() {
         goalLowBound = 10;
         goalHighBound = 99;
         stepAnswerLowBound = 1;
@@ -472,7 +473,10 @@ public class Randomizer_Script : MonoBehaviour
         stepsLowBound = 1;
         stepsHighBound = 2;
         extraSteps = 1;
-        
+    }
+
+    private void Awake() {
+        setDefaultParameters();
         //createRandomPath(2, 5);
         selectSquareScript = gameObject.transform.parent.Find("Select Square").gameObject.GetComponent<Select_Square_Script>();
         gridNumbersScript = gameObject.transform.parent.Find("Background/Grid Numbers").gameObject.GetComponent<Grid_Numbers_Script>();

@@ -54,13 +54,12 @@ public class Remaining_Script : MonoBehaviour
         titleTransform = gameObject.transform.Find("Title");
         stepsTransform = gameObject.transform.Find("Steps");
         stepsTextMesh = stepsTransform.GetComponent<TextMeshProUGUI>();
-        hideText();
     }
     
     private void Start()
     {
         //setOriginalSteps(3);
-        
+        hideText();
     }
 
     // Update is called once per frame

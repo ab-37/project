@@ -103,12 +103,12 @@ public class Grid_Numbers_Script : MonoBehaviour
     }
     
     private void Awake() {
-        hideNumbers();
         
     }
     private void Start()
     {
         //resetGrid();
+        hideNumbers();
     }
 
     private void Update()

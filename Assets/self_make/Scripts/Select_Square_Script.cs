@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Select_Square_Script : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class Select_Square_Script : MonoBehaviour
     private KeyCode selectKey;
     private KeyCode resetKey;
     private KeyCode newQuestionKey;
+    private KeyCode spaceKey;
     private int currentPos;
     //private int lastPos;
     private Vector3 unitVectorX;
@@ -28,7 +30,9 @@ public class Select_Square_Script : MonoBehaviour
 
     private bool isGameActive;
     private bool isIntroDone; //true if intro has played
-    private bool isStartingGame; //true if start game coroutine is running
+    private bool isIntroRunning; //true if intro coroutine is running
+    private bool isTimeUp; //true if the time is up
+    private bool isOutroRunning; //true if the outro coroutine is running
     private float initialTimerSecs; //timer length
 
     private Grid_Numbers_Script gridNumbersScript;
@@ -316,16 +320,19 @@ public class Select_Square_Script : MonoBehaviour
 
     //START THE GAME (COROUTINE)
     private IEnumerator startGameCoroutine(float timerLength) {
-        isStartingGame = true;
-
         //set timer so player can check the time
         timerScript.setTime(timerLength);
 
         //clear the score
         scoreScript.clearScore();
 
-        //play intro
-        //StartCoroutine(introScript.startCountdown());
+        //show press space to start text
+        introScript.showPressToStartText();
+        //wait until space is pressed
+        yield return new WaitUntil(() => Input.GetKeyDown(spaceKey));
+        introScript.hidePressToStartText();
+        
+        //start countdown
         introScript.showCountdownText();
         for (int i = 0 ; i < 4 ; ++i) {
             introScript.updateTextByIndex(i);
@@ -348,15 +355,34 @@ public class Select_Square_Script : MonoBehaviour
         //set game to active
         isGameActive = true;
         isIntroDone = true;
-        isStartingGame = false;
+        isIntroRunning = false;
     }
     
     //END THE GAME
-    private void EndGame() {
+    private IEnumerator EndGame() {
+        Debug.Log("Game Ended");
+
+        //game is now inactive
         isGameActive = false;
+
+        //return score to static variables
+        Static_Variables.lastGameScore = scoreScript.getScore();
+
+        //hide the numbers and show time up text
         gridNumbersScript.hideNumbers();
         outroScript.showTimesUpText();
-        Debug.Log("Game Ended");
+        
+        //after a second, show press space to return text
+        yield return new WaitForSeconds(1);
+        outroScript.showPressToReturnText();
+
+        //wait for space press
+        yield return new WaitUntil(() => Input.GetKeyDown(spaceKey));
+        isOutroRunning = false;
+
+        //switch scenes
+        Debug.Log("lastGameScore: " + Static_Variables.lastGameScore.ToString());
+        SceneManager.LoadScene("Dialogue Main");
     }
     
     private void Awake() {
@@ -368,6 +394,7 @@ public class Select_Square_Script : MonoBehaviour
         selectKey = KeyCode.Z;
         resetKey = KeyCode.R;
         newQuestionKey = KeyCode.Space;
+        spaceKey = KeyCode.Space;
         unitVectorX = squareLength * Vector3.right;
         unitVectorY = squareLength * Vector3.up;
         currentPos = 4;
@@ -391,7 +418,9 @@ public class Select_Square_Script : MonoBehaviour
     {
         isGameActive = false;
         isIntroDone = false;
-        isStartingGame = false;
+        isIntroRunning = false;
+        isTimeUp = false;
+        isOutroRunning = false;
         initialTimerSecs = 60f;
         //startGame(60f);
         /*
@@ -401,15 +430,25 @@ public class Select_Square_Script : MonoBehaviour
     }
     private void Update()
     {
+        //playing intro
         if (!isIntroDone) {
-            if (!isStartingGame) {
+            if (!isIntroRunning) {
+                isIntroRunning = true;
                 StartCoroutine(startGameCoroutine(initialTimerSecs));
             }
             return;
         }
+        if (isTimeUp) {
+            if (!isOutroRunning) {
+                isOutroRunning = true;
+                StartCoroutine(EndGame()); //scene should switch here
+            }
+            return;
+        }
+        //in game
         if (isGameActive) {
             if (timerScript.isTimeOver()) {
-                EndGame();
+                isTimeUp = true;
             }
             else {
                 int newDirection = directionHandler();
@@ -433,7 +472,6 @@ public class Select_Square_Script : MonoBehaviour
                     moveSelectSquare(newDirection);
                 }
             }
-            
         }
     }
 }
