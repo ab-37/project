@@ -5,9 +5,12 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using Fungus;
+using UnityEngine.SceneManagement;
 
 public class ControlUI : MonoBehaviour
 {
+    public Flowchart flowchart;
+    public string blockSelect;
 
     private GameObject mainMenu;
     public void hideMainUI()
@@ -23,21 +26,46 @@ public class ControlUI : MonoBehaviour
     {
         switch(value)
         {
-            case 0:
-                //Fungus.Flowchart.BroadcastFungusMessage("第一幕發生事件");
-                break;
             case 1:
-                //Fungus.Flowchart.BroadcastFungusMessage("第一幕發生事件(2)");
+                flowchart.ExecuteBlock("Stage1-1");
                 break;
             case 2:
-               // Fungus.Flowchart.BroadcastFungusMessage("第一幕發生事件(3)");
+                flowchart.ExecuteBlock("Stage1-2");
+                break;
+            case 3:
+                flowchart.ExecuteBlock("Stage1-3");
                 break;
         }
     }
 
+    //change scence and tell what is stage running
+    public void changeScence(string scenceName,string blockRunning)
+    {
+        SceneManager.LoadScene(scenceName);
+        Static_Variables.blockRuning = blockRunning;
+    }
+    public void gamePlay()
+    {
+        SceneManager.LoadScene("Gameplay Main");
+    }
+
+
+    private void playBlockStage(string blockName)
+    {
+        flowchart.ExecuteBlock(blockName);
+    }
+    
+    
     void Start()
     {
+        blockSelect = Static_Variables.blockSelect;
         mainMenu = GameObject.Find("MainUI");
+
+        if (blockSelect != null)
+            playBlockStage(blockSelect);
+        else
+            Debug.Log("no block select");
+
     }
 
     void Update()
