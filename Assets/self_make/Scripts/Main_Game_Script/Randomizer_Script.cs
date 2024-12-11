@@ -1,9 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Randomizer_Script : MonoBehaviour
@@ -28,6 +26,12 @@ public class Randomizer_Script : MonoBehaviour
         "036147258", //90 counterclockwise, horizontal flip
     };
 
+    /*
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    THE OLD VARIABLES, KEEP FOR FALLBACK
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    */
+    /*
     //variables needed to create new problems
     //ALL BOUNDS ARE INCLUSIVE, +1 TO THE HIGH BOUND WHEN USING UnityEngine.Random.Range()
     private int goalLowBound, goalHighBound; //range of target number, HAS TO BE A SUBRANGE OF STEP ANSWER BOUND
@@ -48,11 +52,17 @@ public class Randomizer_Script : MonoBehaviour
     //private string[] grid = {"4", "+", "5", "-", "3", "*", "1", "+", "2"};
     //private List<string> solution;
     //private int totalSteps;
+    */
+    //private QuestionParameters questionParameters;
+    private Problem currentProblem;
     
     private Select_Square_Script selectSquareScript;
     private Grid_Numbers_Script gridNumbersScript;
     private Goal_Script goalScript;
     private Remaining_Script remainingScript;
+
+    /*
+    //moved to static functions
 
     //shuffle array
     private void shuffleArray<T>(ref T[] arr) {
@@ -80,16 +90,20 @@ public class Randomizer_Script : MonoBehaviour
             list[rng] = temp;
         }
     }
+    */
 
     //generate steps
+    /*
     private int generateSteps() {
         return UnityEngine.Random.Range(stepsLowBound, stepsHighBound + 1);
     }
+    */
 
-    
+
+    /*    
     //generate grid (legacy, now only used in failed instances)
     private void generateNewGridLegacy() {
-        shuffleList(ref signsLegacy);
+        Static_Functions.shuffleList(ref signsLegacy);
         //generate numbers
         for (int i = 0 ; i < 5 ; ++i) {
             grid[i * 2] = UnityEngine.Random.Range(numbersLowBound[i], numbersHighBound[i] + 1).ToString();
@@ -152,8 +166,8 @@ public class Randomizer_Script : MonoBehaviour
         int filterIndex; //index of filter
         string path = "";
         
-        shuffleArray(ref possiblePaths[pathLengthMinus2]);
-        shuffleArray(ref pathFilter);
+        Static_Functions.shuffleArray(ref possiblePaths[pathLengthMinus2]);
+        Static_Functions.shuffleArray(ref pathFilter);
 
         bool pathFound = false;
         //since the arrays are shuffled, we can iterate one by one
@@ -187,13 +201,10 @@ public class Randomizer_Script : MonoBehaviour
         for (int i = 1 ; i < stepsNeeded ; ++i) { //second paths onwards
             paths.Add(generateRandomPath(paths[i - 1]));
         }
-        /*
-        foreach (string path in paths) {
-            Debug.Log(path);
-        }
-        */
+        
     }
-
+    
+    
     //generate an expression from path to feed to calculateResult in Select_Square_Script
     private string pathToExpression(string path, ref string[] tempGrid) {
         string expression = "";
@@ -205,6 +216,8 @@ public class Randomizer_Script : MonoBehaviour
 
         return expression;
     }
+    
+    
 
     private int generateGoalLegacy() {
         string[] tempGrid = new string[9];
@@ -215,7 +228,7 @@ public class Randomizer_Script : MonoBehaviour
             //calculate the goal
             string expression = pathToExpression(paths[i], ref tempGrid);
             //Debug.Log(expression);
-            goal = selectSquareScript.calculateResult(expression);
+            goal = Static_Functions.calculateResult(expression);
             //"complete a step"
             tempGrid[int.Parse(paths[i][paths[i].Length - 1].ToString())] = goal.ToString();
         }
@@ -237,6 +250,7 @@ public class Randomizer_Script : MonoBehaviour
         }
         Debug.Log(debugLogString);
     }
+    */
 
     /*
     //generate a new problem (legacy)
@@ -282,13 +296,13 @@ public class Randomizer_Script : MonoBehaviour
     }
     */
     
-
+    /*
     //complete a path and fill the last square
     private int processPath(string path, ref string[] grid) {
         //calculate the answer
         string expression = pathToExpression(path, ref grid);
         //Debug.Log(expression);
-        int answer = selectSquareScript.calculateResult(expression);
+        int answer = Static_Functions.calculateResult(expression);
         //"complete a step"
         grid[int.Parse(path[path.Length - 1].ToString())] = answer.ToString();
         return answer;
@@ -342,7 +356,7 @@ public class Randomizer_Script : MonoBehaviour
             signsIndexList.Add(i);
         }
         //shuffle the list
-        shuffleList(ref signsIndexList);
+        Static_Functions.shuffleList(ref signsIndexList);
 
         //check if the sign can be used
         foreach (int i in signsIndexList) {
@@ -374,7 +388,7 @@ public class Randomizer_Script : MonoBehaviour
             numbersList.Add(i);
         }
         //shuffle the list
-        shuffleList(ref numbersList);
+        Static_Functions.shuffleList(ref numbersList);
 
         //check if the number can be used
         foreach (int n in numbersList) {
@@ -413,7 +427,7 @@ public class Randomizer_Script : MonoBehaviour
         //generate signs that can be used (obsolete, signsUnique is now the default)
         //updateSignsUnique();
 
-        //generate numbers and signs
+        //if the new algorithm fails use the old algorithm
         if (!generateNewGrid(ref squareUsed)) {
             Debug.Log("Error: Cannot generate grid, falling back to legacy code");
             generateNewGridLegacy();
@@ -424,6 +438,7 @@ public class Randomizer_Script : MonoBehaviour
         newProblemDebugLog();
 
     }
+    */
 
     /*
     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -437,16 +452,33 @@ public class Randomizer_Script : MonoBehaviour
         remainingScript.resetSteps();
     }
 
+    //placeholder code
+    /*
+    public QuestionParameters QP = new QuestionParameters(
+            (10, 50), (1, 50), 
+            ((1, 7), (1, 7), (1, 7), (1, 7), (1, 7)),
+            (2, 5), (1, 1), 1, true, true, true, false);
+    */
+
     //called when new problem key is pressed
     public void newProblem() {
-        generateNewProblem();
-        gridNumbersScript.setOriginalContent(grid);
-        goalScript.setGoalNumber(goal);
-        remainingScript.setOriginalSteps(steps);
+        currentProblem = Static_Variables.levelQuestionParameters[Static_Variables.level].generateNewProblem();
+        
+        //placeholder code
+        //currentProblem.copy(QP.generateNewProblem());
+        //currentProblem = QP.generateNewProblem();
+        string[] tempGrid = new string[9];
+        for (int i = 0 ; i < 9 ; ++i) {
+            tempGrid[i] = currentProblem.getGridContent(i);
+        }
+        gridNumbersScript.setOriginalContent(tempGrid);
+        goalScript.setGoalNumber(currentProblem.getGoal());
+        remainingScript.setOriginalSteps(currentProblem.getSteps());
     }
 
     //set all parameters to default value
     //legacy code, keep for testing purposes
+    /*
     private void setDefaultParameters() {
         goalLowBound = 10;
         goalHighBound = 99;
@@ -474,9 +506,10 @@ public class Randomizer_Script : MonoBehaviour
         stepsHighBound = 2;
         extraSteps = 1;
     }
+    */
 
     private void Awake() {
-        setDefaultParameters();
+        //setDefaultParameters();
         //createRandomPath(2, 5);
         selectSquareScript = gameObject.transform.parent.Find("Select Square").gameObject.GetComponent<Select_Square_Script>();
         gridNumbersScript = gameObject.transform.parent.Find("Background/Grid Numbers").gameObject.GetComponent<Grid_Numbers_Script>();

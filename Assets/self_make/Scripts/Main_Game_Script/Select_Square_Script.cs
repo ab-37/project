@@ -69,7 +69,8 @@ public class Select_Square_Script : MonoBehaviour
         return dir;
     }
 
-    //calculate result
+    //calculate result (moved to static functions)
+    /*
     public int calculateResult(string expression) {
         List<string> expressionList = expression.Split(' ').ToList();
         //pos to number and sign
@@ -82,15 +83,6 @@ public class Select_Square_Script : MonoBehaviour
                 //number
                 //i is used as a temp variable
                 numbers.Add(i);
-                //legacy code
-                /*
-                if (int.TryParse(gridNumbersScript.getGridContent(pos), out i)) {
-                    numbers.Add(i);
-                }
-                else {
-                    Debug.Log("Error: Parsing int failed");
-                }
-                */
             }
             else {
                 //sign
@@ -142,6 +134,7 @@ public class Select_Square_Script : MonoBehaviour
 
         return numbers[0];
     }
+    */
     
     //output expression
     private string expressionToString() {
@@ -181,7 +174,7 @@ public class Select_Square_Script : MonoBehaviour
         */
         //update function word
         string expression = concatExpressionToLastCell(expressionToString(), newPos);
-        int result = calculateResult(expression);
+        int result = Static_Functions.calculateResult(expression);
         functionWordScript.UpdateWordText(expression, result);
     }
 
@@ -251,7 +244,7 @@ public class Select_Square_Script : MonoBehaviour
         }
         
         string expression = expressionToString();
-        int result = calculateResult(expression);
+        int result = Static_Functions.calculateResult(expression);
         //debug code
         Debug.Log("Expression: " + expression + "= " + result);
 
@@ -348,6 +341,8 @@ public class Select_Square_Script : MonoBehaviour
 
         //new problem
         updatePos(currentPos);
+        //debug
+        //Debug.Log("before new problem");
         randomizerScript.newProblem();
         //start the timer
         timerScript.startTimer();
