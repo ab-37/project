@@ -12,12 +12,14 @@ public class Function_Word_Script : MonoBehaviour
     private TextMeshProUGUI expressionTextMesh;
     private TextMeshProUGUI resultTextMesh;
 
+    /*
     private float AutoSetSize(TextMeshProUGUI textMesh, string word)
     {
         return textMesh.fontSize - word.Length * textMesh.fontSize/100;
     }
+    */
 
-    public void UpdateWordText(string expression, int result)
+    public void updateText(string expression, int result)
     {
         /*
         foreach (Transform child in gameObject.transform)
@@ -40,8 +42,13 @@ public class Function_Word_Script : MonoBehaviour
         }
         */
         expressionTextMesh.text = expression;
-        expressionTextMesh.fontSize = AutoSetSize(expressionTextMesh, expression);
+        //expressionTextMesh.fontSize = AutoSetSize(expressionTextMesh, expression);
         resultTextMesh.text = result.ToString();
+    }
+
+    public void clearText() {
+        expressionTextMesh.text = "";
+        resultTextMesh.text = "";
     }
 
     private void Awake() {
@@ -50,7 +57,8 @@ public class Function_Word_Script : MonoBehaviour
     }
     private void Start()
     {
-        UpdateWordText("", 0);
+        //UpdateWordText("", 0);
+        clearText();
     }
 
     private void Update()

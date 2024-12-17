@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Randomizer_Script : MonoBehaviour
 {   
@@ -56,10 +57,11 @@ public class Randomizer_Script : MonoBehaviour
     //private QuestionParameters questionParameters;
     private Problem currentProblem;
     
-    private Select_Square_Script selectSquareScript;
+    //private Select_Square_Script selectSquareScript;
     private Grid_Numbers_Script gridNumbersScript;
     private Goal_Script goalScript;
     private Remaining_Script remainingScript;
+    private Score_Script scoreScript;
 
     /*
     //moved to static functions
@@ -448,6 +450,8 @@ public class Randomizer_Script : MonoBehaviour
 
     //called when reset key is pressed
     public void resetProblem() {
+        //subtract 5 from score
+        scoreScript.addScore(-5);
         gridNumbersScript.resetGrid();
         remainingScript.resetSteps();
     }
@@ -471,6 +475,9 @@ public class Randomizer_Script : MonoBehaviour
         for (int i = 0 ; i < 9 ; ++i) {
             tempGrid[i] = currentProblem.getGridContent(i);
         }
+
+        //subtract 15 from score
+        scoreScript.addScore(-15);
         gridNumbersScript.setOriginalContent(tempGrid);
         goalScript.setGoalNumber(currentProblem.getGoal());
         remainingScript.setOriginalSteps(currentProblem.getSteps());
@@ -511,10 +518,11 @@ public class Randomizer_Script : MonoBehaviour
     private void Awake() {
         //setDefaultParameters();
         //createRandomPath(2, 5);
-        selectSquareScript = gameObject.transform.parent.Find("Select Square").gameObject.GetComponent<Select_Square_Script>();
+        //selectSquareScript = gameObject.transform.parent.Find("Select Square").gameObject.GetComponent<Select_Square_Script>();
         gridNumbersScript = gameObject.transform.parent.Find("Background/Grid Numbers").gameObject.GetComponent<Grid_Numbers_Script>();
         goalScript = gameObject.transform.parent.Find("Background/Goal").gameObject.GetComponent<Goal_Script>();
         remainingScript = gameObject.transform.parent.Find("Background/Remaining").gameObject.GetComponent<Remaining_Script>();
+        scoreScript = gameObject.transform.parent.Find("Background/Score").gameObject.GetComponent<Score_Script>();
 
     }
 

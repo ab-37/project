@@ -175,7 +175,7 @@ public class Select_Square_Script : MonoBehaviour
         //update function word
         string expression = concatExpressionToLastCell(expressionToString(), newPos);
         int result = Static_Functions.calculateResult(expression);
-        functionWordScript.UpdateWordText(expression, result);
+        functionWordScript.updateText(expression, result);
     }
 
     //moved to Randomizer_Script
@@ -221,7 +221,7 @@ public class Select_Square_Script : MonoBehaviour
         selectedSquaresScript.selectSquare(currentPos);
         string expression = gridNumbersScript.getGridContent(currentPos);
         int result = int.Parse(expression);
-        functionWordScript.UpdateWordText(expression, result);
+        functionWordScript.updateText(expression, result);
 
         //string expression = expressionToString();
     }
@@ -248,7 +248,7 @@ public class Select_Square_Script : MonoBehaviour
         //debug code
         Debug.Log("Expression: " + expression + "= " + result);
 
-        functionWordScript.UpdateWordText(expression, result);
+        functionWordScript.updateText(expression, result);
 
         if (goalScript.isGoal(result)) {
             //correct
@@ -338,6 +338,7 @@ public class Select_Square_Script : MonoBehaviour
         gridNumbersScript.showNumbers();
         remainingScript.showText();
         scoreScript.showText();
+        functionWordScript.updateText("", 0);
 
         //new problem
         updatePos(currentPos);
@@ -364,6 +365,7 @@ public class Select_Square_Script : MonoBehaviour
         Static_Variables.lastGameScore = scoreScript.getScore();
 
         //hide the numbers and show time up text
+        functionWordScript.clearText();
         gridNumbersScript.hideNumbers();
         outroScript.showTimesUpText();
         
@@ -416,7 +418,7 @@ public class Select_Square_Script : MonoBehaviour
         isIntroRunning = false;
         isTimeUp = false;
         isOutroRunning = false;
-        initialTimerSecs = 60f;
+        initialTimerSecs = Static_Variables.levelQuestionParameters[Static_Variables.level].getTime();
         //startGame(60f);
         /*
         updatePos(currentPos);

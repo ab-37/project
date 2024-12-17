@@ -26,6 +26,9 @@ public class Score_Script : MonoBehaviour
     //add n to score
     public void addScore(int n) {
         score += n;
+        if (score < 0) {
+            score = 0;
+        }
         updateScoreText();
     }
 

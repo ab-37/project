@@ -4,28 +4,28 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class intBound
+public class IntBound
 {
     public int lowBound;
     public int highBound;
     
     //constructor
-    public intBound(int low = 1, int high = 99) {
+    public IntBound(int low = 1, int high = 99) {
         lowBound = low;
         highBound = high;
     }
     
     //convert tuple to intBound
-    public static implicit operator intBound((int, int) tup) 
-    => new intBound(tup.Item1, tup.Item2);
+    public static implicit operator IntBound((int, int) tup) 
+    => new IntBound(tup.Item1, tup.Item2);
 
     //add bounds together
-    public static intBound operator+(intBound a, intBound b) 
-    => new intBound(a.lowBound + b.lowBound, a.highBound + b.highBound);
+    public static IntBound operator+(IntBound a, IntBound b) 
+    => new IntBound(a.lowBound + b.lowBound, a.highBound + b.highBound);
 
     //subtract bounds
-    public static intBound operator-(intBound a, intBound b)
-    => new intBound(a.lowBound - b.lowBound, a.highBound - b.highBound);
+    public static IntBound operator-(IntBound a, IntBound b)
+    => new IntBound(a.lowBound - b.lowBound, a.highBound - b.highBound);
 
     //copy a bound
     /*
@@ -132,11 +132,12 @@ public class QuestionParameters
     private int stepsLowBound, stepsHighBound; //range of minimum steps needed to complete the question
     private int extraSteps; //number of extra steps given on top of steps needed
     */
-    private intBound goalBound; //range of target number, HAS TO BE A SUBRANGE OF STEP ANSWER BOUND
-    private intBound stepAnswerBound; //range of the answer of every step
-    private intBound[] numbersBound = new intBound[5]; //range of number in each square
+    private float time; //time needed for the level
+    private IntBound goalBound; //range of target number, HAS TO BE A SUBRANGE OF STEP ANSWER BOUND
+    private IntBound stepAnswerBound; //range of the answer of every step
+    private IntBound[] numbersBound = new IntBound[5]; //range of number in each square
     private List<string> availablePaths = new List<string>(); //all available paths
-    private intBound stepsBound; //range of minimum steps needed to complete the question
+    private IntBound stepsBound; //range of minimum steps needed to complete the question
     private int extraSteps; //number of extra steps given on top of steps needed
     private List<string> signs = new List<string>(); //all available signs
 
@@ -147,11 +148,12 @@ public class QuestionParameters
     */
     //case 1: path is a bound
     public QuestionParameters(
-        intBound goalBound,
-        intBound stepAnswerBound,
-        (intBound, intBound, intBound, intBound, intBound) numbersBound,
-        intBound pathBound,
-        intBound stepsBound,
+        float time,
+        IntBound goalBound,
+        IntBound stepAnswerBound,
+        (IntBound, IntBound, IntBound, IntBound, IntBound) numbersBound,
+        IntBound pathBound,
+        IntBound stepsBound,
         int extraSteps,
         bool add = true,
         bool sub = true,
@@ -171,6 +173,7 @@ public class QuestionParameters
         this.numbersBound[3].copy(numbersBound.Item4);
         this.numbersBound[4].copy(numbersBound.Item5);
         */
+        this.time = time;
         this.goalBound = goalBound;
         this.stepAnswerBound = stepAnswerBound;
         this.stepsBound = stepsBound;
@@ -211,17 +214,20 @@ public class QuestionParameters
 
     //case 2: path is a special array of paths
     public QuestionParameters(
-        intBound goalBound,
-        intBound stepAnswerBound,
-        (intBound, intBound, intBound, intBound, intBound) numbersBound,
-        string[] paths,
-        intBound stepsBound,
+        float time,
+        IntBound goalBound,
+        IntBound stepAnswerBound,
+        (IntBound, IntBound, IntBound, IntBound, IntBound) numbersBound,
+        ref string[] paths,
+        IntBound stepsBound,
         int extraSteps,
         bool add = true,
         bool sub = true,
         bool mul = true,
         bool div = false
         ) {
+
+        this.time = time;
         //copy bounds
         this.goalBound = goalBound;
         this.stepAnswerBound = stepAnswerBound;
@@ -267,87 +273,8 @@ public class QuestionParameters
     !!!!!!!!!!!!!!!!!!!
     */
 
-
-    //check if the new path is valid
-    private bool isValidPath(string lastPath, string newPath) {
-        if (!newPath.Contains(lastPath[lastPath.Length - 1])) {
-            //doesn't contain the last square from the last path
-            return false;
-        }
-        if (!newPath.EndsWith(newPath[0].ToString())) {
-            //new path doesn't start from the end of the last path
-            return true;
-        }
-        if ((lastPath + newPath).Distinct().Count() == lastPath.Length + newPath.Length - 1) {
-            //last path and new path only share one square, i.e. end of last path and start of new path
-            //that means it can be done with just one path instead of two
-            return false;
-        }
-        return true;
-    }
-
-    //get path from variables
-    private string getPath(int pathIndex, int filterIndex) {
-        string path = "";
-        foreach (char c in availablePaths[pathIndex]) {
-            //Debug.Log(pathFilter[filterIndex][int.Parse(c.ToString())].ToString()); //debug code
-            path += pathFilter[filterIndex][int.Parse(c.ToString())].ToString();
-        }
-        return path;
-    }
-
-    //generate first path
-    private string generateRandomPath() {
-        //int pathLengthMinus2 = UnityEngine.Random.Range(pathLengthLowBound, pathLengthHighBound + 1) - 2; //length of path - 2
-        int pathIndex = UnityEngine.Random.Range(0, availablePaths.Count); 
-        int filterIndex = UnityEngine.Random.Range(0, pathFilter.Length);
-        return getPath(pathIndex, filterIndex);
-    }
-
-    //generate second path, overloading last function
-    private string generateRandomPath(string lastPath) {
-        //int pathLengthMinus2 = UnityEngine.Random.Range(pathLengthLowBound, pathLengthHighBound + 1) - 2; //length of path - 2
-        int pathIndex; //index of path
-        int filterIndex; //index of filter
-        string path = "";
-        
-        Static_Functions.shuffleList(ref availablePaths);
-        Static_Functions.shuffleArray(ref pathFilter);
-
-        bool pathFound = false;
-        //since the arrays are shuffled, we can iterate one by one
-        for (pathIndex = 0 ; pathIndex < availablePaths.Count ; ++pathIndex) {
-            for (filterIndex = 0 ; filterIndex < pathFilter.Length ; ++filterIndex) {
-
-                path = getPath(pathIndex, filterIndex);
-                if (isValidPath(lastPath, path)) {
-                    pathFound = true;
-                    break;
-                }
-            }
-            if (pathFound) {
-                break;
-            }
-        }
-        if (!pathFound) {
-            Debug.Log("Error: Cannot generate a path. Last path: " + lastPath);
-            return "";
-        }
-        return path;
-    }
-
-
-    //generate all paths needed
-    private void generatePaths(ref List<string> paths, ref int stepsNeeded) {
-        paths.Clear();
-        if (stepsNeeded == 0) {
-            Debug.Log("Error, Steps needed is 0, generating one anyway");
-        }
-        paths.Add(generateRandomPath()); //first path
-        for (int i = 1 ; i < stepsNeeded ; ++i) { //second paths onwards
-            paths.Add(generateRandomPath(paths[i - 1]));
-        }
-    }
+    public float getTime() 
+    => time;
 
     //generate an expression from path to feed to calculateResult in Select_Square_Script
     private string pathToExpression(string path, ref string[] tempGrid) {
@@ -471,6 +398,145 @@ public class QuestionParameters
         return generateNumber(ref squaresUsed, ref problem, ref paths, 0);
     }
 
+    //check if the new path is valid
+    private bool isValidPath(string lastPath, string newPath) {
+        if (!newPath.Contains(lastPath[lastPath.Length - 1])) {
+            //doesn't contain the last square from the last path
+            return false;
+        }
+        if (!newPath.EndsWith(newPath[0].ToString())) {
+            //new path doesn't start from the end of the last path
+            return true;
+        }
+        if ((lastPath + newPath).Distinct().Count() == lastPath.Length + newPath.Length - 1) {
+            //last path and new path only share one square, i.e. end of last path and start of new path
+            //that means it can be done with just one path instead of two
+            return false;
+        }
+        return true;
+    }
+
+    
+    //get path from variables
+    private string getPath(int pathIndex, int filterIndex) {
+        string path = "";
+        foreach (char c in availablePaths[pathIndex]) {
+            //Debug.Log(pathFilter[filterIndex][int.Parse(c.ToString())].ToString()); //debug code
+            path += pathFilter[filterIndex][int.Parse(c.ToString())].ToString();
+        }
+        return path;
+    }
+
+    /*
+    //generate first path
+    private string generateRandomPath() {
+        //int pathLengthMinus2 = UnityEngine.Random.Range(pathLengthLowBound, pathLengthHighBound + 1) - 2; //length of path - 2
+        int pathIndex = UnityEngine.Random.Range(0, availablePaths.Count); 
+        int filterIndex = UnityEngine.Random.Range(0, pathFilter.Length);
+        return getPath(pathIndex, filterIndex);
+    }
+
+    //generate second path, overloading last function
+    private string generateRandomPath(string lastPath) {
+        //int pathLengthMinus2 = UnityEngine.Random.Range(pathLengthLowBound, pathLengthHighBound + 1) - 2; //length of path - 2
+        int pathIndex; //index of path
+        int filterIndex; //index of filter
+        string path = "";
+        
+        Static_Functions.shuffleList(ref availablePaths);
+        Static_Functions.shuffleArray(ref pathFilter);
+
+        bool pathFound = false;
+        //since the arrays are shuffled, we can iterate one by one
+        for (pathIndex = 0 ; pathIndex < availablePaths.Count ; ++pathIndex) {
+            for (filterIndex = 0 ; filterIndex < pathFilter.Length ; ++filterIndex) {
+
+                path = getPath(pathIndex, filterIndex);
+                if (isValidPath(lastPath, path)) {
+                    pathFound = true;
+                    break;
+                }
+            }
+            if (pathFound) {
+                break;
+            }
+        }
+        if (!pathFound) {
+            Debug.Log("Error: Cannot generate a path. Last path: " + lastPath);
+            return "";
+        }
+        return path;
+    }
+
+    //generate all paths needed (old)
+    private void generatePaths(ref List<string> paths, ref int stepsNeeded) {
+        paths.Clear();
+        if (stepsNeeded == 0) {
+            Debug.Log("Error, Steps needed is 0, generating one anyway");
+        }
+        paths.Add(generateRandomPath()); //first path
+        for (int i = 1 ; i < stepsNeeded ; ++i) { //second paths onwards
+            paths.Add(generateRandomPath(paths[i - 1]));
+        }
+    }
+    */
+
+    //generate paths (new algorithm)
+    private bool generatePaths(ref List<string> paths, int stepsNeeded, ref Problem problem, bool isFirstPath) {
+        if (stepsNeeded == 0) {
+            //path generation is done
+            bool[] squareUsed = {false, false, false, false, false, false, false, false, false};
+            foreach (string path in paths) {
+                foreach (char c in path) {
+                    squareUsed[int.Parse(c.ToString())] = true;
+                }
+            }
+            return generateNewGrid(ref squareUsed, ref paths, ref problem);
+        }
+
+        //create a new list of path indexes shuffled
+        List<int> pathIndexList = new List<int>();
+        for (int i = 0 ; i < availablePaths.Count() ; ++i) {
+            pathIndexList.Add(i);
+        }
+        Static_Functions.shuffleList(ref pathIndexList);
+        
+        //used to avoid calling getPath multiple times
+        string nextPath;
+
+        //go through every path and filter
+        foreach (int pathIndex in pathIndexList) {
+            //create a new list of filter indexes shuffled
+            int[] filterIndexList = {0, 1, 2, 3, 4, 5, 6, 7};
+            Static_Functions.shuffleArray(ref filterIndexList);
+
+            foreach (int filterIndex in filterIndexList) {
+                nextPath = getPath(pathIndex, filterIndex);
+                if (!isFirstPath) {
+                    if (!isValidPath(paths.LastOrDefault(), nextPath)) {
+                        //not a valid path, try next path
+                        continue;
+                    }
+                }
+                //add the path
+                paths.Add(nextPath);
+
+                //debug
+                //Debug.Log(stepsNeeded.ToString() + "paths left, Trying path" + paths.LastOrDefault());
+
+                if (generatePaths(ref paths, stepsNeeded - 1, ref problem, false)) {
+                    return true;
+                }
+
+                //path failed, remove last path
+                paths.RemoveAt(paths.Count() - 1);
+            }
+        }
+
+        //if everything failed
+        return false;
+    }
+
     //generate a new problem
     public Problem generateNewProblem() {
         //generate a new problem variable
@@ -482,6 +548,7 @@ public class QuestionParameters
 
         //generate paths
         List<string> paths = new List<string>();
+        /*
         generatePaths(ref paths, ref stepsNeeded);
         
         //check which squares are used
@@ -492,6 +559,10 @@ public class QuestionParameters
             }
         }
         if (!generateNewGrid(ref squareUsed, ref paths, ref problem)) {
+            Debug.Log("Error: Generate new problem failed");
+        }
+        */
+        if (!generatePaths(ref paths, stepsNeeded, ref problem, true)) {
             Debug.Log("Error: Generate new problem failed");
         }
         
