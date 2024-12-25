@@ -31,9 +31,10 @@ public class Select_Square_Script : MonoBehaviour
     private bool isGameActive;
     private bool isIntroDone; //true if intro has played
     private bool isIntroRunning; //true if intro coroutine is running
-    private bool isTimeUp; //true if the time is up
+    private bool isLevelEnded; //true if the level is ended
     private bool isOutroRunning; //true if the outro coroutine is running
-    private float initialTimerSecs; //timer length
+    private int levelMode; //level mode, 1 = countdown, 2 = point requirement
+    private int objective; //objective
 
     private Grid_Numbers_Script gridNumbersScript;
     private Selected_Squares_Script selectedSquaresScript;
@@ -68,73 +69,6 @@ public class Select_Square_Script : MonoBehaviour
         }
         return dir;
     }
-
-    //calculate result (moved to static functions)
-    /*
-    public int calculateResult(string expression) {
-        List<string> expressionList = expression.Split(' ').ToList();
-        //pos to number and sign
-        List<int> numbers = new List<int>();
-        List<string> signs = new List<string>();
-        int i;
-        foreach (string element in expressionList) {
-            //Debug.Log(element);
-            if (int.TryParse(element, out i)) {
-                //number
-                //i is used as a temp variable
-                numbers.Add(i);
-            }
-            else {
-                //sign
-                signs.Add(element);
-            }
-        }
-        
-        if (numbers.Count() == signs.Count()) {
-            //last sign not followed by anything, delete last sign
-            signs.RemoveAt(signs.Count() - 1);
-        }
-        
-
-        //process mult and div
-        i = 0; //i is used as an iterator
-        while (i < signs.Count()) {
-            if (signs[i] == "*") {
-                numbers[i] *= numbers[i + 1];
-                numbers.RemoveAt(i + 1);
-                signs.RemoveAt(i);
-            }
-            else if (signs[i] == "/") {
-                if (numbers[i + 1] == 0) {
-                    //divide by 0, defaults value to 0
-                    Debug.Log("Divide by zero!");
-                    numbers[i] = 0;
-                }
-                else {
-                    numbers[i] /= numbers[i + 1];
-                }
-                numbers.RemoveAt(i + 1);
-                signs.RemoveAt(i);
-            }
-            else {
-                ++i;
-            }
-        }
-        //process add and sub
-        while (signs.Any()) {
-            if (signs[0] == "+") {
-                numbers[0] += numbers[1];
-            }
-            else {
-                numbers[0] -= numbers[1];
-            }
-            numbers.RemoveAt(1);
-            signs.RemoveAt(0);
-        }
-
-        return numbers[0];
-    }
-    */
     
     //output expression
     private string expressionToString() {
@@ -177,31 +111,6 @@ public class Select_Square_Script : MonoBehaviour
         int result = Static_Functions.calculateResult(expression);
         functionWordScript.updateText(expression, result);
     }
-
-    //moved to Randomizer_Script
-    /*
-    //reset grid by pressing reset
-    public void resetGrid() {
-        //gridNumbersScript.resetGrid();
-        //goalScript.setGoalNumber(23); //placeholder code, should be a generated number
-        //remainingScript.setOriginalSteps(3); //placeholder code, should be a generated number
-    }
-
-    //new grid by pressing new question
-    public void newGrid() {
-        
-        
-        //string pathString = randomizerScript.generateRandomPath(2, 5);
-        //Debug.Log("first path"+pathString); //placeholder code
-        //string pathString2 = randomizerScript.generateRandomPath(2, 5, pathString);
-        //Debug.Log(pathString + ", " + pathString2); //placeholder code
-        
-        //int lastPoint = randomizerScript.getLastPointFromPath(pathString);
-        //Debug.Log("second path:"+randomizerScript.generateRandomPathFrom(2,5,lastPoint)); //placeholder code
-        
-        resetGrid();
-    }
-    */
 
     //press or release select
     private void selectPress()
@@ -255,6 +164,14 @@ public class Select_Square_Script : MonoBehaviour
             Debug.Log("Correct!");
             //add score
             scoreScript.addScore(30 + remainingScript.getCurrentSteps() * 10);
+            //countup level score check
+            if (levelMode == 2) {
+                if (scoreScript.getScore() >= objective) {
+                    isLevelEnded = true;
+                    timerScript.stopTimer();
+                    goto resetEverything;
+                }
+            }
             randomizerScript.newProblem();
         }
         else {
@@ -262,6 +179,7 @@ public class Select_Square_Script : MonoBehaviour
             //moves - 1
         }
 
+        resetEverything:
         selectState = false;
         selectedSquaresScript.deselectAllSquares();
         selectedPositions.Clear();
@@ -312,9 +230,13 @@ public class Select_Square_Script : MonoBehaviour
     }
 
     //START THE GAME (COROUTINE)
-    private IEnumerator startGameCoroutine(float timerLength) {
-        //set timer so player can check the time
-        timerScript.setTime(timerLength);
+    private IEnumerator startGameCoroutine() {
+        //set the timer 
+        timerScript.setTimerMode(levelMode == 1);
+        timerScript.setTime(0);
+        if (levelMode == 1) {
+            timerScript.setTime(objective);
+        }
 
         //clear the score
         scoreScript.clearScore();
@@ -361,13 +283,20 @@ public class Select_Square_Script : MonoBehaviour
         //game is now inactive
         isGameActive = false;
 
-        //return score to static variables
-        Static_Variables.lastGameScore = scoreScript.getScore();
+        //return score or time to static variables (obsolete, now check for countup levels)
+        if (levelMode == 1) {
+            Static_Variables.lastGameScore = scoreScript.getScore();
+            Debug.Log("lastGameScore: " + Static_Variables.lastGameScore.ToString());
+        }
+        else {
+            Static_Variables.lastGameTime = timerScript.getTime();
+            Debug.Log("lastGameTime: " + Static_Variables.lastGameTime.ToString());
+        }
 
         //hide the numbers and show time up text
         functionWordScript.clearText();
         gridNumbersScript.hideNumbers();
-        outroScript.showTimesUpText();
+        outroScript.showLevelEndedText();
         
         //after a second, show press space to return text
         yield return new WaitForSeconds(1);
@@ -378,7 +307,6 @@ public class Select_Square_Script : MonoBehaviour
         isOutroRunning = false;
 
         //switch scenes
-        Debug.Log("lastGameScore: " + Static_Variables.lastGameScore.ToString());
         SceneManager.LoadScene("Dialogue Main");
     }
     
@@ -416,9 +344,11 @@ public class Select_Square_Script : MonoBehaviour
         isGameActive = false;
         isIntroDone = false;
         isIntroRunning = false;
-        isTimeUp = false;
+        isLevelEnded = false;
         isOutroRunning = false;
-        initialTimerSecs = Static_Variables.levelQuestionParameters[Static_Variables.level].getTime();
+
+        levelMode = Static_Variables.levelQuestionParameters[Static_Variables.level].getLevelMode();
+        objective = Static_Variables.levelQuestionParameters[Static_Variables.level].getObjective();
         //startGame(60f);
         /*
         updatePos(currentPos);
@@ -431,11 +361,11 @@ public class Select_Square_Script : MonoBehaviour
         if (!isIntroDone) {
             if (!isIntroRunning) {
                 isIntroRunning = true;
-                StartCoroutine(startGameCoroutine(initialTimerSecs));
+                StartCoroutine(startGameCoroutine());
             }
             return;
         }
-        if (isTimeUp) {
+        if (isLevelEnded) {
             if (!isOutroRunning) {
                 isOutroRunning = true;
                 StartCoroutine(EndGame()); //scene should switch here
@@ -444,30 +374,32 @@ public class Select_Square_Script : MonoBehaviour
         }
         //in game
         if (isGameActive) {
-            if (timerScript.isTimeOver()) {
-                isTimeUp = true;
+            //game end check
+            if (levelMode == 1) {
+                if (timerScript.isTimeOver()) {
+                    isLevelEnded = true;
+                    return;
+                }
             }
-            else {
-                int newDirection = directionHandler();
-                if (Input.GetKeyDown(resetKey)) {
-                    randomizerScript.resetProblem();
-                }
-                if (Input.GetKeyDown(newQuestionKey)) {
-                    randomizerScript.newProblem();
-                }
+            int newDirection = directionHandler();
+            if (Input.GetKeyDown(resetKey)) {
+                randomizerScript.resetProblem();
+            }
+            if (Input.GetKeyDown(newQuestionKey)) {
+                randomizerScript.newProblem(true);
+            }
 
-                if (Input.GetKeyDown(selectKey)) {
-                    selectPress();
-                }
-                if (Input.GetKeyUp(selectKey) && selectState) {
-                    selectRelease();
-                }
+            if (Input.GetKeyDown(selectKey)) {
+                selectPress();
+            }
+            if (Input.GetKeyUp(selectKey) && selectState) {
+                selectRelease();
+            }
 
-                if (newDirection != 0)
-                {
-                    //Debug.Log(newDirection);
-                    moveSelectSquare(newDirection);
-                }
+            if (newDirection != 0)
+            {
+                //Debug.Log(newDirection);
+                moveSelectSquare(newDirection);
             }
         }
     }

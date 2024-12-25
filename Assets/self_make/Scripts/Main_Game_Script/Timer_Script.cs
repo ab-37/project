@@ -10,6 +10,7 @@ public class Timer_Script : MonoBehaviour
     private int centisecond; //the hundredth part of fullTime (rounded down)
     private bool isTicking; //if the time is ticking
     private float originalTime; //time to set when resetting
+    private bool timerMode; //timer mode, true = countdown, false = countup
 
     private TextMeshProUGUI timerTextMesh;
 
@@ -22,6 +23,10 @@ public class Timer_Script : MonoBehaviour
             }
             timerTextMesh.text = second.ToString() + "." + centisecondText;
         }
+    }
+
+    public void setTimerMode(bool mode) {
+        timerMode = mode;
     }
 
     //start or resume timer
@@ -75,6 +80,10 @@ public class Timer_Script : MonoBehaviour
         clearTime();
         Debug.Log("Time's up!");
     }
+
+    //get time
+    public float getTime() 
+    => fullTime;
     
     private void Awake() {
         timerTextMesh = gameObject.transform.Find("Timer Text").GetComponent<TextMeshProUGUI>();
@@ -89,14 +98,18 @@ public class Timer_Script : MonoBehaviour
 
     private void Update() {
         if (isTicking) {
-            fullTime -= Time.deltaTime;
-            if (fullTime <= 0f) {
-                //timer ended
-                timerEnded();
+            if (timerMode) {
+                fullTime -= Time.deltaTime;
+                if (fullTime <= 0f) {
+                    //timer ended
+                    timerEnded();
+                    return;
+                }
             }
             else {
-                updateTime();
+                fullTime += Time.deltaTime;
             }
+            updateTime();
         }
     }
 }

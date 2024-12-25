@@ -672,7 +672,7 @@ GameObject:
   - component: {fileID: 180135538}
   - component: {fileID: 180135537}
   m_Layer: 0
-  m_Name: Times Up Text
+  m_Name: Level Ended Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -717,7 +717,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Time's Up!
+  m_text: Level Ended
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0757db6fb258dfb4a823dd96fde413ae, type: 2}
   m_sharedMaterial: {fileID: 811551064349003424, guid: 0757db6fb258dfb4a823dd96fde413ae, type: 2}
@@ -744,7 +744,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 220
+  m_fontSize: 199.8
   m_fontSizeBase: 220
   m_fontWeight: 400
   m_enableAutoSizing: 1

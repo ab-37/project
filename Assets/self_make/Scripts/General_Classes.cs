@@ -132,7 +132,8 @@ public class QuestionParameters
     private int stepsLowBound, stepsHighBound; //range of minimum steps needed to complete the question
     private int extraSteps; //number of extra steps given on top of steps needed
     */
-    private float time; //time needed for the level
+    private int objective; //time limit or points needed for the level
+    private int levelMode; //level mode, 1 = countdown, 2 = point requirement
     private IntBound goalBound; //range of target number, HAS TO BE A SUBRANGE OF STEP ANSWER BOUND
     private IntBound stepAnswerBound; //range of the answer of every step
     private IntBound[] numbersBound = new IntBound[5]; //range of number in each square
@@ -148,7 +149,8 @@ public class QuestionParameters
     */
     //case 1: path is a bound
     public QuestionParameters(
-        float time,
+        int objective,
+        int levelMode,
         IntBound goalBound,
         IntBound stepAnswerBound,
         (IntBound, IntBound, IntBound, IntBound, IntBound) numbersBound,
@@ -173,7 +175,8 @@ public class QuestionParameters
         this.numbersBound[3].copy(numbersBound.Item4);
         this.numbersBound[4].copy(numbersBound.Item5);
         */
-        this.time = time;
+        this.objective = objective;
+        this.levelMode = levelMode;
         this.goalBound = goalBound;
         this.stepAnswerBound = stepAnswerBound;
         this.stepsBound = stepsBound;
@@ -214,7 +217,8 @@ public class QuestionParameters
 
     //case 2: path is a special array of paths
     public QuestionParameters(
-        float time,
+        int objective,
+        int levelMode,
         IntBound goalBound,
         IntBound stepAnswerBound,
         (IntBound, IntBound, IntBound, IntBound, IntBound) numbersBound,
@@ -227,7 +231,8 @@ public class QuestionParameters
         bool div = false
         ) {
 
-        this.time = time;
+        this.objective = objective;
+        this.levelMode = levelMode;
         //copy bounds
         this.goalBound = goalBound;
         this.stepAnswerBound = stepAnswerBound;
@@ -273,8 +278,11 @@ public class QuestionParameters
     !!!!!!!!!!!!!!!!!!!
     */
 
-    public float getTime() 
-    => time;
+    public int getLevelMode() 
+    => levelMode;
+
+    public int getObjective() 
+    => objective;
 
     //generate an expression from path to feed to calculateResult in Select_Square_Script
     private string pathToExpression(string path, ref string[] tempGrid) {
