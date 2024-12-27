@@ -405,7 +405,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &331519771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -634,7 +634,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &659444448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2428,6 +2428,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1809241318}
   - component: {fileID: 1809241319}
+  - component: {fileID: 1809241320}
   m_Layer: 0
   m_Name: Characters
   m_TagString: Untagged
@@ -2457,7 +2458,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1809241316}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a60ccad91b474843b1467e7e9483177, type: 3}
   m_Name: 
@@ -2473,6 +2474,22 @@ MonoBehaviour:
   rag: {fileID: 659444448}
   backgroundText: {fileID: 4900000, guid: cfe9e1f77815adb41a92c605d8987847, type: 3}
   numRAGResults: 3
+--- !u!114 &1809241320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809241316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10067dc2d1fcd814a825f8cbc214cc71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scriptfile: {fileID: 4900000, guid: 010f90b1e3b8ef74b921f688243f9c0b, type: 3}
+  Kate: {fileID: 1949007489}
+  Hao: {fileID: 1749287517}
+  Eva: {fileID: 983279838}
 --- !u!1 &1898115685
 GameObject:
   m_ObjectHideFlags: 0
