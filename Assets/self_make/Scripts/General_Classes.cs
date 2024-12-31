@@ -141,7 +141,7 @@ public class QuestionParameters
     private IntBound stepsBound; //range of minimum steps needed to complete the question
     private int extraSteps; //number of extra steps given on top of steps needed
     private List<string> signs = new List<string>(); //all available signs
-
+    private int specialMode; //special cases
     /*
     !!!!!!!!!!!!!!!!!!!!!
     START OF CONSTRUCTORS
@@ -160,7 +160,8 @@ public class QuestionParameters
         bool add = true,
         bool sub = true,
         bool mul = true,
-        bool div = false
+        bool div = false,
+        int specialMode = 0
         ) {
         //copy bounds
         /*
@@ -212,7 +213,9 @@ public class QuestionParameters
             Debug.Log("no paths, adding \"012\"");
             availablePaths.Add("012");
         }
-
+        
+        //special mode
+        this.specialMode = specialMode;
     }
 
     //case 2: path is a special array of paths
@@ -228,7 +231,8 @@ public class QuestionParameters
         bool add = true,
         bool sub = true,
         bool mul = true,
-        bool div = false
+        bool div = false,
+        int specialMode = 0
         ) {
 
         this.objective = objective;
@@ -266,6 +270,9 @@ public class QuestionParameters
             Debug.Log("no paths, adding \"012\"");
             availablePaths.Add("012");
         }
+
+        //special mode
+        this.specialMode = specialMode;
     }
 
     //case 3: empty constructor
@@ -329,6 +336,14 @@ public class QuestionParameters
             //out of bounds
             return false;
         }
+
+        //check if the goal is one of the numbers in the grid
+        for (int i = 0 ; i <= 8 ; i += 2) {
+            if (lastAnswer == int.Parse(problem.getGridContent(i))) {
+                return false;
+            }
+        }
+
         problem.setGoal(lastAnswer);
         return true;
     }
@@ -343,7 +358,7 @@ public class QuestionParameters
             //int g = generateGoal();
             //return g >= goalLowBound && g <= goalHighBound;
         }
-        if (!squaresUsed[signSquare * 2 + 1]) {
+        if (specialMode == 0 && (!squaresUsed[signSquare * 2 + 1])) {
             //this sign is not used, generate a random sign
             problem.setGrid(signSquare * 2 + 1, signs[UnityEngine.Random.Range(0, signs.Count)]);
             return generateSigns(ref squaresUsed, ref problem, ref paths, signSquare + 1);
@@ -356,6 +371,19 @@ public class QuestionParameters
         }
         //shuffle the list
         Static_Functions.shuffleList(ref signsIndexList);
+
+        //special mode 1: all same signs
+        if (specialMode == 1) {
+            foreach (int i in signsIndexList) {
+                for (int j = 1 ; j <= 7 ; j += 2) {
+                    problem.setGrid(j, signs[i]);
+                }
+                if (isValidProblem(ref problem, ref paths)) {
+                    return true;
+                }
+            }
+            return false;
+        }
 
         //check if the sign can be used
         foreach (int i in signsIndexList) {
