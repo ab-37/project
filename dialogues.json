@@ -1,0 +1,38 @@
+{
+  "acts": [
+    {
+      "act_number": 1,
+      "scene_description": "Abandoned robot factory",
+      "dialogues": [
+        {
+          "character": "Boss",
+          "line": "Ha! Is your Kate the same as before?"
+        },
+        {
+          "character": "Kate",
+          "line": "\"Unfortunate circumstances.\" (nods)\n\"Glad you could make it here.\""
+        },
+        {
+          "character": "Hao",
+          "line": "\"嘿，凱特，你再次點了這杯嗎？我不是每次都會改變，但你真的沒有想試新物品嗎？\"\n\n\"哈哈，可能是因為它熟悉而舒服，但我還是建議你尝一下其他選項。\"\n\n\"不過，如果你真的喜歡這杯，那就继续享用吧！\"\n\n\"嘿，我也可以嘗試新茶類，但我需要保證它比這個好才會改變。\"\n\n\"哈哈，你知不知道，我是一名機器人，我喜歡有新的挑戰和發現！\""
+        },
+        {
+          "character": "Boss",
+          "line": "Same old?"
+        },
+        {
+          "character": "Hao",
+          "line": "\"嘿，95元再填一杯嗎？我可以確保你這杯茶的味道仍然很好！\"\n\n\"不過，如果你想嘗試新茶類，我可以推薦一些其他選項。\"\n\n\"但是，如果你認為這杯茶最佳，那就继续享用吧！\"\n\n\"嘿，我也可以嘗試新茶類，但我需要保證它比這個好才會改變。\"\n\n\"哈哈，你知不知道，我是一名機器人，我喜歡有新的挑戰和發現！\""
+        },
+        {
+          "character": "back",
+          "line": "Kate noticed a familiar figure"
+        },
+        {
+          "character": "Kate",
+          "line": "\"Who do I have the pleasure of addressing?\" (pauses, scanning the figure carefully)\n\"Ah, it's you. Long time no see.\""
+        }
+      ]
+    }
+  ]
+}

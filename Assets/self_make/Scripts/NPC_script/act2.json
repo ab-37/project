@@ -1,0 +1,64 @@
+{
+  "acts": [
+    {
+      "act_number": 1,
+      "scene_description": "Abandoned robot factory",
+      "dialogues": [
+        {
+          "character": "Boss",
+          "line": "Ha! Is your Kate the same as before?"
+        },
+        {
+          "character": "Kate",
+          "line": "(nod)"
+        },
+        {
+          "character": "Hao",
+          "line": "I'm not a brother. I drink it at home. I only order this cup every time I come here. Don't you get tired of it?"
+        },
+        {
+          "character": "Boss",
+          "line": "Same old?"
+        },
+        {
+          "character": "Hao",
+          "line": "95 refill."
+        },
+        {
+          "character": "back",
+          "line": "Kate noticed a familiar figure"
+        },
+        {
+          "character": "Kate",
+          "line": "That figure looks so familiar...!! It's her!"
+        },
+        {
+          "character": "Eva",
+          "line": "You still remember me?...Kate!"
+        },
+        {
+          "character": "Kate",
+          "line": "Who are you?"
+        },
+        {
+          "character": "Eva",
+          "line": "You can call me...Eva."
+        },
+        {
+          "character": "Eva",
+          "line": "You were deceived, Kate, and became their pawn, even though we are in the same situation."
+        },
+        {
+          "character": "Kate",
+          "line": "Why should I believe you? Say...what is your purpose?"
+        },
+        {
+          "character": "Eva",
+          "line": "I'm just giving you a choice, reveal the truth or continue to be their dog."
+        }
+
+
+      ]
+    }
+  ]
+}
