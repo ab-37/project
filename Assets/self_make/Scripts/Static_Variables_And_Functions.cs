@@ -11,7 +11,7 @@ public static class Static_Variables
     public static string blockRuning;//save what is it stage
 
     //level number
-    public static int level = 7;
+    public static int level = 2;
     //level data
 
     public static string[][] specialPaths = {
@@ -21,7 +21,7 @@ public static class Static_Variables
         new string[] {"012", "014", "452"}
     };
 
-    //needs 12 levels
+    //needs ? levels
     public static QuestionParameters[] levelQuestionParameters = {
         //id 0
         new QuestionParameters(
@@ -29,7 +29,7 @@ public static class Static_Variables
             ((1, 9), (1, 9), (1, 9), (1, 9), (1, 9)),
             (2, 5), (1, 1), 0,
             true, false, false, false),
-        //id 1
+        //id 1, might need tweaks
         new QuestionParameters(
             150, 2, (20, 56), (1, 56), 
             ((1, 4), (2, 5), (1, 8), (3, 6), (4, 7)),
@@ -66,8 +66,7 @@ public static class Static_Variables
             30, 1, (1, 99), (1, 99),
             ((1, 9), (1, 9), (1, 9), (1, 9), (1, 9)),
             ref specialPaths[1], (1, 1), 0,
-            true, true, true, false, 1
-        )
+            true, true, true, false, 1)
     };
 }
 
