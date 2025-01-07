@@ -46,6 +46,7 @@ public class Select_Square_Script : MonoBehaviour
     private Timer_Script timerScript;
     private Intro_Script introScript;
     private Outro_Script outroScript;
+    private Target_Script targetScript;
 
     //key input handlers
     private int directionHandler()
@@ -231,11 +232,17 @@ public class Select_Square_Script : MonoBehaviour
 
     //START THE GAME (COROUTINE)
     private IEnumerator startGameCoroutine() {
-        //set the timer 
+        //set the timer
         timerScript.setTimerMode(levelMode == 1);
         timerScript.setTime(0);
+        
         if (levelMode == 1) {
             timerScript.setTime(objective);
+        }
+        //show target text if needed
+        else if (levelMode == 2) {
+            targetScript.setTarget(objective);
+            targetScript.showText();
         }
 
         //clear the score
@@ -336,6 +343,7 @@ public class Select_Square_Script : MonoBehaviour
         timerScript = gameObject.transform.parent.Find("Background/Timer").GetComponent<Timer_Script>();
         introScript = gameObject.transform.parent.Find("Transitions/Intro").GetComponent<Intro_Script>();
         outroScript = gameObject.transform.parent.Find("Transitions/Outro").GetComponent<Outro_Script>();
+        targetScript = gameObject.transform.parent.Find("Background/Target").GetComponent<Target_Script>();
 
     }
 

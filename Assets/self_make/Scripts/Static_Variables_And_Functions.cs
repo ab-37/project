@@ -11,62 +11,84 @@ public static class Static_Variables
     public static string blockRuning;//save what is it stage
 
     //level number
-    public static int level = 2;
+    public static int level = 8;
     //level data
 
     public static string[][] specialPaths = {
         //from the middle, without all squares
         new string[] {"452", "45210", "4521036"},
         //only length 2
-        new string[] {"012", "014", "452"}
+        //new string[] {"012", "014", "452"},
+        //only length 2 and 3
+        //new string[] {"012", "014", "452", "01254", "01258", "01436", "01476", "01478", "01458", "01452", "45210"}
     };
 
     //needs ? levels
     public static QuestionParameters[] levelQuestionParameters = {
-        //id 0
+        //id 0, tutorial
         new QuestionParameters(
-            150, 2, (10, 45), (10, 45), 
-            ((1, 9), (1, 9), (1, 9), (1, 9), (1, 9)),
-            (2, 5), (1, 1), 0,
-            true, false, false, false),
-        //id 1, might need tweaks
+            200, 2, (10, 50), (1, 50), 
+            ((2, 5), (2, 5), (2, 5), (2, 5), (2, 5)),
+            (2, 3), (1, 2), 0
+        ),
+        //id 1, unused
         new QuestionParameters(
             150, 2, (20, 56), (1, 56), 
             ((1, 4), (2, 5), (1, 8), (3, 6), (4, 7)),
             (3, 5), (2, 2), 0,
-            true, false, false, false),
-        //id 2
+            true, false, false, false
+        ),
+        //id 2, level 1
         new QuestionParameters(
-            150, 2, (10, 50), (1, 50),
+            300, 2, (10, 50), (1, 50),
             ((1, 7), (1, 7), (1, 7), (1, 7), (1, 7)),
-            (2, 4), (1, 2), 1),
-        //id 3
+            (2, 3), (1, 2), 1
+        ),
+        //id 3, unused
         new QuestionParameters(
             120, 1, (10, 50), (1, 50), 
             ((1, 7), (1, 7), (1, 7), (1, 7), (1, 7)),
-            (2, 4), (1, 1), 1),
-        //id 4
+            (2, 4), (1, 1), 1
+        ),
+        //id 4, level 2
         new QuestionParameters(
             120, 1, (10, 50), (1, 50), 
             ((1, 7), (1, 7), (1, 7), (1, 7), (1, 7)),
-            (2, 4), (1, 2), 1),
-        //id 5
+            (2, 4), (1, 2), 1
+        ),
+        //id 5, special level
         new QuestionParameters(
-            90, 1, (75, 400), (0, 500), 
+            60, 1, (75, 400), (0, 500), 
             ((15, 75), (15, 75), (300, 500), (15, 75), (15, 75)),
             ref specialPaths[0], (1, 1), 0,
-            false, true, false, false),
-        //id 6
+            false, true, false, false, 1
+        ),
+        //id 6, unused
         new QuestionParameters(
             200, 2, (10, 50), (1, 50), 
             ((1, 7), (1, 7), (1, 7), (1, 7), (1, 7)),
-            (2, 4), (1, 1), 1),
-        //id 7
+            (2, 4), (1, 1), 1
+        ),
+        //id 7, special level
         new QuestionParameters(
             30, 1, (1, 99), (1, 99),
             ((1, 9), (1, 9), (1, 9), (1, 9), (1, 9)),
-            ref specialPaths[1], (1, 1), 0,
-            true, true, true, false, 1)
+            (2, 2), (1, 1), 0,
+            true, true, true, false, 1
+        ),
+        //id 8, special level
+        new QuestionParameters(
+            120, 1, (1000, 10000), (10, 10000),
+            ((10, 25), (10, 25), (10, 25), (10, 25), (10, 25)),
+            (3, 3), (1, 1), 0,
+            false, false, true, false, 1
+        ),
+        //id 9, level 3
+        new QuestionParameters(
+            120, 1, (10, 99), (1, 99),
+            ((1, 9), (1, 9), (1, 9), (1, 9), (1, 9)),
+            (2, 5), (1, 1), 1
+        )
     };
 }
 
