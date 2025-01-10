@@ -402,6 +402,7 @@ public class Select_Square_Script : MonoBehaviour
             }
             if (Input.GetKeyUp(selectKey) && selectState) {
                 selectRelease();
+                selectedSquaresScript.allSquareSpawnClikVFX();
             }
 
             if (newDirection != 0)

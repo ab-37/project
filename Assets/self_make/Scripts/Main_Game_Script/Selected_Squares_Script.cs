@@ -7,6 +7,7 @@ public class Selected_Squares_Script : MonoBehaviour
 {
     private GameObject[] tileObject = new GameObject[9];
     private bool[] isSelected = new bool[9];
+    public GameObject clickVFX;
 
     public bool isSquareSelected(int square) {
         return isSelected[square];
@@ -27,6 +28,25 @@ public class Selected_Squares_Script : MonoBehaviour
         isSelected[square] = true;
         updateSquare(square);
     }
+
+    public void spawnClickVFX(GameObject square)
+    {
+        if (clickVFX != null){
+            var vfx = Instantiate(clickVFX, square.transform.position, Quaternion.identity) as GameObject;
+            vfx.transform.SetParent(square.transform);
+            var ps =vfx.GetComponent<ParticleSystem>();
+            Destroy(vfx, ps.main.duration + ps.main.startLifetime.constantMax);
+        }
+    }
+    public void allSquareSpawnClikVFX()
+    {
+        for(int i=0;i<9;i++)
+        {
+            if (isSelected[i])
+                spawnClickVFX(tileObject[i]);
+        }
+    }
+
     private void Awake() {
         for (int i = 0 ; i < 9 ; ++i) {
             //get child objects
