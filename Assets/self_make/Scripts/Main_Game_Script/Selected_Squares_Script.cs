@@ -29,6 +29,7 @@ public class Selected_Squares_Script : MonoBehaviour
         updateSquare(square);
     }
 
+    
     public void spawnClickVFX(GameObject square)
     {
         if (clickVFX != null){
@@ -38,7 +39,7 @@ public class Selected_Squares_Script : MonoBehaviour
             Destroy(vfx, ps.main.duration + ps.main.startLifetime.constantMax);
         }
     }
-    public void allSquareSpawnClikVFX()
+    public void allSquareSpawnClickVFX()
     {
         for(int i=0;i<9;i++)
         {
@@ -46,6 +47,7 @@ public class Selected_Squares_Script : MonoBehaviour
                 spawnClickVFX(tileObject[i]);
         }
     }
+    
 
     private void Awake() {
         for (int i = 0 ; i < 9 ; ++i) {

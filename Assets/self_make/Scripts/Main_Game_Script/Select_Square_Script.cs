@@ -47,6 +47,7 @@ public class Select_Square_Script : MonoBehaviour
     private Intro_Script introScript;
     private Outro_Script outroScript;
     private Target_Script targetScript;
+    private Sound_Handler_Script soundHandlerScript;
 
     //key input handlers
     private int directionHandler()
@@ -127,6 +128,10 @@ public class Select_Square_Script : MonoBehaviour
             Debug.Log("Select failed, no more steps");
             return;
         }
+
+        //play sfx
+        soundHandlerScript.playSFX("Select");
+
         selectState = true;
         selectedSquaresScript.selectSquare(currentPos);
         string expression = gridNumbersScript.getGridContent(currentPos);
@@ -165,6 +170,10 @@ public class Select_Square_Script : MonoBehaviour
             Debug.Log("Correct!");
             //add score
             scoreScript.addScore(30 + remainingScript.getCurrentSteps() * 10);
+
+            //play correct sfx
+            soundHandlerScript.playSFX("Correct");
+
             //countup level score check
             if (levelMode == 2) {
                 if (scoreScript.getScore() >= objective) {
@@ -177,7 +186,13 @@ public class Select_Square_Script : MonoBehaviour
         }
         else {
             gridNumbersScript.setGridContent(realUpdatePos, result.ToString());
-            //moves - 1
+            //check if no remaining steps, play sfx
+            if (remainingScript.hasSteps()) {
+                soundHandlerScript.playSFX("Select");
+            }
+            else {
+                soundHandlerScript.playSFX("Wrong");
+            }
         }
 
         resetEverything:
@@ -222,10 +237,13 @@ public class Select_Square_Script : MonoBehaviour
         if (isInvalidMovement(newPos, dir)) {
             return;
         } 
+        
+        //play sfx
+        soundHandlerScript.playSFX("Tick");
+
         if (selectState)
         {
             trySelect(newPos);
-
         }
         updatePos(newPos);
     }
@@ -329,7 +347,6 @@ public class Select_Square_Script : MonoBehaviour
         spaceKey = KeyCode.Space;
         unitVectorX = squareLength * Vector3.right;
         unitVectorY = squareLength * Vector3.up;
-        currentPos = 4;
         //lastPos = -1;
         //squareLength = 240;
 
@@ -344,11 +361,14 @@ public class Select_Square_Script : MonoBehaviour
         introScript = gameObject.transform.parent.Find("Transitions/Intro").GetComponent<Intro_Script>();
         outroScript = gameObject.transform.parent.Find("Transitions/Outro").GetComponent<Outro_Script>();
         targetScript = gameObject.transform.parent.Find("Background/Target").GetComponent<Target_Script>();
+        soundHandlerScript = gameObject.transform.parent.Find("Sound Handler").GetComponent<Sound_Handler_Script>();
 
     }
 
     private void Start()
     {
+        currentPos = 4;
+        updatePos(4);
         isGameActive = false;
         isIntroDone = false;
         isIntroRunning = false;
@@ -402,7 +422,7 @@ public class Select_Square_Script : MonoBehaviour
             }
             if (Input.GetKeyUp(selectKey) && selectState) {
                 selectRelease();
-                selectedSquaresScript.allSquareSpawnClikVFX();
+                selectedSquaresScript.allSquareSpawnClickVFX();
             }
 
             if (newDirection != 0)

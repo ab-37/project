@@ -14,13 +14,19 @@ public class Randomizer_Script : MonoBehaviour
     private Goal_Script goalScript;
     private Remaining_Script remainingScript;
     private Score_Script scoreScript;
+    private Sound_Handler_Script soundHandlerScript;
 
     //called when reset key is pressed
     public void resetProblem() {
+        if (remainingScript.isNoStepsUsed()) {
+            return;
+        }
         //subtract 5 from score
         scoreScript.addScore(-5);
         gridNumbersScript.resetGrid();
         remainingScript.resetSteps();
+        //play sfx
+        soundHandlerScript.playSFX("Reset Question");
     }
 
     //called when new problem key is pressed
@@ -38,6 +44,8 @@ public class Randomizer_Script : MonoBehaviour
         if (isManualReset) {
             //subtract 15 from score
             scoreScript.addScore(-15);
+            //play sfx
+            soundHandlerScript.playSFX("New Question");
         }
         gridNumbersScript.setOriginalContent(tempGrid);
         goalScript.setGoalNumber(currentProblem.getGoal());
@@ -51,6 +59,7 @@ public class Randomizer_Script : MonoBehaviour
         goalScript = gameObject.transform.parent.Find("Background/Goal").gameObject.GetComponent<Goal_Script>();
         remainingScript = gameObject.transform.parent.Find("Background/Remaining").gameObject.GetComponent<Remaining_Script>();
         scoreScript = gameObject.transform.parent.Find("Background/Score").gameObject.GetComponent<Score_Script>();
+        soundHandlerScript = gameObject.transform.parent.Find("Sound Handler").gameObject.GetComponent<Sound_Handler_Script>();
 
     }
 
