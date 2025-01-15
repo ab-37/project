@@ -1,0 +1,25 @@
+{
+    "acts":[
+        {
+            "act_number": 1,
+      "scene_description": "廢棄的機器人工廠",
+      "dialogues": [
+        { "character": "Boss", "line":"呵!有你的凱特，老樣子嗎?" },
+        { "character": "Kate", "line":"(點頭)" },
+        { "character": "Hao" , "line": "不是老哥，在家也喝，每次來這也只點這杯，不膩嗎?" },
+        { "character": "Boss" , "line":"老樣子?" },
+        { "character": "Hao", "line":"95加滿。" },
+        { "character": "back", "line":"凱特注意到熟悉的身影" },
+        { "character": "Kate", "line":"那個身影好眼熟...!!是她!" },
+        { "character": "Eva" , "line": "竟然還記得我嗎?…凱特!" },
+        { "character": "Kate", "line":"你是誰？" },
+        { "character": "Eva" , "line":"你可以叫我…伊娃。" },
+        { "character": "Eva" , "line":"你被欺騙了，凱特，淪為他們的棋子，明明我們的處境是一樣的。" },
+        { "character": "Kate", "line":"我為何要相信你？說…你們的目的為何 ?" },
+        { "character": "Eva" , "line":"我只是給你選擇的機會，揭露真相或者繼續做他們的狗。" }
+
+
+      ]
+        }
+    ]
+}
