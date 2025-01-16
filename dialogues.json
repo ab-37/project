@@ -1,0 +1,14 @@
+{
+  "acts": [
+    {
+      "act_number": 1,
+      "scene_description": "Abandoned robot factory",
+      "dialogues": [
+        {
+          "character": "Boss",
+          "line": "Ha! Is your Kate the same as before?"
+        }
+      ]
+    }
+  ]
+}
