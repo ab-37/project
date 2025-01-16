@@ -15,6 +15,11 @@ using UnityEditor.U2D.Animation;
 using System.Collections;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using UnityEngine.Rendering;
+using UnityEngine.Networking;
+using System.Text;
+using UnityEditor.PackageManager.Requests;
+
 
 public class Test2_1 : MonoBehaviour
 {
@@ -28,21 +33,28 @@ public class Test2_1 : MonoBehaviour
     public LLMCharacter Hao;
     public LLMCharacter Eva;
 
-    //[Header("UI elements")]
+    [Header("UI elements")]
     //public Text AIText;
 
-    private string filePath;
+    private string outputFilePath = "acter.txt";
+    private string translateFilepath = "translate.txt";
+    private string jsonFilePath = "dialogues.json";
+    private string jsonFilePath2 = "dialogues2.json";
+
+
     private List<Act> acts;
-    private int CurrntAct = 1;
     private Dictionary<string, LLMCharacter> characters;
-    private List<Dialogue> dialogueLog;
-    string outputFilePath;
-    private string jsonFilePath;
-    Script outputfile;
+    private List<Dialogue> dialogueLog = new List<Dialogue>();
+    private int CurrntAct = 1;
+    private Script outputfile;
+    private Script outputfile2;
+
 
     void Start()
     {
-        outputFilePath = "acter.txt";
+       // outputFilePath = "acter.txt";
+        //translateFilepath = "translate.txt"; //0108
+        //targetLanguage = "zh-TW";
         InitializeFile();
         acts = JsonUtility.FromJson<Script>(scriptfile.text).acts;
         Debug.Log($"Loaded {acts.Count} acts from script.");
@@ -52,9 +64,9 @@ public class Test2_1 : MonoBehaviour
             { "Hao", Hao },
             { "Eva", Eva }
         };
-        dialogueLog = new List<Dialogue>();
-        jsonFilePath = "dialogues.json";
-        Script script = JsonConvert.DeserializeObject<Script>(scriptfile.text);
+        //dialogueLog = new List<Dialogue>();
+        //jsonFilePath = @"C:\Users\USER\unity\My project (5)\dialogues.json";;
+        //Script script = JsonConvert.DeserializeObject<Script>(scriptfile.text);
         SaveDialogueLogToJson();
         StartCoroutine(PlayAct(CurrntAct));
 
@@ -63,16 +75,25 @@ public class Test2_1 : MonoBehaviour
     {
         try
         {
-            if (File.Exists(outputFilePath))
+            File.Delete(outputFilePath);
+            File.Delete(translateFilepath);
+
+            File.WriteAllText(outputFilePath, "Dialogue Log\n========================");
+            File.WriteAllText(translateFilepath, "Translated Dialogue Log\n========================");
+
+            /*if (File.Exists(outputFilePath))
             {
                 File.Delete(outputFilePath);
             }
-
-            using (StreamWriter writer = new StreamWriter(outputFilePath, false))
+            if (File.Exists(translateFilepath))
             {
-                writer.WriteLine("Dialogue Log");
-                writer.WriteLine("========================");
+                File.Delete(translateFilepath);
             }
+
+            Translate("en", "ko", "I'm a real gangster.", (translatedText) =>
+            {
+                    Debug.Log(translatedText);
+            });*/
         }
         catch (IOException e)
         {
@@ -90,7 +111,7 @@ public class Test2_1 : MonoBehaviour
         }
 
         Debug.Log($"Playing Act {act.act_number}: {act.scene_description}");
-        WriteResponseToFile($"Playing Act {act.act_number}: {act.scene_description}");
+        WriteResponseToFile($"Playing Act {act.act_number}: {act.scene_description}\n");
         
 
         foreach (Dialogue dialogue in act.dialogues)
@@ -128,10 +149,15 @@ public class Test2_1 : MonoBehaviour
         }
 
         //AIText.text += $"\n{characterName}: {generatedLine}";
-        Debug.Log($"0{characterName}: {generatedLine}");
+        Debug.Log($"{characterName}: {generatedLine}");
         WriteResponseToFile($"{characterName}: {generatedLine}");
-        ReDialogueLogToJson(outputfile, 1, new Dialogue(characterName, generatedLine));
-        dialogueLog.Add(new Dialogue(characterName, generatedLine));
+        
+        Translate("en", "zh-TW",generatedLine, translatedResponse =>
+        {
+            ReDialogueLogToJson(jsonFilePath2,outputfile2, 1,new Dialogue(characterName, translatedResponse));
+        });
+        ReDialogueLogToJson(jsonFilePath, outputfile, 1, new Dialogue(characterName, generatedLine));
+        //dialogueLog.Add(new Dialogue(characterName, generatedLine));
 
 
     }
@@ -144,11 +170,46 @@ public class Test2_1 : MonoBehaviour
             return originalLine;
         }
 
-        string prompt = $"{originalLine}";
-        string response = await characters[characterName].Chat(prompt);
+        //string prompt = $"{originalLine}";
+        string response = await characters[characterName].Chat(originalLine);
         return response;
 
     }
+    //update 0108
+    public void Translate(string orignal, string target,string txt,Action<string> x)
+    {
+       if (string.IsNullOrEmpty(orignal) || string.IsNullOrEmpty(target) || string.IsNullOrEmpty(txt)) return;
+       StartCoroutine( TranslateCoroutine(orignal,target,txt, x));
+    }
+    IEnumerator TranslateCoroutine(string original, string target,string txt, Action<string> x)
+    {
+        string requestUrl = $"https://translate.googleapis.com/translate_a/single?client=gtx&sl={original}&tl={target}&dt=t&q={UnityWebRequest.EscapeURL(txt)}";
+        //string requestUrl = string.Format(TranslateUrl, new object[] {original,target,txt});
+
+        using (UnityWebRequest webRequest = UnityWebRequest.Get(requestUrl))
+        {
+            yield return webRequest.SendWebRequest();
+            if (webRequest.result == UnityWebRequest.Result.ConnectionError || webRequest.result == UnityWebRequest.Result.ProtocolError)
+            {
+                Debug.LogError($"Error: {webRequest.error}");
+                x.Invoke(string.Empty);
+                yield break;
+            }
+
+            try
+            {
+                JArray jsonResponse = JArray.Parse(webRequest.downloadHandler.text);
+                string translatedText = string.Concat(jsonResponse[0].Select(segment => segment[0]?.ToString()));
+                x.Invoke(translatedText);
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"JSON Parsing Error: {ex.Message}");
+                x.Invoke("Error parsing translation response.");
+            }
+        }
+    }
+
     private Act GetAct(int actNumber)
     {
         if (actNumber < 1 || actNumber > acts.Count) return null;
@@ -159,10 +220,13 @@ public class Test2_1 : MonoBehaviour
     {
         try
         {
-            using (StreamWriter writer = new StreamWriter(outputFilePath, true))  
+            File.AppendAllText(outputFilePath, $"{response}\n");
+
+            Translate("en", "zh-TW", response, translatedResponse =>
             {
-                writer.WriteLine(response);
-            }
+                File.AppendAllText(translateFilepath, $"{translatedResponse}\n");
+                Debug.Log($"Translated: {translatedResponse}");
+            });
         }
         catch (IOException e)
         {
@@ -171,33 +235,41 @@ public class Test2_1 : MonoBehaviour
     }
     private void SaveDialogueLogToJson()
     {
-        if (File.Exists(jsonFilePath))
-        {
-            File.WriteAllText(jsonFilePath, string.Empty);
-        }
-        else
-        {
-            File.WriteAllText(jsonFilePath, "{}");
-        }
-
         outputfile = new Script
         {
             acts = acts.Select(act => new Act
             {
                 act_number = act.act_number,
                 scene_description = act.scene_description,
-                dialogues = new List<Dialogue> ()
-            }).ToList(),
+                dialogues = new List<Dialogue>()
+            }).ToList()
         };
-        string json = JsonConvert. SerializeObject(outputfile, Formatting.Indented);
-        File.WriteAllText(jsonFilePath, json);
-        //Debug.Log($"Dialogues saved to {jsonFilePath}");
+        outputfile2 = new Script
+        {
+            acts = acts.Select(act => new Act
+            {
+                act_number = act.act_number,
+                scene_description = act.scene_description,
+                dialogues = new List<Dialogue>()
+            }).ToList()
+        };
+        File.WriteAllText(jsonFilePath, JsonConvert.SerializeObject(outputfile, Formatting.Indented));
+        File.WriteAllText(jsonFilePath2, JsonConvert.SerializeObject(outputfile2, Formatting.Indented));
+
+        /*if (File.Exists(jsonFilePath))
+        {
+            File.WriteAllText(jsonFilePath, string.Empty);
+        }
+        else
+        {
+            File.WriteAllText(jsonFilePath, "{}");
+        }*/
     }
-    private void ReDialogueLogToJson(Script script, int actNumber, Dialogue newDialogue)
+    private void ReDialogueLogToJson(string filepath,Script script, int actNumber, Dialogue newDialogue)
     {
         Act targetAct = script.acts.FirstOrDefault(act => act.act_number == actNumber);
         targetAct.dialogues.Add(newDialogue);
-        File.WriteAllText(jsonFilePath, JsonConvert.SerializeObject(outputfile, Formatting.Indented));
+        File.WriteAllText(filepath, JsonConvert.SerializeObject(script, Formatting.Indented));
         //Debug.Log($"Dialogues saved !!");
     }
 
@@ -235,11 +307,11 @@ public class Dialogue
         this.line = line;
     }
 }
-[System.Serializable]
-public class DialogueLog
-{
-    public List<Dialogue> dialogues;
-}
+//[System.Serializable]
+//public class DialogueLog
+//{
+//    public List<Dialogue> dialogues;
+//}
 [System.Serializable]
 public class Script
 {
