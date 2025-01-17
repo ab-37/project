@@ -153,9 +153,11 @@ public class Select_Square_Script : MonoBehaviour
         }
         int realUpdatePos = selectedPositions.LastOrDefault();
 
-        //decrement step only if 3+ squares selected
+        //decrement step and play vfx only if 3+ squares selected
         if (selectedPositions.Count() > 2) {
             remainingScript.decrementStep();
+            //selectedSquaresScript.pathVFX(ref selectedPositions);
+            selectedSquaresScript.allSquareSpawnClickVFX();
         }
         
         string expression = expressionToString();
@@ -188,7 +190,7 @@ public class Select_Square_Script : MonoBehaviour
             gridNumbersScript.setGridContent(realUpdatePos, result.ToString());
             //check if no remaining steps, play sfx
             if (remainingScript.hasSteps()) {
-                soundHandlerScript.playSFX("Select");
+                soundHandlerScript.playSFX("Deselect");
             }
             else {
                 soundHandlerScript.playSFX("Wrong");
@@ -422,7 +424,7 @@ public class Select_Square_Script : MonoBehaviour
             }
             if (Input.GetKeyUp(selectKey) && selectState) {
                 selectRelease();
-                selectedSquaresScript.allSquareSpawnClickVFX();
+                //selectedSquaresScript.allSquareSpawnClickVFX();
             }
 
             if (newDirection != 0)

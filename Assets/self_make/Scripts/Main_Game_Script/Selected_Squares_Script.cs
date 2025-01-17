@@ -29,25 +29,33 @@ public class Selected_Squares_Script : MonoBehaviour
         updateSquare(square);
     }
 
-    
-    public void spawnClickVFX(GameObject square)
+    //doesn't work?
+    public void spawnClickVFX(int square)
     {
         if (clickVFX != null){
-            var vfx = Instantiate(clickVFX, square.transform.position, Quaternion.identity) as GameObject;
-            vfx.transform.SetParent(square.transform);
+            var vfx = Instantiate(clickVFX, tileObject[square].transform.position, Quaternion.identity) as GameObject;
+            vfx.transform.SetParent(tileObject[square].transform);
             var ps =vfx.GetComponent<ParticleSystem>();
             Destroy(vfx, ps.main.duration + ps.main.startLifetime.constantMax);
         }
     }
+    
+    /*
+    public void pathVFX(ref List<int> selectedPositions) {
+        foreach (int pos in selectedPositions) {
+            spawnClickVFX(pos);
+        }
+    }
+    */
+    
     public void allSquareSpawnClickVFX()
     {
         for(int i=0;i<9;i++)
         {
             if (isSelected[i])
-                spawnClickVFX(tileObject[i]);
+                spawnClickVFX(i);
         }
     }
-    
 
     private void Awake() {
         for (int i = 0 ; i < 9 ; ++i) {
