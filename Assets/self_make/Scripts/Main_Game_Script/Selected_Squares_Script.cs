@@ -7,7 +7,8 @@ public class Selected_Squares_Script : MonoBehaviour
 {
     private GameObject[] tileObject = new GameObject[9];
     private bool[] isSelected = new bool[9];
-    public GameObject clickVFX;
+    //public GameObject clickVFX;
+    private GameObject selectVFX;
 
     public bool isSquareSelected(int square) {
         return isSelected[square];
@@ -32,11 +33,14 @@ public class Selected_Squares_Script : MonoBehaviour
     //doesn't work?
     public void spawnClickVFX(int square)
     {
-        if (clickVFX != null){
-            var vfx = Instantiate(clickVFX, tileObject[square].transform.position, Quaternion.identity) as GameObject;
-            vfx.transform.SetParent(tileObject[square].transform);
-            var ps =vfx.GetComponent<ParticleSystem>();
-            Destroy(vfx, ps.main.duration + ps.main.startLifetime.constantMax);
+        if (selectVFX != null){
+            GameObject vfx = Instantiate(selectVFX, tileObject[square].transform.position, Quaternion.identity);
+            vfx.SetActive(true);
+            vfx.transform.SetParent(transform);
+            ParticleSystem ps =vfx.GetComponent<ParticleSystem>();
+            //bruh
+            //ps.Play();
+            Destroy(vfx, ps.main.duration);
         }
     }
     
@@ -60,8 +64,9 @@ public class Selected_Squares_Script : MonoBehaviour
     private void Awake() {
         for (int i = 0 ; i < 9 ; ++i) {
             //get child objects
-            tileObject[i] = gameObject.transform.GetChild(i).gameObject;
+            tileObject[i] = gameObject.transform.Find(i.ToString()).gameObject;
         }
+        selectVFX = transform.Find("Select VFX").gameObject;
     }
     
     private void Start()

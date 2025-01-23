@@ -46,7 +46,7 @@ public class Select_Square_Script : MonoBehaviour
     private Timer_Script timerScript;
     private Intro_Script introScript;
     private Outro_Script outroScript;
-    private Target_Script targetScript;
+    //private Target_Script targetScript;
     private Sound_Handler_Script soundHandlerScript;
 
     //key input handlers
@@ -253,7 +253,7 @@ public class Select_Square_Script : MonoBehaviour
     //START THE GAME (COROUTINE)
     private IEnumerator startGameCoroutine() {
         //set the timer
-        timerScript.setTimerMode(levelMode == 1);
+        timerScript.setTimerMode(levelMode);
         timerScript.setTime(0);
         
         if (levelMode == 1) {
@@ -261,9 +261,13 @@ public class Select_Square_Script : MonoBehaviour
         }
         //show target text if needed
         else if (levelMode == 2) {
-            targetScript.setTarget(objective);
-            targetScript.showText();
+            //targetScript.setTarget(objective);
+            //targetScript.showText();
+            scoreScript.setTarget(objective);
         }
+
+        //set score mode
+        scoreScript.setMode(levelMode);
 
         //clear the score
         scoreScript.clearScore();
@@ -286,7 +290,7 @@ public class Select_Square_Script : MonoBehaviour
         goalScript.showText();
         gridNumbersScript.showNumbers();
         remainingScript.showText();
-        scoreScript.showText();
+        //scoreScript.showText();
         functionWordScript.updateText("", 0);
 
         //new problem
@@ -362,7 +366,7 @@ public class Select_Square_Script : MonoBehaviour
         timerScript = gameObject.transform.parent.Find("Background/Timer").GetComponent<Timer_Script>();
         introScript = gameObject.transform.parent.Find("Transitions/Intro").GetComponent<Intro_Script>();
         outroScript = gameObject.transform.parent.Find("Transitions/Outro").GetComponent<Outro_Script>();
-        targetScript = gameObject.transform.parent.Find("Background/Target").GetComponent<Target_Script>();
+        //targetScript = gameObject.transform.parent.Find("Background/Target").GetComponent<Target_Script>();
         soundHandlerScript = gameObject.transform.parent.Find("Sound Handler").GetComponent<Sound_Handler_Script>();
 
     }

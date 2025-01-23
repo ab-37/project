@@ -11,7 +11,7 @@ public static class Static_Variables
     public static string blockRuning;//save what is it stage
 
     //level number
-    public static int level = 0;
+    public static int level = 4;
     //level data
 
     public static string[][] specialPaths = {
