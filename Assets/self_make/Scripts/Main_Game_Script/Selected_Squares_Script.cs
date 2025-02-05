@@ -40,7 +40,8 @@ public class Selected_Squares_Script : MonoBehaviour
             ParticleSystem ps =vfx.GetComponent<ParticleSystem>();
             //bruh
             //ps.Play();
-            Destroy(vfx, ps.main.duration);
+            //Destroy(vfx, ps.main.duration);
+            Destroy(vfx, 0.5f);
         }
     }
     
