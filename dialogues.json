@@ -2,11 +2,177 @@
   "acts": [
     {
       "act_number": 1,
-      "scene_description": "Abandoned robot factory",
+      "scene_description": "The Abandoned Factory",
       "dialogues": [
         {
-          "character": "Boss",
-          "line": "Ha! Is your Kate the same as before?"
+          "character": "Commander1",
+          "line": "Kate, we've receive intelligence that an abandoned factory on the outskirts may be a front for illegal android production. Your mission is to infiltrate, confirm the intel, and collect any relevant evidence."
+        },
+        {
+          "character": "Kate",
+          "line": "\"Very unfortunate.\"\n\"Glad you could make it here.\""
+        },
+        {
+          "character": "Commander2",
+          "line": "The site may be guarded by heavily armed personnel. Avoid direct confrontation unless absolutely necessary. Your priority is gathering evidence."
+        }
+      ]
+    },
+    {
+      "act_number": 2,
+      "scene_description": "Infiltration",
+      "dialogues": [
+        {
+          "character": "Patrol Guard A3",
+          "line": "Do we really have to pull night shifts in this dump? Even the rats won’t come near this place."
+        },
+        {
+          "character": "Patrol Guard B4",
+          "line": "Stop bellyaching. I heard there’s an important operation going on. We can’t afford any mistakes."
+        },
+        {
+          "character": "BACK5",
+          "line": "(Rustling sounds in the distance…)"
+        },
+        {
+          "character": "Patrol Guard B6",
+          "line": "Did you hear that?!"
+        },
+        {
+          "character": "Patrol Guard A7",
+          "line": "Relax, it's probably just a rat. This place is crawling with them."
+        },
+        {
+          "character": "Patrol Guard B8",
+          "line": "No way! Orders are orders—nothing suspicious gets ignored!"
+        },
+        {
+          "character": "Patrol Guard A9",
+          "line": "Ugh, fine! I’ll go check it out. Happy now?"
+        },
+        {
+          "character": "BACK10",
+          "line": "(The ventilation shaft is empty, except for some rat droppings.)"
+        },
+        {
+          "character": "Patrol Guard A11",
+          "line": "See? You’re just paranoid—wait, what the—?!"
+        },
+        {
+          "character": "BACK12",
+          "line": "(A man in a detective’s coat stands by the doorway. A fallen guard lies unconscious beside him.)"
+        },
+        {
+          "character": "Patrol Guard A13",
+          "line": "Who the hell are you?! How did you get in here?!,"
+        },
+        {
+          "character": "BACK14",
+          "line": "(Before the guards can react, the man smashes the alarm system and pulls out a hacking device.)"
+        },
+        {
+          "character": "Kate",
+          "line": "\"Sigh, it's a hassle.\""
+        },
+        {
+          "character": "BACK15",
+          "line": "(Battle begins. Kate activates her hacking device.)"
+        },
+        {
+          "character": "Patrol Guard A16",
+          "line": " the rats won’t come near this place."
+        }
+      ]
+    },
+    {
+      "act_number": 3,
+      "scene_description": "Unfinished Androids",
+      "dialogues": [
+        {
+          "character": "BACK17",
+          "line": "(Deeper inside the factory, Kate finds a fully operational assembly line. Half-assembled androids hang from the conveyor belts, lifeless yet eerie.)"
+        },
+        {
+          "character": "Kate",
+          "line": "\"Looks like these androids still need some work.\""
+        },
+        {
+          "character": "Commander18",
+          "line": "Copy that. Snap some photos for analysis."
+        },
+        {
+          "character": "Kate",
+          "line": "\"I'll take care of it.\""
+        },
+        {
+          "character": "BACK19",
+          "line": "(While taking photos, Kate spots a document on a nearby workstation.)"
+        },
+        {
+          "character": "Kate",
+          "line": "\"Replacement project, understood.\""
+        },
+        {
+          "character": "BACK",
+          "line": "(Before she can process the information, a man in a suit steps out from the shadows, his gaze filled with disdain.)"
+        },
+        {
+          "character": "Victor",
+          "line": "So, an enforcer, huh? You guys sure have a knack for showing up uninvited. Too bad you’re early—our product isn’t quite ready yet. But I don’t mind giving you a preview."
+        },
+        {
+          "character": "BACK",
+          "line": "(Victor activates the unfinished androids.)"
+        },
+        {
+          "character": "Victor",
+          "line": "Go on, clean up the mess."
+        },
+        {
+          "character": "Kate",
+          "line": "\"Half-finished, yes.\""
+        },
+        {
+          "character": "BACK",
+          "line": "(Kate hacks into the conveyor belt’s robotic arms to fight back.)"
+        }
+      ]
+    },
+    {
+      "act_number": 4,
+      "scene_description": "Overwhelmed",
+      "dialogues": [
+        {
+          "character": "BACK",
+          "line": "(Time passes... When Kate finally regains consciousness, he finds herself back at base.)"
+        },
+        {
+          "character": "Commander",
+          "line": "You're awake…"
+        },
+        {
+          "character": "Commander",
+          "line": "When we found you in the ruins, all the data you collected was gone. The only things left were you and your hacking device. What exactly happened in that factory?"
+        },
+        {
+          "character": "BACK",
+          "line": "(Kate remains silent for a moment.)"
+        },
+        {
+          "character": "Kate",
+          "line": "\"Saw a lot of androids, but nothing else noteworthy.\""
+        },
+        {
+          "character": "Commander",
+          "line": "I see. Well, get some rest—you’ve done enough."
+        },
+        {
+          "character": "BACK",
+          "line": "(The commander exits the medical room.)"
+        },
+        {
+          "character": "Victor",
+          "line": "'Replacement Project,'changing the world... Justice... Forget it. Thinking wont change anything. Might as well just rest for now…"
         }
       ]
     }

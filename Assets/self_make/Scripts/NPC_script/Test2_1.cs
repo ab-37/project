@@ -30,8 +30,9 @@ public class Test2_1 : MonoBehaviour
 
     [Header("Character")]
     public LLMCharacter Kate;
-    public LLMCharacter Hao;
+    public LLMCharacter Houtai;
     public LLMCharacter Eva;
+    public LLMCharacter tran;
 
     [Header("UI elements")]
     //public Text AIText;
@@ -40,14 +41,19 @@ public class Test2_1 : MonoBehaviour
     private string translateFilepath = "translate.txt";
     private string jsonFilePath = "dialogues.json";
     private string jsonFilePath2 = "dialogues2.json";
+  //  private string newtrans = "trans2.txt";
+  //  private string newdia = "dia3.json";
+    private string CharacterName;
 
 
     private List<Act> acts;
+    //private List<Act> act2;
     private Dictionary<string, LLMCharacter> characters;
     private List<Dialogue> dialogueLog = new List<Dialogue>();
     private int CurrntAct = 1;
     private Script outputfile;
     private Script outputfile2;
+    //private Script outputfile3;
 
 
     void Start()
@@ -61,7 +67,7 @@ public class Test2_1 : MonoBehaviour
         characters = new Dictionary<string, LLMCharacter>
         {
             { "Kate", Kate },
-            { "Hao", Hao },
+            { "Houtai", Houtai},
             { "Eva", Eva }
         };
         //dialogueLog = new List<Dialogue>();
@@ -88,12 +94,7 @@ public class Test2_1 : MonoBehaviour
             if (File.Exists(translateFilepath))
             {
                 File.Delete(translateFilepath);
-            }
-
-            Translate("en", "ko", "I'm a real gangster.", (translatedText) =>
-            {
-                    Debug.Log(translatedText);
-            });*/
+            }*/
         }
         catch (IOException e)
         {
@@ -116,18 +117,26 @@ public class Test2_1 : MonoBehaviour
 
         foreach (Dialogue dialogue in act.dialogues)
         {
+           CharacterName = dialogue.character;
            yield return StartCoroutine(GenerateLineCoroutine(dialogue.character, dialogue.line));
             //yield return new WaitForSeconds(2f);
         }
+        yield return StartCoroutine(ProcessTranslationsForAct(CurrntAct));
         if (actNumber < acts.Count)
         {
+            
             CurrntAct++;
+            
             StartCoroutine(PlayAct(CurrntAct));
         }
         else
         {
-            Debug.Log("All acts completed!");
-            WriteResponseToFile("All acts completed!");
+            Debug.Log("\n========================\n All acts completed!");
+            WriteResponseToFile("\n========================\n All acts completed!");
+            //StartCoroutine(FixTranslationErrors());
+            
+
+
         }
     }
     private IEnumerator GenerateLineCoroutine(string characterName, string originalLine)
@@ -150,13 +159,14 @@ public class Test2_1 : MonoBehaviour
 
         //AIText.text += $"\n{characterName}: {generatedLine}";
         Debug.Log($"{characterName}: {generatedLine}");
-        WriteResponseToFile($"{characterName}: {generatedLine}");
+        WriteResponseToFile($"{generatedLine}");
         
-        Translate("en", "zh-TW",generatedLine, translatedResponse =>
-        {
-            ReDialogueLogToJson(jsonFilePath2,outputfile2, 1,new Dialogue(characterName, translatedResponse));
-        });
-        ReDialogueLogToJson(jsonFilePath, outputfile, 1, new Dialogue(characterName, generatedLine));
+
+        //Translate("en", "zh-TW", generatedLine, translatedResponse =>
+        //{
+        //    ReDialogueLogToJson(jsonFilePath2, outputfile2, new Dialogue(characterName, translatedResponse));
+        //});
+        ReDialogueLogToJson(jsonFilePath, outputfile, new Dialogue(characterName, generatedLine));
         //dialogueLog.Add(new Dialogue(characterName, generatedLine));
 
 
@@ -180,6 +190,7 @@ public class Test2_1 : MonoBehaviour
     {
        if (string.IsNullOrEmpty(orignal) || string.IsNullOrEmpty(target) || string.IsNullOrEmpty(txt)) return;
        StartCoroutine( TranslateCoroutine(orignal,target,txt, x));
+        
     }
     IEnumerator TranslateCoroutine(string original, string target,string txt, Action<string> x)
     {
@@ -209,8 +220,30 @@ public class Test2_1 : MonoBehaviour
             }
         }
     }
+    //update 0205
+private IEnumerator ProcessTranslationsForAct(int Actnumber)
+{
+        List<Act> Act2;
+        Act2= JsonUtility.FromJson<Script>(File.ReadAllText(jsonFilePath)).acts;
+        Act act2 = Act2[Actnumber - 1];
+        for (int i = 0; i < act2.dialogues.Count; i++)
+        {
+            string originalLine = act2.dialogues[i].line;
+            if (!string.IsNullOrEmpty(originalLine))
+            {
+                string translated = string.Empty;
 
-    private Act GetAct(int actNumber)
+                yield return StartCoroutine(TranslateCoroutine("en", "zh-TW", originalLine, result => { translated = result; }));
+                Debug.Log("new");
+                act2.dialogues[i].line = translated;
+
+                File.AppendAllText(translateFilepath, $"{act2.dialogues[i].character}: {translated}\n");
+                ReDialogueLogToJson(jsonFilePath2, outputfile2, new Dialogue(act2.dialogues[i].character, translated));
+            }
+        }
+    }
+        //0205¤î
+        private Act GetAct(int actNumber)
     {
         if (actNumber < 1 || actNumber > acts.Count) return null;
         return acts[actNumber - 1];
@@ -220,13 +253,13 @@ public class Test2_1 : MonoBehaviour
     {
         try
         {
-            File.AppendAllText(outputFilePath, $"{response}\n");
-
-            Translate("en", "zh-TW", response, translatedResponse =>
-            {
-                File.AppendAllText(translateFilepath, $"{translatedResponse}\n");
-                Debug.Log($"Translated: {translatedResponse}");
-            });
+            File.AppendAllText(outputFilePath, $"{CharacterName}: {response}\n");
+            //Translate("en", "zh-TW", response, translatedResponse =>
+            //{
+            //    File.AppendAllText(translateFilepath, $"{CharacterName}: {translatedResponse}\n");
+            //    //ReDialogueLogToJson(jsonFilePath2,outputfile2, 1,new Dialogue(CharacterName, translatedResponse));
+            //    Debug.Log($"Translated: {CharacterName}:{translatedResponse}");
+            //});
         }
         catch (IOException e)
         {
@@ -235,42 +268,31 @@ public class Test2_1 : MonoBehaviour
     }
     private void SaveDialogueLogToJson()
     {
-        outputfile = new Script
+        outputfile = JsonConvert.DeserializeObject<Script>(scriptfile.text);
+        foreach (Act act1 in outputfile.acts)
         {
-            acts = acts.Select(act => new Act
-            {
-                act_number = act.act_number,
-                scene_description = act.scene_description,
-                dialogues = new List<Dialogue>()
-            }).ToList()
-        };
-        outputfile2 = new Script
+            act1.dialogues.Clear();
+        }
+        outputfile2 = JsonConvert.DeserializeObject<Script>(scriptfile.text);
+        foreach (Act act2 in outputfile2.acts)
         {
-            acts = acts.Select(act => new Act
-            {
-                act_number = act.act_number,
-                scene_description = act.scene_description,
-                dialogues = new List<Dialogue>()
-            }).ToList()
-        };
+            act2.dialogues.Clear();
+        }
+        //outputfile3 = JsonConvert.DeserializeObject<Script>(scriptfile.text);
+        //foreach (Act act3 in outputfile3.acts)
+        //{
+        //    act3.dialogues.Clear();
+        //}
         File.WriteAllText(jsonFilePath, JsonConvert.SerializeObject(outputfile, Formatting.Indented));
         File.WriteAllText(jsonFilePath2, JsonConvert.SerializeObject(outputfile2, Formatting.Indented));
+        //File.WriteAllText(newdia, JsonConvert.SerializeObject(outputfile2, Formatting.Indented));
 
-        /*if (File.Exists(jsonFilePath))
-        {
-            File.WriteAllText(jsonFilePath, string.Empty);
-        }
-        else
-        {
-            File.WriteAllText(jsonFilePath, "{}");
-        }*/
     }
-    private void ReDialogueLogToJson(string filepath,Script script, int actNumber, Dialogue newDialogue)
+    private void ReDialogueLogToJson(string filepath,Script script, Dialogue newDialogue)
     {
-        Act targetAct = script.acts.FirstOrDefault(act => act.act_number == actNumber);
+        Act targetAct = script.acts.FirstOrDefault(act => act.act_number == CurrntAct);
         targetAct.dialogues.Add(newDialogue);
         File.WriteAllText(filepath, JsonConvert.SerializeObject(script, Formatting.Indented));
-        //Debug.Log($"Dialogues saved !!");
     }
 
     //void SetAIText(string text)
@@ -286,7 +308,64 @@ public class Test2_1 : MonoBehaviour
             else throw new System.Exception(error);
         }
     }
+    private IEnumerator FixTranslationErrors()
+    {
+        if (tran == null)
+        {
+            Debug.LogError("Translation AI (tran) is not assigned!");
+            yield break;
+        }
+
+        if (!File.Exists(translateFilepath) || !File.Exists(jsonFilePath))
+        {
+            Debug.LogError("Translation or dialogue file missing!");
+            yield break;
+        }
+
+        string[] translatedLines = File.ReadAllLines(translateFilepath);
+        Script translatedScript = JsonConvert.DeserializeObject<Script>(File.ReadAllText(jsonFilePath));
+
+        List<string> fixedTranslations = new List<string>();
+
+        foreach (var act in translatedScript.acts)
+        {
+            foreach (var dialogue in act.dialogues)
+            {
+                string originalText = dialogue.line;
+                string correctedText = originalText;
+
+                Task<string> fixTask = tran.Chat(originalText);
+                while (!fixTask.IsCompleted)
+                {
+                    yield return null;
+                }
+                if (fixTask.Status == TaskStatus.RanToCompletion)
+                {
+                    correctedText = fixTask.Result;
+                }
+                //Translate("en", "zh-TW", correctedText, translatedResponse =>
+                //{
+                //    dialogue.line = translatedResponse;
+                //    fixedTranslations.Add(translatedResponse);
+                //});
+                
+                //dialogue.line = correctedText;
+                //fixedTranslations.Add(correctedText);
+                Debug.Log($"Corrected: {correctedText}");
+            }
+        }
+
+       // File.WriteAllText(newtrans, string.Join("\n", fixedTranslations));
+        //File.WriteAllText(newdia, JsonConvert.SerializeObject(translatedScript, Formatting.Indented));
+
+        Debug.Log("Translation corrections saved successfully.");
+    }
+
+
 }
+
+
+
 [System.Serializable]
 public class Act
 {
