@@ -71,14 +71,15 @@ public class Score_Script : MonoBehaviour
     //set mode to score or target
     public void setMode(int m) {
         mode = m;
+        targetTransform.gameObject.SetActive(false);
+        scoreTransform.gameObject.SetActive(false);
+        
         if (mode == 1) {
             //score mode
-            targetTransform.gameObject.SetActive(false);
             scoreTransform.gameObject.SetActive(true);
         }
         else if (mode == 2) {
             //target mode
-            scoreTransform.gameObject.SetActive(false);
             targetTransform.gameObject.SetActive(true);
         }
     }
