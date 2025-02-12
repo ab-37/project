@@ -69,7 +69,22 @@ public class ControlUI : MonoBehaviour
         }
         return null;
     }
-    
+
+    private void changeDialuage()
+    {
+        flowchart.SetStringVariable("VarDialogue", "123") ;
+    }
+    /*private void findBlockText(string act_number)
+    {
+        for (int i = 0; i < StageData["stage"].Count; i++)
+        {
+            if (chosen_id == StageData["stage"][i]["id"].ToString())
+                return StageData["stage"][i];
+        }
+        return null;
+
+    }*/
+
     void Start()
     {
         LoadData = File.ReadAllText(Application.dataPath + "/self_make/stage/stage.json");
@@ -82,10 +97,14 @@ public class ControlUI : MonoBehaviour
         //Debug.Log(StageData["stage"][1]["next_stage"]);
         Debug.Log(selcetStage("11")["next_stage"]);
 
+        changeDialuage();
+
+        /*
         if (blockSelect != "0")
             playBlockStage(blockSelect);
         else
             Debug.Log("no block select");
+        */
 
     }
 
