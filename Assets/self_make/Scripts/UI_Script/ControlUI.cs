@@ -17,6 +17,12 @@ public class ControlUI : MonoBehaviour
     private string LoadData;
     private JsonData StageData;
 
+    //the full dialogue data
+    private JsonData fullDialogueData;
+    
+    //the current loaded node's dialogue data
+    private JsonData currentNodeDialogue;
+
     private GameObject mainMenu;
     public void hideMainUI()
     {
@@ -27,7 +33,7 @@ public class ControlUI : MonoBehaviour
         mainMenu.SetActive(true);
     }
 
-    public void choseSatge(int value)
+    public void chooseStage(int value)
     {
         switch(value)
         {
@@ -44,10 +50,10 @@ public class ControlUI : MonoBehaviour
     }
 
     //change scence and tell what is stage running
-    public void changeScence(string scenceName,string blockRunning)
+    public void changeScene(string sceneName,string blockRunning)
     {
-        SceneManager.LoadScene(scenceName);
-        Static_Variables.blockRuning = blockRunning;
+        SceneManager.LoadScene(sceneName);
+        Static_Variables.blockRunning = blockRunning;
     }
     public void gamePlay()
     {
@@ -60,7 +66,7 @@ public class ControlUI : MonoBehaviour
         flowchart.ExecuteBlock(blockName);
     }
     
-    private JsonData selcetStage(string chosen_id)
+    private JsonData selectStage(string chosen_id)
     {
         for(int i=0;i< StageData["stage"].Count;i++)
         {
@@ -70,7 +76,7 @@ public class ControlUI : MonoBehaviour
         return null;
     }
 
-    private void changeDialuage()
+    private void changeDialogueTest()
     {
         flowchart.SetStringVariable("VarDialogue", "123") ;
     }
@@ -85,6 +91,53 @@ public class ControlUI : MonoBehaviour
 
     }*/
 
+    //load act node
+    private bool loadNode(int act, int node) {
+
+        //fetch version
+        JsonData versionJson = null;
+        bool successFlag = false;
+        foreach (JsonData actJson in fullDialogueData["acts"]) {
+            if ((int)actJson["version"] == act) {
+                versionJson = actJson;
+                successFlag = true;
+                break;
+            }
+        }
+        if (!successFlag) {
+            Debug.Log("Failed to fetch version");
+            return false;
+        }
+
+        //temp code
+        Debug.Log("Scene Description: " + versionJson["scene_description"]);
+
+        //fetch node
+        foreach (JsonData contentJson in versionJson["content"]) {
+            if ((int)contentJson["node"] == node) {
+                currentNodeDialogue = contentJson["dialogues"];
+                return true;
+            }
+        }
+        Debug.Log("Failed to fetch node in version " + act.ToString());
+        return false;
+    }
+
+    //load single dialogue line
+    bool loadDialogueLine(int lineNum) {
+        if (lineNum >= currentNodeDialogue.Count) {
+            return false;
+        }
+        
+        string characterStr = (string)currentNodeDialogue[lineNum]["character"];
+        string lineStr = (string)currentNodeDialogue[lineNum]["line"];
+
+        //debug code below, put real code here
+        Debug.Log(characterStr + ": " + lineStr);
+        
+        return true;
+    }
+
     void Start()
     {
         LoadData = File.ReadAllText(Application.dataPath + "/self_make/stage/stage.json");
@@ -93,11 +146,24 @@ public class ControlUI : MonoBehaviour
         blockSelect = Static_Variables.blockSelect;
         mainMenu = GameObject.Find("MainUI");
 
+        //load dialogue, temp file path
+        fullDialogueData = JsonMapper.ToObject(File.ReadAllText(Application.dataPath + "/self_make/Scripts/NPC_script/acts 1.json"));
+
+        if (loadNode(1, 1)) {
+            Debug.Log("Dialogue loaded successfully");
+        }
+
+        //debug checking line by line
+        for (int i = 0 ; loadDialogueLine(i) ; ++i) {}
+
+        //Debug.Log(currentNodeDialogue[0]["character"]); //debug
+
+
 
         //Debug.Log(StageData["stage"][1]["next_stage"]);
-        Debug.Log(selcetStage("11")["next_stage"]);
+        //Debug.Log(selectStage("11")["next_stage"]);
 
-        changeDialuage();
+        changeDialogueTest();
 
         /*
         if (blockSelect != "0")
