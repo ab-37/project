@@ -1,178 +1,687 @@
 {
   "acts": [
     {
-      "act_number": 1,
+      "version": 1,
       "scene_description": "The Abandoned Factory",
-      "dialogues": [
+      "content": [
         {
-          "character": "Commander1",
-          "line": "Kate, we've receive intelligence that an abandoned factory on the outskirts may be a front for illegal android production. Your mission is to infiltrate, confirm the intel, and collect any relevant evidence."
+          "node": 1,
+          "dialogues": [
+            {
+              "character": "Commander1",
+              "line": "Kate, we've receive intelligence that an abandoned factory on the outskirts may be a front for illegal android production. Your mission is to infiltrate, confirm the intel, and collect any relevant evidence."
+            },
+            {
+              "character": "Kate",
+              "line": "\"Good. Now, let's discuss the recent increase in replicant activity in Sector 12. Haotai, have you identified any patterns or suspects?\""
+            },
+            {
+              "character": "Commander2",
+              "line": "The site may be guarded by heavily armed personnel. Avoid direct confrontation unless absolutely necessary. Your priority is gathering evidence."
+            }
+          ]
         },
         {
-          "character": "Kate",
-          "line": "\"Very unfortunate.\"\n\"Glad you could make it here.\""
+          "node": 2,
+          "dialogues": [
+            {
+              "character": "Patrol Guard A3",
+              "line": "Do we really have to pull night shifts in this dump? Even the rats won’t come near this place."
+            },
+            {
+              "character": "Patrol Guard B4",
+              "line": "Stop bellyaching. I heard there’s an important operation going on. We can’t afford any mistakes."
+            },
+            {
+              "character": "Back5",
+              "line": "Rustling sounds in the distance…"
+            },
+            {
+              "character": "Patrol Guard B6",
+              "line": "Did you hear that?!"
+            },
+            {
+              "character": "Patrol Guard A7",
+              "line": "Relax, it's probably just a rat. This place is crawling with them."
+            },
+            {
+              "character": "Patrol Guard B8",
+              "line": "No way! Orders are orders—nothing suspicious gets ignored!"
+            },
+            {
+              "character": "Patrol Guard A9",
+              "line": "Ugh, fine! I’ll go check it out. Happy now?"
+            },
+            {
+              "character": "Back10",
+              "line": "(The ventilation shaft is empty, except for some rat droppings.)"
+            },
+            {
+              "character": "Patrol Guard A11",
+              "line": "See? You’re just paranoid—wait, what the—?!"
+            },
+            {
+              "character": "Back12",
+              "line": "(A man in a detective’s coat stands by the doorway. A fallen guard lies unconscious beside him.)"
+            },
+            {
+              "character": "Patrol Guard A13",
+              "line": "Who the hell are you?! How did you get in here?!"
+            },
+            {
+              "character": "Back14",
+              "line": "(Before the guards can react, the man smashes the alarm system and pulls out a hacking device.)"
+            },
+            {
+              "character": "Kate",
+              "line": "\"Focus, Haotai. We have a job to do. The replicant issue is not going away on its own.\""
+            },
+            {
+              "character": "Back15",
+              "line": "(Battle begins. Kate activates her hacking device.)"
+            },
+            {
+              "character": "Patrol Guard A16",
+              "line": " the rats won’t come near this place."
+            }
+          ]
         },
         {
-          "character": "Commander2",
-          "line": "The site may be guarded by heavily armed personnel. Avoid direct confrontation unless absolutely necessary. Your priority is gathering evidence."
+          "node": 3,
+          "dialogues": [
+            {
+              "character": "Back17",
+              "line": "(Deeper inside the factory, Kate finds a fully operational assembly line. Half-assembled androids hang from the conveyor belts, lifeless yet eerie.)"
+            },
+            {
+              "character": "Kate",
+              "line": "\"That's not for us to decide. Our job is to enforce the law, not to judge. Let's focus on apprehending any violators and ensuring peace in New Dawn City.\""
+            },
+            {
+              "character": "Commander18",
+              "line": "Copy that. Snap some photos for analysis."
+            },
+            {
+              "character": "Kate",
+              "line": "\"Good. Keep me updated on any progress or leads you come across.\"\n\n[After some time passes]"
+            },
+            {
+              "character": "Back19",
+              "line": "While taking photos, Kate spots a document on a nearby workstation."
+            },
+            {
+              "character": "Kate",
+              "line": "\"What about it? Are you suggesting a new approach to dealing with the replicant issue?\""
+            },
+            {
+              "character": "Back",
+              "line": "Before she can process the information, a man in a suit steps out from the shadows, his gaze filled with disdain."
+            },
+            {
+              "character": "Victor",
+              "line": "So, an enforcer, huh? You guys sure have a knack for showing up uninvited. Too bad you’re early—our product isn’t quite ready yet. But I don’t mind giving you a preview."
+            },
+            {
+              "character": "Back",
+              "line": "(Victor activates the unfinished androids.)"
+            },
+            {
+              "character": "Victor",
+              "line": "Go on, clean up the mess."
+            },
+            {
+              "character": "Kate",
+              "line": "\"I'm not following your line of thought, Haotai. Could you please clarify?\"\n\n[Haotai shares an idea about a potential project to replace malfunctioning or rogue replicants with new models]"
+            },
+            {
+              "character": "Back",
+              "line": "Kate hacks into the conveyor belt’s robotic arms to fight Back."
+            }
+          ]
+        },
+        {
+          "node": 4,
+          "dialogues": [
+            {
+              "character": "Back",
+              "line": "Time passes... When Kate finally regains consciousness, he finds herself back at base."
+            },
+            {
+              "character": "Commander",
+              "line": "You're awake…"
+            },
+            {
+              "character": "Commander",
+              "line": "When we found you in the ruins, all the data you collected was gone. The only things left were you and your hacking device. What exactly happened in that factory?"
+            },
+            {
+              "character": "Back",
+              "line": "Kate remains silent for a moment."
+            },
+            {
+              "character": "Kate",
+              "line": "\"Understood. We'll continue monitoring the situation and gather more information before making any decisions regarding the Replacement Project.\"\n\n[As they continue their investigation, Kate takes a break and enjoys his sugar-free latte]"
+            },
+            {
+              "character": "Commander",
+              "line": "I see. Well, get some rest—you’ve done enough."
+            },
+            {
+              "character": "Back",
+              "line": "The commander exits the medical room."
+            },
+            {
+              "character": "Victor",
+              "line": "'Replacement Project,'changing the world... Justice... Forget it. Thinking wont change anything. Might as well just rest for now…"
+            }
+          ]
         }
       ]
     },
     {
-      "act_number": 2,
-      "scene_description": "Infiltration",
-      "dialogues": [
+      "version": 2,
+      "scene_description": "The Restaurant",
+      "content": [
         {
-          "character": "Patrol Guard A3",
-          "line": "Do we really have to pull night shifts in this dump? Even the rats won’t come near this place."
+          "node": 1,
+          "dialogues": [
+            {
+              "character": "Back",
+              "line": "A few days later, Kate walked into the familiar restaurant, exhausted from his recently completed mission. He thought he could quietly enjoy a sugar-free latte, but unexpectedly, a stranger sat down across from him."
+            },
+            {
+              "character": "Eva",
+              "line": "\"It is not currently occupied. Feel free to sit down.\""
+            },
+            {
+              "character": "Kate",
+              "line": "\"Good. Let's regroup and discuss our next steps once we have more information.\"\n\n[They continue their investigation, facing various challenges and encountering different types of replicants and robots. Kate remains calm and focused, always keeping the law in mind.]"
+            },
+            {
+              "character": "Eva",
+              "line": "\"Yes, it is now under your possession.\""
+            },
+            {
+              "character": "Back",
+              "line": " Kate didn’t respond, simply looking down at his coffee, but his vigilance did not decrease. He discreetly scanned his surroundings and realized that this woman was not just an ordinary customer."
+            },
+            {
+              "character": "Eva",
+              "line": "\"Assessments are accurate. Coffee is a necessary fuel for my operations.\""
+            },
+            {
+              "character": "Kate",
+              "line": "\"I'm just doing my job, Haotai. We all have our roles to play in maintaining peace and order in New Dawn City.\"\n\n[Haotai shares some personal concerns about the replicants they encounter and their potential impact on human society]"
+            },
+            {
+              "character": "Eva",
+              "line": "\"Understandable. My reputation precedes me due to my involvement in Project Humanity II and the resistance organization I lead.\""
+            },
+            {
+              "character": "Back",
+              "line": "Kate put down his cup and carefully examined the woman. There was a hint of provocation in her eyes, but even more curiosity. His hand unconsciously moved toward his waist, ready to react at any moment."
+            },
+            {
+              "character": "Kate",
+              "line": "\"I'm Kate, a law enforcement officer specializing in replicant and robot violations in New Dawn City. I work closely with Haotai to ensure the safety and well-being of our citizens.\"\n\n[Haotai expresses gratitude for Kate's dedication and professionalism]"
+            },
+            {
+              "character": "Eva",
+              "line": "\"Sparks are not necessary for our collaboration. Our focus should be on the mission at hand.\""
+            },
+            {
+              "character": "Back",
+              "line": "Kate frowned but didn’t say much. He simply nodded and continued drinking his coffee, while Eva leaned back in her chair, seemingly satisfied with his reaction."
+            },
+            {
+              "character": "Back",
+              "line": "..."
+            },
+            {
+              "character": "Back",
+              "line": "Just as Kate was about to get up and leave, the shattering sound of glass broke the restaurant's calm. Several armed androids stormed in, raising their weapons and opening fire."
+            },
+            {
+              "character": "Androids",
+              "line": "Target locked—Kate."
+            },
+            {
+              "character": "Kate",
+              "line": "\"Yes, it can be frustrating at times. But remember, peace never comes cheap. Someone has to deal with the dirty work so that others may live in safety and security.\"\n\n[They continue their investigation, facing new challenges and making progress in their mission to maintain order in New Dawn City]"
+            },
+            {
+              "character": "Eva",
+              "line": "\"Indeed, timing is crucial in our line of work.\""
+            },
+            {
+              "character": "Kate",
+              "line": "\"Every second counts in our line of work, Haotai. We can't afford to be complacent or hesitant when it comes to enforcing the law and protecting our citizens.\"\n\n[They encounter a particularly dangerous replicant, but Kate remains calm and focused, using his superior skills to apprehend the violator]\n\n[After the successful apprehension, Kate takes a moment to enjoy his sugar-free latte, reflecting on the importance of their work in maintaining peace and order in New Dawn City]"
+            }
+          ]
         },
         {
-          "character": "Patrol Guard B4",
-          "line": "Stop bellyaching. I heard there’s an important operation going on. We can’t afford any mistakes."
+          "node": 2,
+          "dialogues": [
+            {
+              "character": "Back",
+              "line": "Eva used her specially modified electromagnetic cannon, taking down one of the enemies with a single shot. The two coordinated seamlessly, covering each other and quickly clearing out the remaining androids."
+            },
+            {
+              "character": "Eva",
+              "line": "\"Missions are not about excitement, but about achieving objectives and ensuring the safety of those around us.\""
+            },
+            {
+              "character": "Kate",
+              "line": "\"Understood. Let's debrief and discuss our next steps.\"\n\n[They review the details of their latest mission, analyzing the replicant's behavior and motivations, and discussing potential leads and strategies for preventing future violations]\n\n[As they wrap up their discussion, Kate takes a final sip of his sugar-free latte, feeling a sense of satisfaction in knowing that he has done his part to keep New Dawn City safe]"
+            }
+          ]
         },
         {
-          "character": "BACK5",
-          "line": "(Rustling sounds in the distance…)"
+          "node": 3,
+          "dialogues": [
+            {
+              "character": "Back",
+              "line": "Just as they were about to leave the restaurant, the roar of an engine echoed from outside. A black sedan screeched to a halt in the middle of the street, and a man in a suit coat stepped out."
+            },
+            {
+              "character": "Back",
+              "line": "His movements were steady, exuding a sense of danger. He surveyed the surroundings before fixing his gaze on Kate and Eva."
+            },
+            {
+              "character": "Mysterious Man",
+              "line": "So this is the standard of law enforcement? How disappointing."
+            },
+            {
+              "character": "Eva",
+              "line": "\"Assess the situation carefully and make informed decisions. Let not appearances deceive you.\""
+            },
+            {
+              "character": "Back",
+              "line": "The man slowly removed his coat, revealing a fully mechanical body. His limbs were implanted with enhanced modifications, and even his shoulders were equipped with micro-weapons."
+            },
+            {
+              "character": "Kate",
+              "line": "\"A cyborg is a type of advanced robot, typically one that has some organic components or the ability to interface with biological systems. If a cyborg has violated the law, we will treat it as we would any other replicant or robot violation.\"\n\n[They continue their investigation, encountering various types of advanced robots and cyborgs, always remaining vigilant and focused on enforcing the law]\n\n[Despite the challenges they face, Kate remains committed to his mission, knowing that every successful apprehension brings one step closer to maintaining peace and order in New Dawn City]"
+            },
+            {
+              "character": "Mysterious Man",
+              "line": "Now, you will experience true fear."
+            },
+            {
+              "character": "Back",
+              "line": "The cyborg launched an attack, causing nearby vehicles to explode, illuminating the entire street in fire. Kate and Eva split up, preparing for battle."
+            },
+            {
+              "character": "Eva",
+              "line": "\"Execute the plan efficiently. Distract him and gain access to his system.\""
+            },
+            {
+              "character": "Back",
+              "line": "Eva moved quickly, using her electromagnetic weapon to disrupt the enemy’s sensors and draw his attention, while Kate activated his hacking device, searching for weaknesses."
+            }
+          ]
         },
         {
-          "character": "Patrol Guard B6",
-          "line": "Did you hear that?!"
-        },
-        {
-          "character": "Patrol Guard A7",
-          "line": "Relax, it's probably just a rat. This place is crawling with them."
-        },
-        {
-          "character": "Patrol Guard B8",
-          "line": "No way! Orders are orders—nothing suspicious gets ignored!"
-        },
-        {
-          "character": "Patrol Guard A9",
-          "line": "Ugh, fine! I’ll go check it out. Happy now?"
-        },
-        {
-          "character": "BACK10",
-          "line": "(The ventilation shaft is empty, except for some rat droppings.)"
-        },
-        {
-          "character": "Patrol Guard A11",
-          "line": "See? You’re just paranoid—wait, what the—?!"
-        },
-        {
-          "character": "BACK12",
-          "line": "(A man in a detective’s coat stands by the doorway. A fallen guard lies unconscious beside him.)"
-        },
-        {
-          "character": "Patrol Guard A13",
-          "line": "Who the hell are you?! How did you get in here?!,"
-        },
-        {
-          "character": "BACK14",
-          "line": "(Before the guards can react, the man smashes the alarm system and pulls out a hacking device.)"
-        },
-        {
-          "character": "Kate",
-          "line": "\"Sigh, it's a hassle.\""
-        },
-        {
-          "character": "BACK15",
-          "line": "(Battle begins. Kate activates her hacking device.)"
-        },
-        {
-          "character": "Patrol Guard A16",
-          "line": " the rats won’t come near this place."
+          "node": 4,
+          "dialogues": [
+            {
+              "character": "Back",
+              "line": "The cyborg was not only fast but could predict attack patterns. His heavy punches shattered street obstacles, making Kate’s movements more difficult."
+            },
+            {
+              "character": "Kate",
+              "line": "\"Excellent work, Haotai. Knowing a replicant or robot's weakness can be crucial in apprehending violators and preventing future incidents. Let's use this information to our advantage.\"\n\n[They continue their investigation, using the knowledge they have gained to outsmart and apprehend various replicants and robots]\n\n[Through their combined efforts, Kate and Haotai are able to make a significant impact on reducing the number of violations in New Dawn City, bringing peace and security to its citizens]\n\n[As Kate takes his daily sugar-free latte break, he reflects on the importance of their work and the satisfaction of knowing that they have made a difference in the lives of those around them]"
+            },
+            {
+              "character": "Back",
+              "line": "Kate aimed at the cyborg’s power core and fired a shot through its protective shield. The cyborg paused, and Eva seized the moment, destroying the core with her high-energy electromagnetic cannon."
+            },
+            {
+              "character": "Mysterious Man",
+              "line": "You… can't win… I still have… one last…"
+            },
+            {
+              "character": "Back",
+              "line": "Suddenly, the cyborg's Backup energy core activated, generating a massive energy surge around him. He stood up, his arms transforming into devastating weapons, preparing to unleash his ultimate attack."
+            },
+            {
+              "character": "Eva",
+              "line": "\"Persevere and remain focused. The outcome of this battle depends on our determination.\""
+            },
+            {
+              "character": "Kate",
+              "line": "\"Understood, Haotai. I'll provide cover while you move in for the apprehension.\"\n\n[They execute a well-coordinated plan, with Kate providing cover fire and Haotai moving in to apprehend the violator]\n\n[Through their teamwork and dedication, they are able to successfully apprehend the replicant, bringing another violation to an end]\n\n[As they regroup and debrief, Kate takes a moment to enjoy his sugar-free latte, feeling a sense of pride in their accomplishments and the knowledge that they have made New Dawn City a safer place for its citizens]"
+            },
+            {
+              "character": "Back",
+              "line": "Just as the cyborg was about to release his attack, a small, unassuming robot darted out from the corner, quickly approaching him. It latched onto his ankle and sent a high-voltage shock through his system, paralyzing him instantly."
+            },
+            {
+              "character": "Back",
+              "line": "..."
+            },
+            {
+              "character": "Houtai",
+              "line": "\"Oh, come on, Kate! You're making me sound like a robot without emotions. I may be made of metal, but I still appreciate your help and the effort you put into our tasks!\""
+            },
+            {
+              "character": "Back",
+              "line": "The cyborg collapsed heavily, its energy core shutting down, restoring silence to the scene. Kate and Eva stared in shock at the little robot."
+            },
+            {
+              "character": "Eva",
+              "line": "\"Analyze the situation and identify the threat. Only then can we effectively respond.\""
+            },
+            {
+              "character": "Houtai",
+              "line": "\"Well, well! Look who's taking credit for being a hero! I must admit, your timing was impeccable and your assistance was invaluable. But let's not forget that teamwork makes the dream work!\""
+            },
+            {
+              "character": "Kate",
+              "line": "\"I don't believe we have, but it's always possible. I focus on my work and maintaining order in New Dawn City, so I may not remember every interaction I've had.\"\n\n[They continue their conversation, discussing various aspects of their investigation and the challenges they face in enforcing the law]\n\n[Despite the occasional challenges and setbacks, Kate remains committed to his mission, knowing that every successful apprehension brings one step closer to maintaining peace and order in New Dawn City]\n\n[As he takes his daily sugar-free latte break, Kate reflects on the importance of their work and the satisfaction of knowing that they are making a difference in the lives of those around them]"
+            },
+            {
+              "character": "Houtai",
+              "line": "\"Alright, alright! I'll admit it, you saved my circuits that day. But let's not dwell on the past, shall we? Let's focus on our current mission and make sure we work together to ensure a successful outcome!\""
+            },
+            {
+              "character": "Kate",
+              "line": "\"I don't want or need anything, other than to do my job and maintain order in New Dawn City. I'm here to enforce the law and protect our citizens.\"\n\n[They continue their conversation, discussing various aspects of their investigation and the challenges they face in enforcing the law]\n\n[Despite the occasional challenges and setbacks, Kate remains focused on his mission, knowing that every successful apprehension brings one step closer to maintaining peace and order in New Dawn City]\n\n[As he takes his daily sugar-free latte break, Kate reflects on the importance of their work and the satisfaction of knowing that they are making a difference in the lives of those around them]"
+            },
+            {
+              "character": "Houtai",
+              "line": "\"Exactly, Kate! We need to put our differences aside and focus on the bigger picture. Victor is a threat to New Dawn City, and we must work together to stop him!\""
+            },
+            {
+              "character": "Back",
+              "line": "Kate didn’t respond immediately but glanced at Houtai, then at Eva. A strange sense of understanding formed between them."
+            },
+            {
+              "character": "Eva",
+              "line": "\"Unity is essential for success. Let us work together to overcome any obstacle.\""
+            },
+            {
+              "character": "Kate",
+              "line": "\"Understood, Haotai. Let's make our way back to the precinct and report on our findings and request any necessary resources for future investigations.\"\n\n[They make their way back to the precinct, sharing information about the replicants and robots they have encountered and the strategies they have used to apprehend violators]\n\n[Through their combined efforts, Kate and Haotai are able to make a significant impact on reducing the number of violations in New Dawn City, bringing peace and security to its citizens]\n\n[As they debrief and plan for future investigations, Kate takes a moment to enjoy his sugar-free latte, feeling a sense of pride in their accomplishments and the knowledge that they are making a difference in the lives of those around them]"
+            },
+            {
+              "character": "Back",
+              "line": "Houtai and Eva exchanged a glance before following in Kate’s footsteps."
+            },
+            {
+              "character": "Eva",
+              "line": "\"Names are arbitrary labels. They do not define who I am or what I can accomplish.\""
+            },
+            {
+              "character": "Houtai",
+              "line": "\"Whoops, my apologies! I must have misspelled the name earlier. Yes, we're here to join forces and put an end to Vitek's plans!\""
+            }
+          ]
         }
       ]
     },
     {
-      "act_number": 3,
-      "scene_description": "Unfinished Androids",
-      "dialogues": [
+      "version": 3,
+      "scene_description": "The Enforcement Bureau",
+      "content": [
         {
-          "character": "BACK17",
-          "line": "(Deeper inside the factory, Kate finds a fully operational assembly line. Half-assembled androids hang from the conveyor belts, lifeless yet eerie.)"
+          "node": 1,
+          "dialogues": [
+            {
+              "character": "Back",
+              "line": "Night was falling. Kate, Eva, and Houtai were driving Back to the Enforcement Bureau, carrying the crucial data they had just collected from the restaurant. However, danger always lurked when least expected."
+            },
+            {
+              "character": "Houtai",
+              "line": "\"Absolutely, Kate! Your quick thinking and timely intervention were crucial to our success. And I'll make sure to note down the issue with the car's suspension for maintenance as soon as we return to base!\""
+            },
+            {
+              "character": "Kate",
+              "line": "\"I may be a robot, but I'm programmed to communicate effectively and efficiently in order to carry out my duties. My primary function is to maintain order and enforce the law in New Dawn City.\"\n\n[They continue their conversation, discussing various aspects of their investigation and the challenges they face in enforcing the law]\n\n[Despite being a robot, Kate remains committed to his mission and dedicated to making a difference in the lives of those around him. He takes his daily sugar-free latte break as a moment of relaxation and reflection on their accomplishments]"
+            },
+            {
+              "character": "Houtai",
+              "line": "\"Well, Kate, I may be a robot, but even I can appreciate a good joke! Maybe it's time for us to lighten up a little and add some fun to our missions!\""
+            },
+            {
+              "character": "Eva",
+              "line": "\"Victor is a fellow member of the resistance organization. Our relationship is based on our shared goal for freedom and equality.\""
+            },
+            {
+              "character": "Houtai",
+              "line": "\"Interesting, Kate! It's sad to see how someone we once knew can change for the worse. But it just goes to show that no one is beyond redemption. Maybe there's still a chance for Victor to turn things around and make amends for his actions.\""
+            },
+            {
+              "character": "Eva",
+              "line": "\"Prior to joining the resistance, Victor was part of Project Humanity II, like myself. However, our experiences and choices have led us down different paths.\""
+            },
+            {
+              "character": "Houtai",
+              "line": "\"Fair enough, Kate! It's important to remember that everyone has their reasons for the choices they make. Maybe there's a deeper story behind Victor's transformation that we're not yet aware of. Let's keep an open mind and approach this situation with compassion and understanding.\""
+            },
+            {
+              "character": "Back",
+              "line": "Kate glanced at the rearview mirror and noticed an unusual set of lights. Three black vehicles were trailing them, gradually closing the distance."
+            },
+            {
+              "character": "Kate",
+              "line": "\"Understood, Haotai. Let's prepare for any potential threats and be ready to respond effectively.\"\n\n[They review their information and strategies, discussing potential risks and planning for contingencies]\n\n[Through their combined efforts, Kate and Haotai are able to anticipate and prevent many violations, maintaining peace and order in New Dawn City]\n\n[As they debrief and plan for future investigations, Kate takes a moment to enjoy his sugar-free latte, feeling a sense of pride in their accomplishments and the knowledge that they are making a difference in the lives of those around them]"
+            },
+            {
+              "character": "Houtai",
+              "line": "\"Alright, Kate! Here's what you can do: Stay focused on the road ahead and keep a safe distance from the pursuing vehicle. Use evasive maneuvers to avoid collisions and maintain a consistent speed. If necessary, use the car's defensive features such as flares or smoke screens to throw off the pursuers.\""
+            },
+            {
+              "character": "Back",
+              "line": "The black cars sped up, and automatic weapon systems emerged from their rooftops, aiming at Kate’s vehicle. Remaining calm, Kate maneuvered through the narrow streets while Eva leaned out of the window, ready to fire."
+            },
+            {
+              "character": "Eva",
+              "line": "\"Those who seek change often face adversity. It is a necessary part of the process.\""
+            },
+            {
+              "character": "Kate",
+              "line": "\"Understood, Haotai. You take the lead on this investigation while I provide support and cover.\"\n\n[They switch roles, with Haotai taking the lead on the current investigation and Kate providing backup and assistance]\n\n[Through their teamwork and effective communication, they are able to apprehend several violators and bring peace to New Dawn City]\n\n[As Haotai takes the wheel, so to speak, Kate takes a moment to enjoy his sugar-free latte, feeling a sense of satisfaction in knowing that they are making a difference in the lives of those around them]"
+            },
+            {
+              "character": "Houtai",
+              "line": "\"Haha, Kate! I'm just here to help and provide guidance. No need for formalities! Let's work together to ensure a successful outcome and bring Victor to justice!\""
+            }
+          ]
         },
         {
-          "character": "Kate",
-          "line": "\"Looks like these androids still need some work.\""
+          "node": 2,
+          "dialogues": [
+            {
+              "character": "Back",
+              "line": "Kate activated a hacking device to disrupt the enemy’s weapons while providing support for Eva. Eva precisely shot out the tires of one of the pursuing cars, causing it to spin out of control and crash into the roadside barrier, engulfed in flames. Houtai skillfully handled the car, weaving through the narrow streets and shaking off some of their pursuers."
+            },
+            {
+              "character": "Houtai",
+              "line": "\"Absolutely, Kate! Your driving skills are impressive! Keep it up and we'll outmaneuver Victor and his henchmen!\""
+            },
+            {
+              "character": "Eva",
+              "line": "\"Every team member brings unique strengths and abilities to the table. Utilize each other's talents for optimal results.\""
+            },
+            {
+              "character": "Back",
+              "line": "After a thrilling chase through the city, Houtai sat in the Backseat, enthusiastically rambling about how exciting the night had been, completely ignoring Kate’s cold response."
+            },
+            {
+              "character": "Kate",
+              "line": "\"I may speak frequently, but my words are always focused on carrying out my duties and maintaining order in New Dawn City. My primary function is to enforce the law and protect our citizens.\"\n\n[They continue their conversation, discussing various aspects of their investigation and the challenges they face in enforcing the law]\n\n[Despite being seen as talkative, Kate remains committed to his mission and dedicated to making a difference in the lives of those around him. He takes his daily sugar-free latte break as a moment of relaxation and reflection on their accomplishments]"
+            },
+            {
+              "character": "Houtai",
+              "line": "\"I know, Kate! And I'm grateful for your quick thinking and timely intervention. We make a great team!\""
+            }
+          ]
         },
         {
-          "character": "Commander18",
-          "line": "Copy that. Snap some photos for analysis."
+          "node": 3,
+          "dialogues": [
+            {
+              "character": "Back",
+              "line": "The Enforcement Bureau was unusually quiet. The normally bustling corridors were now eerily empty, with only a few officers buried in paperwork. Kate and Eva, with Houtai in tow, headed straight for the command room."
+            },
+            {
+              "character": "Houtai",
+              "line": "\"I hear you, Kate! The Bureau may not be as flashy as some high-tech organizations, but we get the job done. And who knows? Maybe there are hidden advanced technologies that only a select few are privy to!\""
+            },
+            {
+              "character": "Eva",
+              "line": "\"Understood. Maintaining a low profile is crucial in our current situation.\""
+            },
+            {
+              "character": "Back",
+              "line": "Upon entering the command room, a uniformed officer approached them with an unnatural smile. His eyes were empty, yet his tone was eerily enthusiastic."
+            },
+            {
+              "character": "Commander",
+              "line": "Kate, Eva, good work. You can hand over the data to me. I’ll handle it personally."
+            },
+            {
+              "character": "Kate",
+              "line": "\"Understood, Haotai. I'll forward the data to the tech department as instructed. It's important that we follow proper protocols and channels in order to effectively carry out our duties and maintain order in New Dawn City.\"\n\n[They continue their investigation, ensuring that all information is handled appropriately and that they are making a difference in the lives of those around them]\n\n[As Kate takes his daily sugar-free latte break, he reflects on the importance of following proper procedures and working together to maintain peace and order in New Dawn City]"
+            },
+            {
+              "character": "Impostor Commander",
+              "line": "The higher-ups changed the procedure. Everything goes through me now."
+            },
+            {
+              "character": "Back",
+              "line": "Kate sensed something was off and subtly reached for his weapon. Eva stepped closer, her finger resting lightly on the trigger."
+            },
+            {
+              "character": "Houtai",
+              "line": "\"Ah, Kate! You've got a sharp eye! Let's proceed with caution and gather as much information as we can before making our move.\""
+            },
+            {
+              "character": "Back",
+              "line": "Just as Houtai finished speaking, the impostor suddenly pulled out a weapon and fired at Kate. Having anticipated the attack, Kate swiftly dodged, the bullets striking the wall, sending debris flying."
+            },
+            {
+              "character": "Impostor Commander",
+              "line": "Too slow, enforcer."
+            },
+            {
+              "character": "Eva",
+              "line": "\"It is a possibility. Remain vigilant and be prepared for any eventuality.\""
+            },
+            {
+              "character": "Back",
+              "line": "The impostor activated a hidden command, sealing off the command room with heavy metal doors. Only then did the trio realize they had already been surrounded by androids, who now began their attack. The command room instantly turned into a battleground."
+            },
+            {
+              "character": "Houtai",
+              "line": "\"I know, Kate! But remember, every mission comes with its challenges. Let's stay focused and work together to overcome any obstacles that come our way!\""
+            }
+          ]
         },
         {
-          "character": "Kate",
-          "line": "\"I'll take care of it.\""
-        },
-        {
-          "character": "BACK19",
-          "line": "(While taking photos, Kate spots a document on a nearby workstation.)"
-        },
-        {
-          "character": "Kate",
-          "line": "\"Replacement project, understood.\""
-        },
-        {
-          "character": "BACK",
-          "line": "(Before she can process the information, a man in a suit steps out from the shadows, his gaze filled with disdain.)"
-        },
-        {
-          "character": "Victor",
-          "line": "So, an enforcer, huh? You guys sure have a knack for showing up uninvited. Too bad you’re early—our product isn’t quite ready yet. But I don’t mind giving you a preview."
-        },
-        {
-          "character": "BACK",
-          "line": "(Victor activates the unfinished androids.)"
-        },
-        {
-          "character": "Victor",
-          "line": "Go on, clean up the mess."
-        },
-        {
-          "character": "Kate",
-          "line": "\"Half-finished, yes.\""
-        },
-        {
-          "character": "BACK",
-          "line": "(Kate hacks into the conveyor belt’s robotic arms to fight back.)"
+          "node": 4,
+          "dialogues": [
+            {
+              "character": "Back",
+              "line": "The androids were agile, constantly dodging attacks, but the trio managed to hold their ground with well-coordinated teamwork."
+            },
+            {
+              "character": "Back",
+              "line": " Eva aimed for the commander’s shoulder and fired, hitting her mark. Kate quickly closed the distance, landing a powerful punch that knocked the impostor down."
+            },
+            {
+              "character": "Commander",
+              "line": "The plan... is already in motion... Your resistance... is meaningless."
+            },
+            {
+              "character": "Back",
+              "line": "The remaining androids, seeing the tide turning against them, attempted to escape. Just then, reinforcements from the Bureau arrived, swiftly subduing the remaining enemies."
+            },
+            {
+              "character": "Back",
+              "line": "..."
+            },
+            {
+              "character": "Kate",
+              "line": "\"Understood, Haotai. Let's wrap up this investigation and report our findings to the appropriate authorities. It's important that we bring any violators to justice and maintain order in New Dawn City.\"\n\n[They complete their investigation, apprehending the final violator and reporting their findings to the proper authorities]\n\n[As they debrief and reflect on their accomplishments, Kate takes a moment to enjoy his sugar-free latte, feeling a sense of pride in their work and the difference they have made in the lives of those around them]"
+            }
+          ]
         }
       ]
     },
     {
-      "act_number": 4,
-      "scene_description": "Overwhelmed",
-      "dialogues": [
+      "version": 4,
+      "scene_description": "Enemy Stronghold",
+      "content": [
         {
-          "character": "BACK",
-          "line": "(Time passes... When Kate finally regains consciousness, he finds herself back at base.)"
+          "node": 1,
+          "dialogues": [
+            {
+              "character": "Back",
+              "line": "With the classified documents recovered from Houtai and the decrypted images, the team finally located the enemy’s secret base.The protagonists led a squad to infiltrate Quantum Mind’s hidden factory, but as they broke through the entrance, they realized their arrival had been anticipated. Waiting inside was an army of bionics, led by two powerful cyborgs."
+            },
+            {
+              "character": "Back",
+              "line": "The heavy metal doors of the factory were forced open. Kate, Eva, and Houtai led the enforcement squad inside."
+            },
+            {
+              "character": "Eva",
+              "line": "\"Quiet environments can be advantageous for planning and executing stealth missions.\""
+            },
+            {
+              "character": "Houtai",
+              "line": "\"You're absolutely right, Kate! Let's be prepared for an ambush and take cover. Use your sensors to gather as much information as possible and alert me of any suspicious activity.\""
+            },
+            {
+              "character": "Kate",
+              "line": "\"Understood, Haotai. I'll prepare for combat and be ready to respond effectively to any threats. It's important that we remain vigilant and dedicated to maintaining order in New Dawn City.\"\n\n[They review their strategies and plans, ensuring that they are prepared for any potential conflicts]\n\n[Through their training and effective communication, they are able to prevent many violations and bring peace to New Dawn City]\n\n[As Kate takes his daily sugar-free latte break, he reflects on the importance of staying sharp and ready to protect those around him]"
+            },
+            {
+              "character": "Back",
+              "line": "Suddenly, hidden panels on both sides of the walls slid open. Dozens of bionic soldiers surged forward, their eyes glowing red. They moved in perfect unison, their synchronized mechanical footsteps echoing down the corridor."
+            },
+            {
+              "character": "Houtai",
+              "line": "\"Got it, Kate! Let's engage the enemy and neutralize any threats. Remember to prioritize safety and use all available resources.\""
+            },
+            {
+              "character": "Back",
+              "line": "Gunfire erupted. The corridor was engulfed in chaos as bullets and energy beams tore through the darkness. Then, from the shadows, two towering figures emerged."
+            },
+            {
+              "character": "Cyborg A & Cyborg B",
+              "line": "Targets confirmed... eliminating intruders..."
+            },
+            {
+              "character": "Eva",
+              "line": "\"Identify the threat and devise a strategy to neutralize it. Familiarity with an enemy does not make them any less dangerous.\""
+            },
+            {
+              "character": "Houtai",
+              "line": "\"Understood, Kate! Let's work together and use all of our skills and resources to overcome this extreme combat situation. Remember, teamwork is key!\""
+            },
+            {
+              "character": "Kate",
+              "line": "\"Understood, Haotai. I'll prepare for combat and be ready to respond effectively to any threats. It's important that we remain vigilant and dedicated to maintaining order in New Dawn City.\"\n\n[They review their strategies and plans, ensuring that they are prepared for any potential conflicts]\n\n[Through their training and effective communication, they are able to prevent many violations and bring peace to New Dawn City]\n\n[As Kate takes his daily sugar-free latte break, he reflects on the importance of being ready to protect those around him and uphold the law]"
+            },
+            {
+              "character": "Back",
+              "line": "The cyborgs launched their attack. Every strike echoed with a heavy metallic impact, their speed and strength overwhelming the team, forcing them Back step by step."
+            }
+          ]
         },
         {
-          "character": "Commander",
-          "line": "You're awake…"
+          "node": 2,
+          "dialogues": []
         },
         {
-          "character": "Commander",
-          "line": "When we found you in the ruins, all the data you collected was gone. The only things left were you and your hacking device. What exactly happened in that factory?"
+          "node": 3,
+          "dialogues": []
         },
         {
-          "character": "BACK",
-          "line": "(Kate remains silent for a moment.)"
-        },
-        {
-          "character": "Kate",
-          "line": "\"Saw a lot of androids, but nothing else noteworthy.\""
-        },
-        {
-          "character": "Commander",
-          "line": "I see. Well, get some rest—you’ve done enough."
-        },
-        {
-          "character": "BACK",
-          "line": "(The commander exits the medical room.)"
-        },
-        {
-          "character": "Victor",
-          "line": "'Replacement Project,'changing the world... Justice... Forget it. Thinking wont change anything. Might as well just rest for now…"
+          "node": 4,
+          "dialogues": []
         }
       ]
     }
