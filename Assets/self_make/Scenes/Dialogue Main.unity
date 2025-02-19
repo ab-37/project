@@ -1834,7 +1834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: "\u8001\u95C6"
+  nameText: "\u6307\u63EE\u5B98"
   nameColor: {r: 1, g: 1, b: 1, a: 1}
   soundEffect: {fileID: 0}
   portraits: []
@@ -5178,6 +5178,16 @@ GameObject:
   - component: {fileID: 2003729376}
   - component: {fileID: 2003729375}
   - component: {fileID: 2003729377}
+  - component: {fileID: 2003729387}
+  - component: {fileID: 2003729386}
+  - component: {fileID: 2003729385}
+  - component: {fileID: 2003729384}
+  - component: {fileID: 2003729383}
+  - component: {fileID: 2003729382}
+  - component: {fileID: 2003729381}
+  - component: {fileID: 2003729380}
+  - component: {fileID: 2003729379}
+  - component: {fileID: 2003729378}
   m_Layer: 0
   m_Name: "\u5C0D\u8A71\u6846"
   m_TagString: Untagged
@@ -5201,7 +5211,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 102.76468
     y: 179.64706
-    width: 125.40979
+    width: 125.94935
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5225,11 +5235,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -394.69153, y: 249.95953}
+  scrollPos: {x: -654.5536, y: 84.260574}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 200
-  zoom: 0.6100004
+  zoom: 0.7900002
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -5238,8 +5248,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 2003729376}
-  selectedCommands:
-  - {fileID: 2003729377}
+  selectedCommands: []
   variables:
   - {fileID: 2003729276}
   - {fileID: 2003729375}
@@ -5385,7 +5394,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 93.73332
     y: 249.6266
-    width: 148.3606
+    width: 148.73416
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 1
@@ -5487,7 +5496,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 427.1693
     y: 177.71967
-    width: 125.40979
+    width: 125.94935
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5541,7 +5550,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 265.17404
     y: 179.82146
-    width: 125.40979
+    width: 125.94935
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5937,7 +5946,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 769.748
     y: 0.5950519
-    width: 102.458984
+    width: 104.43037
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 1
@@ -6162,7 +6171,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 770.3799
     y: -53.858387
-    width: 100.81964
+    width: 104.43037
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6326,7 +6335,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 770.1024
     y: -110.3361
-    width: 100.81964
+    width: 103.16454
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6505,7 +6514,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 259.4982
     y: 248.07874
-    width: 148.3606
+    width: 148.73416
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 1
@@ -6636,7 +6645,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 423.34833
     y: 251.26755
-    width: 148.3606
+    width: 148.73416
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 1
@@ -7018,7 +7027,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 946.1316
     y: -69.64084
-    width: 104.09833
+    width: 108.22783
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7261,7 +7270,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 964.55225
     y: -27.535606
-    width: 104.09833
+    width: 106.962006
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7456,7 +7465,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 956.6579
     y: -117.00926
-    width: 99.1803
+    width: 103.16454
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7501,14 +7510,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 693.052
-    y: 87.74518
-    width: 109.01636
+    x: 730.62115
+    y: 79.5099
+    width: 117.08859
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 92
-  blockName: New Block
+  blockName: KateSaying
   description: 
   eventHandler: {fileID: 0}
   commandList:
@@ -7541,6 +7550,276 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &2003729378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003729271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 103
+  indentLevel: 0
+  storyText: '{$VarDialogue}'
+  description: 
+  character: {fileID: 894815937}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &2003729379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003729271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 1015.67267
+    y: 77.91606
+    width: 181.64554
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 108
+  blockName: MysteriousManSaying
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 2003729378}
+  suppressAllAutoSelections: 0
+--- !u!114 &2003729380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003729271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 101
+  indentLevel: 0
+  storyText: '{$VarDialogue}'
+  description: 
+  character: {fileID: 69689796}
+  portrait: {fileID: 21300000, guid: 8984e43169685474fb4f4f05c919be9e, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &2003729381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003729271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 876.2615
+    y: 79.092445
+    width: 113.29112
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 107
+  blockName: EveSaying
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 2003729380}
+  suppressAllAutoSelections: 0
+--- !u!114 &2003729382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003729271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 99
+  indentLevel: 0
+  storyText: '{$VarDialogue}'
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &2003729383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003729271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 726.26276
+    y: 137.91592
+    width: 120.886055
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 106
+  blockName: BackSaying
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 2003729382}
+  suppressAllAutoSelections: 0
+--- !u!114 &2003729384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003729271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 97
+  indentLevel: 0
+  storyText: '{$VarDialogue}'
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &2003729385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003729271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 1032.512
+    y: 140.6812
+    width: 123.4177
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 105
+  blockName: VictorSaying
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 2003729384}
+  suppressAllAutoSelections: 0
+--- !u!114 &2003729386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003729271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 95
+  indentLevel: 0
+  storyText: '{$VarDialogue}'
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &2003729387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003729271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 858.7686
+    y: 136.99672
+    width: 161.39238
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 104
+  blockName: CommonderSaying
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 2003729386}
+  suppressAllAutoSelections: 0
 --- !u!1 &2071233430
 GameObject:
   m_ObjectHideFlags: 0
