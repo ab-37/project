@@ -80,6 +80,32 @@ public class ControlUI : MonoBehaviour
     {
         flowchart.SetStringVariable("VarDialogue", "123") ;
     }
+    private void ExecuteDialogurText(string character,string Dialogue)
+    {
+        flowchart.SetStringVariable("VarDialogue", Dialogue);
+        switch (character)
+        {
+            case "Kate":
+                flowchart.ExecuteBlock("KateSaying");
+                break;
+            case "Eve":
+                flowchart.ExecuteBlock("EveSaying");
+                break;
+            case "MysteriousMan":
+                flowchart.ExecuteBlock("MysteriousManSaying");
+                break;
+            case "Back":
+                flowchart.ExecuteBlock("BackSaying");
+                break;
+            case "Commonder":
+                flowchart.ExecuteBlock("CommonderSaying");
+                break;
+            case "Victor":
+                flowchart.ExecuteBlock("VictorSaying");
+                break;
+        }
+    }
+
     /*private void findBlockText(string act_number)
     {
         for (int i = 0; i < StageData["stage"].Count; i++)
@@ -147,7 +173,7 @@ public class ControlUI : MonoBehaviour
         mainMenu = GameObject.Find("MainUI");
 
         //load dialogue, temp file path
-        fullDialogueData = JsonMapper.ToObject(File.ReadAllText(Application.dataPath + "/self_make/Scripts/NPC_script/acts 1.json"));
+        fullDialogueData = JsonMapper.ToObject(File.ReadAllText(Application.dataPath + "/self_make/Scripts/NPC_script/acts1.json"));
 
         if (loadNode(1, 1)) {
             Debug.Log("Dialogue loaded successfully");
