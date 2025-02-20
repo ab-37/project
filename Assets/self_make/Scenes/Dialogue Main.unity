@@ -4248,7 +4248,7 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
-    m_VerticalOverflow: 1
+    m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Story text
 --- !u!222 &1791254344
@@ -5247,7 +5247,7 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 2003729376}
+  - {fileID: 2003729381}
   selectedCommands: []
   variables:
   - {fileID: 2003729276}
@@ -7652,7 +7652,7 @@ MonoBehaviour:
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 107
-  blockName: EveSaying
+  blockName: EvaSaying
   description: 
   eventHandler: {fileID: 0}
   commandList:
@@ -7814,7 +7814,7 @@ MonoBehaviour:
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 104
-  blockName: CommonderSaying
+  blockName: CommanderSaying
   description: 
   eventHandler: {fileID: 0}
   commandList:

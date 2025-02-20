@@ -8,6 +8,7 @@ using Fungus;
 using UnityEngine.SceneManagement;
 using LitJson;
 using System.IO;
+using UnityEditorInternal;
 
 public class ControlUI : MonoBehaviour
 {
@@ -22,6 +23,12 @@ public class ControlUI : MonoBehaviour
     
     //the current loaded node's dialogue data
     private JsonData currentNodeDialogue;
+
+    //the current line number of dialogue playing
+    private int currentLine;
+
+    //check if dialogue is finished playing
+    private bool isDialogueDone;
 
     private GameObject mainMenu;
     public void hideMainUI()
@@ -75,30 +82,58 @@ public class ControlUI : MonoBehaviour
         }
         return null;
     }
-
+    /*
     private void changeDialogueTest()
     {
         flowchart.SetStringVariable("VarDialogue", "123") ;
     }
-    private void ExecuteDialogurText(string character,string Dialogue)
+    */
+
+    //split dialogue into lines
+    private string splitDialogue(string dialogueText, int lineLimit = 60 /*, int startTruncate = 3, int extraLineIncrement = 6 */) {
+        string[] words = dialogueText.Split(' ');
+        string outString = "";
+        int lineLength = 0;
+        //int lineNum = 0;
+        foreach (string word in words) {
+            if (lineLength + word.Length > lineLimit) {
+                //line limit reached
+                /*
+                if (++lineNum >= startTruncate) {
+                    //text is smaller and can hold more characters, redo everything
+                    return splitDialogue(dialogueText, lineLimit + extraLineIncrement, startTruncate + 1);
+                }
+                */
+                outString += "\n";
+                lineLength = 0;
+            }
+            outString += word + " ";
+            lineLength += word.Length + 1;
+        }
+        return outString;
+    }
+
+    private void executeDialogueText(string character, string dialogue)
     {
-        flowchart.SetStringVariable("VarDialogue", Dialogue);
+        string spDialogue = splitDialogue(dialogue);
+
+        flowchart.SetStringVariable("VarDialogue", spDialogue);
         switch (character)
         {
             case "Kate":
                 flowchart.ExecuteBlock("KateSaying");
                 break;
-            case "Eve":
-                flowchart.ExecuteBlock("EveSaying");
+            case "Eva":
+                flowchart.ExecuteBlock("EvaSaying");
                 break;
-            case "MysteriousMan":
+            case "Mysterious Man":
                 flowchart.ExecuteBlock("MysteriousManSaying");
                 break;
             case "Back":
                 flowchart.ExecuteBlock("BackSaying");
                 break;
-            case "Commonder":
-                flowchart.ExecuteBlock("CommonderSaying");
+            case "Commander":
+                flowchart.ExecuteBlock("CommanderSaying");
                 break;
             case "Victor":
                 flowchart.ExecuteBlock("VictorSaying");
@@ -159,12 +194,13 @@ public class ControlUI : MonoBehaviour
         string lineStr = (string)currentNodeDialogue[lineNum]["line"];
 
         //debug code below, put real code here
-        Debug.Log(characterStr + ": " + lineStr);
-        
+        //Debug.Log(characterStr + ": " + lineStr);
+        executeDialogueText(characterStr, lineStr);
+
         return true;
     }
 
-    void Start()
+    private void Start()
     {
         LoadData = File.ReadAllText(Application.dataPath + "/self_make/stage/stage.json");
         StageData = JsonMapper.ToObject(LoadData);
@@ -175,12 +211,15 @@ public class ControlUI : MonoBehaviour
         //load dialogue, temp file path
         fullDialogueData = JsonMapper.ToObject(File.ReadAllText(Application.dataPath + "/self_make/Scripts/NPC_script/acts1.json"));
 
-        if (loadNode(1, 1)) {
+        if (loadNode(2, 1)) {
             Debug.Log("Dialogue loaded successfully");
         }
 
+        isDialogueDone = false;
+        currentLine = -1;
+
         //debug checking line by line
-        for (int i = 0 ; loadDialogueLine(i) ; ++i) {}
+        //for (int i = 0 ; loadDialogueLine(i) ; ++i) {}
 
         //Debug.Log(currentNodeDialogue[0]["character"]); //debug
 
@@ -189,7 +228,7 @@ public class ControlUI : MonoBehaviour
         //Debug.Log(StageData["stage"][1]["next_stage"]);
         //Debug.Log(selectStage("11")["next_stage"]);
 
-        changeDialogueTest();
+        //changeDialogueTest();
 
         /*
         if (blockSelect != "0")
@@ -200,8 +239,18 @@ public class ControlUI : MonoBehaviour
 
     }
 
-    void Update()
+    private void Update()
     {
-        
+        if (isDialogueDone) {
+            //do end of dialogue stuff
+        } 
+        else {
+            if (!SayDialog.GetSayDialog().isActiveAndEnabled) {
+                if (!loadDialogueLine(++currentLine)) {
+                    isDialogueDone = true;
+                    Debug.Log("End of dialogue");
+                }
+            }
+        }
     }
 }
