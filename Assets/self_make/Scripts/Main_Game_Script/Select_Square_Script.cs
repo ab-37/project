@@ -46,7 +46,9 @@ public class Select_Square_Script : MonoBehaviour
     private Timer_Script timerScript;
     private Intro_Script introScript;
     private Outro_Script outroScript;
-    private Target_Script targetScript;
+    //private Target_Script targetScript;
+    private Sound_Handler_Script soundHandlerScript;
+    private Tutorial_Script tutorialScript;
 
     //key input handlers
     private int directionHandler()
@@ -127,6 +129,13 @@ public class Select_Square_Script : MonoBehaviour
             Debug.Log("Select failed, no more steps");
             return;
         }
+
+        //play sfx
+        soundHandlerScript.playSFX("Select");
+
+        //tutorial mode
+        tutorialScript.setText("select");
+
         selectState = true;
         selectedSquaresScript.selectSquare(currentPos);
         string expression = gridNumbersScript.getGridContent(currentPos);
@@ -148,9 +157,21 @@ public class Select_Square_Script : MonoBehaviour
         }
         int realUpdatePos = selectedPositions.LastOrDefault();
 
-        //decrement step only if 3+ squares selected
+        //decrement step and play vfx only if 3+ squares selected
         if (selectedPositions.Count() > 2) {
             remainingScript.decrementStep();
+            //selectedSquaresScript.pathVFX(ref selectedPositions);
+            selectedSquaresScript.allSquareSpawnClickVFX();
+        }
+        else {
+            //selected a single number
+            functionWordScript.clearText();
+            soundHandlerScript.playSFX("Deselect");
+
+            //tutorial mode
+            tutorialScript.setText("notSelect");
+
+            goto resetEverything;
         }
         
         string expression = expressionToString();
@@ -165,8 +186,15 @@ public class Select_Square_Script : MonoBehaviour
             Debug.Log("Correct!");
             //add score
             scoreScript.addScore(30 + remainingScript.getCurrentSteps() * 10);
+
+            //play correct sfx
+            soundHandlerScript.playSFX("Correct");
+
+            //tutorial mode
+            tutorialScript.setText("goal");
+
             //countup level score check
-            if (levelMode == 2) {
+            if (levelMode == 2 || levelMode == 0) {
                 if (scoreScript.getScore() >= objective) {
                     isLevelEnded = true;
                     timerScript.stopTimer();
@@ -177,7 +205,17 @@ public class Select_Square_Script : MonoBehaviour
         }
         else {
             gridNumbersScript.setGridContent(realUpdatePos, result.ToString());
-            //moves - 1
+            //check if no remaining steps, play sfx
+            if (remainingScript.hasSteps()) {
+                soundHandlerScript.playSFX("Deselect");
+                //tutorial mode
+                tutorialScript.setText("intermediate");
+            }
+            else {
+                soundHandlerScript.playSFX("Wrong");
+                //tutorial mode
+                tutorialScript.setText("outOfMoves");
+            }
         }
 
         resetEverything:
@@ -222,28 +260,35 @@ public class Select_Square_Script : MonoBehaviour
         if (isInvalidMovement(newPos, dir)) {
             return;
         } 
+        
+        //play sfx
+        soundHandlerScript.playSFX("Tick");
+
         if (selectState)
         {
             trySelect(newPos);
-
         }
         updatePos(newPos);
     }
 
     //START THE GAME (COROUTINE)
     private IEnumerator startGameCoroutine() {
-        //set the timer
-        timerScript.setTimerMode(levelMode == 1);
+        //set the timer, tutorial uses mode 2
+        timerScript.setTimerMode(levelMode == 1 ? 1 : 2);
         timerScript.setTime(0);
         
         if (levelMode == 1) {
             timerScript.setTime(objective);
         }
         //show target text if needed
-        else if (levelMode == 2) {
-            targetScript.setTarget(objective);
-            targetScript.showText();
+        else {
+            //targetScript.setTarget(objective);
+            //targetScript.showText();
+            scoreScript.setTarget(objective);
         }
+
+        //set score mode, tutorial uses mode 2
+        scoreScript.setMode(levelMode == 1 ? 1 : 2);
 
         //clear the score
         scoreScript.clearScore();
@@ -266,8 +311,14 @@ public class Select_Square_Script : MonoBehaviour
         goalScript.showText();
         gridNumbersScript.showNumbers();
         remainingScript.showText();
-        scoreScript.showText();
+        //scoreScript.showText();
         functionWordScript.updateText("", 0);
+
+        //tutorial mode
+        if (levelMode == 0) {
+            tutorialScript.showText();
+            tutorialScript.setText("notSelect");
+        }
 
         //new problem
         updatePos(currentPos);
@@ -300,10 +351,11 @@ public class Select_Square_Script : MonoBehaviour
             Debug.Log("lastGameTime: " + Static_Variables.lastGameTime.ToString());
         }
 
-        //hide the numbers and show time up text
+        //hide the numbers and show level end text
         functionWordScript.clearText();
         gridNumbersScript.hideNumbers();
         outroScript.showLevelEndedText();
+        tutorialScript.hideText();
         
         //after a second, show press space to return text
         yield return new WaitForSeconds(1);
@@ -329,7 +381,6 @@ public class Select_Square_Script : MonoBehaviour
         spaceKey = KeyCode.Space;
         unitVectorX = squareLength * Vector3.right;
         unitVectorY = squareLength * Vector3.up;
-        currentPos = 4;
         //lastPos = -1;
         //squareLength = 240;
 
@@ -343,12 +394,16 @@ public class Select_Square_Script : MonoBehaviour
         timerScript = gameObject.transform.parent.Find("Background/Timer").GetComponent<Timer_Script>();
         introScript = gameObject.transform.parent.Find("Transitions/Intro").GetComponent<Intro_Script>();
         outroScript = gameObject.transform.parent.Find("Transitions/Outro").GetComponent<Outro_Script>();
-        targetScript = gameObject.transform.parent.Find("Background/Target").GetComponent<Target_Script>();
+        //targetScript = gameObject.transform.parent.Find("Background/Target").GetComponent<Target_Script>();
+        soundHandlerScript = gameObject.transform.parent.Find("Sound Handler").GetComponent<Sound_Handler_Script>();
+        tutorialScript = gameObject.transform.parent.Find("Background/Tutorial").GetComponent<Tutorial_Script>();
 
     }
 
     private void Start()
     {
+        currentPos = 4;
+        updatePos(4);
         isGameActive = false;
         isIntroDone = false;
         isIntroRunning = false;
@@ -392,9 +447,11 @@ public class Select_Square_Script : MonoBehaviour
             int newDirection = directionHandler();
             if (Input.GetKeyDown(resetKey)) {
                 randomizerScript.resetProblem();
+                tutorialScript.setText("notSelect");
             }
             if (Input.GetKeyDown(newQuestionKey)) {
                 randomizerScript.newProblem(true);
+                tutorialScript.setText("notSelect");
             }
 
             if (Input.GetKeyDown(selectKey)) {
@@ -402,6 +459,7 @@ public class Select_Square_Script : MonoBehaviour
             }
             if (Input.GetKeyUp(selectKey) && selectState) {
                 selectRelease();
+                //selectedSquaresScript.allSquareSpawnClickVFX();
             }
 
             if (newDirection != 0)

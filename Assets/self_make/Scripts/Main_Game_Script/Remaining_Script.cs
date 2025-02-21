@@ -49,6 +49,9 @@ public class Remaining_Script : MonoBehaviour
     public bool hasSteps() {
         return currentSteps > 0;
     }
+    //check if no steps are used
+    public bool isNoStepsUsed()
+    => originalSteps == currentSteps;
 
     private void Awake() {
         titleTransform = gameObject.transform.Find("Title");

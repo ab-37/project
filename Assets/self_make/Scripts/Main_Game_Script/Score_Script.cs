@@ -6,20 +6,27 @@ using UnityEngine;
 public class Score_Script : MonoBehaviour
 {
     private Transform scoreTransform;
+    private Transform targetTransform;
     private TextMeshProUGUI scoreTextMesh;
+    private TextMeshProUGUI targetTextMesh;
+
     private int score;
+    private int target;
+    private int mode; //1 = score, 2 = target
 
-    public void hideText() {
-        scoreTransform.gameObject.SetActive(false);
-    }
-    public void showText() {
-        scoreTransform.gameObject.SetActive(true);
-    }
-
-    //update text mesh
-    private void updateScoreText() {
-        if (scoreTextMesh != null) {
-            scoreTextMesh.text = "Score: " + score.ToString();
+    //update text meshes
+    private void updateText() {
+        if (mode == 1) {
+            //score mode
+            if (scoreTextMesh != null) {
+                scoreTextMesh.text = "Score: " + score.ToString();
+            }
+        }
+        else if (mode == 2) {
+            //target mode
+            if (targetTextMesh != null) {
+                targetTextMesh.text = score.ToString() + " / " + target.ToString();
+            }
         }
     }
 
@@ -29,36 +36,66 @@ public class Score_Script : MonoBehaviour
         if (score < 0) {
             score = 0;
         }
-        updateScoreText();
+        updateText();
     }
 
     //set score to n
     public void setScore(int n) {
         score = n;
-        updateScoreText();
+        if (score < 0) {
+            score = 0;
+        }
+        updateText();
     }
 
     //set score to 0
     public void clearScore() {
         score = 0;
-        updateScoreText();
+        updateText();
     }
 
     //get score
-    public int getScore() {
-        return score;
+    public int getScore()
+    => score;
+
+    //set target to n
+    public void setTarget(int n) {
+        target = n;
+        if (target < 0) {
+            target = 0;
+            
+        }
+        updateText();
+    }
+
+    //set mode to score or target
+    public void setMode(int m) {
+        mode = m;
+        targetTransform.gameObject.SetActive(false);
+        scoreTransform.gameObject.SetActive(false);
+        
+        if (mode == 1) {
+            //score mode
+            scoreTransform.gameObject.SetActive(true);
+        }
+        else if (mode == 2) {
+            //target mode
+            targetTransform.gameObject.SetActive(true);
+        }
     }
 
     private void Awake() {
-        scoreTransform = gameObject.transform.Find("Score Text");
-        scoreTextMesh = scoreTransform.GetComponent<TextMeshProUGUI>();
+        scoreTransform = transform.Find("Score");
+        scoreTextMesh = scoreTransform.Find("Score Text").GetComponent<TextMeshProUGUI>();
+        targetTransform = transform.Find("Target");
+        targetTextMesh = targetTransform.Find("Target Text").GetComponent<TextMeshProUGUI>();
     }
 
     private void Start() {
-        hideText();
+
     }
 
     private void Update() {
-        
+
     }
 }

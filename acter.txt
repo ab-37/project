@@ -1,0 +1,51 @@
+Dialogue Log
+========================: Playing Act 1: The Abandoned Factory
+
+Commander1: Kate, we've receive intelligence that an abandoned factory on the outskirts may be a front for illegal android production. Your mission is to infiltrate, confirm the intel, and collect any relevant evidence.
+Kate: "Very unfortunate."
+"Glad you could make it here."
+Commander2: The site may be guarded by heavily armed personnel. Avoid direct confrontation unless absolutely necessary. Your priority is gathering evidence.
+Commander2: Playing Act 2: Infiltration
+
+Patrol Guard A3: Do we really have to pull night shifts in this dump? Even the rats won’t come near this place.
+Patrol Guard B4: Stop bellyaching. I heard there’s an important operation going on. We can’t afford any mistakes.
+BACK5: (Rustling sounds in the distance…)
+Patrol Guard B6: Did you hear that?!
+Patrol Guard A7: Relax, it's probably just a rat. This place is crawling with them.
+Patrol Guard B8: No way! Orders are orders—nothing suspicious gets ignored!
+Patrol Guard A9: Ugh, fine! I’ll go check it out. Happy now?
+BACK10: (The ventilation shaft is empty, except for some rat droppings.)
+Patrol Guard A11: See? You’re just paranoid—wait, what the—?!
+BACK12: (A man in a detective’s coat stands by the doorway. A fallen guard lies unconscious beside him.)
+Patrol Guard A13: Who the hell are you?! How did you get in here?!,
+BACK14: (Before the guards can react, the man smashes the alarm system and pulls out a hacking device.)
+Kate: "Sigh, it's a hassle."
+BACK15: (Battle begins. Kate activates her hacking device.)
+Patrol Guard A16:  the rats won’t come near this place.
+Patrol Guard A16: Playing Act 3: Unfinished Androids
+
+BACK17: (Deeper inside the factory, Kate finds a fully operational assembly line. Half-assembled androids hang from the conveyor belts, lifeless yet eerie.)
+Kate: "Looks like these androids still need some work."
+Commander18: Copy that. Snap some photos for analysis.
+Kate: "I'll take care of it."
+BACK19: (While taking photos, Kate spots a document on a nearby workstation.)
+Kate: "Replacement project, understood."
+BACK: (Before she can process the information, a man in a suit steps out from the shadows, his gaze filled with disdain.)
+Victor: So, an enforcer, huh? You guys sure have a knack for showing up uninvited. Too bad you’re early—our product isn’t quite ready yet. But I don’t mind giving you a preview.
+BACK: (Victor activates the unfinished androids.)
+Victor: Go on, clean up the mess.
+Kate: "Half-finished, yes."
+BACK: (Kate hacks into the conveyor belt’s robotic arms to fight back.)
+BACK: Playing Act 4: Overwhelmed
+
+BACK: (Time passes... When Kate finally regains consciousness, he finds herself back at base.)
+Commander: You're awake…
+Commander: When we found you in the ruins, all the data you collected was gone. The only things left were you and your hacking device. What exactly happened in that factory?
+BACK: (Kate remains silent for a moment.)
+Kate: "Saw a lot of androids, but nothing else noteworthy."
+Commander: I see. Well, get some rest—you’ve done enough.
+BACK: (The commander exits the medical room.)
+Victor: 'Replacement Project,'changing the world... Justice... Forget it. Thinking wont change anything. Might as well just rest for now…
+Victor: 
+========================
+ All acts completed!

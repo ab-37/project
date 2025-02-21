@@ -5,13 +5,19 @@ using UnityEngine;
 
 public class Timer_Script : MonoBehaviour
 {
+    //text positions and scale for countup and countdown
+    private static Vector3[] textPositions = {new Vector3(), new Vector3(40f, -450f, 0), new Vector3(27.5f, 410f, 0)};
+    private static Vector3[] textScale = {new Vector3(), new Vector3(1f, 1f, 1f), new Vector3(0.7f, 0.7f, 1f)};
+
+
     private float fullTime; //the exact time
     private int second; //the integer part of fullTime
     private int centisecond; //the hundredth part of fullTime (rounded down)
     private bool isTicking; //if the time is ticking
     private float originalTime; //time to set when resetting
-    private bool timerMode; //timer mode, true = countdown, false = countup
+    private int timerMode; //timer mode,  1 = countdown, 2 = countup
 
+    private Transform timerTransform;
     private TextMeshProUGUI timerTextMesh;
 
     //update textmesh
@@ -25,8 +31,10 @@ public class Timer_Script : MonoBehaviour
         }
     }
 
-    public void setTimerMode(bool mode) {
+    public void setTimerMode(int mode) {
         timerMode = mode;
+        timerTransform.position = textPositions[mode];
+        timerTransform.localScale = textScale[mode];
     }
 
     //start or resume timer
@@ -86,7 +94,8 @@ public class Timer_Script : MonoBehaviour
     => fullTime;
     
     private void Awake() {
-        timerTextMesh = gameObject.transform.Find("Timer Text").GetComponent<TextMeshProUGUI>();
+        timerTransform = gameObject.transform.Find("Timer Text");
+        timerTextMesh = timerTransform.GetComponent<TextMeshProUGUI>();
     }
 
     private void Start() {
@@ -98,7 +107,7 @@ public class Timer_Script : MonoBehaviour
 
     private void Update() {
         if (isTicking) {
-            if (timerMode) {
+            if (timerMode == 1) {
                 fullTime -= Time.deltaTime;
                 if (fullTime <= 0f) {
                     //timer ended
