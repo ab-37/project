@@ -8,7 +8,6 @@ using Fungus;
 using UnityEngine.SceneManagement;
 using LitJson;
 using System.IO;
-using UnityEditorInternal;
 
 public class ControlUI : MonoBehaviour
 {
@@ -20,6 +19,12 @@ public class ControlUI : MonoBehaviour
 
     //the full dialogue data
     private JsonData fullDialogueData;
+
+    //the dialogue jump data
+    private JsonData dialogueJumpData;
+
+    //the levels data
+    private JsonData levelsData;
     
     //the current loaded node's dialogue data
     private JsonData currentNodeDialogue;
@@ -29,6 +34,9 @@ public class ControlUI : MonoBehaviour
 
     //check if dialogue is finished playing
     private bool isDialogueDone;
+
+    //check if currently between dialogues
+    private bool isBetweenDialogues;
 
     private GameObject mainMenu;
     public void hideMainUI()
@@ -62,7 +70,7 @@ public class ControlUI : MonoBehaviour
         SceneManager.LoadScene(sceneName);
         Static_Variables.blockRunning = blockRunning;
     }
-    public void gamePlay()
+    public void loadGameplayScene()
     {
         SceneManager.LoadScene("Gameplay Main");
     }
@@ -90,7 +98,8 @@ public class ControlUI : MonoBehaviour
     */
 
     //split dialogue into lines
-    private string splitDialogue(string dialogueText, int lineLimit = 60 /*, int startTruncate = 3, int extraLineIncrement = 6 */) {
+    /*
+    private string splitDialogue(string dialogueText, int lineLimit = 60) {
         string[] words = dialogueText.Split(' ');
         string outString = "";
         int lineLength = 0;
@@ -98,12 +107,7 @@ public class ControlUI : MonoBehaviour
         foreach (string word in words) {
             if (lineLength + word.Length > lineLimit) {
                 //line limit reached
-                /*
-                if (++lineNum >= startTruncate) {
-                    //text is smaller and can hold more characters, redo everything
-                    return splitDialogue(dialogueText, lineLimit + extraLineIncrement, startTruncate + 1);
-                }
-                */
+                
                 outString += "\n";
                 lineLength = 0;
             }
@@ -112,6 +116,7 @@ public class ControlUI : MonoBehaviour
         }
         return outString;
     }
+    */
 
     private void executeDialogueText(string character, string dialogue)
     {
@@ -153,12 +158,24 @@ public class ControlUI : MonoBehaviour
 
     }*/
 
+    private JsonData fetchJsonData(JsonData json, string targetAttribute, int targetData) {
+        foreach (JsonData childJson in json) {
+            if ((int)childJson[targetAttribute] == targetData) {
+                return childJson;
+            }
+        }
+        return null;
+    }
+
     //load act node
-    private bool loadNode(int act, int node) {
+    private bool loadNode(int act, int part) {
 
         //fetch version
-        JsonData versionJson = null;
-        bool successFlag = false;
+        
+        JsonData versionJson = fetchJsonData(fullDialogueData["acts"], "version", act);
+        
+        //bool successFlag = false;
+        /*
         foreach (JsonData actJson in fullDialogueData["acts"]) {
             if ((int)actJson["version"] == act) {
                 versionJson = actJson;
@@ -166,7 +183,8 @@ public class ControlUI : MonoBehaviour
                 break;
             }
         }
-        if (!successFlag) {
+        */
+        if (versionJson == null) {
             Debug.Log("Failed to fetch version");
             return false;
         }
@@ -175,18 +193,27 @@ public class ControlUI : MonoBehaviour
         Debug.Log("Scene Description: " + versionJson["scene_description"]);
 
         //fetch node
+        /*
         foreach (JsonData contentJson in versionJson["content"]) {
             if ((int)contentJson["node"] == node) {
                 currentNodeDialogue = contentJson["dialogues"];
                 return true;
             }
         }
-        Debug.Log("Failed to fetch node in version " + act.ToString());
-        return false;
+        */
+        JsonData nodeJson = fetchJsonData(versionJson["content"], "node", part);
+        if (nodeJson == null) {
+            Debug.Log("Failed to fetch node in version " + act.ToString());
+            return false;
+        }
+        currentNodeDialogue = nodeJson["dialogues"];
+        Static_Variables.currentAct = act;
+        Static_Variables.currentPart = part;
+        return true;
     }
 
     //load single dialogue line
-    bool loadDialogueLine(int lineNum) {
+    private bool loadDialogueLine(int lineNum) {
         if (lineNum >= currentNodeDialogue.Count) {
             return false;
         }
@@ -201,7 +228,100 @@ public class ControlUI : MonoBehaviour
         return true;
     }
 
-    private void Start()
+    //find the "next" object from dialogue_jump.json
+    private JsonData findNextFromDialogueJump(int act, int part) {
+        JsonData json = fetchJsonData(dialogueJumpData["acts"], "act", act)["parts"];
+        if (json == null) {
+            Debug.Log("Failed to fetch act");
+            return null;
+        }
+        json = fetchJsonData(json, "part", part)["next"];
+        if (json == null) {
+            Debug.Log("Failed to fetch part");
+            return null;
+        }
+        return json;
+    }
+
+    //check the next dialogue
+    private (int, int) nextDialogue() {
+        //JsonData json = null;
+        //bool successFlag = false;
+
+        //fetch current act and part
+        JsonData json = findNextFromDialogueJump(Static_Variables.currentAct, Static_Variables.currentPart);
+        
+        //JsonData json = fetchJsonData(dialogueJumpData["acts"], "act", Static_Variables.currentAct)["parts"];
+        /*
+        if (json == null) {
+            Debug.Log("Failed to fetch act");
+            return (0, 0);
+        }
+        json = fetchJsonData(json, "part", Static_Variables.currentPart)["next"];
+        if (json == null) {
+            Debug.Log("Failed to fetch part");
+            return (0, 0);
+        }
+        */
+        if (json == null) {
+            return (0, 0);
+        }
+
+        //check type
+        switch ((string)json["type"]) {
+            case "dialogue":
+                return ((int)json["act"], (int)json["part"]);
+            case "level":
+                JsonData levelJson = fetchJsonData(levelsData["levels"], "level_number", (int)json["level_number"]);
+                if ((int)levelJson["type"] == 1) {
+                    //countdown
+                    if (Static_Variables.lastGameScore >= (int)levelJson["target"]) {
+                        return ((int)levelJson["pass"]["act"], (int)levelJson["pass"]["part"]);
+                    }
+                    return ((int)levelJson["fail"]["act"], (int)levelJson["fail"]["part"]);
+                }
+                else {
+                    //countup
+                    if (Static_Variables.lastGameTime <= (int)levelJson["target"]) {
+                        return ((int)levelJson["pass"]["act"], (int)levelJson["pass"]["part"]);
+                    }
+                    return ((int)levelJson["fail"]["act"], (int)levelJson["fail"]["part"]);
+                }
+            default:
+                Debug.Log("Failed to fetch dialogue");
+                return (0, 0);
+        }
+    }
+
+    //LOAD THE NEXT DIALOGUE OR LEVEL (COROUTINE)
+    private IEnumerator loadNextThingCoroutine() {
+        JsonData lastPart = findNextFromDialogueJump(Static_Variables.currentAct, Static_Variables.currentPart);
+        switch ((string)lastPart["type"]) {
+            case "dialogue":
+                (int, int) nextPart = nextDialogue();
+                if (loadNode(nextPart.Item1, nextPart.Item2)) {
+                    Debug.Log("Dialogue loaded successfully");
+                    isDialogueDone = false;
+                    currentLine = -1;
+                    yield return new WaitForSeconds(1);
+                }
+                else {
+                    Debug.Log("Failed to load dialogue");
+                    yield break;
+                }
+                break;
+            case "level":
+                Static_Variables.level_id = (int)lastPart["level_number"];
+                loadGameplayScene();
+                break;
+            default:
+                Debug.Log("Failed to fetch next dialogue or level");
+                break;
+        }
+        isBetweenDialogues = false;
+    }
+
+    private void Awake()
     {
         LoadData = File.ReadAllText(Application.dataPath + "/self_make/stage/stage.json");
         StageData = JsonMapper.ToObject(LoadData);
@@ -210,14 +330,27 @@ public class ControlUI : MonoBehaviour
         mainMenu = GameObject.Find("MainUI");
 
         //load dialogue, temp file path
-        fullDialogueData = JsonMapper.ToObject(File.ReadAllText(Application.dataPath + "/self_make/Scripts/NPC_script/acts1.json"));
+        fullDialogueData = JsonMapper.ToObject(File.ReadAllText(Application.dataPath + "/self_make/Scripts/dialogues.json"));
+        
+        //load other jsons
+        dialogueJumpData = JsonMapper.ToObject(File.ReadAllText(Application.dataPath + "/self_make/Scripts/dialogue_jump.json"));
+        levelsData = JsonMapper.ToObject(File.ReadAllText(Application.dataPath + "/self_make/Scripts/levels.json"));
+    }
 
-        if (loadNode(2, 1)) {
-            Debug.Log("Dialogue loaded successfully");
-        }
-
+    private void Start()
+    {
+        isBetweenDialogues = true;
         isDialogueDone = false;
-        currentLine = -1;
+        (int, int) nextPart = nextDialogue();
+        if (loadNode(nextPart.Item1, nextPart.Item2)) {
+            Debug.Log("Dialogue loaded successfully");
+            isDialogueDone = false;
+            currentLine = -1;
+        }
+        else {
+            Debug.Log("Failed to load dialogue");
+        }
+        isBetweenDialogues = false;
 
         //debug checking line by line
         //for (int i = 0 ; loadDialogueLine(i) ; ++i) {}
@@ -242,8 +375,12 @@ public class ControlUI : MonoBehaviour
 
     private void Update()
     {
+        if (isBetweenDialogues) {
+            return;
+        }
         if (isDialogueDone) {
-            //do end of dialogue stuff
+            isBetweenDialogues = true;
+            StartCoroutine(loadNextThingCoroutine());
         } 
         else {
             if (!SayDialog.GetSayDialog().isActiveAndEnabled) {

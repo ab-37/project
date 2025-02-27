@@ -410,8 +410,8 @@ public class Select_Square_Script : MonoBehaviour
         isLevelEnded = false;
         isOutroRunning = false;
 
-        levelMode = Static_Variables.levelQuestionParameters[Static_Variables.level].getLevelMode();
-        objective = Static_Variables.levelQuestionParameters[Static_Variables.level].getObjective();
+        levelMode = Static_Variables.levelQuestionParameters[Static_Variables.level_id].getLevelMode();
+        objective = Static_Variables.levelQuestionParameters[Static_Variables.level_id].getObjective();
         //startGame(60f);
         /*
         updatePos(currentPos);

@@ -1,0 +1,61 @@
+{
+	"levels": [
+		{
+            "level_number": 0,
+            "level_id": 0,
+            "type": 2,
+            "target": 0,
+            "pass": {
+                "act": 1,
+                "part": 3
+            },
+            "fail": {
+                "act": 1,
+                "part": 3
+            }
+		},
+        {
+            "level_number": 1,
+            "level_id": 2,
+            "type": 2,
+            "target": 210,
+            "pass": {
+                "act": 1,
+                "part": 4
+            },
+            "fail": {
+                "act": 1,
+                "part": 4
+            }
+        },
+
+        {
+            "level_number": 2,
+            "level_id": 4,
+            "type": 1,
+            "target": 150,
+            "pass": {
+                "act": 2,
+                "part": 2
+            },
+            "fail": {
+                "act": 2,
+                "part": 2
+            }
+		},
+        {
+            "level_number": 3,
+            "level_id": 9,
+            "type": 1,
+            "target": 150,
+            "pass": {
+                "act": 2,
+                "part": 4
+            },
+            "fail": {
+                "act": 2,
+                "part": 4
+            }
+		}
+	]
+}

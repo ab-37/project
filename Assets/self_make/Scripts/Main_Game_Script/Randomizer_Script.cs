@@ -31,7 +31,7 @@ public class Randomizer_Script : MonoBehaviour
 
     //called when new problem key is pressed
     public void newProblem(bool isManualReset = false) {
-        currentProblem = Static_Variables.levelQuestionParameters[Static_Variables.level].generateNewProblem();
+        currentProblem = Static_Variables.levelQuestionParameters[Static_Variables.level_id].generateNewProblem();
         
         //placeholder code
         //currentProblem.copy(QP.generateNewProblem());
