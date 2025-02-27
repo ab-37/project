@@ -115,9 +115,10 @@ public class ControlUI : MonoBehaviour
 
     private void executeDialogueText(string character, string dialogue)
     {
-        string spDialogue = splitDialogue(dialogue);
+        //string spDialogue = splitDialogue(dialogue);
 
-        flowchart.SetStringVariable("VarDialogue", spDialogue);
+        flowchart.SetStringVariable("VarDialogue", dialogue);
+        
         switch (character)
         {
             case "Kate":
