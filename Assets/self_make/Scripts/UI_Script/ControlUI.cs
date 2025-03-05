@@ -38,6 +38,9 @@ public class ControlUI : MonoBehaviour
     //check if currently between dialogues
     private bool isBetweenDialogues;
 
+    //design other chracater name
+    public Character targetCharacter;
+
     private GameObject mainMenu;
     public void hideMainUI()
     {
@@ -143,6 +146,10 @@ public class ControlUI : MonoBehaviour
                 break;
             case "Victor":
                 flowchart.ExecuteBlock("VictorSaying");
+                break;
+            default:
+                targetCharacter.SetStandardText(character);
+                flowchart.ExecuteBlock("OtherCharacterSaying");
                 break;
         }
     }
