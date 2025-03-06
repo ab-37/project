@@ -216,6 +216,7 @@ public class ControlUI : MonoBehaviour
         currentNodeDialogue = nodeJson["dialogues"];
         Static_Variables.currentAct = act;
         Static_Variables.currentPart = part;
+        Debug.Log(act.ToString() + "-" + part.ToString());
         return true;
     }
 
@@ -307,7 +308,7 @@ public class ControlUI : MonoBehaviour
             case "dialogue":
                 (int, int) nextPart = nextDialogue();
                 if (loadNode(nextPart.Item1, nextPart.Item2)) {
-                    Debug.Log("Dialogue loaded successfully");
+                    Debug.Log("Dialogue " + nextPart.Item1.ToString() + "-" + nextPart.Item2.ToString() + " loaded successfully");
                     isDialogueDone = false;
                     currentLine = -1;
                     yield return new WaitForSeconds(1);
@@ -318,7 +319,9 @@ public class ControlUI : MonoBehaviour
                 }
                 break;
             case "level":
-                Static_Variables.level_id = (int)lastPart["level_number"];
+                //Static_Variables.level_id = (int)lastPart["level_number"];
+                Static_Variables.level_id = (int)fetchJsonData(levelsData["levels"], "level_number", (int)lastPart["level_number"])["level_id"];
+                Debug.Log("Loading level ID " + Static_Variables.level_id);
                 loadGameplayScene();
                 break;
             default:

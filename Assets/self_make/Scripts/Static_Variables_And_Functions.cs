@@ -7,7 +7,7 @@ public static class Static_Variables
 {
 
     //current part
-    public static int currentAct = 1;
+    public static int currentAct = 2;
     public static int currentPart = 4;
     public static int lastGameScore = 0;
     public static float lastGameTime = 0;
@@ -15,7 +15,7 @@ public static class Static_Variables
     public static string blockRunning;//save what is it stage
 
     //level number
-    public static int level_id = 4;
+    public static int level_id;
     //level data
 
     public static string[][] specialPaths = {
@@ -73,7 +73,7 @@ public static class Static_Variables
             ((1, 7), (1, 7), (1, 7), (1, 7), (1, 7)),
             (2, 4), (1, 1), 1
         ),
-        //id 7, special level
+        //id 7, level 4 (special)
         new QuestionParameters(
             30, 1, (1, 99), (1, 99),
             ((1, 9), (1, 9), (1, 9), (1, 9), (1, 9)),
@@ -91,7 +91,13 @@ public static class Static_Variables
         new QuestionParameters(
             120, 1, (10, 99), (1, 99),
             ((1, 9), (1, 9), (1, 9), (1, 9), (1, 9)),
-            (2, 5), (1, 1), 1
+            (2, 5), (1, 2), 1
+        ),
+        //id 10, level 5
+        new QuestionParameters(
+            240, 1, (10, 99), (1, 99),
+            ((1, 9), (1, 9), (1, 9), (1, 9), (1, 9)),
+            (2, 5), (1, 2), 1
         )
     };
 }

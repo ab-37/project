@@ -65,7 +65,42 @@
                     "next": {
                         "type": "dialogue",
                         "act": 3,
-                        "part": 4
+                        "part": 1
+                    }
+                }
+            ]
+        },
+        {
+            "act": 3,
+            "parts": [
+                {
+                    "part": 1,
+                    "next": {
+                        "type": "level",
+                        "level_number": 4
+                    }
+                },
+                {
+                    "part": 2,
+                    "next": {
+                        "type": "dialogue",
+                        "act": 3,
+                        "part": 3
+                    }
+                },
+                {
+                    "part": 3,
+                    "next": {
+                        "type": "level",
+                        "level_number": 5
+                    }
+                },
+                {
+                    "part": 4,
+                    "next": {
+                        "type": "dialogue",
+                        "act": 4,
+                        "part": 1
                     }
                 }
             ]

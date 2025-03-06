@@ -56,6 +56,34 @@
                 "act": 2,
                 "part": 4
             }
+		},
+        {
+            "level_number": 4,
+            "level_id": 7,
+            "type": 1,
+            "target": 120,
+            "pass": {
+                "act": 3,
+                "part": 2
+            },
+            "fail": {
+                "act": 3,
+                "part": 2
+            }
+		},
+        {
+            "level_number": 5,
+            "level_id": 10,
+            "type": 1,
+            "target": 360,
+            "pass": {
+                "act": 3,
+                "part": 4
+            },
+            "fail": {
+                "act": 3,
+                "part": 4
+            }
 		}
 	]
 }
