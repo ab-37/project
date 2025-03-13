@@ -165,9 +165,18 @@ public class ControlUI : MonoBehaviour
 
     }*/
 
+    //find target data of target attribute of json
     private JsonData fetchJsonData(JsonData json, string targetAttribute, int targetData) {
         foreach (JsonData childJson in json) {
             if ((int)childJson[targetAttribute] == targetData) {
+                return childJson;
+            }
+        }
+        return null;
+    }
+    private JsonData fetchJsonData(JsonData json, string targetAttribute, string targetData) {
+        foreach (JsonData childJson in json) {
+            if ((string)childJson[targetAttribute] == targetData) {
                 return childJson;
             }
         }
@@ -257,7 +266,7 @@ public class ControlUI : MonoBehaviour
         //bool successFlag = false;
 
         //fetch current act and part
-        JsonData json = findNextFromDialogueJump(Static_Variables.currentAct, Static_Variables.currentPart);
+        JsonData lastJson = findNextFromDialogueJump(Static_Variables.currentAct, Static_Variables.currentPart);
         
         //JsonData json = fetchJsonData(dialogueJumpData["acts"], "act", Static_Variables.currentAct)["parts"];
         /*
@@ -271,29 +280,35 @@ public class ControlUI : MonoBehaviour
             return (0, 0);
         }
         */
-        if (json == null) {
+        if (lastJson == null) {
             return (0, 0);
         }
 
         //check type
-        switch ((string)json["type"]) {
+        switch ((string)lastJson["type"]) {
             case "dialogue":
-                return ((int)json["act"], (int)json["part"]);
+            case "smallgame1":
+            case "smallgame2":
+                return ((int)lastJson["act"], (int)lastJson["part"]);
             case "level":
-                JsonData levelJson = fetchJsonData(levelsData["levels"], "level_number", (int)json["level_number"]);
+                JsonData levelJson = fetchJsonData(levelsData["levels"], "level_number", (int)lastJson["level_number"]);
                 if ((int)levelJson["type"] == 1) {
                     //countdown
-                    if (Static_Variables.lastGameScore >= (int)levelJson["target"]) {
-                        return ((int)levelJson["pass"]["act"], (int)levelJson["pass"]["part"]);
+                    if (Static_Variables.lastGameScore >= (int)lastJson["target"]) {
+                        Debug.Log("Passed");
+                        return ((int)lastJson["pass"]["act"], (int)lastJson["pass"]["part"]);
                     }
-                    return ((int)levelJson["fail"]["act"], (int)levelJson["fail"]["part"]);
+                    Debug.Log("Failed");
+                    return ((int)lastJson["fail"]["act"], (int)lastJson["fail"]["part"]);
                 }
                 else {
                     //countup
-                    if (Static_Variables.lastGameTime <= (int)levelJson["target"]) {
-                        return ((int)levelJson["pass"]["act"], (int)levelJson["pass"]["part"]);
+                    if (Static_Variables.lastGameTime <= (int)lastJson["target"]) {
+                        Debug.Log("Passed");
+                        return ((int)lastJson["pass"]["act"], (int)lastJson["pass"]["part"]);
                     }
-                    return ((int)levelJson["fail"]["act"], (int)levelJson["fail"]["part"]);
+                    Debug.Log("Failed");
+                    return ((int)lastJson["fail"]["act"], (int)lastJson["fail"]["part"]);
                 }
             default:
                 Debug.Log("Failed to fetch dialogue");
@@ -323,6 +338,14 @@ public class ControlUI : MonoBehaviour
                 Static_Variables.level_id = (int)fetchJsonData(levelsData["levels"], "level_number", (int)lastPart["level_number"])["level_id"];
                 Debug.Log("Loading level ID " + Static_Variables.level_id);
                 loadGameplayScene();
+                break;
+            case "smallgame1":
+                Debug.Log("Loading small game 1");
+                //load small game 1
+                break;
+            case "smallgame2": 
+                Debug.Log("Loading small game 2");
+                //load small game 2
                 break;
             default:
                 Debug.Log("Failed to fetch next dialogue or level");

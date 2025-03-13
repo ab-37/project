@@ -29,7 +29,7 @@ public static class Static_Variables
 
     //needs ? levels
     public static QuestionParameters[] levelQuestionParameters = {
-        //id 0, tutorial
+        //id 0, tutorial (1-1)
         new QuestionParameters(
             200, 0, (10, 50), (1, 50), 
             ((2, 5), (2, 5), (2, 5), (2, 5), (2, 5)),
@@ -42,7 +42,7 @@ public static class Static_Variables
             (3, 5), (2, 2), 0,
             true, false, false, false
         ),
-        //id 2, level 1
+        //id 2, level 1-2, no target
         new QuestionParameters(
             300, 2, (10, 50), (1, 50),
             ((1, 7), (1, 7), (1, 7), (1, 7), (1, 7)),
@@ -54,15 +54,15 @@ public static class Static_Variables
             ((1, 7), (1, 7), (1, 7), (1, 7), (1, 7)),
             (2, 4), (1, 1), 1
         ),
-        //id 4, level 2
+        //id 4, level 2-1, target 150p
         new QuestionParameters(
             120, 1, (10, 50), (1, 50), 
             ((1, 7), (1, 7), (1, 7), (1, 7), (1, 7)),
             (2, 4), (1, 2), 1
         ),
-        //id 5, special level
+        //id 5, level 4-1 (special), target 100s
         new QuestionParameters(
-            60, 1, (75, 400), (0, 500), 
+            300, 2, (75, 400), (0, 500), 
             ((15, 75), (15, 75), (300, 500), (15, 75), (15, 75)),
             ref specialPaths[0], (1, 1), 0,
             false, true, false, false, 1
@@ -73,31 +73,43 @@ public static class Static_Variables
             ((1, 7), (1, 7), (1, 7), (1, 7), (1, 7)),
             (2, 4), (1, 1), 1
         ),
-        //id 7, level 4 (special)
+        //id 7, level 3-1 (special), target 120p/180p
         new QuestionParameters(
-            30, 1, (1, 99), (1, 99),
+            40, 1, (1, 99), (1, 99),
             ((1, 9), (1, 9), (1, 9), (1, 9), (1, 9)),
             (2, 2), (1, 1), 0,
             true, true, true, false, 1
         ),
-        //id 8, special level
+        //id 8, level 7-1 (special), target 300p
         new QuestionParameters(
             120, 1, (1000, 10000), (10, 10000),
             ((10, 25), (10, 25), (10, 25), (10, 25), (10, 25)),
             (3, 3), (1, 1), 0,
             false, false, true, false, 1
         ),
-        //id 9, level 3
+        //id 9, level 2-2, target 150p/210p
         new QuestionParameters(
             120, 1, (10, 99), (1, 99),
             ((1, 9), (1, 9), (1, 9), (1, 9), (1, 9)),
             (2, 5), (1, 2), 1
         ),
-        //id 10, level 5
+        //id 10, level 3-2, target 360p/480p
         new QuestionParameters(
             240, 1, (10, 99), (1, 99),
             ((1, 9), (1, 9), (1, 9), (1, 9), (1, 9)),
             (2, 5), (1, 2), 1
+        ),
+        //id 11, level 4-2/7-2, target 700p/850p/1000p
+        new QuestionParameters(
+            600, 1, (13, 144), (-144, 144),
+            ((1, 12), (1, 12), (1, 12), (1, 12), (1, 12)),
+            (3, 5), (1, 2), 1
+        ),
+        //id 12, unused
+        new QuestionParameters(
+            600, 1, (13, 144), (-144, 144),
+            ((1, 12), (1, 12), (1, 12), (1, 12), (1, 12)),
+            (3, 5), (1, 2), 1
         )
     };
 }
