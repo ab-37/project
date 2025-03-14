@@ -817,6 +817,7 @@ MonoBehaviour:
   questionText: {fileID: 1013483013}
   inputField: {fileID: 161892129}
   feedbackText: {fileID: 550112423}
+  gameMode: 0
 --- !u!1 &1657533571
 GameObject:
   m_ObjectHideFlags: 0

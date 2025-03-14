@@ -7,10 +7,11 @@ public class GameController : MonoBehaviour
     public TMP_Text questionText; // 顯示題目的文本
     public TMP_InputField inputField; // 輸入答案的文本框
     public TMP_Text feedbackText; // 顯示反饋的文本
+    public int gameMode; // 遊戲模式    
 
     private int[] n = new int[5]; // 數列
     private int correctAnswer; // 正確答案
-    private int remainingAttempts = 3; // 剩餘嘗試次數
+    private int remainingAttempts = 5; // 剩餘嘗試次數
     private int randomN; // 隨機索引
 
     void Start()
@@ -28,7 +29,7 @@ public class GameController : MonoBehaviour
     {
         Array.Clear(n, 0, n.Length);
         randomN = UnityEngine.Random.Range(0, 5); // 隨機索引
-        int gameMode = UnityEngine.Random.Range(0, 2); // 0 或 1
+        gameMode = UnityEngine.Random.Range(0, 2); // 遊戲模式
 
         if (gameMode == 0)
         {
@@ -134,14 +135,19 @@ public class GameController : MonoBehaviour
             else
             {
                 remainingAttempts--;
-                if (remainingAttempts > 0)
+                feedbackText.text = "Wrong!";
+                feedbackText.color = Color.red;
+
+                if (remainingAttempts <= 0)
                 {
-                    feedbackText.text = $"Wrong! Remaining Attempts: {remainingAttempts}";
-                    feedbackText.color = Color.red;
-                }
-                else
-                {
-                    feedbackText.text = $"Out of attempts! Correct Answer: {correctAnswer}";
+                    if (gameMode == 0)
+                    {
+                        feedbackText.text = "n[i + 2] = n[i + 1] + n[i] (0 <= n <=2)";
+                    }
+                    else
+                    {
+                        feedbackText.text = "2n[2] = n[i] + n[4 - i] (0 <= n <=4)";
+                    }
                     feedbackText.color = Color.yellow;
                 }
             }
