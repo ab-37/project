@@ -1,27 +1,38 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PuzzleManager : MonoBehaviour
 {
-    public static PuzzleManager Instance; // ³æ¨Ò¼Ò¦¡
+    public static PuzzleManager Instance; // ï¿½ï¿½Ò¼Ò¦ï¿½
 
-    public GameObject[] pieces; // ¦s©ñ©Ò¦³¤E®c®æªºª«¥ó
-    public GameObject winMessage; // ³Ó§Q°T®§ªº UI ª«¥ó
+    private GameObject[] pieces = new GameObject[9]; // ï¿½sï¿½ï¿½Ò¦ï¿½ï¿½Eï¿½cï¿½æªºï¿½ï¿½ï¿½ï¿½
+    private GameObject winMessage; // ï¿½Ó§Qï¿½Tï¿½ï¿½ï¿½ï¿½ UI ï¿½ï¿½ï¿½ï¿½
 
-    public bool isGameOver = false; // ¬ö¿ý¹CÀ¸
+    public bool isGameOver; // ï¿½ï¿½ï¿½ï¿½ï¿½Cï¿½ï¿½
+
+    private bool isCoroutinePlaying; //if the change scene coroutine is done
 
     void Start()
     {
-        // ½T«O¹CÀ¸¶}©l®ÉÁôÂÃ³Ó§Q©M¹CÀ¸µ²§ô°T®§
+        // ï¿½Tï¿½Oï¿½Cï¿½ï¿½ï¿½}ï¿½lï¿½ï¿½ï¿½ï¿½ï¿½Ã³Ó§Qï¿½Mï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Tï¿½ï¿½
         if (winMessage != null)
         {
             winMessage.SetActive(false);
         }
+        isGameOver = false;
+        isCoroutinePlaying = false;
+
+        for (int i = 0 ; i < 9 ; ++i) {
+            pieces[i] = gameObject.transform.parent.Find("Piece_" + (i + 1).ToString()).gameObject;
+        }
+        winMessage = gameObject.transform.parent.Find("WinMessage").gameObject;
     }
 
     void Awake()
     {
-        // ½T«O³æ¨Ò¼Ò¦¡
+        // ï¿½Tï¿½Oï¿½ï¿½Ò¼Ò¦ï¿½
         if (Instance == null)
         {
             Instance = this;
@@ -32,40 +43,56 @@ public class PuzzleManager : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        if (isGameOver) {
+            if (!isCoroutinePlaying) {
+                isCoroutinePlaying = true;
+                StartCoroutine(gameOverCoroutine());
+            }
+        }   
+    }
+
+    private IEnumerator gameOverCoroutine() {
+        isCoroutinePlaying = true;
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("Dialogue Main");
+    }
+
     public void CheckWinCondition()
     {
-        if (isGameOver) return; // ¦pªG¹CÀ¸¤w¸g§¹¦¨¡A«h¤£¦AÀË¬d
+        if (isGameOver) return; // ï¿½pï¿½Gï¿½Cï¿½ï¿½ï¿½wï¿½gï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½hï¿½ï¿½ï¿½Aï¿½Ë¬d
 
         foreach (GameObject piece in pieces)
         {
             float zRotation = piece.transform.eulerAngles.z;
 
-            // ­×¥¿¯BÂI¼Æ»~®t¡]¤¹³\¤Ö¶q°¾®t¡^
+            // ï¿½×¥ï¿½ï¿½Bï¿½Iï¿½Æ»~ï¿½tï¿½]ï¿½ï¿½ï¿½\ï¿½Ö¶qï¿½ï¿½ï¿½tï¿½^
             if (Mathf.Abs(zRotation % 360) > 1e-2)
             {
                 Debug.Log($"Piece {piece.name} not aligned: {zRotation}");
-                return; // ¦pªG¦³¥ô¦ó¤@¶ô¤£¥¿½T¡Aª½±µªð¦^
+                return; // ï¿½pï¿½Gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½@ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Tï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½^
             }
         }
 
-        // ©Ò¦³¹Ï¤ù³£¥¿½T
-        isGameOver = true; // §¹¦¨¹CÀ¸µ²§ô
+        // ï¿½Ò¦ï¿½ï¿½Ï¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½T
+        isGameOver = true; // ï¿½ï¿½ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         Debug.Log("All pieces aligned! Showing win message...");
         GameOver();
     }
 
     private void GameOver()
     {
-        // Åã¥Ü¹CÀ¸µ²§ô°T®§
+        // ï¿½ï¿½Ü¹Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Tï¿½ï¿½
         if (isGameOver)
         {
-            winMessage.SetActive(true); // Åã¥Ü³Ó§Q°T®§
+            winMessage.SetActive(true); // ï¿½ï¿½Ü³Ó§Qï¿½Tï¿½ï¿½
         }
 
-        isGameOver = true; // ¹CÀ¸µ²§ô 
+        isGameOver = true; // ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
         foreach (GameObject piece in pieces)
         {
-            piece.GetComponent<PieceController>().enabled = false; // °±¥Î¸}¥»¡A¸T¤î±ÛÂà
+            piece.GetComponent<PieceController>().enabled = false; // ï¿½ï¿½ï¿½Î¸}ï¿½ï¿½ï¿½Aï¿½Tï¿½ï¿½ï¿½ï¿½ï¿½
         }
     }
 }

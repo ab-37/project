@@ -7,8 +7,8 @@ public static class Static_Variables
 {
 
     //current part
-    public static int currentAct = 2;
-    public static int currentPart = 4;
+    public static int currentAct = 0;
+    public static int currentPart = 1;
     public static int lastGameScore = 0;
     public static float lastGameTime = 0;
     public static string blockSelect;//return what stage need to play 

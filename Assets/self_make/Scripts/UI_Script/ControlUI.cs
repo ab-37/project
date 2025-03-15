@@ -341,11 +341,11 @@ public class ControlUI : MonoBehaviour
                 break;
             case "smallgame1":
                 Debug.Log("Loading small game 1");
-                //load small game 1
+                SceneManager.LoadScene("SmallGame_1");
                 break;
             case "smallgame2": 
                 Debug.Log("Loading small game 2");
-                //load small game 2
+                SceneManager.LoadScene("SmallGame_2");
                 break;
             default:
                 Debug.Log("Failed to fetch next dialogue or level");

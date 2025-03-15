@@ -1,35 +1,59 @@
 using System;
 using UnityEngine;
 using TMPro;
+using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    public TMP_Text questionText; // Åã¥ÜÃD¥Øªº¤å¥»
-    public TMP_InputField inputField; // ¿é¤Jµª®×ªº¤å¥»®Ø
-    public TMP_Text feedbackText; // Åã¥Ü¤ÏõXªº¤å¥»
-    public int gameMode; // ¹CÀ¸¼Ò¦¡    
+    public TMP_Text questionText; // ï¿½ï¿½ï¿½ï¿½Dï¿½Øªï¿½ï¿½å¥»
+    public TMP_InputField inputField; // ï¿½ï¿½Jï¿½ï¿½ï¿½×ªï¿½ï¿½å¥»ï¿½ï¿½
+    public TMP_Text feedbackText; // ï¿½ï¿½Ü¤ï¿½ï¿½Xï¿½ï¿½ï¿½å¥»
+    public int gameMode; // ï¿½Cï¿½ï¿½ï¿½Ò¦ï¿½    
 
-    private int[] n = new int[5]; // ¼Æ¦C
-    private int correctAnswer; // ¥¿½Tµª®×
-    private int remainingAttempts = 5; // ³Ñ¾l¹Á¸Õ¦¸¼Æ
-    private int randomN; // ÀH¾÷¯Á¤Þ
+    private int[] n = new int[5]; // ï¿½Æ¦C
+    private int correctAnswer; // ï¿½ï¿½ï¿½Tï¿½ï¿½ï¿½ï¿½
+    private int remainingAttempts = 5; // ï¿½Ñ¾lï¿½ï¿½ï¿½Õ¦ï¿½ï¿½ï¿½
+    private int randomN; // ï¿½Hï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+    private bool isGameOver;
+    private bool isCoroutinePlaying; //if the change scene coroutine is done
 
     void Start()
     {
+        isGameOver = false;
+        isCoroutinePlaying = false;
+
         GenerateGame();
         inputField.onSubmit.AddListener(OnInputSubmit);
     }
 
+    void Update()
+    {
+        if (isGameOver) {
+            if (!isCoroutinePlaying) {
+                isCoroutinePlaying = true;
+                StartCoroutine(gameOverCoroutine());
+            }
+        }   
+    }
+
+    private IEnumerator gameOverCoroutine() {
+        isCoroutinePlaying = true;
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("Dialogue Main");
+    }
+
     void OnInputSubmit(string text)
     {
-        CheckAnswer(); // «ö¤U Enter Áä«á½Õ¥Î CheckAnswer ¤èªk
+        CheckAnswer(); // ï¿½ï¿½ï¿½U Enter ï¿½ï¿½ï¿½Õ¥ï¿½ CheckAnswer ï¿½ï¿½k
     }
 
     void GenerateGame()
     {
         Array.Clear(n, 0, n.Length);
-        randomN = UnityEngine.Random.Range(0, 5); // ÀH¾÷¯Á¤Þ
-        gameMode = UnityEngine.Random.Range(0, 2); // ¹CÀ¸¼Ò¦¡
+        randomN = UnityEngine.Random.Range(0, 5); // ï¿½Hï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        gameMode = UnityEngine.Random.Range(0, 2); // ï¿½Cï¿½ï¿½ï¿½Ò¦ï¿½
 
         if (gameMode == 0)
         {
@@ -129,8 +153,9 @@ public class GameController : MonoBehaviour
         {
             if (input == correctAnswer)
             {
-                feedbackText.text = "Correct!";
+                feedbackText.text = "Correct! Return in 3s...";
                 feedbackText.color = Color.green;
+                isGameOver = true;
             }
             else
             {
