@@ -14,6 +14,20 @@ public static class Static_Variables
     public static string blockSelect;//return what stage need to play 
     public static string blockRunning;//save what is it stage
 
+    //act directories
+    public static string[] actDirectories = {
+        Application.dataPath + "/self_make/Scripts/CNdialogues.json", //original
+        "", //AI
+        Application.dataPath + "/self_make/Scripts/NPC_script/CNact.json" //last
+    };
+
+    //mode of the dialogue
+    //0 = original, 1 = AI, 2 = last
+    public static int dialogueMode;
+
+    //is the dialogue loaded by ControlUI
+    public static bool isDialogueLoaded;
+
     //level number
     public static int level_id;
     //level data

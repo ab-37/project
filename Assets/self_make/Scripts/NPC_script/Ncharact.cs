@@ -98,10 +98,12 @@ public class Ncharact : MonoBehaviour
     private void NormalDia()
     {
         test.NormalJson();
+        Static_Variables.dialogueMode = 0;
     }
     private void LastDia()
     {
         test.LastJson();
+        Static_Variables.dialogueMode = 2;
     }
     //private void StartGame()
     //{

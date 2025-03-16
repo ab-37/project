@@ -14,8 +14,10 @@ public class ControlUI : MonoBehaviour
     public Flowchart flowchart;
     public string blockSelect;
 
+    /*
     private string LoadData;
     private JsonData StageData;
+    */
 
     //the full dialogue data
     private JsonData fullDialogueData;
@@ -42,6 +44,9 @@ public class ControlUI : MonoBehaviour
     public Character targetCharacter;
 
     private GameObject mainMenu;
+
+
+    /*
     public void hideMainUI()
     {
         mainMenu.SetActive(false);
@@ -50,7 +55,8 @@ public class ControlUI : MonoBehaviour
     {
         mainMenu.SetActive(true);
     }
-
+    */
+    /*
     public void chooseStage(int value)
     {
         switch(value)
@@ -66,13 +72,17 @@ public class ControlUI : MonoBehaviour
                 break;
         }
     }
+    */
 
+    /*
     //change scence and tell what is stage running
     public void changeScene(string sceneName,string blockRunning)
     {
         SceneManager.LoadScene(sceneName);
         Static_Variables.blockRunning = blockRunning;
     }
+    */
+
     public void loadGameplayScene()
     {
         SceneManager.LoadScene("Gameplay Main");
@@ -84,6 +94,7 @@ public class ControlUI : MonoBehaviour
         flowchart.ExecuteBlock(blockName);
     }
     
+    /*
     private JsonData selectStage(string chosen_id)
     {
         for(int i=0;i< StageData["stage"].Count;i++)
@@ -93,6 +104,7 @@ public class ControlUI : MonoBehaviour
         }
         return null;
     }
+    */
     /*
     private void changeDialogueTest()
     {
@@ -354,16 +366,21 @@ public class ControlUI : MonoBehaviour
         isBetweenDialogues = false;
     }
 
+    private IEnumerator waitCoroutine(int seconds) {
+        yield return new WaitForSeconds(seconds);
+    }
+
     private void Awake()
     {
-        LoadData = File.ReadAllText(Application.dataPath + "/self_make/stage/stage.json");
-        StageData = JsonMapper.ToObject(LoadData);
+        //LoadData = File.ReadAllText(Application.dataPath + "/self_make/stage/stage.json");
+        //StageData = JsonMapper.ToObject(LoadData);
 
         blockSelect = Static_Variables.blockSelect;
         mainMenu = GameObject.Find("MainUI");
 
         //load dialogue, temp file path
-        fullDialogueData = JsonMapper.ToObject(File.ReadAllText(Application.dataPath + "/self_make/Scripts/dialogues.json"));
+        //fullDialogueData = JsonMapper.ToObject(File.ReadAllText(Application.dataPath + "/self_make/Scripts/dialogues.json"));
+        Static_Variables.isDialogueLoaded = false;
         
         //load other jsons
         dialogueJumpData = JsonMapper.ToObject(File.ReadAllText(Application.dataPath + "/self_make/Scripts/dialogue_jump.json"));
@@ -372,6 +389,13 @@ public class ControlUI : MonoBehaviour
 
     private void Start()
     {
+        //load the dialogue if haven't
+        if (!Static_Variables.isDialogueLoaded) {
+            fullDialogueData = JsonMapper.ToObject(File.ReadAllText(Static_Variables.actDirectories[Static_Variables.dialogueMode]));
+            Static_Variables.isDialogueLoaded = true;
+            StartCoroutine(waitCoroutine(1));
+        }
+
         isBetweenDialogues = true;
         isDialogueDone = false;
         (int, int) nextPart = nextDialogue();
