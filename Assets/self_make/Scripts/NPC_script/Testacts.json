@@ -1,0 +1,297 @@
+{
+  "acts": [
+    {
+      "version": 1,
+      "scene_description": "Ending",
+      "content": [
+        {
+          "node": 1,
+          "outline": "Crisis resolved",
+          "dialogues": [
+            {
+              "character": "Back",
+              "line": "In the combat control room at the law enforcement headquarters, the display shows that the androids have been completely shut down and the enemy's actions have completely collapsed."
+            },
+            {
+              "character": "Law enforcement officer",
+              "line": "The last batch of illegal bionic people have been shut down, the main suspect and other senior executives have been arrested, the operation was successful."
+            },
+            {
+              "character": "Back",
+              "line": "The screen switches to the scene of Victor being escorted. He is silent, his face is gloomy, and his hands are locked in metal handcuffs."
+            },
+            {
+              "character": "Law enforcement officer",
+              "line": "The relevant technology has been recovered, and all research institutions involved are under review. The city's security system has returned to normal, and the Robot Act will be further strengthened to prevent similar incidents from happening again."
+            },
+            {
+              "character": "Eva",
+              "line": "This kind of thing... feels like it will happen again one day."
+            },
+            {
+              "character": "Back",
+              "line": "The two looked at each other and said nothing more."
+            }
+          ]
+        },
+        {
+          "node": 2,
+          "outline": "A moment of peace",
+          "dialogues": [
+            {
+              "character": "Back",
+              "line": "Evening, familiar restaurant. The lights here are warm and peaceful, like a completely different world compared to the tense atmosphere of a few days ago."
+            },
+            {
+              "character": "Back",
+              "line": "Kate sat in the window seat, his silhouette reflected in the glass in front of her. His fingers tapped lightly on the table, and a cup of sugar-free latte was quietly placed in front of him."
+            },
+            {
+              "character": "Back",
+              "line": "Not long after, Eva came in with a cup of coffee in her hand and sat down opposite him."
+            },
+            {
+              "character": "Eva",
+              "line": "This is not the taste I like."
+            },
+            {
+              "character": "Kate",
+              "line": "Then why did you order it?"
+            },
+            {
+              "character": "Eva",
+              "line": "Give it a try, maybe you'll get used to it someday."
+            },
+            {
+              "character": "Back",
+              "line": "Kate did not respond, but gently turned the coffee cup in her hand, took a sip, and felt the bitter and mellow taste."
+            },
+            {
+              "character": "Eva",
+              "line": "What do you think about this incident?"
+            },
+            {
+              "character": "Kate",
+              "line": "There's nothing much to say. We've done what we should do."
+            },
+            {
+              "character": "Back",
+              "line": "Eva looked at him, smiled, and then lowered her head to take a sip of coffee. The silence between the two was not awkward, but rather contained a rare calmness."
+            },
+            {
+              "character": "Eva",
+              "line": "Houtai hasn't been repaired yet, right?"
+            },
+            {
+              "character": "Back",
+              "line": "Kate paused, gently put down the coffee cup, and nodded slightly."
+            },
+            {
+              "character": "Kate",
+              "line": "The technical department said that his core system is still stable and should be able to be repaired."
+            },
+            {
+              "character": "Eva",
+              "line": "I hope he is not too affected..."
+            },
+            {
+              "character": "Back",
+              "line": "Kate did not respond, but he tapped the table twice with his fingers, as if he was thinking about something."
+            },
+            {
+              "character": "Kate",
+              "line": "Let's go and see him."
+            },
+            {
+              "character": "Back",
+              "line": "Eva was stunned for a moment, then smiled softly and stood up."
+            }
+          ]
+        },
+        {
+          "node": 3,
+          "outline": "Houtai's Repair",
+          "dialogues": [
+            {
+              "character": "Back",
+              "line": "In the technical department of the law enforcement agency, in a maintenance room full of mechanical equipment, Haota's machine is placed on the maintenance table in the center."
+            },
+            {
+              "character": "Houtai",
+              "line": "Ah - finally woke up! Am I still alive? How long have I been lying there?"
+            },
+            {
+              "character": "Eva",
+              "line": "It seems you are not completely broken."
+            },
+            {
+              "character": "Houtai",
+              "line": "Where is Victor?"
+            },
+            {
+              "character": "Back",
+              "line": "Kate and Eva look at each other and pause for a moment."
+            },
+            {
+              "character": "Kate",
+              "line": "Arrested."
+            },
+            {
+              "character": "Back",
+              "line": "Hoitai's LED screen flickered and then displayed a small 'sigh' icon."
+            },
+            {
+              "character": "Kate",
+              "line": "I don't know how to describe it... He is indeed a dangerous person, but..."
+            },
+            {
+              "character": "Back",
+              "line": "He paused, as if searching for the right words."
+            },
+            {
+              "character": "Houtai",
+              "line": "But he is also my...family."
+            },
+            {
+              "character": "Back",
+              "line": "His LED screen flashed a series of blurry old pictures - a young boy sitting next to the robot, excitedly adjusting the body, with a smile on his face."
+            },
+            {
+              "character": "Back",
+              "line": "Eva patted Kota's body gently."
+            },
+            {
+              "character": "Kate",
+              "line": "You are right to help us stop him. People change, including him."
+            },
+            {
+              "character": "Eva",
+              "line": "Join us from now on, Haota, for the safety of the city."
+            },
+            {
+              "character": "Back",
+              "line": "Houtai's LED screen flashed, and then he slowly turned to Kate and Eva, with a faint smile on the screen."
+            },
+            {
+              "character": "Houtai",
+              "line": "You're right! The responsibility of protecting the city's safety will be handed over to us - the Cyber ​​Squad!"
+            },
+            {
+              "character": "Back",
+              "line": "Eva smiled and shook her head."
+            },
+            {
+              "character": "Eva",
+              "line": "Cyber ​​Squad?...Another weird name."
+            },
+            {
+              "character": "Houtai",
+              "line": "Are you polite?"
+            },
+            {
+              "character": "Kate",
+              "line": "It's time to go, we still have a lot to do."
+            },
+            {
+              "character": "Back",
+              "line": "Houtai was stunned for a moment, then followed excitedly, and Eva followed with a chuckle."
+            },
+            {
+              "character": "Back",
+              "line": "The city returned to calm. But their story has just begun——"
+            }
+          ]
+        }
+      ]
+
+    },
+    {
+      "version": 1,
+      "scene_description": "The Abandoned Factory",
+      "content": [
+        {
+          "node": 1,
+          "outline": "Kate was ordered to investigate an abandoned factory, which was suspected to be the base of illegal robot manufacturing activities.",
+          "dialogues": [
+            {
+              "character": "Commander",
+              "line": "Kate, we've receive intelligence that an abandoned factory on the outskirts may be a front for illegal android production. Your mission is to infiltrate, confirm the intel, and collect any relevant evidence."
+            },
+            {
+              "character": "Kate",
+              "line": "Understood."
+            },
+            {
+              "character": "Commander",
+              "line": "The site may be guarded by heavily armed personnel. Avoid direct confrontation unless absolutely necessary. Your priority is gathering evidence."
+            }
+          ]
+        },
+        {
+          "node": 2,
+          "outline": "Kate was discovered by patrol officers when he sneaked into the factory and was attacked by them. He used cover and his superb marksmanship to defeat them one by one.",
+          "dialogues": [
+            {
+              "character": "Patrol Guard",
+              "line": "Do we really have to pull night shifts in this dump? Even the rats won't come near this place."
+            },
+            {
+              "character": "Patrol Guard B",
+              "line": "Stop bellyaching. I heard there's an important operation going on. We can't afford any mistakes."
+            },
+            {
+              "character": "Back",
+              "line": "Rustling sounds in the distance…"
+            },
+            {
+              "character": "Patrol Guard B",
+              "line": "Did you hear that?!"
+            },
+            {
+              "character": "Patrol Guard A",
+              "line": "Relax, it's probably just a rat. This place is crawling with them."
+            },
+            {
+              "character": "Patrol Guard B",
+              "line": "No way! Orders are orders—nothing suspicious gets ignored!"
+            },
+            {
+              "character": "Patrol Guard A",
+              "line": "Ugh, fine! I'll go check it out. Happy now?"
+            },
+            {
+              "character": "Back",
+              "line": "The ventilation shaft is empty, except for some rat droppings."
+            },
+            {
+              "character": "Patrol Guard A",
+              "line": "See? You're just paranoid—wait, what the—?!"
+            },
+            {
+              "character": "Back",
+              "line": "A man in a detective's coat stands by the doorway. A fallen guard lies unconscious beside him."
+            },
+            {
+              "character": "Patrol Guard A",
+              "line": "Who the hell are you?! How did you get in here?!"
+            },
+            {
+              "character": "Back",
+              "line": "Before the guards can react, the man smashes the alarm system and pulls out a hacking device."
+            },
+            {
+              "character": "Kate",
+              "line": "Sigh... What a pain."
+            },
+            {
+              "character": "Back",
+              "line": "Battle begins. Kate activates her hacking device."
+            }
+
+
+          ]
+        }
+      ]
+    }
+  ]
+}
