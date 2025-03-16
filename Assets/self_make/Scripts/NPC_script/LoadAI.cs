@@ -79,17 +79,18 @@ public class LoadAI : MonoBehaviour
         Debug.Log($"Loaded {acts.Count} acts from script.");
         NameTrans = new Dictionary<string, string>
         {
-            { "Kate", "凱特" },
-            { "Houtai", "皓汰"},
-            { "Eva", "伊娃"},
-            { "Victor", "維克特"},
-            { "Back", "旁白"},
-            { "commander", "指揮官"},
+            {"Kate", "凱特" },
+            {"Houtai", "浩汰"},
+            {"Eva", "伊娃"},
+            {"Victor", "維克特"},
+            {"Narration", "旁白"},
+            {"commander", "指揮官"},
             {"New Dawn City", "新黎明城" },
             {"Ugh", "痾" },
-            {"android", "機器人" },
+            {"android", "仿生人" },
             {"Cyber ​​Squad", "賽博小隊" },
-            {"Law enforcement officer", "執法官員" }
+            {"Law enforcement officer", "執法官員" },
+            {"cyborg", "改造人" }
         };
     }
 
