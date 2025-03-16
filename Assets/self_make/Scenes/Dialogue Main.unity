@@ -2693,6 +2693,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1158558853}
   m_CullTransparentMesh: 1
+--- !u!1 &1223303408
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1223303410}
+  - component: {fileID: 1223303409}
+  m_Layer: 0
+  m_Name: "\u6307\u63EE\u5B98\u5716\u7247\u8A2D\u5B9A"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1223303409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223303408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: "\u6307\u63EE\u5B98"
+  nameColor: {r: 1, g: 1, b: 1, a: 1}
+  soundEffect: {fileID: 0}
+  portraits: []
+  portraitsFace: 0
+  setSayDialog: {fileID: 0}
+  description: 
+--- !u!4 &1223303410
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223303408}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1246350693
 GameObject:
   m_ObjectHideFlags: 0
@@ -5099,8 +5150,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 2003729390}
-  selectedCommands: []
+  - {fileID: 2003729387}
+  selectedCommands:
+  - {fileID: 2003729386}
   variables:
   - {fileID: 2003729276}
   - {fileID: 2003729375}
@@ -7498,8 +7550,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 877.5273
-    y: 79.092445
+    x: 878.7931
+    y: 80.35827
     width: 113.29112
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -7636,7 +7688,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: '{$VarDialogue}'
   description: 
-  character: {fileID: 0}
+  character: {fileID: 1223303409}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -7661,7 +7713,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 858.7686
+    x: 860.0344
     y: 136.99672
     width: 161.39238
     height: 40
@@ -8022,6 +8074,7 @@ SceneRoots:
   - {fileID: 606129758}
   - {fileID: 69689797}
   - {fileID: 894815938}
+  - {fileID: 1223303410}
   - {fileID: 1855148006}
   - {fileID: 1022321855}
   - {fileID: 1952979718}

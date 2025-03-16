@@ -142,21 +142,27 @@ public class ControlUI : MonoBehaviour
         switch (character)
         {
             case "Kate":
+            case "凱特":
                 flowchart.ExecuteBlock("KateSaying");
                 break;
             case "Eva":
+            case "伊娃":
                 flowchart.ExecuteBlock("EvaSaying");
                 break;
             case "Mysterious Man":
+            case "浩汰":
                 flowchart.ExecuteBlock("MysteriousManSaying");
                 break;
             case "Back":
+            case "旁白":
                 flowchart.ExecuteBlock("BackSaying");
                 break;
             case "Commander":
+            case "指揮官":
                 flowchart.ExecuteBlock("CommanderSaying");
                 break;
             case "Victor":
+            case "維克特":
                 flowchart.ExecuteBlock("VictorSaying");
                 break;
             default:
