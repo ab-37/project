@@ -5,13 +5,17 @@ using UnityEngine;
 
 public static class Static_Variables
 {
-    public static int lastGameScore;
-    public static float lastGameTime;
+
+    //current part
+    public static int currentAct = 1;
+    public static int currentPart = 4;
+    public static int lastGameScore = 0;
+    public static float lastGameTime = 0;
     public static string blockSelect;//return what stage need to play 
-    public static string blockRuning;//save what is it stage
+    public static string blockRunning;//save what is it stage
 
     //level number
-    public static int level = 0;
+    public static int level_id = 4;
     //level data
 
     public static string[][] specialPaths = {
