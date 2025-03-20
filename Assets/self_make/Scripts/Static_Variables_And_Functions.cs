@@ -68,7 +68,7 @@ public static class Static_Variables
             ((1, 7), (1, 7), (1, 7), (1, 7), (1, 7)),
             (2, 4), (1, 1), 1
         ),
-        //id 4, level 2-1, target 150p
+        //id 4, level 2-1, target 120p
         new QuestionParameters(
             120, 1, (10, 50), (1, 50), 
             ((1, 7), (1, 7), (1, 7), (1, 7), (1, 7)),
@@ -87,7 +87,7 @@ public static class Static_Variables
             ((1, 7), (1, 7), (1, 7), (1, 7), (1, 7)),
             (2, 4), (1, 1), 1
         ),
-        //id 7, level 3-1 (special), target 120p/180p
+        //id 7, level 3-1 (special), target 300p/360p
         new QuestionParameters(
             40, 1, (1, 99), (1, 99),
             ((1, 9), (1, 9), (1, 9), (1, 9), (1, 9)),
@@ -101,7 +101,7 @@ public static class Static_Variables
             (3, 3), (1, 1), 0,
             false, false, true, false, 1
         ),
-        //id 9, level 2-2, target 150p/210p
+        //id 9, level 2-2, target 120p/180p
         new QuestionParameters(
             120, 1, (10, 99), (1, 99),
             ((1, 9), (1, 9), (1, 9), (1, 9), (1, 9)),
