@@ -331,6 +331,7 @@ public class ControlUI : MonoBehaviour
     //LOAD THE NEXT DIALOGUE OR LEVEL (COROUTINE)
     private IEnumerator loadNextThingCoroutine() {
         JsonData lastPart = findNextFromDialogueJump(Static_Variables.currentAct, Static_Variables.currentPart);
+        flowchart.ExecuteBlock("CleanAllChatacter");
         switch ((string)lastPart["type"]) {
             case "dialogue":
                 (int, int) nextPart = nextDialogue();
