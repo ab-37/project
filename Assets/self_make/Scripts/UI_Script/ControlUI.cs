@@ -142,27 +142,21 @@ public class ControlUI : MonoBehaviour
         switch (character)
         {
             case "Kate":
-            case "凱特":
                 flowchart.ExecuteBlock("KateSaying");
                 break;
             case "Eva":
-            case "伊娃":
                 flowchart.ExecuteBlock("EvaSaying");
                 break;
-            case "Mysterious Man":
-            case "浩汰":
+            case "???":
                 flowchart.ExecuteBlock("MysteriousManSaying");
                 break;
-            case "Back":
-            case "旁白":
+            case "Narration":
                 flowchart.ExecuteBlock("BackSaying");
                 break;
             case "Commander":
-            case "指揮官":
                 flowchart.ExecuteBlock("CommanderSaying");
                 break;
             case "Victor":
-            case "維克特":
                 flowchart.ExecuteBlock("VictorSaying");
                 break;
             default:
@@ -365,6 +359,8 @@ public class ControlUI : MonoBehaviour
                 Debug.Log("Loading small game 2");
                 SceneManager.LoadScene("SmallGame_2");
                 break;
+            case "end":
+                //end code here idk
             default:
                 Debug.Log("Failed to fetch next dialogue or level");
                 break;

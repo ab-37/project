@@ -75,6 +75,7 @@ public class Ncharact : MonoBehaviour
     {
         if (test != null)
         {
+            Static_Variables.dialogueMode = 2;
             test.StartAI();
         }
         else
@@ -97,13 +98,13 @@ public class Ncharact : MonoBehaviour
     }
     private void NormalDia()
     {
-        test.NormalJson();
         Static_Variables.dialogueMode = 0;
+        test.NormalJson();
     }
     private void LastDia()
     {
-        test.LastJson();
         Static_Variables.dialogueMode = 2;
+        test.LastJson();
     }
     //private void StartGame()
     //{

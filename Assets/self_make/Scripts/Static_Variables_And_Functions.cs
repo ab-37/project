@@ -16,13 +16,13 @@ public static class Static_Variables
 
     //act directories
     public static string[] actDirectories = {
-        Application.dataPath + "/self_make/Scripts/CNdialogues.json", //original
-        "", //AI
-        Application.dataPath + "/self_make/Scripts/NPC_script/CNact.json" //last
+        Application.dataPath + "/self_make/Scripts/NPC_script/CNact.json", //original
+        "", //unused
+        Application.dataPath + "/self_make/Scripts/CNdialogues.json", //AI, last
     };
 
     //mode of the dialogue
-    //0 = original, 1 = AI, 2 = last
+    //0 = original, 2 = last
     public static int dialogueMode;
 
     //is the dialogue loaded by ControlUI
