@@ -147,11 +147,11 @@ public class ControlUI : MonoBehaviour
             case "Eva":
                 flowchart.ExecuteBlock("EvaSaying");
                 break;
-            case "???":
-                flowchart.ExecuteBlock("MysteriousManSaying");
+            case "Houtai":
+                flowchart.ExecuteBlock("HoutaiSaying");
                 break;
             case "Narration":
-                flowchart.ExecuteBlock("BackSaying");
+                flowchart.ExecuteBlock("NarrationSaying");
                 break;
             case "Commander":
                 flowchart.ExecuteBlock("CommanderSaying");
