@@ -55,7 +55,7 @@ public class Skip_Handler_Script : MonoBehaviour
                     Static_Variables.currentAct = actJump[i].Item1;
                     Static_Variables.currentPart = actJump[i].Item2;
                     if (i == 0) {
-                        SceneManager.LoadScene("Main_menu");
+                        SceneManager.LoadScene("NPC");
                         return;
                     }
                     SceneManager.LoadScene("Dialogue Main");
