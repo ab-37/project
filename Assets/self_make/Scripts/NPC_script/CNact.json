@@ -32,7 +32,7 @@
           "dialogues": [
             {
               "character": "Patrol Guard A",
-              "line": "嘿，我們真的需要在這種地方值夜班嗎？這裡危險得連老鼠都不來了"
+              "line": "嘿，我們真的需要在這種地方值夜班嗎?這裡危險得連老鼠都不來了"
             },
             {
               "character": "Patrol Guard B",
@@ -44,7 +44,7 @@
             },
             {
               "character": "Patrol Guard B",
-              "line": "甚麼聲音？!"
+              "line": "甚麼聲音?!"
             },
             {
               "character": "Patrol Guard A",
@@ -56,7 +56,7 @@
             },
             {
               "character": "Patrol Guard A",
-              "line": "真是死腦筋...好啦!我去看一眼你滿意了嗎？"
+              "line": "真是死腦筋...好啦!我去看一眼你滿意了嗎?"
             },
             {
               "character": "Narration",
@@ -64,7 +64,7 @@
             },
             {
               "character": "Patrol Guard A",
-              "line": "是吧？都是你太神經了。阿？!"
+              "line": "是吧?都是你太神經了。阿?!"
             },
             {
               "character": "Narration",
@@ -72,7 +72,7 @@
             },
             {
               "character": "Patrol Guard A",
-              "line": "你是誰？!從哪裡來的"
+              "line": "你是誰?!從哪裡來的"
             },
             {
               "character": "Narration",
@@ -136,7 +136,7 @@
             },
             {
               "character": "Kate",
-              "line": "'替換計畫？'"
+              "line": "'替換計畫?'"
             },
             {
               "character": "Narration",
@@ -152,15 +152,11 @@
             },
             {
               "character": "Victor",
-              "line": "去吧，清理掉他！"
-            },
-            {
-              "character": "Narration",
-              "line": "去吧，清理掉他！"
+              "line": "去吧，清理掉他!"
             },
             {
               "character": "Kate",
-              "line": "半成品？"
+              "line": "半成品?"
             },
             {
               "character": "Narration",
@@ -186,7 +182,7 @@
             },
             {
               "character": "Kate",
-              "line": "改變...這個世界？!"
+              "line": "改變...這個世界?!"
             },
             {
               "character": "Narration",
@@ -202,7 +198,7 @@
             },
             {
               "character": "Commander",
-              "line": "你醒了阿...，我們在廢墟找你時，你身上的照片資料全都不見了，現在只剩下你跟駭客裝置而已，你在工廠有發生甚麼事嗎？"
+              "line": "你醒了阿...，我們在廢墟找你時，你身上的照片資料全都不見了，現在只剩下你跟駭客裝置而已，你在工廠有發生甚麼事嗎?"
             },
             {
               "character": "Kate",
@@ -210,7 +206,7 @@
             },
             {
               "character": "Commander",
-              "line": "是嗎？那我了解了，那你好好休息吧，這次的工作辛苦你了"
+              "line": "是嗎?那我了解了，那你好好休息吧，這次的工作辛苦你了"
             },
             {
               "character": "Narration",
@@ -239,7 +235,7 @@
             },
             {
               "character": "Eva",
-              "line": "不好意思，這裡有人嗎？"
+              "line": "不好意思，這裡有人嗎?"
             },
             {
               "character": "Kate",
@@ -259,7 +255,7 @@
             },
             {
               "character": "Kate",
-              "line": "關你什麼事？"
+              "line": "關你什麼事?"
             },
             {
               "character": "Eva",
@@ -271,7 +267,7 @@
             },
             {
               "character": "Kate",
-              "line": "你到底是誰？"
+              "line": "你到底是誰?"
             },
             {
               "character": "Eva",
@@ -322,7 +318,7 @@
             },
             {
               "character": "Eva",
-              "line": "不過癮嗎？"
+              "line": "不過癮嗎?"
             },
             {
               "character": "Kate",
@@ -344,7 +340,7 @@
             },
             {
               "character": "Mysterious Man",
-              "line": "這就是執法官的水準？你們太令人失望了"
+              "line": "這就是執法官的水準?你們太令人失望了"
             },
             {
               "character": "Eva",
@@ -368,7 +364,7 @@
             },
             {
               "character": "Eva",
-              "line": "吸引他的火力！你找機會破解他的系統！"
+              "line": "吸引他的火力!你找機會破解他的系統!"
             },
             {
               "character": "Narration",
@@ -403,7 +399,7 @@
             },
             {
               "character": "Eva",
-              "line": "這傢伙還能反擊！"
+              "line": "這傢伙還能反擊!"
             },
             {
               "character": "Kate",
@@ -415,7 +411,7 @@
             },
             {
               "character": "Houtai",
-              "line": "嗨！不用謝！這是我應該做的！"
+              "line": "嗨!不用謝!這是我應該做的!"
             },
             {
               "character": "Narration",
@@ -423,23 +419,23 @@
             },
             {
               "character": "Eva",
-              "line": "什麼東西？"
+              "line": "什麼東西?"
             },
             {
               "character": "Houtai",
-              "line": "你禮貌嗎？我是浩汰！全能小助手！話說，剛剛那招超酷吧？我就知道你們需要幫忙，幸好我及時趕到！"
+              "line": "你禮貌嗎?我是浩汰!全能小助手!話說，剛剛那招超酷吧?我就知道你們需要幫忙，幸好我及時趕到!"
             },
             {
               "character": "Kate",
-              "line": "我們見過嗎？"
+              "line": "我們見過嗎?"
             },
             {
               "character": "Houtai",
-              "line": "別這麼冷漠嘛！我可是你的救命恩人，上次要不是我拖延時間讓執法所的人來找你，你的性命早就不保了"
+              "line": "別這麼冷漠嘛!我可是你的救命恩人，上次要不是我拖延時間讓執法所的人來找你，你的性命早就不保了"
             },
             {
               "character": "Kate",
-              "line": "...謝謝，那你有什麼目的？"
+              "line": "...謝謝，那你有什麼目的?"
             },
             {
               "character": "Houtai",
@@ -459,11 +455,11 @@
             },
             {
               "character": "Eva",
-              "line": "是說...有人說過你的名字很奇特嗎？"
+              "line": "是說...有人說過你的名字很奇特嗎?"
             },
             {
               "character": "Houtai",
-              "line": "你禮貌嗎？"
+              "line": "你禮貌嗎?"
             }
           ]
         }
@@ -484,11 +480,11 @@
             },
             {
               "character": "Houtai",
-              "line": "話說，剛剛可以算是個大成功吧？要不是我機靈，你們的麻煩可不小！不過話說回來，這車的懸掛有點硬啊..."
+              "line": "話說，剛剛可以算是個大成功吧?要不是我機靈，你們的麻煩可不小!不過話說回來，這車的懸掛有點硬啊..."
             },
             {
               "character": "Kate",
-              "line": "作為機器人，你的話會不會太多了點？"
+              "line": "作為機器人，你的話會不會太多了點?"
             },
             {
               "character": "Houtai",
@@ -496,7 +492,7 @@
             },
             {
               "character": "Eva",
-              "line": "你和那位維克特有什麼交集嗎？"
+              "line": "你和那位維克特有什麼交集嗎?"
             },
             {
               "character": "Houtai",
@@ -504,7 +500,7 @@
             },
             {
               "character": "Eva",
-              "line": "你是說，他以前還挺正常的？"
+              "line": "你是說，他以前還挺正常的?"
             },
             {
               "character": "Houtai",
@@ -520,7 +516,7 @@
             },
             {
               "character": "Houtai",
-              "line": "追逐戰嗎？快說，我要怎麼幫忙？"
+              "line": "追逐戰嗎?快說，我要怎麼幫忙?"
             },
             {
               "character": "Narration",
@@ -536,7 +532,7 @@
             },
             {
               "character": "Houtai",
-              "line": "Yes sir！"
+              "line": "Yes sir!"
             }
 
           ]
@@ -552,7 +548,7 @@
             },
             {
               "character": "Houtai",
-              "line": "看看，我這車技不錯吧？"
+              "line": "看看，我這車技不錯吧?"
             },
             {
               "character": "Eva",
@@ -564,11 +560,11 @@
             },
             {
               "character": "Kate",
-              "line": "你知道嗎？你確實有點吵"
+              "line": "你知道嗎?你確實有點吵"
             },
             {
               "character": "Houtai",
-              "line": "喂！好歹我是你的救命恩人耶！"
+              "line": "喂!好歹我是你的救命恩人耶!"
             }
           ]
         },
@@ -612,7 +608,7 @@
             },
             {
               "character": "Houtai",
-              "line": "嘿，這傢伙有點奇怪（掃描）...等等，他根本不是人！"
+              "line": "嘿，這傢伙有點奇怪（掃描）...等等，他根本不是人!"
             },
             {
               "character": "Narration",
@@ -624,7 +620,7 @@
             },
             {
               "character": "Eva",
-              "line": "糟糕，難道他們滲透到這裡了？"
+              "line": "糟糕，難道他們滲透到這裡了?"
             },
             {
               "character": "Narration",
@@ -632,10 +628,8 @@
             },
             {
               "character": "Houtai",
-              "line": "這也太驚悚了吧！"
+              "line": "這也太驚悚了吧!"
             }
-
-
           ]
         },
         {
@@ -677,11 +671,11 @@
           "dialogues": [
             {
               "character": "Narration",
-              "line": "有了浩太身上的機密文件，解碼後取的圖片，找到敵方的秘密基地"
+              "line": "有了浩汰身上的機密文件，解碼後取的圖片，找到敵方的秘密基地"
             },
             {
               "character": "Narration",
-              "line": "秘密工廠的金屬大門被破開，凱特、伊娃、浩太帶領執法小隊進入"
+              "line": "秘密工廠的金屬大門被破開，凱特、伊娃、浩汰帶領執法小隊進入"
             },
             {
               "character": "Eva",
@@ -689,7 +683,7 @@
             },
             {
               "character": "Houtai",
-              "line": "不對勁，感測器顯示大量熱源，可能是埋伏！"
+              "line": "不對勁，感測器顯示大量熱源，可能是埋伏!"
             },
             {
               "character": "Kate",
@@ -701,14 +695,14 @@
             },
             {
               "character": "Houtai",
-              "line": "敵人出現！敵人出現！"
+              "line": "敵人出現!敵人出現!"
             },
             {
               "character": "Narration",
               "line": "槍聲響起，戰鬥爆發。火光交錯，子彈與能量光束劃破黑暗，戰場瞬間陷入混亂。就在這時，兩個高大的人影突然從陰影中走出"
             },
             {
-              "character": "改造人們",
+              "character": "Android",
               "line": "目標確認...消滅入侵者..."
             },
             {
@@ -725,7 +719,7 @@
             },
             {
               "character": "Narration",
-              "line": "改造人迅速發動攻擊，戰鬥開始！每一次衝撞都伴隨著沉悶的金屬聲響，他們的力量與速度遠超常人，讓整個小隊步步退後"
+              "line": "改造人迅速發動攻擊，戰鬥開始!每一次衝撞都伴隨著沉悶的金屬聲響，他們的力量與速度遠超常人，讓整個小隊步步退後"
             }
 
           ]
@@ -744,7 +738,7 @@
             },
             {
               "character": "Victor",
-              "line": "你們就非得阻擋我嗎？"
+              "line": "你們就非得阻擋我嗎?"
             }
           ]
         },
@@ -763,7 +757,7 @@
             },
             {
               "character": "Victor",
-              "line": "逃？你還沒明白吧...這裡是我的戰場"
+              "line": "逃?你還沒明白吧...這裡是我的戰場"
             },
             {
               "character": "Narration",
@@ -771,19 +765,19 @@
             },
             {
               "character": "Houtai",
-              "line": "警告！他的力量輸出已經提升至最危險等級！"
+              "line": "警告!他的力量輸出已經提升至最危險等級!"
             },
             {
               "character": "Eva",
-              "line": "別給他機會，我們上！"
+              "line": "別給他機會，我們上!"
             },
             {
               "character": "Victor",
-              "line": "你們還不明白嗎？這個計畫是為了人類的未來，讓低等的人淘汰淨化，讓優秀的個體得以存續，不再壽命的限制。你們所做的，只是在延遲不可避免的紛爭"
+              "line": "你們還不明白嗎?這個計畫是為了人類的未來，讓低等的人淘汰淨化，讓優秀的個體得以存續，不再壽命的限制。你們所做的，只是在延遲不可避免的紛爭"
             },
             {
               "character": "Kate",
-              "line": "那可不是犧牲無辜者的藉口！"
+              "line": "那可不是犧牲無辜者的藉口!"
             }
           ]
         },
@@ -802,7 +796,7 @@
             },
             {
               "character": "Victor",
-              "line": "別妄想了！"
+              "line": "別妄想了!"
             },
             {
               "character": "Narration",
@@ -842,7 +836,7 @@
             },
             {
               "character": "Narration",
-              "line": "當執法隊伍將維克特押送時，他最後望向浩太殘破的機體，語氣低沉卻帶著一絲誠懇"
+              "line": "當執法隊伍將維克特押送時，他最後望向浩汰殘破的機體，語氣低沉卻帶著一絲誠懇"
             },
             {
               "character": "Victor",
@@ -869,7 +863,7 @@
               "line": "執法所總部，作戰控制室內，顯示仿生人已全面停機，敵方的行動徹底瓦解"
             },
             {
-              "character": "執法官員",
+              "character": "Law enforcement officer",
               "line": "最後一批非法仿生人已經停機，主嫌和其餘高層已被捕，行動成功"
             },
             {
@@ -877,7 +871,7 @@
               "line": "螢幕切換到維克特被押送的畫面，他一言不發，臉色陰沉，雙手被鎖在金屬手銬中"
             },
             {
-              "character": "執法官員",
+              "character": "Law enforcement officer",
               "line": "相關技術已被回收，所有涉及的研究機構正在接受審查。城市安全系統已恢復正常，機器人法案將進一步強化，防止類似事件發生"
             },
             {
@@ -895,13 +889,7 @@
             {
               "character": "Narration",
               "line": "兩人對視一眼，沒有再多說話"
-            }
-          ]
-        },
-        {
-          "node": 2,
-          "outline": "平靜片刻",
-          "dialogues": [
+            },
             {
               "character": "Narration",
               "line": "傍晚，熟悉的餐館。這裡的燈光溫暖而寧靜，和幾天前的緊張氛圍相比，簡直像是另一個世界"
@@ -920,7 +908,7 @@
             },
             {
               "character": "Kate",
-              "line": "那為什麼還點？"
+              "line": "那為什麼還點?"
             },
             {
               "character": "Narration",
@@ -928,7 +916,7 @@
             },
             {
               "character": "Eva",
-              "line": "這次的事情...你覺得怎麼樣？"
+              "line": "這次的事情...你覺得怎麼樣?"
             },
             {
               "character": "Kate",
@@ -940,7 +928,7 @@
             },
             {
               "character": "Eva",
-              "line": "浩汰還沒修復好吧？"
+              "line": "浩汰還沒修復好吧?"
             },
             {
               "character": "Narration",
@@ -965,24 +953,18 @@
             {
               "character": "Narration",
               "line": "伊娃愣了一下，然後輕輕一笑，跟著站了起來"
-            }
-          ]
-        },
-        {
-          "node": 3,
-          "outline": "浩汰的修復",
-          "dialogues": [
-            {
-              "character": "Narration",
-              "line": "執法所技術部，一間充滿機械設備的維修室內，中央的維修台上放著浩太的機體"
             },
             {
               "character": "Narration",
-              "line": "浩汰的語音系統啟動，LED顯示「系統自檢中...完成！」"
+              "line": "執法所技術部，一間充滿機械設備的維修室內，中央的維修台上放著浩汰的機體"
+            },
+            {
+              "character": "Narration",
+              "line": "浩汰的語音系統啟動，LED顯示「系統自檢中...完成!」"
             },
             {
               "character": "Houtai",
-              "line": "啊——終於醒了！我還活著嗎？我躺了多久？"
+              "line": "啊——終於醒了!我還活著嗎?我躺了多久?"
             },
             {
               "character": "Eva",
@@ -990,7 +972,7 @@
             },
             {
               "character": "Houtai",
-              "line": "...維克特呢？"
+              "line": "...維克特呢?"
             },
             {
               "character": "Narration",
@@ -1030,15 +1012,15 @@
             },
             {
               "character": "Eva",
-              "line": "今後就加入我們吧，浩太，為了城市的安全"
+              "line": "今後就加入我們吧，浩汰，為了城市的安全"
             },
             {
               "character": "Narration",
-              "line": "浩太的LED螢幕閃了一下，然後，他緩緩地轉向凱特和伊娃，螢幕上顯示出一個淡淡的微笑"
+              "line": "浩汰的LED螢幕閃了一下，然後，他緩緩地轉向凱特和伊娃，螢幕上顯示出一個淡淡的微笑"
             },
             {
               "character": "Houtai",
-              "line": "你說得對！守護城市安全的責任，就交給我們——賽博小隊！"
+              "line": "你說得對!守護城市安全的責任，就交給我們——賽博小隊!"
             },
             {
               "character": "Narration",
@@ -1046,11 +1028,11 @@
             },
             {
               "character": "Eva",
-              "line": "賽博小隊？⋯⋯又是一個奇怪的名字"
+              "line": "賽博小隊?⋯⋯又是一個奇怪的名字"
             },
             {
               "character": "Houtai",
-              "line": "你禮貌嗎？"
+              "line": "你禮貌嗎?"
             },
             {
               "character": "Kate",
@@ -1058,11 +1040,275 @@
             },
             {
               "character": "Narration",
-              "line": "浩太愣了一下，然後興奮地跟了上去，伊娃則輕笑著跟上"
+              "line": "浩汰愣了一下，然後興奮地跟了上去，伊娃則輕笑著跟上"
             },
             {
               "character": "Narration",
               "line": "城市恢復平靜。但屬於他們的故事，才剛剛開始——"
+            }
+          ]
+        },
+        {
+          "node": 2,
+          "outline": "結局二",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "執法所總部，作戰控制室內，顯示仿生人已全面停機，敵方的行動徹底瓦解"
+            },
+            {
+              "character": "Law enforcement officer",
+              "line": "最後一批非法仿生人已經停機，主嫌和其餘高層已被捕，行動成功"
+            },
+            {
+              "character": "Narration",
+              "line": "螢幕切換到維克特被押送的畫面，他一言不發，臉色陰沉，雙手被鎖在金屬手銬中"
+            },
+            {
+              "character": "Law enforcement officer",
+              "line": "相關技術已被回收，所有涉及的研究機構正在接受審查。城市安全系統已恢復正常，機器人法案將進一步強化，防止類似事件發生"
+            },
+            {
+              "character": "Eva",
+              "line": "這種事...感覺總有一天還會再發生"
+            },
+            {
+              "character": "Narration",
+              "line": "她看向螢幕上那些被回收的仿生人，神色複雜"
+            },
+            {
+              "character": "Kate",
+              "line": "但至少，今天結束了"
+            },
+            {
+              "character": "Narration",
+              "line": "兩人對視一眼，沒有再多說話"
+            },
+            {
+              "character": "Narration",
+              "line": "數日後——"
+            },
+            {
+              "character": "Narration",
+              "line": "風輕輕吹過廢墟邊緣，戰火過後的城市逐漸恢復寧靜"
+            },
+            {
+              "character": "Narration",
+              "line": "一處高處平台上，凱特與伊娃並肩而坐。城市景色延展在眼前，遠方工程隊正重建塌陷的區域"
+            },
+            {
+              "character": "Eva",
+              "line": "說真的，我還以為我們不會活過去"
+            },
+            {
+              "character": "Kate",
+              "line": "我也沒賭多大"
+            },
+            {
+              "character": "Eva",
+              "line": "你現在可以承認，其實你那時是硬撐的吧?"
+            },
+            {
+              "character": "Kate",
+              "line": "我只是不想死在沒完成任務的情況下"
+            },
+            {
+              "character": "Eva",
+              "line": "你真的有夠無趣"
+            },
+            {
+              "character": "Narration",
+              "line": "兩人之間沉默片刻，卻是一種久違的安穩"
+            },
+            {
+              "character": "Eva",
+              "line": "接下來呢?我們是要回去寫報告，還是乾脆失蹤一下?"
+            },
+            {
+              "character": "Kate",
+              "line": "我想先喝杯咖啡，再決定"
+            },
+            {
+              "character": "Eva",
+              "line": "不會又是你那種無糖拿鐵吧?那根本是液態懲罰"
+            },
+            {
+              "character": "Narration",
+              "line": "凱特沒有回嘴，只是靜靜看著遠方。他低頭看了眼身旁隨身包中的一件物品——一顆微微閃爍著藍光的機械核心，外殼上印著一個熟悉的標記"
+            },
+            {
+              "character": "Eva",
+              "line": "這傢伙的核心怎麼還在?"
+            },
+            {
+              "character": "Eva",
+              "line": "你打算把他修回來嗎?"
+            },
+            {
+              "character": "Kate",
+              "line": "正在嘗試"
+            },
+            {
+              "character": "Narration",
+              "line": "他們靜靜坐著，陽光穿過雲層，灑在損壞的機械核心上，藍光微微閃爍了一下，彷彿回應著什麼"
+            },
+            {
+              "character": "Eva",
+              "line": "好吧，一杯無糖拿鐵，加你那顆不合邏輯的機械心。還蠻適合你"
+            },
+            {
+              "character": "Kate",
+              "line": "隨便你"
+            },
+            {
+              "character": "Narration",
+              "line": "畫面漸暗，留下風聲與城市重建的低鳴。戰鄧雖已終結，但未來仍然在他們手中"
+            }
+          ]
+        },
+        {
+          "node": 3,
+          "outline": "結局三",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "維克特冷漠地俯視著滿身傷痕的凱特與伊娃，眼中沒有絲毫猶豫"
+            },
+            {
+              "character": "Victor",
+              "line": "掙扎到這種地步，還不肯放棄嗎?"
+            },
+            {
+              "character": "Narration",
+              "line": "伊娃舉槍想要反擊，卻被維克特輕易一揮，強大的能量波將她震飛出去，重重撞上牆壁，鮮血從嘴角滲出"
+            },
+            {
+              "character": "Eva",
+              "line": "可惡..."
+            },
+            {
+              "character": "Narration",
+              "line": "凱特獨自站在戰場中央，雙手緊握武器，強撐著疲憊的身體，目光依舊銳利"
+            },
+            {
+              "character": "Kate",
+              "line": "這場戰鬥...必須在這裡結束"
+            },
+            {
+              "character": "Narration",
+              "line": "浩汰的系統嚴重受損，語音斷斷續續，但仍在拼命分析著情勢"
+            },
+            {
+              "character": "Houtai",
+              "line": "警告...能量核心...過載臨界點..."
+            },
+            {
+              "character": "Narration",
+              "line": "凱特的目光一閃，他迅速計算了一個瘋狂的計畫。他知道，這是唯一能讓伊娃與浩汰活下去的方法"
+            },
+            {
+              "character": "Kate",
+              "line": "...這次，輪到我來終結一切"
+            },
+            {
+              "character": "Narration",
+              "line": "他悄悄地將手放在懷中的駭入裝置上，握緊"
+            },
+            {
+              "character": "Narration",
+              "line": "維克特沒有察覺到凱特的異樣，而是緩緩舉起手臂，機械炮口對準了凱特的胸口，準備發射致命一擊"
+            },
+            {
+              "character": "Victor",
+              "line": "老實說，我也不想做到這地步，但是再見了，凱特"
+            },
+            {
+              "character": "Eva",
+              "line": "凱特——!!"
+            },
+            {
+              "character": "Narration",
+              "line": "就在能量炮發射的瞬間，凱特猛然衝向維克特，強行扭轉炮口，讓爆炸在兩人之間爆發!"
+            },
+            {
+              "character": "Narration",
+              "line": "轟——!!"
+            },
+            {
+              "character": "Narration",
+              "line": "劇烈的爆炸震撼整座工廠，強大的衝擊波撕裂了地面，金屬碎片四散飛舞"
+            },
+            {
+              "character": "Narration",
+              "line": "當煙塵稍微散去，伊娃睜開模糊的視線，看見凱特與維克特仍然在僵持，兩人的身體都已經遍體鱗傷，但維克特的能量核心卻變得不穩定，紅光閃爍，顯示他已經受到了嚴重的損壞"
+            },
+            {
+              "character": "Victor",
+              "line": "你...還想...做什麼...?"
+            },
+            {
+              "character": "Narration",
+              "line": "凱特沒有回答，而是用最後的力氣，將駭入裝置死死按在維克特的核心上"
+            },
+            {
+              "character": "Kate",
+              "line": "帶你...一起下地獄"
+            },
+            {
+              "character": "Narration",
+              "line": "警報聲瘋狂響起，維克特的機械裝甲開始劇烈震動，核心能量場完全失控，紅光在他的身上亂竄"
+            },
+            {
+              "character": "Victor",
+              "line": "不——!!"
+            },
+            {
+              "character": "Narration",
+              "line": "最後一刻，凱特回頭看向伊娃，露出微笑，然後猛然抱住維克特，不讓他逃離爆炸範圍"
+            },
+            {
+              "character": "Eva",
+              "line": "凱特!!!"
+            },
+            {
+              "character": "Narration",
+              "line": "一道毀滅性的白光閃爍，當塵埃落定，整個工廠中央只剩下一個巨大焦黑的爆炸坑，紅色的能量核心已經完全熄滅，凱特與維克特的身影，永遠地消失在火焰與廢墟之中"
+            },
+            {
+              "character": "Narration",
+              "line": "伊娃跪倒在地，雙拳緊握，身體微微顫抖，眼淚無聲滑落"
+            },
+            {
+              "character": "Eva",
+              "line": "...凱特..."
+            },
+            {
+              "character": "Narration",
+              "line": "浩汰的機體損壞嚴重，但他的核心仍在微弱閃爍，他的語音斷斷續續"
+            },
+            {
+              "character": "Houtai",
+              "line": "結束了嗎...?"
+            },
+            {
+              "character": "Eva",
+              "line": "是的，他做到了"
+            },
+            {
+              "character": "Narration",
+              "line": "..."
+            },
+            {
+              "character": "Narration",
+              "line": "數日後，凱特的名字被刻在紀念碑上，他的犧牲成為歷史的一部分"
+            },
+            {
+              "character": "Narration",
+              "line": "伊娃站在紀念碑前，靜靜地望著他的名字，手中緊握著浩汰的手"
+            },
+            {
+              "character": "Narration",
+              "line": "遠方，城市恢復平靜，維克特的計畫已經化為灰燼，但未來仍然充滿未知"
             }
           ]
         }
@@ -1070,15 +1316,197 @@
     },
     {
       "version": 6,
-      "scene_description": "",
+      "scene_description": "執法所",
       "content": [
         {
           "node": 1,
-          "outline": "",
+          "outline": "第三幕遊戲一失敗",
           "dialogues": [
             {
               "character": "Narration",
-              "line": ""
+              "line": "車輛劇烈晃動，街道上的燈光在視線中快速閃過，追擊者的火力越來越猛烈，彈孔在車身上留下深深的痕跡"
+            },
+            {
+              "character": "Houtai",
+              "line": "我們撐不了多久"
+            },
+            {
+              "character": "Narration",
+              "line": "車載系統突然跳出異常警報，顯示執法所內部有不明訊號干擾，系統無法與執法所直接連接"
+            },
+            {
+              "character": "Houtai",
+              "line": "這訊號被加密過，內部系統可能已經被入侵"
+            },
+            {
+              "character": "Kate",
+              "line": "不...那裡可能已經不安全了"
+            },
+            {
+              "character": "Narration",
+              "line": "黑色車輛緊咬不放，前方的路口突然被攔截，封鎖撤退路線"
+            },
+            {
+              "character": "Houtai",
+              "line": "他們提前佈局了，沒路可走了"
+            },
+            {
+              "character": "Kate",
+              "line": "看來只能先甩開他們再說"
+            },
+            {
+              "character": "Narration",
+              "line": "一段時間後"
+            },
+            {
+              "character": "Narration",
+              "line": "眼看無法甩開敵人，浩汰的系統開始進行快速運算，並做出決策"
+            },
+            {
+              "character": "Houtai",
+              "line": "數據已加密，行動開始"
+            },
+            {
+              "character": "Kate",
+              "line": "你的意思是?"
+            },
+            {
+              "character": "Narration",
+              "line": "浩汰將一個小型硬碟塞進凱特的口袋"
+            },
+            {
+              "character": "Houtai",
+              "line": "他們的目標是我們的情報，我留下這個，接下來就交給你們了"
+            },
+            {
+              "character": "Eva",
+              "line": "你打算..."
+            },
+            {
+              "character": "Houtai",
+              "line": "這是唯一能成功的機會"
+            },
+            {
+              "character": "Narration",
+              "line": "不等他們回答，浩汰突然以全速衝向敵人的封鎖點"
+            },
+            {
+              "character": "Enemy",
+              "line": "什麼?!"
+            },
+            {
+              "character": "Narration",
+              "line": "浩汰猛踩油門，在最後一刻將車身旋轉，把凱特與伊娃甩出車外，而車輛則全速衝入敵方車陣"
+            },
+            {
+              "character": "Narration",
+              "line": "轟——!!!"
+            },
+            {
+              "character": "Narration",
+              "line": "劇烈的爆炸聲震撼整條街道，火焰吞噬一切，但仍然有敵人倖存，開始掃描現場，尋找殘餘目標"
+            },
+            {
+              "character": "Narration",
+              "line": "煙霧散去，倖存的敵人迅速鎖定凱特與伊娃，追擊戰繼續展開"
+            },
+            {
+              "character": "Kate",
+              "line": "還沒完?"
+            },
+            {
+              "character": "Enemy",
+              "line": "目標仍然存活!包圍他們!"
+            }
+          ]
+        },
+        {
+          "node": 2,
+          "outline": "遊戲二勝利",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "在激戰中，凱特發現一旁的重型摩托車，快速駭入解除鎖定，發動引擎"
+            },
+            {
+              "character": "Kate",
+              "line": "上車"
+            },
+            {
+              "character": "Eva",
+              "line": "這次去哪?"
+            },
+            {
+              "character": "Kate",
+              "line": "地下基地"
+            },
+            {
+              "character": "Narration",
+              "line": "摩托車迅速加速，穿過敵軍防線，駛入黑暗的巷弄"
+            },
+            {
+              "character": "Narration",
+              "line": "..."
+            },
+            {
+              "character": "Narration",
+              "line": "幾分鐘後，他們來到一處隱密的地下倉庫前，凱特迅速輸入指令，一道隱藏的金屬大門緩緩開啟，露出一條深入地下的通道"
+            },
+            {
+              "character": "Eva",
+              "line": "等等，這地方是什麼?"
+            },
+            {
+              "character": "Narration",
+              "line": "兩人駛入後，場景豁然開朗，四周是高科技設備、武器架、監控螢幕，甚至還有一個戰術規劃桌，氣氛嚴肅而精密"
+            },
+            {
+              "character": "Eva",
+              "line": "凱特，你該不會韋恩集團的大少爺吧?"
+            },
+            {
+              "character": "Kate",
+              "line": "別浪費時間，先解密浩汰留下的硬碟"
+            },
+            {
+              "character": "Eva",
+              "line": "你有一個藏在廢棄倉庫下的秘密基地，裡面裝滿武器和情報系統，還能直接監控整個城市..."
+            },
+            {
+              "character": "Eva",
+              "line": "就差一件披風和一個面具了"
+            },
+            {
+              "character": "Kate",
+              "line": "如果有用，我不介意加上"
+            },
+            {
+              "character": "Narration",
+              "line": "伊娃翻了個白眼，但還是走到凱特旁，開始協助分析數據"
+            },
+            {
+              "character": "Narration",
+              "line": "隨著浩汰留下的數據被解密，螢幕上開始顯示大量情報"
+            },
+            {
+              "character": "Kate",
+              "line": "維克特..."
+            },
+            {
+              "character": "Eva",
+              "line": "接下來呢?"
+            },
+            {
+              "character": "Kate",
+              "line": "看來想終結這場戰鬥，只能出奇不意了"
+            },
+            {
+              "character": "Eva",
+              "line": "你似乎有些想法?說說看"
+            },
+            {
+              "character": "Narration",
+              "line": "監視螢幕上的紅色標記顯示敵方的基地，危機尚未解除，而這場戰鬥，似乎變得極為困難"
             }
           ]
         }
@@ -1090,44 +1518,705 @@
       "content": [
         {
           "node": 1,
-          "outline": "",
+          "outline": "小遊戲前",
           "dialogues": [
             {
               "character": "Narration",
-              "line": ""
+              "line": "凱特與伊娃站在秘密基地內，終端機上顯示著浩汰留下的加密數據。螢幕閃爍著一串無序的數字，看起來像是某種加密訊息，但沒有明顯的解密線索"
+            },
+            {
+              "character": "Eva",
+              "line": "這就是浩汰留下的東西?一堆亂碼?"
+            },
+            {
+              "character": "Narration",
+              "line": "凱特敲擊鍵盤，試圖透過標準破解方式解密，但數據受到了多層加密"
+            },
+            {
+              "character": "Eva",
+              "line": "該不會是什麼機器人才懂的演算法吧?"
+            },
+            {
+              "character": "Narration",
+              "line": "螢幕上開始規律性地閃爍一串數字"
+            },
+            {
+              "character": "Eva",
+              "line": "這是什麼?某種數列?"
+            },
+            {
+              "character": "Kate",
+              "line": "看來浩汰給我們留了一個測試，如果我們解不出來，數據就無法解鎖"
+            },
+            {
+              "character": "Narration",
+              "line": "終端機上出現一條訊息"
+            },
+            {
+              "character": "Narration",
+              "line": "'找出數列規律，輸入正確答案，否則資料將自動銷毀。'"
+            },
+            {
+              "character": "Eva",
+              "line": "這機器人真是防範我們被蠢死啊"
+            },
+            {
+              "character": "Kate",
+              "line": "動手吧，這可能是我們唯一能找到幕後黑手的方法"
             }
           ]
-        }
-      ]
-    },
-    {
-      "version": 8,
-      "scene_description": "",
-      "content": [
+        },
         {
-          "node": 1,
-          "outline": "",
+          "node": 2,
+          "outline": "極難一",
           "dialogues": [
             {
               "character": "Narration",
-              "line": ""
+              "line": "終端機嗶的一聲，數據開始解鎖，原本雜亂的數據開始重組，最終顯示出一張機密文件"
+            },
+            {
+              "character": "Eva",
+              "line": "成功了！"
+            },
+            {
+              "character": "Narration",
+              "line": "..."
+            },
+            {
+              "character": "Narration",
+              "line": "凱特與伊娃沿著狹長的地下通道潛行，根據浩汰留下的情報，敵方大部隊正集結於基地的核心區域，正中央是維克特的兩名親衛——改造人A與B"
+            },
+            {
+              "character": "Eva",
+              "line": "看到了，數十名仿生士兵，全武裝戒備"
+            },
+            {
+              "character": "Narration",
+              "line": "兩人從背包中取出數枚炸彈，輕輕安裝在通道牆面與天花板的結構要點上"
+            },
+            {
+              "character": "Kate",
+              "line": "一分鐘後引爆"
+            },
+            {
+              "character": "Eva",
+              "line": "真希望這批炸彈夠大"
+            },
+            {
+              "character": "Narration",
+              "line": "…隨著倒數結束，地下通道劇烈震動，牆面崩塌，大量碎石與爆炸衝擊撕裂了仿生機器人的隊形。金屬碎片與火焰四散飛濺，現場陷入混亂"
+            },
+            {
+              "character": "Cyborg",
+              "line": "入侵者！警戒——!!"
+            },
+            {
+              "character": "Narration",
+              "line": "在爆炸餘波未平之際，凱特與伊娃從兩側躍入戰場，展開正面攻擊"
+            },
+            {
+              "character": "Cyborg",
+              "line": "你們以為這樣就能毀了我們?"
+            },
+            {
+              "character": "Eva",
+              "line": "我們沒打算全靠這招"
+            },
+            {
+              "character": "Narration",
+              "line": "數十名仿生士兵雖然遭受重創，仍有部分系統恢復，重新組隊反擊。改造人B則以驚人的衝刺速度接近伊娃，展開高強度近戰"
+            },
+            {
+              "character": "Kate",
+              "line": "我來處理這個"
+            },
+            {
+              "character": "Eva",
+              "line": "那我就打包剩下那一堆鐵皮"
             }
-
+          ]
+        },
+        {
+          "node": 3,
+          "outline": "極難一結束",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "這是一場硬仗。敵人雖已受損，但仍強大無比。凱特與伊娃憑藉戰術、精準與默契，逐一擊破。改造人B終於在伊娃的連續爆擊下倒地，系統徹底癱瘓，改造人A則被凱特一發爆裂彈命中核心，重傷跪地"
+            },
+            {
+              "character": "Narration",
+              "line": "戰場一片狼藉，火花與金屬煙霧在空氣中盤旋"
+            },
+            {
+              "character": "Kate",
+              "line": "還沒結束。維克特在上層"
+            },
+            {
+              "character": "Narration",
+              "line": "戰火仍未停歇。伊娃與殘餘敵人交戰，槍聲不絕於耳。凱特則走進中控塔內部，一道金屬門自動關閉，與外界隔絕"
+            },
+            {
+              "character": "Narration",
+              "line": "當凱特來到維克特的主控室時，一道身影從陰影中現身"
+            },
+            {
+              "character": "Victor",
+              "line": "你就是那個一直干擾我計畫的執法官?"
+            },
+            {
+              "character": "Kate",
+              "line": "事情終將來到結局"
+            },
+            {
+              "character": "Victor",
+              "line": "果然是體制下的好士兵，命令一下就毫不猶豫"
+            },
+            {
+              "character": "Kate",
+              "line": "你發動機械叛亂，滲透執法所，傷亡人數難以估計，這是事實並非情緒。"
+            },
+            {
+              "character": "Narration",
+              "line": "維克特微微頷首，似乎對凱特的冷淡反應不感意外。他卸下外披，露出強化裝甲與自製神經接口，戰鬥姿態一瞬成形"
+            },
+            {
+              "character": "Victor",
+              "line": "那就讓戰鬥決定誰該留下"
+            },
+            {
+              "character": "Narration",
+              "line": "沒有更多話語。凱特開火，維克特迅速閃避——生死決戰開始"
+            },
+            {
+              "character": "Narration",
+              "line": "與此同時，在外部獨自對抗殘兵的伊娃。她伏身、換彈、快速移動，機械碎片不斷在她腳邊堆積"
+            },
+            {
+              "character": "Eva",
+              "line": "凱特，撐下去啊"
+            }
+          ]
+        },
+        {
+          "node": 4,
+          "outline": "極難二結束",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "經過數分鐘的激戰，兩人皆身負重創。凱特半跪在地，手臂掛彩，仍緊握手槍。而維克特的裝甲破損，內部機構冒出電火花"
+            },
+            {
+              "character": "Narration",
+              "line": "凱特按下早已植入系統的遠端駭入模組，控制台瞬間超載，維克特身後的主能源爐爆閃"
+            },
+            {
+              "character": "Kate",
+              "line": "結束了"
+            },
+            {
+              "character": "Narration",
+              "line": "一道劇烈的爆炸吞噬整個中控核心。紅光閃爍，火焰將維克特的身影吞沒"
+            }
           ]
         }
       ]
     },
     {
       "version": 9,
-      "scene_description": "",
+      "scene_description": "Bed Ending",
       "content": [
         {
-          "node": 1,
+          "node": 21,
+          "outline": "第二幕遊戲一失敗",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "凱特的攻擊無法突破改造人的防禦，他每一次反擊都精準無比。即使凱特試圖拉開距離，對方卻像幽靈一樣緊追不放"
+            },
+            {
+              "character": "Narration",
+              "line": "伊娃那邊雖然盡力牽制仿生人，但敵人數量過多，加上武器已經損壞，她逐漸被逼入死角"
+            },
+            {
+              "character": "Mysterious Man",
+              "line": "真讓人失望。你們這些執法官，就這點能耐?"
+            },
+            {
+              "character": "Narration",
+              "line": "一記沉重的拳擊命中凱特胸口，他整個人被砸進後方牆壁，鮮血自唇角滑落。他試圖站起，卻已經無力還擊"
+            },
+            {
+              "character": "Narration",
+              "line": "伊娃看見凱特倒下，眼中閃過恐懼與絕望。就在她想衝上前時，一道紅光閃過——"
+            },
+            {
+              "character": "Narration",
+              "line": "煙塵散去，一切歸於寂靜。敵人離去，只留下滿目瘡痍的街道與兩位倒下的戰士"
+            },
+            {
+              "character": "Narration",
+              "line": "一個圓潤小巧的銀白色機器人悄悄浮現。他沒有發出任何聲音，只是靜靜地懸浮在兩人身旁，頭部的感測燈微微閃爍，像是在……默哀"
+            }
+          ]
+        },
+        {
+          "node": 221,
+          "outline": "第二幕遊戲二失敗結束",
+          "dialogues": [
+
+            {
+              "character": "Eva",
+              "line": "我們做到了!快走!"
+            },
+            {
+              "character": "Narration",
+              "line": "兩人突破封鎖，朝著安全區域疾馳而去"
+            },
+            {
+              "character": "Narration",
+              "line": "駛離戰場後，凱特小心翼翼地監視四周，但沒有發現追兵。他們的心跳仍然急促，剛才的戰鬥讓腎上腺素飆升"
+            },
+            {
+              "character": "Eva",
+              "line": "看來...我們真的擺脫他們了?"
+            },
+            {
+              "character": "Kate",
+              "line": "還不能確定，得找個地方躲起來，先確保不再被追蹤"
+            },
+            {
+              "character": "Narration",
+              "line": "然而，就在此時，凱特的通訊設備突然響起，不同於剛才帶有干擾的聲音，這次是一個清晰而淡然的聲音"
+            },
+            {
+              "character": "???",
+              "line": "辛苦了，你們贏了這一回合。但...你們以為這樣就能改變結果嗎?"
+            },
+            {
+              "character": "Narration",
+              "line": "伊娃神色一變，迅速打開便攜掃描器，檢測附近訊號來源。數秒後，她的臉色驟變"
+            },
+            {
+              "character": "Eva",
+              "line": "凱特!我們的車被標記了—他們一直在追蹤我們的位置!"
+            },
+            {
+              "character": "Eva",
+              "line": "該死，我們根本沒機會逃走!"
+            },
+            {
+              "character": "Narration",
+              "line": "天空中，一架更大的戰術無人機緩緩降下，改造人再次現身"
+            },
+            {
+              "character": "Cyborg",
+              "line": "遊戲...結束了"
+            },
+            {
+              "character": "Narration",
+              "line": "這一刻，凱特終於明白，他們從一開始就沒有真正的勝算——無論是迎戰還是撤退，這場戰鬥早已被精密計算過，他們只不過是敵人計畫中的一部分..."
+            }
+          ]
+
+        },
+        {
+          "node": 222,
           "outline": "",
           "dialogues": [
             {
               "character": "Narration",
-              "line": ""
+              "line": "凱特明白與其正面交戰，不如尋找另一條路。他猛然轉動方向盤，試圖從小巷繞開無人機的封鎖"
+            },
+            {
+              "character": "Eva",
+              "line": "這樣行嗎?"
+            },
+            {
+              "character": "Kate",
+              "line": "我們沒得選"
+            },
+            {
+              "character": "Narration",
+              "line": "然而，就在他們剛轉入小巷時，四周的路燈同時亮起，照出一排排早已埋伏在此的機械士兵。改造人的身影從黑暗中緩緩浮現，手中的武器鎖定了他們"
+            },
+            {
+              "character": "Cyborg",
+              "line": "這場遊戲...已經結束了"
+            },
+            {
+              "character": "Narration",
+              "line": "敵人的炮火如暴雨般襲來，凱特與伊娃試圖反擊，但火力完全壓制。他們漸漸被逼入死角，無論如何掙扎，這場戰鬥早已沒有勝算"
+            },
+            {
+              "character": "Eva",
+              "line": "我們...輸了嗎？"
+            },
+            {
+              "character": "Narration",
+              "line": "凱特緊握著槍，眉頭微皺，卻沒有回答。他們知道，無論之前做出什麼選擇，這場戰鬥的結局已經註定"
+            }
+          ]
+        },
+        {
+          "node": 3,
+          "outline": "",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "指揮室內，紅色警戒燈閃爍，仿生人軍團步步逼近"
+            },
+            {
+              "character": "Kate",
+              "line": "這裡完了..."
+            },
+            {
+              "character": "Eva",
+              "line": "我們...沒得選了"
+            },
+            {
+              "character": "Narration",
+              "line": "浩汰的機體已被損壞，核心閃爍異常紅光，無力地倒在地上"
+            },
+            {
+              "character": "Houtai",
+              "line": "凱特...伊娃...小心..."
+            },
+            {
+              "character": "Narration",
+              "line": "敵人不給喘息的機會，密集的火力瘋狂傾瀉而來"
+            },
+            {
+              "character": "Narration",
+              "line": "伊娃躍起射擊，子彈擊落一名仿生士兵，卻被另一台機械迅速鎖定，能量炮直擊她的腹部"
+            },
+            {
+              "character": "Eva",
+              "line": "...不行..."
+            },
+            {
+              "character": "Narration",
+              "line": "凱特試圖掩護，但敵人的攻擊毫不留情，一道電磁脈衝貫穿他的身體"
+            },
+            {
+              "character": "Kate",
+              "line": "伊娃..."
+            },
+            {
+              "character": "Narration",
+              "line": "兩人背靠背，滿身鮮血，氣息奄奄。敵人舉起武器，最後的攻擊降臨"
+            },
+            {
+              "character": "Eva",
+              "line": "凱特...對不起了..."
+            },
+            {
+              "character": "Narration",
+              "line": "刺眼的光芒閃過，凱特與伊娃的身影被爆炸吞沒——"
+            },
+            {
+              "character": "Narration",
+              "line": "數週後"
+            },
+            {
+              "character": "Journalist",
+              "line": "叛亂落幕，社會秩序恢復，犯罪率驟降。機械管理系統全面接管，城市安全與穩定達到前所未有的水平"
+            },
+            {
+              "character": "Narration",
+              "line": "人們適應了新的世界，街道井然有序，生活規律而穩定。但在某些角落，還是有人低聲耳語"
+            },
+            {
+              "character": "???",
+              "line": "這真的是「和平」嗎?"
+            },
+            {
+              "character": "Narration",
+              "line": "無人回答，監視器的紅光靜靜閃爍，見證著未來降臨"
+            }
+          ]
+        },
+        {
+          "node": 41,
+          "outline": "遊戲二輸",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "凱特氣喘吁吁，滿身傷痕。他努力想要站穩，但雙腿再也支撐不住，膝蓋一軟，重重跪倒在地"
+            },
+            {
+              "character": "Eva",
+              "line": "凱特!快起來!"
+            },
+            {
+              "character": "Narration",
+              "line": "然而，維克特的身影已經逼近，他的機械裝甲發出低沉的運作聲，紅色能量核心閃爍著毀滅的光芒"
+            },
+            {
+              "character": "Victor",
+              "line": "我早就說過了，你們沒有勝算"
+            },
+            {
+              "character": "Narration",
+              "line": "伊娃試圖衝上前，但改造人A擋住了她的去路，狠狠地將她擊倒在地。浩汰也想要支援，但他的能量早已耗盡，只能無助的倒在地上，發出微弱的聲音"
+            },
+            {
+              "character": "Victor",
+              "line": "這場鬧劇該結束了"
+            },
+            {
+              "character": "Narration",
+              "line": "他抬起手臂，機械裝甲的電磁脈衝裝置開始聚能。凱特試圖掙扎，但已經無法動彈，只能眼睜睜看著死亡降臨"
+            },
+            {
+              "character": "Eva",
+              "line": "住手——!"
+            },
+            {
+              "character": "Narration",
+              "line": "伊娃強行起身，無視身上的傷勢，撿起地上的武器，瘋狂朝維克特射擊"
+            },
+            {
+              "character": "Eva",
+              "line": "你這個怪物——!!"
+            },
+            {
+              "character": "Narration",
+              "line": "然而，子彈擊中維克特的裝甲，他卻只是冷漠地轉過頭，眼神像是在看著一個無謂掙扎的生物"
+            },
+            {
+              "character": "Victor",
+              "line": "無意義的抵抗"
+            },
+            {
+              "character": "Narration",
+              "line": "下一秒，他的裝甲肩部突然彈出一支砲管，閃爍著紅光，如閃電般射出"
+            },
+            {
+              "character": "Eva",
+              "line": "!"
+            },
+            {
+              "character": "Narration",
+              "line": "維特克重傷了伊娃，她的身體僵住。她的手顫抖著，想要繼續扣下扳機，但力氣卻漸漸流失"
+            },
+            {
+              "character": "Kate",
+              "line": "伊娃"
+            },
+            {
+              "character": "Narration",
+              "line": "伊娃的膝蓋一軟，身體搖晃了一下，最終無力地倒下。她的雙眼無神地望著天花板，嘴唇微微顫抖，想說什麼，但最後只發出一聲微弱的氣音"
+            },
+            {
+              "character": "Eva",
+              "line": "...凱特...抱歉了..."
+            },
+            {
+              "character": "Narration",
+              "line": "她的手無力地垂下，眼中的光芒漸漸熄滅"
+            },
+            {
+              "character": "Victor",
+              "line": "結束了"
+            },
+            {
+              "character": "Narration",
+              "line": "他抬起手，最後一擊毫不留情地——轟——!!!"
+            },
+            {
+              "character": "Narration",
+              "line": "爆炸聲響起，烈焰吞沒了一切，最終被黑暗吞噬..."
+            }
+          ]
+        },
+        {
+          "node": 6,
+          "outline": "遊戲二失敗",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "凱特與伊娃被逐步逼入死角，無法突圍"
+            },
+            {
+              "character": "Eva",
+              "line": "我們...沒機會了"
+            },
+            {
+              "character": "Narration",
+              "line": "敵人開火，密集的子彈封鎖了最後的逃生路線"
+            },
+            {
+              "character": "Enemy",
+              "line": "結束了，執法官"
+            },
+            {
+              "character": "Narration",
+              "line": "最後一刻，槍聲響起，畫面陷入黑暗"
+            },
+            {
+              "character": "Narration",
+              "line": "..."
+            },
+            {
+              "character": "Narration",
+              "line": "凱特與伊娃戰死，敵人成功奪取數據。浩汰的犧牲毫無意義，反抗勢力遭受重創"
+            }
+          ]
+        },
+        {
+          "node": 7,
+          "outline": "遊戲一失敗",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "改造人A的拳頭將鋼柱砸成碎片，一擊將伊娃震飛，撞上牆面；她重重落地，槍支滑出數米遠"
+            },
+            {
+              "character": "Eva",
+              "line": "咳...不..."
+            },
+            {
+              "character": "Kate",
+              "line": "撐住!"
+            },
+            {
+              "character": "Narration",
+              "line": "凱特奮力與B纏鬥，但雙臂早已疲憊，身上中彈數處。改造人B以壓倒性的速度撲上，將他按倒在地，一拳一拳猛砸頭盔"
+            },
+            {
+              "character": "Narration",
+              "line": "防彈面罩碎裂，血跡濺出。凱特勉力伸手，但再也拿不起武器"
+            },
+            {
+              "character": "Cyborg",
+              "line": "清除任務，完成進行中"
+            },
+            {
+              "character": "Narration",
+              "line": "伊娃想要起身，卻被一腳踢回地面，喉嚨被踩住，逐漸失去呼吸"
+            },
+            {
+              "character": "Kate",
+              "line": "伊...娃..."
+            },
+            {
+              "character": "Narration",
+              "line": "下一刻，雙方的生命訊號同時歸零。硬碟模組跌落在地，微光閃爍，卻被敵方機器人一腳踩碎"
+            },
+            {
+              "character": "Narration",
+              "line": "敵方殘軍重整隊形，回報中央"
+            },
+            {
+              "character": "Cyborg",
+              "line": "入侵者排除"
+            },
+            {
+              "character": "Narration",
+              "line": "反叛勢力最重要的兩名行動者戰死，徹底失敗"
+            },
+            {
+              "character": "Narration",
+              "line": "..."
+            },
+            {
+              "character": "Narration",
+              "line": "數週後"
+            },
+            {
+              "character": "Journalist",
+              "line": "叛亂落幕，社會秩序恢復，犯罪率驟降。機械管理系統全面接管，城市安全與穩定達到前所未有的水平"
+            },
+            {
+              "character": "Narration",
+              "line": "人們適應了新的世界，街道井然有序，生活規律而穩定。但在某些角落，還是有人低聲耳語"
+            },
+            {
+              "character": "???",
+              "line": "這真的是「和平」嗎?"
+            },
+            {
+              "character": "Narration",
+              "line": "無人回答，監視器的紅光靜靜閃爍，見證著未來降臨"
+            }
+          ]
+        },
+        {
+          "node": 8,
+          "outline": "遊戲二輸",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "伊娃守在外部苦戰，堅守出入口不讓任何一個敵人突入。她的手臂中彈，血流不止，但仍撐著不退"
+            },
+            {
+              "character": "Eva",
+              "line": "快點...凱特...你到底在裡面怎麼樣了..."
+            },
+            {
+              "character": "Narration",
+              "line": "中控室內，凱特與維克特已交鋒十數分鐘。煙霧瀰漫，兩人皆受傷，但差距逐漸顯現"
+            },
+            {
+              "character": "Victor",
+              "line": "很可惜，我已經不是你能擊敗的存在"
+            },
+            {
+              "character": "Narration",
+              "line": "凱特的子彈用盡，近戰被壓制，一記重拳擊中胸甲，他重重倒在地上，口吐鮮血"
+            },
+            {
+              "character": "Kate",
+              "line": "任務...還沒..."
+            },
+            {
+              "character": "Victor",
+              "line": "結束了"
+            },
+            {
+              "character": "Narration",
+              "line": "他抬起手臂，能量脈衝閃爍，最後一擊貫穿凱特的身體"
+            },
+            {
+              "character": "Narration",
+              "line": "控制室的門打開，伊娃驚恐衝入，卻只看到維克特立於火光中，而凱特，已然倒地不動"
+            },
+            {
+              "character": "Eva",
+              "line": "凱特——!!"
+            },
+            {
+              "character": "Victor",
+              "line": "沒必要再掙扎了。你的戰鬥，早就已經輸了"
+            },
+            {
+              "character": "Narration",
+              "line": "伊娃舉槍，但身後敵軍湧入。她在爆炸與槍聲中消失"
+            },
+            {
+              "character": "Narration",
+              "line": "..."
+            },
+            {
+              "character": "Narration",
+              "line": "數週後"
+            },
+            {
+              "character": "Journalist",
+              "line": "叛亂落幕，社會秩序恢復，犯罪率驟降。機械管理系統全面接管，城市安全與穩定達到前所未有的水平"
+            },
+            {
+              "character": "Narration",
+              "line": "人們適應了新的世界，街道井然有序，生活規律而穩定。但在某些角落，還是有人低聲耳語"
+            },
+            {
+              "character": "???",
+              "line": "這真的是「和平」嗎?"
+            },
+            {
+              "character": "Narration",
+              "line": "無人回答，監視器的紅光靜靜閃爍，見證著未來降臨"
             }
           ]
         }
@@ -1147,7 +2236,7 @@
             },
             {
               "character": "Eva",
-              "line": "我們第一次的合作好像不太順利，對嗎？"
+              "line": "我們第一次的合作好像不太順利，對嗎?"
             },
             {
               "character": "Kate",
@@ -1163,7 +2252,7 @@
             },
             {
               "character": "Mysterious Man",
-              "line": "這就是執法官的水準？你們比我預想的還令人失望"
+              "line": "這就是執法官的水準?你們比我預想的還令人失望"
             },
             {
               "character": "Eva",
@@ -1218,7 +2307,7 @@
             },
             {
               "character": "Eva",
-              "line": "這傢伙還能反擊！"
+              "line": "這傢伙還能反擊!"
             },
             {
               "character": "Kate",
@@ -1230,7 +2319,7 @@
             },
             {
               "character": "Houtai",
-              "line": "嗨！不用謝！這是我應該做的！"
+              "line": "嗨!不用謝!這是我應該做的!"
             },
             {
               "character": "Narration",
@@ -1238,23 +2327,23 @@
             },
             {
               "character": "Eva",
-              "line": "什麼東西？"
+              "line": "什麼東西?"
             },
             {
               "character": "Houtai",
-              "line": "你禮貌嗎？我是浩汰！全能小助手！話說，剛剛那招超酷吧？我就知道你們需要幫忙，幸好我及時趕到！"
+              "line": "你禮貌嗎?我是浩汰!全能小助手!話說，剛剛那招超酷吧?我就知道你們需要幫忙，幸好我及時趕到!"
             },
             {
               "character": "Kate",
-              "line": "我們見過嗎？"
+              "line": "我們見過嗎?"
             },
             {
               "character": "Houtai",
-              "line": "別這麼冷漠嘛！我可是你的救命恩人，上次要不是我拖延時間讓執法所的人來找你，你的性命早就不保了"
+              "line": "別這麼冷漠嘛!我可是你的救命恩人，上次要不是我拖延時間讓執法所的人來找你，你的性命早就不保了"
             },
             {
               "character": "Kate",
-              "line": "...謝謝，那你有什麼目的？"
+              "line": "...謝謝，那你有什麼目的?"
             },
             {
               "character": "Houtai",
@@ -1274,11 +2363,11 @@
             },
             {
               "character": "Eva",
-              "line": "是說...有人說過你的名字很奇特嗎？"
+              "line": "是說...有人說過你的名字很奇特嗎?"
             },
             {
               "character": "Houtai",
-              "line": "你禮貌嗎？"
+              "line": "你禮貌嗎?"
             }
           ]
         }
@@ -1295,7 +2384,7 @@
           "dialogues": [
             {
               "character": "Kate",
-              "line": "可惡...難道真的沒有弱點嗎？"
+              "line": "可惡...難道真的沒有弱點嗎?"
             },
             {
               "character": "Narration",
@@ -1315,7 +2404,7 @@
             },
             {
               "character": "Eva",
-              "line": "這傢伙還能反擊！"
+              "line": "這傢伙還能反擊!"
             },
             {
               "character": "Kate",
@@ -1327,7 +2416,7 @@
             },
             {
               "character": "Houtai",
-              "line": "嗨！不用謝！這是我應該做的！"
+              "line": "嗨!不用謝!這是我應該做的!"
             },
             {
               "character": "Narration",
@@ -1335,11 +2424,11 @@
             },
             {
               "character": "Eva",
-              "line": "這是...什麼東西？"
+              "line": "這是...什麼東西?"
             },
             {
               "character": "Houtai",
-              "line": "你禮貌嗎？我是浩汰！全能小助手！話說，剛剛那招超酷吧？我就知道你們需要幫忙，幸好我及時趕到！"
+              "line": "你禮貌嗎?我是浩汰!全能小助手!話說，剛剛那招超酷吧?我就知道你們需要幫忙，幸好我及時趕到!"
             },
             {
               "character": "Narration",
@@ -1351,11 +2440,11 @@
             },
             {
               "character": "Eva",
-              "line": "這傢伙竟然還沒死透？！"
+              "line": "這傢伙竟然還沒死透?!"
             },
             {
               "character": "Kate",
-              "line": "快上車！"
+              "line": "快上車!"
             },
             {
               "character": "Narration",
@@ -1387,7 +2476,7 @@
             },
             {
               "character": "Eva",
-              "line": "他還在追來嗎？"
+              "line": "他還在追來嗎?"
             },
             {
               "character": "Kate",
@@ -1410,66 +2499,6 @@
               "line": "無論如何，我們也要殺除重圍"
             }
           ]
-        },
-        {
-          "node": 2,
-          "outline": "第二幕遊戲二失敗結束",
-          "dialogues": [
-
-            {
-              "character": "Eva",
-              "line": "我們做到了！快走！"
-            },
-            {
-              "character": "Narration",
-              "line": "兩人突破封鎖，朝著安全區域疾馳而去"
-            },
-            {
-              "character": "Narration",
-              "line": "駛離戰場後，凱特小心翼翼地監視四周，但沒有發現追兵。他們的心跳仍然急促，剛才的戰鬥讓腎上腺素飆升"
-            },
-            {
-              "character": "Eva",
-              "line": "看來...我們真的擺脫他們了？"
-            },
-            {
-              "character": "Kate",
-              "line": "還不能確定，得找個地方躲起來，先確保不再被追蹤"
-            },
-            {
-              "character": "Narration",
-              "line": "然而，就在此時，凱特的通訊設備突然響起，不同於剛才帶有干擾的聲音，這次是一個清晰而淡然的聲音"
-            },
-            {
-              "character": "???",
-              "line": "辛苦了，你們贏了這一回合。但...你們以為這樣就能改變結果嗎？"
-            },
-            {
-              "character": "Narration",
-              "line": "伊娃神色一變，迅速打開便攜掃描器，檢測附近訊號來源。數秒後，她的臉色驟變"
-            },
-            {
-              "character": "Eva",
-              "line": "凱特！我們的車被標記了—他們一直在追蹤我們的位置！"
-            },
-            {
-              "character": "Eva",
-              "line": "該死，我們根本沒機會逃走！"
-            },
-            {
-              "character": "Narration",
-              "line": "天空中，一架更大的戰術無人機緩緩降下，改造人再次現身"
-            },
-            {
-              "character": "Cyborg",
-              "line": "遊戲...結束了"
-            },
-            {
-              "character": "Narration",
-              "line": "這一刻，凱特終於明白，他們從一開始就沒有真正的勝算——無論是迎戰還是撤退，這場戰鬥早已被精密計算過，他們只不過是敵人計畫中的一部分..."
-            }
-          ]
-
         }
       ]
     },
@@ -1491,7 +2520,7 @@
             },
             {
               "character": "Cyborg A",
-              "line": "這就是你們的能耐嗎？"
+              "line": "這就是你們的能耐嗎?"
             },
             {
               "character": "Narration",
@@ -1507,7 +2536,7 @@
             },
             {
               "character": "Victor",
-              "line": "你們就這點實力，還想阻擋我嗎？"
+              "line": "你們就這點實力，還想阻擋我嗎?"
             }
           ]
         },
@@ -1533,7 +2562,7 @@
             },
             {
               "character": "Victor",
-              "line": "你還不明白嗎？這個計畫是為了人類的未來，讓低等的人淘汰淨化，讓優秀的個體得以存續，不再壽命的限制。你們所做的，只是在延遲不可避免的紛爭"
+              "line": "你還不明白嗎?這個計畫是為了人類的未來，讓低等的人淘汰淨化，讓優秀的個體得以存續，不再壽命的限制。你們所做的，只是在延遲不可避免的紛爭"
             }
           ]
         },
@@ -1547,7 +2576,7 @@
             },
             {
               "character": "Kate",
-              "line": "那可不是犧牲無辜者的藉口！"
+              "line": "那可不是犧牲無辜者的藉口!"
             },
             {
               "character": "Narration",
@@ -1555,7 +2584,7 @@
             },
             {
               "character": "Victor",
-              "line": "別妄想了！"
+              "line": "別妄想了!"
             },
             {
               "character": "Narration",
@@ -1575,7 +2604,7 @@
             },
             {
               "character": "Victor",
-              "line": "浩太...你..."
+              "line": "浩汰...你..."
             },
             {
               "character": "Narration",
@@ -1604,100 +2633,6 @@
             {
               "character": "Narration",
               "line": "凱特與伊娃對視一眼，做了一個決定"
-            }
-          ]
-        },
-        {
-          "node": 4,
-          "outline": "遊戲二輸",
-          "dialogues": [
-            {
-              "character": "Narration",
-              "line": "凱特氣喘吁吁，滿身傷痕。他努力想要站穩，但雙腿再也支撐不住，膝蓋一軟，重重跪倒在地"
-            },
-            {
-              "character": "Eva",
-              "line": "凱特！快起來！"
-            },
-            {
-              "character": "Narration",
-              "line": "然而，維克特的身影已經逼近，他的機械裝甲發出低沉的運作聲，紅色能量核心閃爍著毀滅的光芒"
-            },
-            {
-              "character": "Victor",
-              "line": "我早就說過了，你們沒有勝算"
-            },
-            {
-              "character": "Narration",
-              "line": "伊娃試圖衝上前，但改造人A擋住了她的去路，狠狠地將她擊倒在地。浩汰也想要支援，但他的能量早已耗盡，只能無助的倒在地上，發出微弱的聲音"
-            },
-            {
-              "character": "Victor",
-              "line": "這場鬧劇該結束了"
-            },
-            {
-              "character": "Narration",
-              "line": "他抬起手臂，機械裝甲的電磁脈衝裝置開始聚能。凱特試圖掙扎，但已經無法動彈，只能眼睜睜看著死亡降臨"
-            },
-            {
-              "character": "Eva",
-              "line": "住手——！"
-            },
-            {
-              "character": "Narration",
-              "line": "伊娃強行起身，無視身上的傷勢，撿起地上的武器，瘋狂朝維克特射擊"
-            },
-            {
-              "character": "Eva",
-              "line": "你這個怪物——！！"
-            },
-            {
-              "character": "Narration",
-              "line": "然而，子彈擊中維克特的裝甲，他卻只是冷漠地轉過頭，眼神像是在看著一個無謂掙扎的生物"
-            },
-            {
-              "character": "Victor",
-              "line": "無意義的抵抗"
-            },
-            {
-              "character": "Narration",
-              "line": "下一秒，他的裝甲肩部突然彈出一支砲管，閃爍著紅光，如閃電般射出"
-            },
-            {
-              "character": "Eva",
-              "line": "！"
-            },
-            {
-              "character": "Narration",
-              "line": "維特克重傷了伊娃，她的身體僵住。她的手顫抖著，想要繼續扣下扳機，但力氣卻漸漸流失"
-            },
-            {
-              "character": "Kate",
-              "line": "伊娃"
-            },
-            {
-              "character": "Narration",
-              "line": "伊娃的膝蓋一軟，身體搖晃了一下，最終無力地倒下。她的雙眼無神地望著天花板，嘴唇微微顫抖，想說什麼，但最後只發出一聲微弱的氣音"
-            },
-            {
-              "character": "Eva",
-              "line": "...凱特...抱歉了..."
-            },
-            {
-              "character": "Narration",
-              "line": "她的手無力地垂下，眼中的光芒漸漸熄滅"
-            },
-            {
-              "character": "Victor",
-              "line": "結束了"
-            },
-            {
-              "character": "Narration",
-              "line": "他抬起手，最後一擊毫不留情地——轟——！！！"
-            },
-            {
-              "character": "Narration",
-              "line": "爆炸聲響起，烈焰吞沒了一切，最終被黑暗吞噬..."
             }
           ]
         }

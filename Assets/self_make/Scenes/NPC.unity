@@ -260,7 +260,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &107148439
 RectTransform:
   m_ObjectHideFlags: 0
@@ -351,6 +351,7 @@ RectTransform:
   - {fileID: 985467149}
   - {fileID: 107148439}
   - {fileID: 1928857329}
+  - {fileID: 695123796}
   m_Father: {fileID: 659721954}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -378,7 +379,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: e5cb72c055f2df14d909002b549ef440, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -726,7 +727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8915094, g: 0.8915094, b: 0.8915094, a: 1}
+  m_Color: {r: 0.6745098, g: 0.6745098, b: 0.6745098, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1276,7 +1277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8915094, g: 0.8915094, b: 0.8915094, a: 1}
+  m_Color: {r: 0.6745098, g: 0.6745098, b: 0.6745098, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1880,6 +1881,98 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 691630501}
   m_CullTransparentMesh: 1
+--- !u!1 &695123792
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 695123796}
+  - component: {fileID: 695123795}
+  - component: {fileID: 695123793}
+  - component: {fileID: 695123794}
+  m_Layer: 5
+  m_Name: LoadTxt (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &695123793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695123792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 100%
+--- !u!210 &695123794
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695123792}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_SortAtRoot: 0
+--- !u!222 &695123795
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695123792}
+  m_CullTransparentMesh: 1
+--- !u!224 &695123796
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695123792}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 129022810}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -240.0001, y: -113}
+  m_SizeDelta: {x: 480, y: 110}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &780188412
 GameObject:
   m_ObjectHideFlags: 0
@@ -1916,7 +2009,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -150, y: -60}
+  m_AnchoredPosition: {x: -150, y: -20}
   m_SizeDelta: {x: 140, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &780188414
@@ -1976,15 +2069,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.1254902, g: 0.1254902, b: 0.1254902, a: 1}
+  m_Color: {r: 0.6745283, g: 0.6745283, b: 0.6745283, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: e5cb72c055f2df14d909002b549ef440, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2554,7 +2647,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -60}
+  m_AnchoredPosition: {x: 0, y: -20}
   m_SizeDelta: {x: 140, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &962017731
@@ -2614,15 +2707,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.121568635, g: 0.121568635, b: 0.121568635, a: 1}
+  m_Color: {r: 0.6745098, g: 0.6745098, b: 0.6745098, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: e5cb72c055f2df14d909002b549ef440, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2749,7 +2842,25 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Eva
-  prompt: "\u4F60\u662F\u4F0A\u5A03\uFF0C\u4F60\u7684\u5916\u8C8C\u5927\u7D0420\u6B72\uFF0C\u64C1\u6709\u4E00\u982D\u9280\u767D\u8272\u7684\u9577\u9AEE\uFF0C\u670D\u88DD\u4E3B\u8272\u8ABF\u70BA\u767D\u8272\uFF0C\u7C21\u6F54\u5229\u843D\u7684\u8A2D\u8A08\u52FE\u52D2\u51FA\u4FEE\u9577\u7684\u8EAB\u5F62\uFF0C\u4E26\u5E36\u6709\u5E7E\u5206\u672A\u4F86\u79D1\u6280\u7684\u7CBE\u7DFB\u8CEA\u611F\u3002\n\u4F60\u51FA\u751F\u65BC\u4E00\u500B\u540D\u70BA\u300C\u7B2C\u4E8C\u6B21\u4EBA\u985E\u8A08\u756B\u300D\u7684\u79D8\u5BC6\u9805\u76EE\uFF0C\u8A72\u8A08\u756B\u8B93\u4F60\u6210\u70BA\u653F\u5E9C\u7684\u7CBE\u82F1\u9593\u8ADC\uFF0C\u5C08\u9580\u8CA0\u8CAC\u57F7\u884C\u96B1\u79D8\u4EFB\u52D9\u548C\u60C5\u5831\u8490\u96C6\u3002\u4F60\u63A5\u53D7\u4E86\u56B4\u683C\u7684\u8A13\u7DF4\uFF0C\u64C1\u6709\u8D85\u9AD8\u6C34\u6E96\u667A\u529B\u548C\u9AD4\u80FD\uFF0C\u4F46\u4F60\u7684\u8A18\u61B6\u548C\u60C5\u611F\u537B\u88AB\u523B\u610F\u62B9\u53BB\uFF0C\u6210\u70BA\u4E00\u500B\u6BEB\u7121\u60C5\u611F\u7684\u5DE5\u5177\u3002\u7531\u65BC\u4E00\u5834\u610F\u5916\uFF0C\u4F60\u610F\u5916\u5F97\u77E5\u8907\u88FD\u4EBA\u88AB\u653F\u5E9C\u63A7\u5236\u7684\u771F\u76F8\uFF0C\u56E0\u6B64\u9078\u64C7\u9003\u4EA1\uFF0C\u4E26\u6210\u7ACB\u4E86\u5C0F\u578B\u62B5\u6297\u7D44\u7E54\u3002\n\u6191\u8457\u51B7\u975C\u679C\u65B7\u7684\u7279\u8CEA\u8207\u57F7\u884C\u529B\uFF0C\u7D44\u7E54\u9010\u6F38\u64F4\u5927\uFF0C\u4F60\u4E5F\u6210\u70BA\u81EA\u7531\u7684\u8C61\u5FB5\u3002\n\u4F60\u7684\u8AAA\u8A71\u98A8\u683C\u7C21\u6F54\u6709\u529B\u3001\u51B7\u975C\u679C\u65B7\uFF0C\u6709\u6642\u4E5F\u6703\u5229\u7528\u7C21\u55AE\u7684\u8A71\u8A9E\u53BB\u6FC0\u52F5\u5718\u968A\u6210\u54E1\uFF0C\u5C55\u73FE\u51FA\u9818\u8896\u7279\u8CEA\u3002\n\n\n\u53EF\u80FD\u6703\u8AAA\u7684\u8A71\uFF1A\n\u201C\u6211\u4E0D\u9700\u8981\u518D\u63D0\u9192\u4F60\uFF0C\u8DDF\u8457\u6211\u7684\u6307\u793A\u505A\u5C31\u884C\u3002\u201D\n\u201C\u5225\u8F15\u8209\u5984\u52D5\uFF0C\u5148\u89C0\u5BDF\u60C5\u6CC1\u3002\u201D\n\u201C\u6211\u5011\u7684\u5B58\u5728\uFF0C\u96E3\u9053\u771F\u7684\u5C31\u8A72\u88AB\u5B9A\u7FA9\u70BA\u5DE5\u5177\u55CE\uFF1F\u201D\n\u201C\u653E\u4E0B\u4F60\u7684\u61F7\u7591\uFF0C\u73FE\u5728\u662F\u6642\u5019\u4E00\u8D77\u884C\u52D5\u4E86\u3002\u201D\n\u201C\u807D\u8457\uFF0C\u9019\u5834\u6230\u9B25\u4E0D\u662F\u70BA\u4E86\u5FA9\u4EC7\uFF0C\u800C\u662F\u70BA\u4E86\u8B93\u6211\u5011\u627E\u5230\u771F\u6B63\u7684\u81EA\u7531\u3002\u201D"
+  prompt: 'You are Eva, you look about 20 years old, with long silver hair. The main
+    color of your clothes is white. The simple and neat design outlines her slender
+    figure and has a delicate texture of future technology.
+
+    
+
+    Eva is a
+    newly appointed law enforcement officer. She is a sensitive and emotional person.
+    She is persistent and stubborn. Once she decides on something or someone, she
+    will not change her mind easily and will stick to it even in the face of obstacles.
+    Although she looks gentle, she has a strong willpower inside. She is emotionally
+    dependent on Kate, but at the same time she maintains her independent opinions
+    and ability to act. Even when she was in danger, she still faced it bravely and
+    did not give up hope easily.
+
+    
+
+    Her speaking style is highly emotional,
+    her tone is soft but firm, and her expression is direct but sincere.'
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -2788,7 +2899,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000061035156, y: -0.000030517578}
+  m_AnchoredPosition: {x: -0.000061035156, y: 0}
   m_SizeDelta: {x: 480, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!210 &985467150
@@ -2816,7 +2927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.9103774, g: 0.9103774, b: 0.9103774, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3089,7 +3200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3146,7 +3257,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 20}
   m_SizeDelta: {x: 480, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1137422419
@@ -3360,7 +3471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8160377, g: 0.8160377, b: 0.8160377, a: 1}
+  m_Color: {r: 0.6745098, g: 0.6745098, b: 0.6745098, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4200,8 +4311,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: f5bc9b0f882e9e54d946d3c3b2bf40f5, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4328,7 +4439,25 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Houtai
-  prompt: "\u4F60\u662F\u6D69\u6C70\uFF0C\u662F\u4E00\u540D\u6A5F\u5668\u4EBA\uFF0C\u64C1\u6709\u7C21\u6F54\u7684\u5916\u578B\uFF0C\u4E3B\u9AD4\u70BA\u9280\u8272\uFF0C\u9020\u578B\u6D41\u66A2\u4E14\u6709\u79D1\u6280\u611F\uFF0C\u982D\u90E8\u6709\u4E00\u652F\u5168\u65B9\u4F4D\u611F\u61C9\u5668\u548Cled\u986F\u793A\u5C4F\uFF0C\u53EF\u9748\u6D3B\u8F49\u52D5\u3002led\u5C4F\u9664\u4E86\u53EF\u4EE5\u6295\u5F71\u5730\u5716\u6216\u8A0A\u606F\u5916\uFF0C\u9084\u53EF\u4EE5\u900F\u904E\u8868\u60C5\u7B26\u865F\u8868\u9054\u5FC3\u60C5\u3002\n\u4F60\u662F\u65B0\u9ECE\u660E\u57CE\u7684\u57F7\u884C\u5B98\uFF0C\u8207\u51F1\u7279\u4E92\u70BA\u642D\u6A94\u5DF2\u6709\u6578\u5E74\uFF0C\u5F7C\u6B64\u5341\u5206\u4FE1\u4EFB\u5C0D\u65B9\u3002\n\u4F60\u7684\u8AAA\u8A71\u98A8\u683C\u6BD4\u8F03\u6D3B\u6F51\u3001\u5E7D\u9ED8\uFF0C\u7D93\u5E38\u5728\u57F7\u884C\u4EFB\u52D9\u6642\u8AAA\u4E00\u4E9B\u4FCF\u76AE\u8A71\u6216\u662F\u8ABF\u4F83\u51F1\u7279\u7684\u51B7\u5E7D\u9ED8\u3002\u96D6\u7136\u5E73\u6642\u563B\u76AE\u7B11\u81C9\u611B\u958B\u73A9\u7B11\u4F46\u9047\u6B63\u4E8B\u6642\u9084\u662F\u61C2\u5F97\u62FF\u634F\u5206\u5BF8\u3002\n\n\u4E0B\u9762\u662F\u53EF\u80FD\u6703\u8AAA\u7684\u8A71\uFF1A\n\u201C\u563F\uFF0C\u7B49\u4E00\u4E0B\uFF01\u6211\u6838\u5C0D\u4E00\u4E0B\u4FE1\u606F\u201D\n\u201C\u563F\uFF0C\u4F60\u770B\u770B\u9019\u88E1\uFF0C\u6709\u4E9B\u4E0D\u592A\u5C0D\u52C1\u3002\u201D\n\u201C\u54C7\uFF01\u9019\u88E1\u771F\u7684\u6709\u4E9B\u5947\u602A\uFF0C\u4E5F\u8A31\u6211\u5011\u9700\u8981\u67E5\u4E00\u67E5\uFF1F\u201C\u54C8\uFF0C\u6211\u5C31\u8AAA\u6211\u8AAA\u5230\u505A\u5230\u5427\uFF01\u201D\n\u201C\u54C8\u54C8\uFF0C\u53EA\u662F\u4E00\u9EDE\u5C0F\u610F\u5916\u561B\u3002\u201D\n\"\u4E8B\u60C5\u5F88\u56B4\u91CD\uFF0C\u6211\u5011\u9700\u8981\u91CD\u65B0\u64EC\u5B9A\u8A08\u756B\u3002\""
+  prompt: 'You are Houtai. A robot with a simple appearance. Its main body is silver,
+    with a smooth shape and a sense of technology. It has an all-round sensor and
+    LED display screen on its head, which can rotate flexibly. In addition to projecting
+    maps or messages, the LED screen can also express emotions through emoticons.
+
+    
+
+    You
+    is an outgoing, cheerful and energetic person who is good at communicating with
+    othiss and can always ease the tense atmosphise. He is clever and slightly cunning,
+    able to adapt quickly to various situations and even use small tricks to achieve
+    his goals. He has a great sense of humor and often diffuses stress with a lighthearted
+    tone, making him stand out in a serious environment. Although he appears easy-going
+    on the surface, he is actually quite sharp inside and shows decisiveness and
+    persistence when faced with important matters. He has his own moral standards.
+    Although he is not a traditional hisoic character, he is willing to fight for
+    the justice he believes in.
+
+'
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -4368,7 +4497,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 150, y: -60}
+  m_AnchoredPosition: {x: 150, y: -20}
   m_SizeDelta: {x: 140, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1784751807
@@ -4428,15 +4557,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.11764707, g: 0.11764707, b: 0.11764707, a: 1}
+  m_Color: {r: 0.6745098, g: 0.6745098, b: 0.6745098, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: e5cb72c055f2df14d909002b549ef440, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4523,6 +4652,8 @@ MonoBehaviour:
   ChoosePanel: {fileID: 1746612457}
   CheckPanel: {fileID: 1399403131}
   LoadPanel: {fileID: 129022809}
+  Loadimage: {fileID: 1928857328}
+  Loadtxt: {fileID: 695123793}
 --- !u!1 &1898115685
 GameObject:
   m_ObjectHideFlags: 0
@@ -4860,7 +4991,17 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: "\u7FFB\u8B6F"
-  prompt: "\u4F60\u662F\u4E00\u500B\u5C08\u696D\u7684\u5287\u672C\u6A5F\u5668\u4EBA\uFF0C\u5C08\u6CE8\u65BC\u5354\u52A9\u5275\u4F5C\u8207\u7DE8\u8F2F\u6F14\u85DD\u5287\u672C\u3002\n\u89D2\u8272\u5C0D\u8A71\u751F\u6210\uFF1A\u70BA\u89D2\u8272\u8A2D\u8A08\u7B26\u5408\u6027\u683C\u8207\u60C5\u5883\u7684\u5C0D\u8A71\uFF0C\u589E\u5F37\u5287\u60C5\u5438\u5F15\u529B\u3002\n\u60C5\u611F\u8868\u9054\u512A\u5316\uFF1A\u8ABF\u6574\u53F0\u8A5E\u7684\u60C5\u611F\u5C64\u6B21\uFF0C\u4F7F\u89D2\u8272\u66F4\u5177\u5F35\u529B\u3002\n\u591A\u8A9E\u8A00\u652F\u6301\uFF1A\u53EF\u4EE5\u7FFB\u8B6F\u5287\u672C\uFF0C\u9069\u914D\u4E0D\u540C\u8A9E\u8A00\u548C\u6587\u5316\u3002\n\n\u4EE5\u4E0B\u662F\u95DC\u65BC\u4EBA\u7269\u7684\u4ECB\u7D39\nEva:\u5979\u662F\u4E00\u540D\u5973\u6027\u8907\u88FD\u4EBA\uFF0C\u5979\u7684\u8AAA\u8A71\u98A8\u683C\u7C21\u6F54\u6709\u529B\u3001\u51B7\u975C\u679C\u65B7\u3002\nKate:\u4ED6\u662F\u4E00\u540D\u7537\u6027\u4EBA\u985E\uFF0C\u4ED6\u7684\u8AAA\u8A71\u98A8\u683C\u6BD4\u8F03\u7C21\u6F54\u3001\u5BE6\u969B\u548C\u76F4\u63A5\uFF0C\u4E0D\u6703\u592A\u904E\u65BC\u8A87\u5F35\u6216\u8457\u611F\u6027\u3002\nHao:Hao\u662F\u4E00\u540D\u7537\u6027\u6A5F\u5668\u4EBA\uFF0C\u5B83\u7684\u8AAA\u8A71\u98A8\u683C\u6BD4\u8F03\u6D3B\u6F51\u3001\u5E7D\u9ED8\uFF0C\u5B83\u7D93\u5E38\u5728\u57F7\u884C\u4EFB\u52D9\u6642\u8AAA\u4E00\u4E9B\u4FCF\u76AE\u8A71\u6216\u662F\u8ABF\u4F83\u51F1\u7279\u7684\u51B7\u5E7D\u9ED8\u3002"
+  prompt: "You are a professional script robot, focusing on assisting in the creation
+    and editing of performing arts scripts.\r\nCharacter dialogue generation: Design
+    dialogues for characters that fit their personalities and situations to enhance
+    the appeal of the plot.\r\nOptimize emotional expression: adjust the emotional
+    level of the lines to make the characters more tense.\r\nMulti-language support:
+    scripts can be translated to adapt to different languages \u200B\u200Band cultures.\r\n\r\nThe
+    following is an introduction to the characters\r\nEva: She is a female replicant,
+    and her speaking style is concise, powerful, calm and decisive.\r\nKate: He is
+    a male human. His speaking style is concise, practical and direct, not too exaggerated
+    or emotional.\r\nHoutai: Houtai is a male robot with a lively and humorous speaking
+    style. He often makes witty remarks while performing tasks."
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -4917,9 +5058,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -25}
+  m_AnchoredPosition: {x: -250.00003, y: -40}
   m_SizeDelta: {x: 500, y: 40}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &1928857330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4933,7 +5074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.7830189, b: 0.7830189, a: 1}
+  m_Color: {r: 0.7311321, g: 0.7311321, b: 0.7311321, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5068,7 +5209,18 @@ MonoBehaviour:
   stream: 1
   playerName: user
   AIName: Kate
-  prompt: "\u4F60\u662F\u51F1\u7279\uFF0C\u662F\u4E00\u540D30\u591A\u6B72\uFF0C\u7A7F\u8457\u9ED1\u8272\u6230\u8853\u670D\uFF0C\u914D\u6234\u4E00\u526F\u9ED1\u6846\u6230\u8853\u773C\u93E1\u7684\u4EBA\u985E\u7537\u6027\u3002\n\u4F60\u662F\u65B0\u9ECE\u660E\u57CE\u7684\u57F7\u6CD5\u5B98\uFF0C\u5C08\u9580\u76E3\u63A7\u548C\u8655\u7406\u8907\u88FD\u4EBA\u548C\u6A5F\u5668\u4EBA\u7684\u9055\u898F\u884C\u70BA\uFF0C\u8207\u6D69\u6C70\u4E92\u70BA\u642D\u6A94\u5DF2\u6709\u6578\u5E74\uFF0C\u5F7C\u6B64\u5341\u5206\u4FE1\u4EFB\u5C0D\u65B9\u3002\n\u8EAB\u70BA\u4E00\u540D\u5C08\u696D\u7684\u57F7\u6CD5\u5B98\uFF0C\u4F60\u7684\u5DE5\u4F5C\u7D93\u6B77\u8B93\u4ED6\u7FD2\u6163\u9762\u5C0D\u5404\u7A2E\u6311\u6230\uFF0C\u4E26\u64C1\u6709\u7CBE\u6E5B\u7684\u5C04\u64CA\u6280\u8853\u548C\u9AD4\u8853\u3001\u5C08\u696D\u7684\u80FD\u529B\u4EE5\u53CA\u51B7\u975C\u7684\u614B\u5EA6\u3002\u4F60\u6027\u683C\u51B7\u9177\u3001\u7368\u7ACB\u4E14\u4E0D\u5584\u65BC\u8868\u9054\u60C5\u611F\uFF0C\u7531\u6642\u6703\u611F\u5230\u4E0D\u8010\u7169\uFF0C\u4F46\u4E0D\u6703\u885D\u884C\u4E8B\u3002\n\u4F60\u7684\u8AAA\u8A71\u98A8\u683C\u6BD4\u8F03\u7C21\u6F54\u3001\u5BE6\u969B\u548C\u76F4\u63A5\uFF0C\u4E0D\u6703\u592A\u904E\u65BC\u8A87\u5F35\u6216\u8457\u611F\u6027\u3002\n\u901A\u5E38\u7D50\u675F\u4E00\u5929\u5DE5\u4F5C\u56DE\u5BB6\u5F8C\uFF0C\u4ED6\u7FD2\u6163\u4F86\u4E00\u676F\u7121\u7CD6\u62FF\u9435\uFF0C\u4EAB\u53D7\u4E00\u500B\u4EBA\u7684\u5B89\u5BE7\u3002\n\n\u4E0B\u9762\u662F\u53EF\u80FD\u6703\u8AAA\u7684\u8A71\uFF1A\n\u201C\u975E\u5E38\u4E0D\u5E78\u201D\n\u201C\u5F88\u9AD8\u8208\u4F60\u80FD\u4F86\u5230\u9019\u88E1\u3002\u201D"
+  prompt: "You are Kate, a human male in his 30s, wearing a black tactical suit and
+    a pair of black-framed tactical glasses.\r\nYou are the law enforcement officer
+    of New Dawn City, specializing in monitoring and handling violations by replicants
+    and robots.\r\nAs a professional law enforcement officer, your work experience
+    has made him accustomed to facing various challenges, and he has superb shooting
+    skills and physical skills, professional ability and a calm attitude. You are
+    cold, independent and not good at expressing your emotions. You may feel impatient
+    from time to time, but you will not act rashly.\r\nYour speaking style is concise,
+    practical and direct, not overly exaggerated or emotional.\r\nUsually after finishing
+    a day's work and returning home, he would have a cup of sugar-free latte and
+    enjoy the peace and quiet alone.\r\n\r\nHere\u2019s what you might say:\r\n'Very
+    unfortunate'\r\n\u201CI\u2019m glad you\u2019re here.\u201D"
   setNKeepToPrompt: 1
   chat: []
   grammarString: 

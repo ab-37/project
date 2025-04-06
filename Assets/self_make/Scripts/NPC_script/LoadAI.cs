@@ -65,7 +65,7 @@ public class LoadAI : MonoBehaviour
     public void StartAI()
     {
         Debug.Log("ok");
-        SceneManager.LoadScene("Dialogue Main");
+        //SceneManager.LoadScene("Dialogue Main");
 
         //StartTransAI();
 
@@ -74,9 +74,29 @@ public class LoadAI : MonoBehaviour
     void Start()
     {
         InitializeFile();
+        if (scriptfile == null)
+        {
+            Debug.LogError("scriptfile is null! Please assign it in the Inspector.");
+            return;
+        }
         acts = JsonUtility.FromJson<Script>(scriptfile.text).acts;
         if (acts == null) { Debug.Log("script is null!"); }
         Debug.Log($"Loaded {acts.Count} acts from script.");
+        if (scriptfile != null)
+        {
+            Debug.Log("scriptfile contents: " + scriptfile.text);
+        }
+    }
+
+
+    public void StartTransAI()
+    {
+        characters = new Dictionary<string, LLMCharacter>
+        {
+            { "Kate", Kate },
+            { "Houtai", Houtai},
+            { "Eva", Eva }
+        };
         NameTrans = new Dictionary<string, string>
         {
             {"Kate", "凱特" },
@@ -92,19 +112,13 @@ public class LoadAI : MonoBehaviour
             {"Law enforcement officer", "執法官員" },
             {"cyborg", "改造人" }
         };
-    }
-
-
-    public void StartTransAI()
-    {
-        characters = new Dictionary<string, LLMCharacter>
+        foreach (var kvp in characters)
         {
-            { "Kate", Kate },
-            { "Houtai", Houtai},
-            { "Eva", Eva }
-        };
-        
-        //jsonFilePath = @"C:\Users\USER\unity\My project (5)\dialogues.json";;
+            if (kvp.Value == null)
+            {
+                Debug.LogError($"Character {kvp.Key} is not assigned!");
+            }
+        }
 
         SaveDialogueLogToJson();
         //Normal.onClick.AddListener();
@@ -162,7 +176,7 @@ public class LoadAI : MonoBehaviour
         yield return StartCoroutine(ProcessTranslationsForAct(CurrntAct, CurrentContent));
         if (actNumber < acts.Count)
         {
-            if (ContentNode < contents.Count)
+            if (ContentNode <= contents.Count)
             {
                 CurrentContent++;
                 StartCoroutine(PlayAct(CurrntAct, CurrentContent));
@@ -331,8 +345,32 @@ public class LoadAI : MonoBehaviour
         }
         foreach (ACT act1 in outputfile.acts)
         {
+            if (act1.content == null)
+            {
+                Debug.LogError($"Act {act1.version} has null content!");
+                continue;
+            }
+            //if (act1.version == 21 || act1.version == 22 || act1.version == 41)
+            //{
+            //    Debug.Log($"Handling special case for Act {act1.version}...");
+            //    foreach (Content content1 in act1.content)
+            //    {
+            //        if (content1.dialogues == null)
+            //        {
+            //            Debug.LogError($"Act {act1.version} Content {content1.node} has null dialogues!");
+            //            continue;
+            //        }
+            //        //content1.dialogues.Clear();
+            //    }
+            //    continue; 
+            //}
             foreach (Content content1 in act1.content)
             {
+                if (content1.dialogues == null)
+                {
+                    Debug.LogError($"Act {act1.version} Content {content1.node} has null dialogues!");
+                    continue;
+                }
                 content1.dialogues.Clear();
             }
 
@@ -395,7 +433,7 @@ public class LoadAI : MonoBehaviour
         //{
         //    Debug.Log("null!\n");
         //}
-        SolveBOM();
+        //SolveBOM();
         //File.WriteAllText(jsonFilePath, JsonConvert.SerializeObject(outputfile, Formatting.Indented));
         SceneManager.LoadScene("Dialogue Main");
 
