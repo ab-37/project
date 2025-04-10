@@ -43,8 +43,15 @@ public class ControlUI : MonoBehaviour
     //design other chracater name
     public Character targetCharacter;
 
-    private GameObject mainMenu;
+    //variable to load next bg
+    private string newBgName;
 
+    //private GameObject mainMenu;
+
+    //public Transform test;
+
+
+    public BG_Script bgScript;
 
     /*
     public void hideMainUI()
@@ -234,6 +241,8 @@ public class ControlUI : MonoBehaviour
             Debug.Log("Failed to fetch node in version " + act.ToString());
             return false;
         }
+
+        newBgName = (string)fetchJsonData(fetchJsonData(dialogueJumpData["acts"], "act", act)["parts"], "part", part)["bg"];
         currentNodeDialogue = nodeJson["dialogues"];
         Static_Variables.currentAct = act;
         Static_Variables.currentPart = part;
@@ -340,6 +349,7 @@ public class ControlUI : MonoBehaviour
                     isDialogueDone = false;
                     currentLine = -1;
                     yield return new WaitForSeconds(1);
+                    bgScript.setBg(newBgName);
                 }
                 else {
                     Debug.Log("Failed to load dialogue");
@@ -375,11 +385,16 @@ public class ControlUI : MonoBehaviour
 
     private void Awake()
     {
+        bgScript = gameObject.transform.Find("BG/BGHandler").GetComponent<BG_Script>();
+
+        //test = gameObject.transform.parent;
+
+
         //LoadData = File.ReadAllText(Application.dataPath + "/self_make/stage/stage.json");
         //StageData = JsonMapper.ToObject(LoadData);
 
         blockSelect = Static_Variables.blockSelect;
-        mainMenu = GameObject.Find("MainUI");
+        //mainMenu = GameObject.Find("MainUI");
 
         //load dialogue, temp file path
         //fullDialogueData = JsonMapper.ToObject(File.ReadAllText(Application.dataPath + "/self_make/Scripts/dialogues.json"));
@@ -388,6 +403,8 @@ public class ControlUI : MonoBehaviour
         //load other jsons
         dialogueJumpData = JsonMapper.ToObject(File.ReadAllText(Application.dataPath + "/self_make/Scripts/dialogue_jump.json"));
         levelsData = JsonMapper.ToObject(File.ReadAllText(Application.dataPath + "/self_make/Scripts/levels.json"));
+
+        newBgName = "1";
     }
 
     private void Start()
@@ -403,6 +420,7 @@ public class ControlUI : MonoBehaviour
         isDialogueDone = false;
         (int, int) nextPart = nextDialogue();
         if (loadNode(nextPart.Item1, nextPart.Item2)) {
+            bgScript.setBg(newBgName);
             Debug.Log("Dialogue loaded successfully");
             isDialogueDone = false;
             currentLine = -1;

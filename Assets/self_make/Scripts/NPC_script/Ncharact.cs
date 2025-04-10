@@ -77,7 +77,7 @@ public class Ncharact : MonoBehaviour
 
     private void Awake()
     {
-        Time.timeScale = 2;
+        //Time.timeScale = 2;
 
     }
     private async void StartAI()
