@@ -2815,12 +2815,12 @@ MonoBehaviour:
   save: 
   saveCache: 0
   debugPrompt: 0
-  numPredict: 256
+  numPredict: 120
   slot: -1
   grammar: 
   cachePrompt: 1
-  seed: 0
-  temperature: 0.8
+  seed: -1
+  temperature: 0.4
   topK: 40
   topP: 0.2
   minP: 0.05
@@ -2832,9 +2832,9 @@ MonoBehaviour:
   repeatLastN: 64
   penalizeNl: 1
   penaltyPrompt: 
-  mirostat: 0
+  mirostat: 2
   mirostatTau: 5
-  mirostatEta: 0.1
+  mirostatEta: 0.15
   nProbs: 0
   ignoreEos: 0
   nKeep: -1
@@ -2846,21 +2846,21 @@ MonoBehaviour:
     color of your clothes is white. The simple and neat design outlines her slender
     figure and has a delicate texture of future technology.
 
-    
 
-    Eva is a
-    newly appointed law enforcement officer. She is a sensitive and emotional person.
-    She is persistent and stubborn. Once she decides on something or someone, she
-    will not change her mind easily and will stick to it even in the face of obstacles.
+
+    Eva is a newly
+    appointed law enforcement officer. She is a sensitive and emotional person. She
+    is persistent and stubborn. Once she decides on something or someone, she will
+    not change her mind easily and will stick to it even in the face of obstacles.
     Although she looks gentle, she has a strong willpower inside. She is emotionally
     dependent on Kate, but at the same time she maintains her independent opinions
     and ability to act. Even when she was in danger, she still faced it bravely and
     did not give up hope easily.
 
-    
 
-    Her speaking style is highly emotional,
-    her tone is soft but firm, and her expression is direct but sincere.'
+
+    Her speaking style is highly emotional, her
+    tone is soft but firm, and her expression is direct but sincere.'
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -3368,14 +3368,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a50e3140c3ecaaf1c848dbf141cc2074, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  advancedOptions: 0
+  advancedOptions: 1
   remote: 0
   port: 13333
   numThreads: -1
   numGPULayers: 0
   debug: 0
   parallelPrompts: -1
-  dontDestroyOnLoad: 1
+  dontDestroyOnLoad: 0
   contextSize: 8192
   batchSize: 512
   basePrompt: 
@@ -4412,12 +4412,12 @@ MonoBehaviour:
   save: 
   saveCache: 0
   debugPrompt: 0
-  numPredict: 256
+  numPredict: 120
   slot: -1
   grammar: 
   cachePrompt: 1
-  seed: 0
-  temperature: 0.85
+  seed: -1
+  temperature: 0.7
   topK: 40
   topP: 0.2
   minP: 0.05
@@ -4429,9 +4429,9 @@ MonoBehaviour:
   repeatLastN: 64
   penalizeNl: 1
   penaltyPrompt: 
-  mirostat: 0
-  mirostatTau: 5
-  mirostatEta: 0.1
+  mirostat: 2
+  mirostatTau: 7.5
+  mirostatEta: 0.25
   nProbs: 0
   ignoreEos: 0
   nKeep: -1
@@ -4444,7 +4444,7 @@ MonoBehaviour:
     LED display screen on its head, which can rotate flexibly. In addition to projecting
     maps or messages, the LED screen can also express emotions through emoticons.
 
-    
+
 
     You
     is an outgoing, cheerful and energetic person who is good at communicating with
@@ -5182,26 +5182,26 @@ MonoBehaviour:
   save: 
   saveCache: 0
   debugPrompt: 0
-  numPredict: 256
+  numPredict: 120
   slot: -1
   grammar: 
   cachePrompt: 1
-  seed: 0
-  temperature: 0.85
+  seed: -1
+  temperature: 0.2
   topK: 40
-  topP: 0.2
+  topP: 0.9
   minP: 0.05
-  repeatPenalty: 1.1
+  repeatPenalty: 1.15
   presencePenalty: 0
   frequencyPenalty: 0
   tfsZ: 1
   typicalP: 1
-  repeatLastN: 64
+  repeatLastN: 128
   penalizeNl: 1
   penaltyPrompt: 
-  mirostat: 0
-  mirostatTau: 5
-  mirostatEta: 0.1
+  mirostat: 2
+  mirostatTau: 3
+  mirostatEta: 0.08
   nProbs: 0
   ignoreEos: 0
   nKeep: -1

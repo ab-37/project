@@ -55,9 +55,9 @@ public class LoadAI : MonoBehaviour
     private List<Content> contents;
     private Dictionary<string, LLMCharacter> characters;
     private Dictionary<string, string> NameTrans;
-    private int CurrntAct = 1;
-    private int CurrentContent = 1;
-    private string CurrentOutline = "";
+    private int CurrntAct = 0;
+    private int CurrentContent = 0;
+    //private string CurrentOutline = "";
     private Script outputfile;
     private Script outputfile2;
     //private Script outputfile3;
@@ -66,8 +66,7 @@ public class LoadAI : MonoBehaviour
     {
         Debug.Log("ok");
         //SceneManager.LoadScene("Dialogue Main");
-
-        //StartTransAI();
+        StartTransAI();
 
     }
 
@@ -133,7 +132,6 @@ public class LoadAI : MonoBehaviour
 
             File.WriteAllText(outputFilePath, "Dialogue Log\n========================");
             File.WriteAllText(translateFilepath, "Translated Dialogue Log\n========================");
-
         }
         catch (IOException e)
         {
@@ -143,62 +141,62 @@ public class LoadAI : MonoBehaviour
 
     private IEnumerator PlayAct(int actNumber, int ContentNode)
     {
-        if (ContentNode == 1)
+        ACT act = GetAct2(actNumber);
+        contents = act.content;
+        if (act == null || contents == null)
         {
-            ACT act = GetAct2(actNumber);
-            contents = act.content;
-            if (act == null || contents == null)
-            {
-                Debug.LogError($"Act {actNumber} not found!");
-                yield break;
-            }
-            WriteResponseToFile($"Playing Act {act.version}: {act.scene_description}\n");
-            Debug.Log($"Playing Act {act.version}: {act.scene_description}");
+            Debug.LogError($"Act {actNumber} not found!");
+            yield break;
         }
+        WriteResponseToFile($"Playing Act {act.version}: {act.scene_description}\n");
+        Debug.Log($"Playing Act {act.version}: {act.scene_description}");
+
         Content content = GetContent(ContentNode);
-        CurrentOutline = content.outline;
+        int actualVersion = act.version;
+        int actualNode = content.node;
+
+        //CurrentOutline = content.outline;
         if (content == null)
         {
             Debug.LogError($"Act {ContentNode} not found!");
             yield break;
         }
-        WriteResponseToFile($"Playing Content {content.node}\n");
-        Debug.Log($"Playing Content {content.node}");
+        WriteResponseToFile($"Playing Content {actualNode}\n");
+        Debug.Log($"Playing Content {actualNode}");
         foreach (Dialogue dialogue in content.dialogues)
         {
             CharacterName = dialogue.character;
-            yield return StartCoroutine(GenerateLineCoroutine(dialogue.character, dialogue.line));
+            yield return StartCoroutine(GenerateLineCoroutine(dialogue.character, dialogue.line, actualVersion, actualNode));
             //yield return new WaitForSeconds(2f);
         }
 
-
-
-        yield return StartCoroutine(ProcessTranslationsForAct(CurrntAct, CurrentContent));
-        if (actNumber < acts.Count)
+        yield return StartCoroutine(ProcessTranslationsForAct(actualVersion, actualNode));
+        if (ContentNode + 1 < contents.Count)
         {
-            if (ContentNode <= contents.Count)
-            {
-                CurrentContent++;
-                StartCoroutine(PlayAct(CurrntAct, CurrentContent));
-            }
-            else
-            {
-                CurrntAct++;
-                CurrentContent = 1;
-                Debug.Log($"Current number={contents.Count}");
-                StartCoroutine(PlayAct(CurrntAct, CurrentContent));
-            }
+            CurrentContent = ContentNode + 1;
+            //StartCoroutine(PlayAct(CurrntAct, CurrentContent));
+            StartCoroutine(PlayAct(actNumber, ContentNode + 1));
+        }
+        else if (actNumber + 1 < acts.Count)
+        {
+
+            //CurrntAct = actNumber+1;
+            //CurrentContent = 0;
+            Debug.Log($"Current number={contents.Count}");
+            CurrntAct = actNumber + 1;
+            StartCoroutine(PlayAct(actNumber + 1, 0));
+            //StartCoroutine(PlayAct(CurrntAct, CurrentContent));
         }
         else
         {
             Debug.Log($"Current Act={CurrntAct}, Current Content={CurrentContent}");
             Debug.Log("\n========================\n All acts completed!");
             WriteResponseToFile("\n========================\n All acts completed!");
-            StartCoroutine(FixTranslationErrors());
+            //StartCoroutine(FixTranslationErrors());
             SceneManager.LoadScene("Dialogue Main");
         }
     }
-    private IEnumerator GenerateLineCoroutine(string characterName, string originalLine)
+    private IEnumerator GenerateLineCoroutine(string characterName, string originalLine, int actVersion, int contentNode)
     {
         string generatedLine = null;
         Task<string> generateTask = GenerateLine(characterName, originalLine);
@@ -212,13 +210,12 @@ public class LoadAI : MonoBehaviour
         }
         else
         {
-
             generatedLine = originalLine;
         }
 
         Debug.Log($"{characterName}: {generatedLine}");
         WriteResponseToFile($"{generatedLine}");
-        ReDialogueLogToJson(jsonFilePath, outputfile, new Dialogue(characterName, generatedLine));
+        ReDialogueLogToJson(jsonFilePath, outputfile, new Dialogue(characterName, generatedLine), actVersion, contentNode);
 
     }
     private async Task<string> GenerateLine(string characterName, string originalLine)
@@ -229,10 +226,9 @@ public class LoadAI : MonoBehaviour
             //Debug.LogError($"Character {characterName} not found!");
             return originalLine;
         }
-
         //string prompt = $"{originalLine}";
         string prompt = $"Script Line: {originalLine}\n";
-        prompt += $"Script Outline: {CurrentOutline}";
+        //prompt += $"Script Outline: {CurrentOutline}";
         string response = await characters[characterName].Chat(prompt);
         response = Regex.Replace(response, @"\n\n---", "").Trim();
         response = response.Replace("\"", "");
@@ -244,8 +240,8 @@ public class LoadAI : MonoBehaviour
     {
         if (string.IsNullOrEmpty(orignal) || string.IsNullOrEmpty(target) || string.IsNullOrEmpty(txt)) return;
         StartCoroutine(TranslateCoroutine(orignal, target, txt, x));
-
     }
+
     IEnumerator TranslateCoroutine(string original, string target, string txt, Action<string> x)
     {
         string requestUrl = $"https://translate.googleapis.com/translate_a/single?client=gtx&sl={original}&tl={target}&dt=t&q={UnityWebRequest.EscapeURL(txt)}";
@@ -260,7 +256,6 @@ public class LoadAI : MonoBehaviour
                 x.Invoke(string.Empty);
                 yield break;
             }
-
             try
             {
                 JArray jsonResponse = JArray.Parse(webRequest.downloadHandler.text);
@@ -277,9 +272,13 @@ public class LoadAI : MonoBehaviour
 
     private IEnumerator ProcessTranslationsForAct(int Actnumber, int ContNumber)
     {
-        List<ACT> Act = JsonUtility.FromJson<Script>(File.ReadAllText(jsonFilePath)).acts;
-        ACT act = Act[Actnumber - 1];
-        Content cont = act.content[ContNumber - 1];
+        //List<ACT> Act = JsonUtility.FromJson<Script>(File.ReadAllText(jsonFilePath)).acts;
+        //ACT act = Act[Actnumber];
+        //Content cont = act.content[ContNumber];
+        Script fullScript = JsonUtility.FromJson<Script>(File.ReadAllText(jsonFilePath));
+        List<ACT> actList = fullScript.acts;
+        ACT act = actList.FirstOrDefault(a => a.version == Actnumber);
+        Content cont = act.content.FirstOrDefault(c => c.node == ContNumber);
 
         for (int i = 0; i < cont.dialogues.Count; i++)
         {
@@ -296,7 +295,7 @@ public class LoadAI : MonoBehaviour
                 cont.dialogues[i].line = translated;
 
                 File.AppendAllText(translateFilepath, $"{cont.dialogues[i].character}: {translated}\n");
-                ReDialogueLogToJson(jsonFilePath2, outputfile2, new Dialogue(cont.dialogues[i].character, translated));
+                ReDialogueLogToJson(jsonFilePath2, outputfile2, new Dialogue(cont.dialogues[i].character, translated), Actnumber, ContNumber);
             }
 
         }
@@ -304,32 +303,29 @@ public class LoadAI : MonoBehaviour
     private ACT GetAct2(int version)
     {
 
-        if (version < 1 || version > acts.Count)
+        if (version < 0 || version > acts.Count)
         {
             Debug.Log("full to get act");
             return null;
         }
-        return acts[version - 1];
+        return acts[version];
 
     }
     private Content GetContent(int node)
     {
-        if (node < 1 || node > contents.Count)
+        if (node < 0 || node > contents.Count)
         {
             Debug.Log("full to get act");
             return null;
         }
-        return contents[node - 1];
+        return contents[node];
     }
-
-
 
     private void WriteResponseToFile(string response)
     {
         try
         {
             File.AppendAllText(outputFilePath, $"{CharacterName}: {response}\n");
-
         }
         catch (IOException e)
         {
@@ -350,20 +346,6 @@ public class LoadAI : MonoBehaviour
                 Debug.LogError($"Act {act1.version} has null content!");
                 continue;
             }
-            //if (act1.version == 21 || act1.version == 22 || act1.version == 41)
-            //{
-            //    Debug.Log($"Handling special case for Act {act1.version}...");
-            //    foreach (Content content1 in act1.content)
-            //    {
-            //        if (content1.dialogues == null)
-            //        {
-            //            Debug.LogError($"Act {act1.version} Content {content1.node} has null dialogues!");
-            //            continue;
-            //        }
-            //        //content1.dialogues.Clear();
-            //    }
-            //    continue; 
-            //}
             foreach (Content content1 in act1.content)
             {
                 if (content1.dialogues == null)
@@ -383,12 +365,11 @@ public class LoadAI : MonoBehaviour
                 content2.dialogues.Clear();
             }
         }
-
         File.WriteAllText(jsonFilePath, JsonConvert.SerializeObject(outputfile, Formatting.Indented));
-
-
+        File.WriteAllText(jsonFilePath2, JsonConvert.SerializeObject(outputfile2, Formatting.Indented));
     }
-    private void SolveBOM() {
+    private void SolveBOM()
+    {
         if (!File.Exists(CNacts))
         {
             Debug.LogError($"File not found: {CNacts}");
@@ -401,7 +382,7 @@ public class LoadAI : MonoBehaviour
         if (buffer.Length >= 3 && buffer[0] == bomBuffer[0] && buffer[1] == bomBuffer[1] && buffer[2] == bomBuffer[2])
         {
             Debug.Log("UTF-8 BOM detected. Removing...");
-            buffer = buffer[3..]; 
+            buffer = buffer[3..];
         }
         string jsonText = Encoding.UTF8.GetString(buffer);
 
@@ -416,7 +397,6 @@ public class LoadAI : MonoBehaviour
             //File.WriteAllText(CNacts, jsonText);
             Debug.Log($"Processed JSON saved: {CNacts}");
             File.WriteAllText(jsonFilePath2, JsonConvert.SerializeObject(outputfile2, Formatting.Indented));
-
         }
         catch (Exception ex)
         {
@@ -425,7 +405,6 @@ public class LoadAI : MonoBehaviour
     }
     public void NormalJson()
     {
-      
         //SaveDialogueLogToJson();
         Debug.Log("Normal Loading!");
         //outputfile = JsonConvert.DeserializeObject<Script>(CNacts);
@@ -436,7 +415,6 @@ public class LoadAI : MonoBehaviour
         //SolveBOM();
         //File.WriteAllText(jsonFilePath, JsonConvert.SerializeObject(outputfile, Formatting.Indented));
         SceneManager.LoadScene("Dialogue Main");
-
     }
     public void LastJson()
     {
@@ -447,22 +425,17 @@ public class LoadAI : MonoBehaviour
         }
         SceneManager.LoadScene("Dialogue Main");
     }
-    private void ReDialogueLogToJson(string filepath, Script script, Dialogue newDialogue)
+    private void ReDialogueLogToJson(string filepath, Script script, Dialogue newDialogue, int actVersion, int contentNode)
     {
-
-        ACT targetAct1 = script.acts.FirstOrDefault(act => act.version == CurrntAct);
+        ACT targetAct1 = script.acts.FirstOrDefault(act => act.version == actVersion);
         if (targetAct1 != null)
         {
-            Content targetContent = targetAct1.content.FirstOrDefault(content => content.node == CurrentContent);
+            Content targetContent = targetAct1.content.FirstOrDefault(content => content.node == contentNode);
             targetContent.dialogues.Add(newDialogue);
             File.WriteAllText(filepath, JsonConvert.SerializeObject(script, Formatting.Indented));
         }
     }
 
-    //void SetAIText(string text)
-    //{
-    //    AIText.text = text;
-    //}
     public void CheckLLM(LLMCaller llmCaller, bool debug)
     {
         if (!llmCaller.remote && llmCaller.llm != null && llmCaller.llm.model == "")
@@ -513,18 +486,10 @@ public class LoadAI : MonoBehaviour
                     Debug.Log($"Corrected: {correctedText}");
                 }
             }
-
         }
-
-
         Debug.Log("Translation corrections saved successfully.");
     }
-
-
 }
-
-
-
 
 [System.Serializable]
 public class ACT

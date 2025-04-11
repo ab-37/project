@@ -1,0 +1,2528 @@
+{
+  "acts": [
+    {
+      "version": 1,
+      "scene_description": "The Abandoned Factory",
+      "content": [
+        {
+          "node": 1,
+          "outline": "Kate was ordered to investigate an abandoned factory, which was suspected to be the base of illegal robot manufacturing activities.",
+          "dialogues": [
+            {
+              "character": "commander",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "commander",
+              "line": ""
+            }
+          ]
+        },
+        {
+          "node": 2,
+          "outline": "Kate was discovered by patrol officers when he sneaked into the factory and was attacked by them. He used cover and his superb marksmanship to defeat them one by one.",
+          "dialogues": [
+            {
+              "character": "patrol Guard",
+              "line": ""
+            },
+            {
+              "character": "patrol Guard B",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "patrol Guard B",
+              "line": ""
+            },
+            {
+              "character": "patrol Guard A",
+              "line": ""
+            },
+            {
+              "character": "patrol Guard B",
+              "line": ""
+            },
+            {
+              "character": "patrol Guard A",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "patrol Guard A",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "patrol Guard A",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            }
+          ]
+        },
+        {
+          "node": 3,
+          "outline": "Kate used hacking techniques to erase the patrol officers' short-term memories, then quickly cleaned up the scene and proceeded to the destination.",
+          "dialogues": [
+            {
+              "character": "patrol Guard A",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narrator",
+              "line": ""
+            }
+          ]
+        },
+        {
+          "node": 4,
+          "outline": "Law enforcement officer Kate was ordered to investigate an abandoned factory and discovered an unfinished android and a mysterious replacement plan, but was attacked by Victor.",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "commander",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Victor",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Victor",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            }
+          ]
+        },
+        {
+          "node": 5,
+          "outline": "Kate was besieged by a brute force at the factory and was rescued Narration to the base after falling into a coma. He discovered that all the evidence had disappeared, leaving only questions about the 'replacement plan' and 'changing the world' lingering in he mind.",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "commander",
+              "line": ""
+            },
+            {
+              "character": "commander",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "commander",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "version": 2,
+      "scene_description": "The Restaurant",
+      "content": [
+        {
+          "node": 1,
+          "outline": "Kate meets new law enforcement officer Eva at a diner, and during their first conversation, armed robots raid the diner, forcing them to fight side by side.",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Androids",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            }
+          ]
+        },
+        {
+          "node": 2,
+          "outline": "Kate and Eva teamed up to defeat the android, showing a tacit cooperation in battle.",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            }
+          ]
+        },
+        {
+          "node": 3,
+          "outline": "A mysterious cyborg stops Kate and Eva as they are leaving the restaurant and attacks them. Eva uses electromagnetic weapons to interfere with the opponent, while Kate tries to hack into the opponent's system to find weaknesses.",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Mysterious Man",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Mysterious Man",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            }
+          ]
+        },
+        {
+          "node": 4,
+          "outline": "Kate and Eva team up to severely damage the cyborg, but the cyborg is ready to launch the ultimate attack. At the critical moment, the robot Houtai intervened to paralyze the enemy and offered to join them. The three of them reached a tacit understanding and officially formed a team.",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Mysterious Man",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "version": 3,
+      "scene_description": "The Enforcement Bureau",
+      "content": [
+        {
+          "node": 1,
+          "outline": "Kate, Eva and Houtai were chased by a black vehicle as they returned with the critical data. Kate drove to evade, Eva prepared to fight Narration, and Houtai excitedly took over the steering wheel.",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            }
+          ]
+        },
+        {
+          "node": 2,
+          "outline": "Kate interfered with the enemy's system, Eva destroyed the pursuit vehicle, and Houtai flexibly controlled the vehicle to successfully escape. Houtai was very excited, but was coldly criticized by Kate.",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            }
+          ]
+        },
+        {
+          "node": 3,
+          "outline": "Kate and others returned to the law enforcement station, only to find that the officer had been impersonated by a cyborg. The other side suddenly attacked and locked the command room, and everyone was surrounded by the enemy.",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "commander",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Impostor commander",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Impostor commander",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            }
+          ]
+        },
+        {
+          "node": 4,
+          "outline": "Kate and others fought fiercely with the robots, eventually knocked down the fake commander, and annihilated the enemy after reinforcements arrived. Kate is determined to face the final showdown.",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "commander",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "version": 4,
+      "scene_description": "Enemy Stronghold",
+      "content": [
+        {
+          "node": 1,
+          "outline": "Kate and others found the enemy's secret base based on confidential documents, and led the team to sneak in but were ambushed by the bionic army. The battle broke out, two powerful cyborgs appeared, and the situation suddenly became tense.",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Cyborg A & Cyborg B",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            }
+          ]
+        },
+        {
+          "node": 2,
+          "outline": "Kate and others defeated the cyborg, but the battle was not over yet. As heavy footsteps were heard from deep within the factory, Victor, wearing mechanical armor, appeared, and the atmosphere suddenly became solemn.",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Victor",
+              "line": ""
+            }
+          ]
+        },
+        {
+          "node": 3,
+          "outline": "Victor launched an attack wearing a mechanical armor, and the battlefield shook. Faced with his extreme ideas, Kate and others refused to give in and were determined to stop his plan.",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Victor",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Victor",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            }
+          ]
+        },
+        {
+          "node": 4,
+          "outline": "Victor was eventually subdued and the fight ended. Houtai falls down seriously injured, and Victor asks to repair him before leaving. Kate and Eva looked at each other and acquiesced to the request.",
+          "dialogues": [
+            {
+              "character": "Victor",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Victor",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Victor",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Victor",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "version": 5,
+      "scene_description": "Good Ending",
+      "content": [
+        {
+          "node": 1,
+          "outline": "The crisis was resolved, Victor was arrested, and the city returned to safety. After a short break, Kate and Eva visited Houtai who had completed the repairs. Although he felt sad about Victor's ending, he still decided to join the two of them to protect the city. The three of them left side by side, and a new journey was about to begin.",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Law enforcement officer",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Law enforcement officer",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            }
+          ]
+        },
+        {
+          "node": 2,
+          "outline": "After the war, the city returned to peace. Kate and Eva looked at the ruins from afar, and their words revealed the relief of surviving the disaster. Kate quietly preserved Houtai's core, symbolizing unfinished possibilities. The future is still in their hands.",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Law enforcement officer",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Law enforcement officer",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            }
+          ]
+        },
+        {
+          "node": 3,
+          "outline": "Kate sacrificed herself to end Victor's conspiracy and disappeared in the explosion with him. Eva and Houtai survived and the city returned to peace, but his name and sacrifice will be remembered forever.",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Victor",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Victor",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Victor",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Victor",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "version": 6,
+      "scene_description": "Law Enforcement Office",
+      "content": [
+        {
+          "node": 1,
+          "outline": "Surrounded by enemies, Houtai chooses to sacrifice himself and creates chaos with an explosion to allow Kate and Eva to escape, but the enemy has not given up and the pursuit continues.",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Enemy",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Enemy",
+              "line": ""
+            }
+          ]
+        },
+        {
+          "node": 2,
+          "outline": "Kate takes Eva to hide in his secret base, deciphers the intelligence left by Houtai, finds the enemy's stronghold, and decides to end the battle in an unexpected way.",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "version": 7,
+      "scene_description": "Enemy Camp",
+      "content": [
+        {
+          "node": 1,
+          "outline": "Kate and Eva try to crack the encrypted data left by Houtai. Faced with the challenge of decrypting a series of numbers, they decide to continue working hard to uncover the truth about the mastermind behind the scenes.",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            }
+          ]
+        },
+        {
+          "node": 2,
+          "outline": "Kate and Eva detonated the passage to create chaos, and took the opportunity to raid the enemy's core area and launched a fierce battle.",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Cyborg",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Cyborg",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            }
+          ]
+        },
+        {
+          "node": 3,
+          "outline": "Kate and Eva break through the enemy, Kate goes to the control room alone to fight Victor, and the life-and-death battle officially begins.",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Victor",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Victor",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Victor",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            }
+          ]
+        },
+        {
+          "node": 4,
+          "outline": "Kate initiated remote hacking, detonated the central control core, and eventually buried Victor in a sea of ​​fire.",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "version": 9,
+      "scene_description": "Bed Ending",
+      "content": [
+        {
+          "node": 21,
+          "outline": "Kate and Eva were no match for the powerful enemy. Kate fell to the ground with serious injuries, and Eva was also in desperate situation. After the enemy left, the battlefield was in ruins. A mysterious robot appeared quietly, staring at the two people quietly, as if in silence.",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Mysterious Man",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            }
+          ]
+        },
+        {
+          "node": 221,
+          "outline": "Kate and Eva break through the blockade and temporarily escape the pursuers, but the communication device suddenly rings and a mysterious voice reveals that their car has been marked. Eva realizes she can't escape, and a tactical drone descends, revealing the cyborg. Kate then realized that whether fighting or retreating, everything was already calculated by the enemy.",
+          "dialogues": [
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narrator",
+              "line": ""
+            },
+            {
+              "character": "Narrator",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narrator",
+              "line": ""
+            },
+            {
+              "character": "???",
+              "line": ""
+            },
+            {
+              "character": "Narrator",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narrator",
+              "line": ""
+            },
+            {
+              "character": "Transformer",
+              "line": ""
+            },
+            {
+              "character": "Narrator",
+              "line": ""
+            }
+          ]
+        },
+        {
+          "node": 222,
+          "outline": "Kate tries to circumvent the drone blockade, but ends up being ambushed by mechanical soldiers. The cyborgs appeared and the enemy suppressed their firepower, forcing the two into a dead end. Eva whispered and asked if they were defeated, but Kate remained silent. They finally realized that the outcome of this battle was already determined.",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Cyborg",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            }
+          ]
+        },
+        {
+          "node": 3,
+          "outline": "Kate and Eva fought fiercely with the army of androids in the command room, but were eventually outnumbered and engulfed by the explosion. After a few weeks, the mechanical system took over completely, social order was restored, and the city became peaceful and stable on the surface. Yet, in the shadows, there are still those who question, and the red light of the monitors silently bears witness to the advent of this new world.",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Journalist",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "???",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            }
+          ]
+        },
+        {
+          "node": 41,
+          "outline": "Kate and Eva fell to the ground seriously injured, Victor approached step by step, ruthlessly declaring the end of the battle. Eva fought back but to no avail and was eventually knocked down by heavy damage. In despair, Kate watched her life slip away, and Victor coldly launched a final attack, the explosion engulfed everything and darkness fell.",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Victor",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Victor",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Victor",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Victor",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            }
+          ]
+        },
+        {
+          "node": 6,
+          "outline": "Kate and Eva eventually died in battle, the data fell into the hands of the enemy, Houtai's sacrifice was in vain, and the resistance forces suffered a devastating blow",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Enemy",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            }
+          ]
+        },
+        {
+          "node": 7,
+          "outline": "",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Cyborg",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Cyborg",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Journalist",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "???",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "version": 21,
+      "scene_description": "Restaurant",
+      "content": [
+        {
+          "node": 1,
+          "outline": "Kate's collaboration with Eva is thwarted and she is attacked by a reinforced cyborg. A mysterious man appears, showing off his mechanically modified body and threatening the two. Eva fights her bionic enemies, while Kate faces the cyborgs alone",
+          "dialogues": [
+            {
+              "character": "Narrator",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narrator",
+              "line": ""
+            },
+            {
+              "character": "Narrator",
+              "line": ""
+            },
+            {
+              "character": "Mysterious Man",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narrator",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Mysterious Man",
+              "line": ""
+            },
+            {
+              "character": "Narrator",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narrator",
+              "line": ""
+            }
+          ]
+        },
+        {
+          "node": 2,
+          "outline": "Kate hits the cyborg's weak spot and Eva destroys its energy core. The cyborgs launched an ultimate counterattack, but Houtai suddenly appeared and successfully paralyzed the cyborgs. Houtai introduced himself and expressed his desire to join them. The three of them formed a tacit understanding and decided to go back to ask for support.",
+          "dialogues": [
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narrator",
+              "line": ""
+            },
+            {
+              "character": "Bionic Man",
+              "line": ""
+            },
+            {
+              "character": "Narrator",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narrator",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Narrator",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narrator",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "version": 22,
+      "scene_description": null,
+      "content": [
+        {
+          "node": 1,
+          "outline": "Kate and Eva were besieged, but Houtai's rescue mission was destroyed. The two men fled by car, with the cyborgs chasing them closely. The mysterious force launched 'Plan B', drones blocked the way ahead, and they were in a desperate situation.",
+          "dialogues": [
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narrator",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narrator",
+              "line": ""
+            },
+            {
+              "character": "Narrator",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narrator",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Narrator",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Narrator",
+              "line": ""
+            },
+            {
+              "character": "Narrator",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narrator",
+              "line": ""
+            },
+            {
+              "character": "Narrator",
+              "line": ""
+            },
+            {
+              "character": "Narrator",
+              "line": ""
+            },
+            {
+              "character": "Transformer",
+              "line": ""
+            },
+            {
+              "character": "Narrator",
+              "line": ""
+            },
+            {
+              "character": "???",
+              "line": ""
+            },
+            {
+              "character": "Narrator",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narrator",
+              "line": ""
+            },
+            {
+              "character": "???",
+              "line": ""
+            },
+            {
+              "character": "Narrator",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "version": 41,
+      "scene_description": "Secret Base",
+      "content": [
+        {
+          "node": 1,
+          "outline": "Kate and Eva lost the battle, but the Enforcers were still fighting the enemy. At this time, Victor appeared in heavy mechanical armor, with a red energy core flashing. His steps were steady and oppressive, and he sneered at everyone.",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Cyborg A",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Victor",
+              "line": ""
+            }
+          ]
+        },
+        {
+          "node": 2,
+          "outline": "Eva and Houtai are in charge of the enemy forces, while Kate fights Victor alone. Victor dons a mechanical armor and launches an attack, claiming that the plan is for the evolution of humanity, but Kate angrily denounces that this is not a reason to sacrifice innocent people.",
+          "dialogues": [
+            {
+              "character": "Eva",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Victor",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Victor",
+              "line": ""
+            }
+          ]
+        },
+        {
+          "node": 3,
+          "outline": "Kate tried to shut down Victor's core but was discovered. At the critical moment, Houtai blocked the fatal blow and fell to the ground seriously injured. Victor was briefly shaken, and Kate took the opportunity to hack into his armor, rendering him unable to move. In the end, Victor was subdued and escorted. Before leaving, he asked Houtai to be repaired. Kate and Eva made a silent decision.",
+          "dialogues": [
+            {
+              "character": "Victor",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Victor",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Houtai",
+              "line": ""
+            },
+            {
+              "character": "Victor",
+              "line": ""
+            },
+            {
+              "character": "Victor",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Kate",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Victor",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1775,7 +1775,7 @@
               "line": "In the sky, a larger tactical drone slowly descended, and the cyborg appeared again."
             },
             {
-              "character": "Transformer",
+              "character": "Cyborg",
               "line": "The game is over..."
             },
             {
@@ -2265,7 +2265,7 @@
     },
     {
       "version": 22,
-      "Scene Description": "Resturent",
+      "scene_description": "Resturent",
       "content": [
         {
           "node": 1,
@@ -2348,7 +2348,7 @@
               "line": "Staring at the car going away, with red light flashing in his eyes, he raised the communication device in his hand and answered a mysterious call"
             },
             {
-              "character": "Transformer",
+              "character": "Cyborg",
               "line": "Sir, it's time to implement Plan B"
             },
             {

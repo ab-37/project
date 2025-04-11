@@ -80,7 +80,7 @@ public class Ncharact : MonoBehaviour
         //Time.timeScale = 2;
 
     }
-    private async void StartAI()
+    private void StartAI()
     {
         if (test != null)
         {
@@ -88,11 +88,11 @@ public class Ncharact : MonoBehaviour
             ShowLoad();
             StartCoroutine(DisplayLoading());
             //test.StartAI();
-            Static_Variables.dialogueMode = 2;
-            await Task.Run(() =>
-            {
+            //Static_Variables.dialogueMode = 2;
+            
+            
                 test.StartAI();
-            });
+           
             isAIReady = true;
         }
     }
