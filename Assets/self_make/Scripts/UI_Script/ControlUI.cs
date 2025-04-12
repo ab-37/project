@@ -52,6 +52,7 @@ public class ControlUI : MonoBehaviour
 
 
     public BG_Script bgScript;
+    public End_script endScript;
 
     /*
     public void hideMainUI()
@@ -371,7 +372,8 @@ public class ControlUI : MonoBehaviour
                 SceneManager.LoadScene("SmallGame_2");
                 break;
             case "end":
-                //end code here idk
+                endScript.setEnd();
+                break;
             default:
                 Debug.Log("Failed to fetch next dialogue or level");
                 break;
@@ -386,6 +388,7 @@ public class ControlUI : MonoBehaviour
     private void Awake()
     {
         bgScript = gameObject.transform.Find("BG/BGHandler").GetComponent<BG_Script>();
+        endScript = gameObject.transform.Find("End/EndHandler").GetComponent<End_script>();
 
         //test = gameObject.transform.parent;
 
