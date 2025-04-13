@@ -12,10 +12,13 @@ using UnityEditor;
 public class End_script : MonoBehaviour
 {
     [SerializeField]
-    public GameObject End;
+    private GameObject End;
+
+    private GameObject titleObject;
+    private GameObject wordObject;
 
     private TextMeshProUGUI title;
-    private Text word;
+    private TextMeshProUGUI word;
     JsonData fullDialogueData;
     private void changeTitleWordLog()
     {
@@ -31,11 +34,15 @@ public class End_script : MonoBehaviour
     }
     private void showEndTitle()
     {
-        End.gameObject.SetActive(true);
+        //End.gameObject.SetActive(true);
+        titleObject.SetActive(true);
+        wordObject.SetActive(true);
     }
     private void hideEndTitle()
     {
-        End.gameObject.SetActive(false);
+        //End.gameObject.SetActive(false);
+        titleObject.SetActive(false);
+        wordObject.SetActive(false);
     }
     public void quitGame()
     {
@@ -48,16 +55,18 @@ public class End_script : MonoBehaviour
     }
     public void setEnd()
     {
-        showEndTitle();
         changeTitleWordLog();
+        showEndTitle();
     }
     private void Awake()
     {
         fullDialogueData = JsonMapper.ToObject(File.ReadAllText(Static_Variables.actDirectories[Static_Variables.dialogueMode]));
         End = gameObject.transform.parent.gameObject;
-        title = End.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
-        word = End.transform.GetChild(1).gameObject.GetComponent<Text>();
-
+        titleObject = End.transform.GetChild(0).gameObject;
+        wordObject = End.transform.GetChild(1).gameObject;
+        title = titleObject.GetComponent<TextMeshProUGUI>();
+        word = wordObject.GetComponent<TextMeshProUGUI>();
+        hideEndTitle();
     }
     void Start()
     {

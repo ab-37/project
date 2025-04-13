@@ -13,6 +13,7 @@ public static class Static_Variables
     public static float lastGameTime = 0;
     public static string blockSelect;//return what stage need to play 
     public static string blockRunning;//save what is it stage
+    public static string currentBg = "1"; //bg data
 
     //act directories
     public static string[] actDirectories = {
@@ -43,24 +44,25 @@ public static class Static_Variables
 
     //needs ? levels
     public static QuestionParameters[] levelQuestionParameters = {
-        //id 0, tutorial (1-1)
+        //id 0, unused tutorial
         new QuestionParameters(
             200, 0, (10, 50), (1, 50), 
             ((2, 5), (2, 5), (2, 5), (2, 5), (2, 5)),
             (2, 3), (1, 2), 0
         ),
-        //id 1, unused
+        //id 1, tutorial (1-1)
         new QuestionParameters(
-            150, 2, (20, 56), (1, 56), 
-            ((1, 4), (2, 5), (1, 8), (3, 6), (4, 7)),
-            (3, 5), (2, 2), 0,
+            150, 0, (10, 50), (1, 50), 
+            ((1, 6), (1, 6), (1, 6), (1, 6), (1, 6)),
+            (2, 5), (1, 1), 0,
             true, false, false, false
         ),
         //id 2, level 1-2, no target
         new QuestionParameters(
-            300, 2, (10, 50), (1, 50),
+            200, 2, (10, 50), (1, 50),
             ((1, 7), (1, 7), (1, 7), (1, 7), (1, 7)),
-            (2, 3), (1, 2), 1
+            (2, 4), (1, 1), 1,
+            true, false, true, false
         ),
         //id 3, unused
         new QuestionParameters(
