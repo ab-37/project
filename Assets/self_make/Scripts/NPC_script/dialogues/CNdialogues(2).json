@@ -9,7 +9,7 @@
           "outline": "Kate was ordered to investigate an abandoned factory, which was suspected to be the base of illegal robot manufacturing activities.",
           "dialogues": [
             {
-              "character": "commander",
+              "character": "Commander",
               "line": "凱特，我們已經收到智力，即郊區的一家廢棄工廠可能是非法生產的陣線。您的任務是滲透，確認英特爾並收集任何相關證據。"
             },
             {
@@ -17,7 +17,7 @@
               "line": "非常不幸的是，發生了另一項複製事件。我很高興您在這裡幫助我處理情況。"
             },
             {
-              "character": "commander",
+              "character": "Commander",
               "line": "該地點可能會受到武裝人員的守護。除非絕對必要，否則避免直接對抗。您的首要任務是收集證據。"
             }
           ]
@@ -27,11 +27,11 @@
           "outline": "Kate was discovered by patrol officers when he sneaked into the factory and was attacked by them. He used cover and his superb marksmanship to defeat them one by one.",
           "dialogues": [
             {
-              "character": "patrol Guard",
+              "character": "Patrol Guard A",
               "line": "我們真的必須在這個垃圾場中拉夜班嗎？甚至老鼠也不會靠近這個地方。"
             },
             {
-              "character": "patrol Guard B",
+              "character": "Patrol Guard B",
               "line": "停止腹部。我聽說正在進行重要的操作。我們負擔不起任何錯誤。"
             },
             {
@@ -39,19 +39,19 @@
               "line": "遠處沙沙聲……"
             },
             {
-              "character": "patrol Guard B",
+              "character": "Patrol Guard B",
               "line": "你聽到了嗎？"
             },
             {
-              "character": "patrol Guard A",
+              "character": "Patrol Guard A",
               "line": "放鬆，這可能只是一隻老鼠。這個地方與他們爬。"
             },
             {
-              "character": "patrol Guard B",
+              "character": "Patrol Guard B",
               "line": "決不！訂單是訂單 - 不要忽略可疑的！"
             },
             {
-              "character": "patrol Guard A",
+              "character": "Patrol Guard A",
               "line": "痾，很好！我去檢查一下。現在開心嗎？"
             },
             {
@@ -59,7 +59,7 @@
               "line": "通風軸是空的，除了一些老鼠糞便。"
             },
             {
-              "character": "patrol Guard A",
+              "character": "Patrol Guard A",
               "line": "看？你只是偏執 - 等等，什麼？"
             },
             {
@@ -67,7 +67,7 @@
               "line": "一個穿著偵探外套的人站在門口。一個墮落的後衛在他旁邊昏迷不醒。"
             },
             {
-              "character": "patrol Guard A",
+              "character": "Patrol Guard A",
               "line": "你到底是誰？你是怎麼來這裡的？"
             },
             {
@@ -89,7 +89,7 @@
           "outline": "Kate used hacking techniques to erase the patrol officers' short-term memories, then quickly cleaned up the scene and proceeded to the destination.",
           "dialogues": [
             {
-              "character": "patrol Guard A",
+              "character": "Patrol Guard A",
               "line": "啊！ ！ ！ ！"
             },
             {
@@ -119,7 +119,7 @@
               "line": "看起來這些機器人仍然有一些錯誤可以解決。重要的是，在被釋放到社會之前，它們具有完全的功能。 （事實上​​）"
             },
             {
-              "character": "commander",
+              "character": "Commander",
               "line": "複製。拍攝一些照片以進行分析。"
             },
             {
@@ -169,11 +169,11 @@
               "line": "時間過去了...當凱特最終恢復意識時，他發現自己在基礎上。"
             },
             {
-              "character": "commander",
+              "character": "Commander",
               "line": "你醒了..."
             },
             {
-              "character": "commander",
+              "character": "Commander",
               "line": "當我們在廢墟中找到您時，您收集的所有數據都消失了。唯一剩下的就是您和您的黑客裝置。那個工廠到底發生了什麼？"
             },
             {
@@ -185,7 +185,7 @@
               "line": "我看到了很多機器人，但是除此之外，沒有什麼值得注意的。 （事實上​​）"
             },
             {
-              "character": "commander",
+              "character": "Commander",
               "line": "我懂了。好吧，休息一下 - 您已經做得足夠了。"
             },
             {
@@ -265,7 +265,7 @@
               "line": "就像凱特即將站起來離開一樣，玻璃的破碎聲使餐廳平靜下來。幾個武裝機器人衝進進來，舉起武器並開火。"
             },
             {
-              "character": "Androids",
+              "character": "Andorid",
               "line": "目標鎖定 - 凱特。"
             },
             {
@@ -567,7 +567,7 @@
               "line": "進入指揮室後，一名身穿制服的軍官以不自然的微笑向他們走去。他的眼睛是空的，但他的語氣卻很熱情。"
             },
             {
-              "character": "commander",
+              "character": "Commander",
               "line": "凱特，伊娃，做得好。您可以將數據交給我。我會親自處理。"
             },
             {
@@ -575,7 +575,7 @@
               "line": "這些數據應該去技術部門，而不是您。但是，為了效率和有效性，我將看看是否與我們當前的情況有關。 （邏輯上）"
             },
             {
-              "character": "Impostor commander",
+              "character": "Impostor Commander",
               "line": "更高的上升改變了過程。現在一切都在我。"
             },
             {
@@ -591,7 +591,7 @@
               "line": "就像浩汰完整說話一樣，冒名頂替者突然掏出武器向凱特發射。在預料到這次襲擊之後，凱特迅速躲開，子彈撞牆，使碎屑飛行。"
             },
             {
-              "character": "Impostor commander",
+              "character": "Impostor Commander",
               "line": "太慢，執行者。"
             },
             {
@@ -610,7 +610,7 @@
         },
         {
           "node": 4,
-          "outline": "Kate and others fought fiercely with the robots, eventually knocked down the fake commander, and annihilated the enemy after reinforcements arrived. Kate is determined to face the final showdown.",
+          "outline": "Kate and others fought fiercely with the robots, eventually knocked down the fake Commander, and annihilated the enemy after reinforcements arrived. Kate is determined to face the final showdown.",
           "dialogues": [
             {
               "character": "Narration",
@@ -621,7 +621,7 @@
               "line": "伊娃瞄準了the的肩膀並開了槍，擊中了她的印記。 凱特迅速關閉了距離，降下了強大的拳頭，將冒名頂替者擊倒。"
             },
             {
-              "character": "commander",
+              "character": "Commander",
               "line": "計劃...已經在運動...您的抵抗...毫無意義。"
             },
             {
@@ -1822,7 +1822,7 @@
         },
         {
           "node": 3,
-          "outline": "Kate and Eva fought fiercely with the army of androids in the command room, but were eventually outnumbered and engulfed by the explosion. After a few weeks, the mechanical system took over completely, social order was restored, and the city became peaceful and stable on the surface. Yet, in the shadows, there are still those who question, and the red light of the monitors silently bears witness to the advent of this new world.",
+          "outline": "Kate and Eva fought fiercely with the army of Andorid in the command room, but were eventually outnumbered and engulfed by the explosion. After a few weeks, the mechanical system took over completely, social order was restored, and the city became peaceful and stable on the surface. Yet, in the shadows, there are still those who question, and the red light of the monitors silently bears witness to the advent of this new world.",
           "dialogues": [
             {
               "character": "Narration",
@@ -2185,7 +2185,7 @@
               "line": "凱特針對改造人的能量核心並穿透了保護屏蔽層，並震驚了。 伊娃抓住了這個機會，並使用高能電磁大砲直接摧毀了他的核心。"
             },
             {
-              "character": "Bionic Man",
+              "character": "Andorid",
               "line": "你...無法贏...我仍然有...最後一個..."
             },
             {

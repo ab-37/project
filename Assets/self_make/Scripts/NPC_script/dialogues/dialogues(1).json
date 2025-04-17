@@ -9,7 +9,7 @@
           "outline": "Kate was ordered to investigate an abandoned factory, which was suspected to be the base of illegal robot manufacturing activities.",
           "dialogues": [
             {
-              "character": "commander",
+              "character": "Commander",
               "line": "Kate, we've receive intelligence that an abandoned factory on the outskirts may be a front for illegal android production. Your mission is to infiltrate, confirm the intel, and collect any relevant evidence."
             },
             {
@@ -17,7 +17,7 @@
               "line": "Understood. I'll head to the abandoned factory as instructed.\n\n(As Kate approaches the factory)\n\nThis place gives off some suspicious vibes. Let's proceed with caution.\n\n(Kate enters the factory, scanning his surroundings carefully)\n\nVery unfortunate that this has come to this. Illegal robot manufacturing is a serious threat to public safety.\n\n(Suddenly, Kate hears a noise coming from one of the rooms)\n\nI'm glad you're here, backup. Let's move in together."
             },
             {
-              "character": "commander",
+              "character": "Commander",
               "line": "The site may be guarded by heavily armed personnel. Avoid direct confrontation unless absolutely necessary. Your priority is gathering evidence."
             }
           ]
@@ -27,11 +27,11 @@
           "outline": "Kate was discovered by patrol officers when he sneaked into the factory and was attacked by them. He used cover and his superb marksmanship to defeat them one by one.",
           "dialogues": [
             {
-              "character": "patrol Guard",
+              "character": "Patrol Guard A",
               "line": "Do we really have to pull night shifts in this dump? Even the rats won't come near this place."
             },
             {
-              "character": "patrol Guard B",
+              "character": "Patrol Guard B",
               "line": "Stop bellyaching. I heard there's an important operation going on. We can't afford any mistakes."
             },
             {
@@ -39,19 +39,19 @@
               "line": "Rustling sounds in the distance…"
             },
             {
-              "character": "patrol Guard B",
+              "character": "Patrol Guard B",
               "line": "Did you hear that?!"
             },
             {
-              "character": "patrol Guard A",
+              "character": "Patrol Guard A",
               "line": "Relax, it's probably just a rat. This place is crawling with them."
             },
             {
-              "character": "patrol Guard B",
+              "character": "Patrol Guard B",
               "line": "No way! Orders are orders—nothing suspicious gets ignored!"
             },
             {
-              "character": "patrol Guard A",
+              "character": "Patrol Guard A",
               "line": "Ugh, fine! I'll go check it out. Happy now?"
             },
             {
@@ -59,7 +59,7 @@
               "line": "The ventilation shaft is empty, except for some rat droppings."
             },
             {
-              "character": "patrol Guard A",
+              "character": "Patrol Guard A",
               "line": "See? You're just paranoid—wait, what the—?!"
             },
             {
@@ -67,7 +67,7 @@
               "line": "A man in a detective's coat stands by the doorway. A fallen guard lies unconscious beside him."
             },
             {
-              "character": "patrol Guard A",
+              "character": "Patrol Guard A",
               "line": "Who the hell are you?! How did you get in here?!"
             },
             {
@@ -89,7 +89,7 @@
           "outline": "Kate used hacking techniques to erase the patrol officers' short-term memories, then quickly cleaned up the scene and proceeded to the destination.",
           "dialogues": [
             {
-              "character": "patrol Guard A",
+              "character": "Patrol Guard A",
               "line": "Ah!!!!"
             },
             {
@@ -119,7 +119,7 @@
               "line": "Looks like these robots aren't complete yet. I'll take a closer look around. (Kate examines the factory, searching for any clues)\n\n(Suddenly, Kate hears footsteps approaching)\n\nWho's there? (Kate turns to face the intruder, identifying him as Victor)\n\nVictor, I'm here on official business. Let's not make this difficult.\n\n(Victor attacks Kate, but Kate uses his professional skills and marksmanship to defend himself)\n\n(Once Victor has been neutralized)\n\nI'll need to examine the unfinished android and this mysterious replacement plan more closely. Let's see what information we can gather from here."
             },
             {
-              "character": "commander",
+              "character": "Commander",
               "line": "Copy that. Snap some photos for analysis."
             },
             {
@@ -169,11 +169,11 @@
               "line": "Time passes... When Kate finally regains consciousness, he finds herself Narration at base."
             },
             {
-              "character": "commander",
+              "character": "Commander",
               "line": "You're awake…"
             },
             {
-              "character": "commander",
+              "character": "Commander",
               "line": "When we found you in the ruins, all the data you collected was gone. The only things left were you and your hacking device. What exactly happened in that factory?"
             },
             {
@@ -185,12 +185,12 @@
               "line": "I saw... a lot of robots. Other than that... nothing. (Kate recalls the events leading up to his rescue)\n\n(Kate's mind drifts back to the factory, where he was besieged by a brute force)\n\nI managed to gather some information about an unfinished android and a mysterious replacement plan before being knocked unconscious. But when I came to, all the evidence had disappeared.\n\n(Kate's thoughts are filled with questions)\n\nWhat was the purpose of the replacement plan? Who were they trying to replace? And what did they mean by 'changing the world'?\n\n(Determined to find answers, Kate reports back to his superiors and begins a new investigation)"
             },
             {
-              "character": "commander",
+              "character": "Commander",
               "line": "I see. Well, get some rest—you've done enough."
             },
             {
               "character": "Narration",
-              "line": "The commander exits the medical room."
+              "line": "The Commander exits the medical room."
             },
             {
               "character": "Kate",
@@ -265,7 +265,7 @@
               "line": "Just as Kate was about to get up and leave, the shattering sound of glass broke the restaurant's calm. Several armed robots stormed in, raising their weapons and opening fire."
             },
             {
-              "character": "Androids",
+              "character": "Andorid",
               "line": "Target locked—Kate."
             },
             {
@@ -288,15 +288,15 @@
           "dialogues": [
             {
               "character": "Narration",
-              "line": "Eva used her specially modified electromagnetic cannon, taking down one of the enemies with a single shot. The two coordinated seamlessly, covering each other and quickly clearing out the remaining Androids."
+              "line": "Eva used her specially modified electromagnetic cannon, taking down one of the enemies with a single shot. The two coordinated seamlessly, covering each other and quickly clearing out the remaining Andorid."
             },
             {
               "character": "Eva",
-              "line": "Title: Futuristic Alliance\n\nINT. DINER - CONT'D\n\nKate and Eva exchange glances as the armed robots continue their assault on the diner. They quickly assess each other's skills and work together to take down the androids, showing a tacit cooperation in battle.\n\nEva (grimly): Not thrilling enough for you?\n\nKate (smirking): I've seen worse. But this partnership might just be interesting.\n\nThey continue to fight side by side, their different strengths complementing each other as they take down the androids one by one. The chaos in the diner begins to subside as they finally defeat the last robot.\n\nKate (panting): We did it.\n\nEva (smiling): Yes, we did. And I have a feeling this is only the beginning.\n\nThey exchange a look of determination as they prepare to face whatever challenges come their way in their new partnership."
+              "line": "Title: Futuristic Alliance\n\nINT. DINER - CONT'D\n\nKate and Eva exchange glances as the armed robots continue their assault on the diner. They quickly assess each other's skills and work together to take down the Andorid, showing a tacit cooperation in battle.\n\nEva (grimly): Not thrilling enough for you?\n\nKate (smirking): I've seen worse. But this partnership might just be interesting.\n\nThey continue to fight side by side, their different strengths complementing each other as they take down the Andorid one by one. The chaos in the diner begins to subside as they finally defeat the last robot.\n\nKate (panting): We did it.\n\nEva (smiling): Yes, we did. And I have a feeling this is only the beginning.\n\nThey exchange a look of determination as they prepare to face whatever challenges come their way in their new partnership."
             },
             {
               "character": "Kate",
-              "line": "Enough. (Kate growls, his focus solely on defeating the android threat)\n\n(With Eva fighting by his side, they work together seamlessly to take down the advanced androids)\n\n(Despite their different personalities and backgrounds, they share a common goal)\n\nWe make a good team. (Kate acknowledges their effective partnership as they emerge victorious)\n\n(Once the threat has been neutralized, Kate and Eva exchange a nod of respect before parting ways)\n\n(As Kate walks away, he can't help but feel a sense of satisfaction in their successful collaboration)"
+              "line": "Enough. (Kate growls, his focus solely on defeating the android threat)\n\n(With Eva fighting by his side, they work together seamlessly to take down the advanced Andorid)\n\n(Despite their different personalities and backgrounds, they share a common goal)\n\nWe make a good team. (Kate acknowledges their effective partnership as they emerge victorious)\n\n(Once the threat has been neutralized, Kate and Eva exchange a nod of respect before parting ways)\n\n(As Kate walks away, he can't help but feel a sense of satisfaction in their successful collaboration)"
             }
           ]
         },
@@ -567,7 +567,7 @@
               "line": "Upon entering the command room, a uniformed officer approached them with an unnatural smile. His eyes were empty, yet his tone was eerily enthusiastic."
             },
             {
-              "character": "commander",
+              "character": "Commander",
               "line": "Kate, Eva, good work. You can hand over the data to me. I'll handle it personally."
             },
             {
@@ -575,7 +575,7 @@
               "line": "This data is supposed to go to the tech department, not you. (Kate realizes that something is amiss as they enter the law enforcement station and find an unexpected obstacle)\n\n(To their shock, they discover that one of their own had been impersonated by a cyborg)\n\n(Suddenly, the enemy attacks and locks down the command room, trapping Kate and his team inside)\n\nEveryone, stay calm. (Kate assesses the situation and gives orders to his teammates)\n\n(Despite being surrounded by the enemy, they remain focused and determined to find a way out)\n\nWe need to regroup and come up with a plan. (Kate urges his teammates to think strategically and find a way to escape)\n\n(Together, they work to outmaneuver their enemies and make their way to safety, knowing that the fate of New Dawn City depends on their success)"
             },
             {
-              "character": "Impostor commander",
+              "character": "Impostor Commander",
               "line": "The higher-ups changed the procedure. Everything goes through me now."
             },
             {
@@ -591,7 +591,7 @@
               "line": "Just as Houtai finished speaking, the impostor suddenly pulled out a weapon and fired at Kate. Having anticipated the attack, Kate swiftly dodged, the bullets striking the wall, sending debris flying."
             },
             {
-              "character": "Impostor commander",
+              "character": "Impostor Commander",
               "line": "Too slow, enforcer."
             },
             {
@@ -610,7 +610,7 @@
         },
         {
           "node": 4,
-          "outline": "Kate and others fought fiercely with the robots, eventually knocked down the fake commander, and annihilated the enemy after reinforcements arrived. Kate is determined to face the final showdown.",
+          "outline": "Kate and others fought fiercely with the robots, eventually knocked down the fake Commander, and annihilated the enemy after reinforcements arrived. Kate is determined to face the final showdown.",
           "dialogues": [
             {
               "character": "Narration",
@@ -618,10 +618,10 @@
             },
             {
               "character": "Narration",
-              "line": "Eva aimed for the commander's shoulder and fired, hitting her mark. Kate quickly closed the distance, landing a powerful punch that knocked the impostor down."
+              "line": "Eva aimed for the Commander's shoulder and fired, hitting her mark. Kate quickly closed the distance, landing a powerful punch that knocked the impostor down."
             },
             {
-              "character": "commander",
+              "character": "Commander",
               "line": "The plan... is already in motion... Your resistance... is meaningless."
             },
             {
@@ -634,7 +634,7 @@
             },
             {
               "character": "Kate",
-              "line": "It's time to end this. (Kate declares, determined to put an end to the threat once and for all)\n\n(Despite being outnumbered by the relentless robotic enemies, Kate and his team fight fiercely)\n\n(Together, they manage to knock down the fake commander, weakening the enemy's hold on the command room)\n\n(With reinforcements finally arriving, they join forces to annihilate the remaining robots)\n\nWe did it. (Kate breathes a sigh of relief as they emerge victorious from the intense battle)\n\n(Despite the challenges they faced, Kate remains determined to face whatever comes next, knowing that their mission to protect New Dawn City is far from over)\n\nLet's go. We have work to do. (Kate leads his team forward, ready for the final showdown)"
+              "line": "It's time to end this. (Kate declares, determined to put an end to the threat once and for all)\n\n(Despite being outnumbered by the relentless robotic enemies, Kate and his team fight fiercely)\n\n(Together, they manage to knock down the fake Commander, weakening the enemy's hold on the command room)\n\n(With reinforcements finally arriving, they join forces to annihilate the remaining robots)\n\nWe did it. (Kate breathes a sigh of relief as they emerge victorious from the intense battle)\n\n(Despite the challenges they faced, Kate remains determined to face whatever comes next, knowing that their mission to protect New Dawn City is far from over)\n\nLet's go. We have work to do. (Kate leads his team forward, ready for the final showdown)"
             }
           ]
         }
@@ -1018,7 +1018,7 @@
           "dialogues": [
             {
               "character": "Narration",
-              "line": "Inside the combat control room at the Law Enforcement Headquarters, it is shown that the androids have been shut down and the enemy's actions have completely collapsed."
+              "line": "Inside the combat control room at the Law Enforcement Headquarters, it is shown that the Andorid have been shut down and the enemy's actions have completely collapsed."
             },
             {
               "character": "Law enforcement officer",
@@ -1038,7 +1038,7 @@
             },
             {
               "character": "Narration",
-              "line": "She looked at the recycled androids on the screen with a complicated expression"
+              "line": "She looked at the recycled Andorid on the screen with a complicated expression"
             },
             {
               "character": "Kate",
@@ -1700,7 +1700,7 @@
             },
             {
               "character": "Narration",
-              "line": "Eva tried her best to contain the androids, but the enemy was too numerous and her weapons were damaged, so she was gradually forced into a dead end."
+              "line": "Eva tried her best to contain the Andorid, but the enemy was too numerous and her weapons were damaged, so she was gradually forced into a dead end."
             },
             {
               "character": "Mysterious Man",
@@ -1824,7 +1824,7 @@
         },
         {
           "node": 3,
-          "outline": "Kate and Eva fought fiercely with the army of androids in the command room, but were eventually outnumbered and engulfed by the explosion. After a few weeks, the mechanical system took over completely, social order was restored, and the city became peaceful and stable on the surface. Yet, in the shadows, there are still those who question, and the red light of the monitors silently bears witness to the advent of this new world.",
+          "outline": "Kate and Eva fought fiercely with the army of Andorid in the command room, but were eventually outnumbered and engulfed by the explosion. After a few weeks, the mechanical system took over completely, social order was restored, and the city became peaceful and stable on the surface. Yet, in the shadows, there are still those who question, and the red light of the monitors silently bears witness to the advent of this new world.",
           "dialogues": [
             {
               "character": "Narration",

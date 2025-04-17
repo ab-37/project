@@ -9,7 +9,7 @@
           "outline": "Kate was ordered to investigate an abandoned factory, which was suspected to be the base of illegal robot manufacturing activities.",
           "dialogues": [
             {
-              "character": "commander",
+              "character": "Commander",
               "line": ""
             },
             {
@@ -17,7 +17,7 @@
               "line": ""
             },
             {
-              "character": "commander",
+              "character": "Commander",
               "line": ""
             }
           ]
@@ -27,31 +27,11 @@
           "outline": "Kate was discovered by patrol officers when he sneaked into the factory and was attacked by them. He used cover and his superb marksmanship to defeat them one by one.",
           "dialogues": [
             {
-              "character": "patrol Guard",
+              "character": "Patrol Guard A",
               "line": ""
             },
             {
-              "character": "patrol Guard B",
-              "line": ""
-            },
-            {
-              "character": "Narration",
-              "line": ""
-            },
-            {
-              "character": "patrol Guard B",
-              "line": ""
-            },
-            {
-              "character": "patrol Guard A",
-              "line": ""
-            },
-            {
-              "character": "patrol Guard B",
-              "line": ""
-            },
-            {
-              "character": "patrol Guard A",
+              "character": "Patrol Guard B",
               "line": ""
             },
             {
@@ -59,7 +39,19 @@
               "line": ""
             },
             {
-              "character": "patrol Guard A",
+              "character": "Patrol Guard B",
+              "line": ""
+            },
+            {
+              "character": "Patrol Guard A",
+              "line": ""
+            },
+            {
+              "character": "Patrol Guard B",
+              "line": ""
+            },
+            {
+              "character": "Patrol Guard A",
               "line": ""
             },
             {
@@ -67,7 +59,15 @@
               "line": ""
             },
             {
-              "character": "patrol Guard A",
+              "character": "Patrol Guard A",
+              "line": ""
+            },
+            {
+              "character": "Narration",
+              "line": ""
+            },
+            {
+              "character": "Patrol Guard A",
               "line": ""
             },
             {
@@ -89,7 +89,7 @@
           "outline": "Kate used hacking techniques to erase the patrol officers' short-term memories, then quickly cleaned up the scene and proceeded to the destination.",
           "dialogues": [
             {
-              "character": "patrol Guard A",
+              "character": "Patrol Guard A",
               "line": ""
             },
             {
@@ -119,7 +119,7 @@
               "line": ""
             },
             {
-              "character": "commander",
+              "character": "Commander",
               "line": ""
             },
             {
@@ -169,11 +169,11 @@
               "line": ""
             },
             {
-              "character": "commander",
+              "character": "Commander",
               "line": ""
             },
             {
-              "character": "commander",
+              "character": "Commander",
               "line": ""
             },
             {
@@ -185,7 +185,7 @@
               "line": ""
             },
             {
-              "character": "commander",
+              "character": "Commander",
               "line": ""
             },
             {
@@ -265,7 +265,7 @@
               "line": ""
             },
             {
-              "character": "Androids",
+              "character": "Andorid",
               "line": ""
             },
             {
@@ -567,7 +567,7 @@
               "line": ""
             },
             {
-              "character": "commander",
+              "character": "Commander",
               "line": ""
             },
             {
@@ -575,7 +575,7 @@
               "line": ""
             },
             {
-              "character": "Impostor commander",
+              "character": "Impostor Commander",
               "line": ""
             },
             {
@@ -591,7 +591,7 @@
               "line": ""
             },
             {
-              "character": "Impostor commander",
+              "character": "Impostor Commander",
               "line": ""
             },
             {
@@ -610,7 +610,7 @@
         },
         {
           "node": 4,
-          "outline": "Kate and others fought fiercely with the robots, eventually knocked down the fake commander, and annihilated the enemy after reinforcements arrived. Kate is determined to face the final showdown.",
+          "outline": "Kate and others fought fiercely with the robots, eventually knocked down the fake Commander, and annihilated the enemy after reinforcements arrived. Kate is determined to face the final showdown.",
           "dialogues": [
             {
               "character": "Narration",
@@ -621,7 +621,7 @@
               "line": ""
             },
             {
-              "character": "commander",
+              "character": "Commander",
               "line": ""
             },
             {
@@ -1822,7 +1822,7 @@
         },
         {
           "node": 3,
-          "outline": "Kate and Eva fought fiercely with the army of androids in the command room, but were eventually outnumbered and engulfed by the explosion. After a few weeks, the mechanical system took over completely, social order was restored, and the city became peaceful and stable on the surface. Yet, in the shadows, there are still those who question, and the red light of the monitors silently bears witness to the advent of this new world.",
+          "outline": "Kate and Eva fought fiercely with the army of Andorid in the command room, but were eventually outnumbered and engulfed by the explosion. After a few weeks, the mechanical system took over completely, social order was restored, and the city became peaceful and stable on the surface. Yet, in the shadows, there are still those who question, and the red light of the monitors silently bears witness to the advent of this new world.",
           "dialogues": [
             {
               "character": "Narration",
@@ -2185,7 +2185,7 @@
               "line": ""
             },
             {
-              "character": "Bionic Man",
+              "character": "Andorid",
               "line": ""
             },
             {
