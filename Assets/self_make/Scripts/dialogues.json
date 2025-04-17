@@ -9,15 +9,15 @@
           "outline": "Kate was ordered to investigate an abandoned factory, which was suspected to be the base of illegal robot manufacturing activities.",
           "dialogues": [
             {
-              "character": "Commander",
+              "character": "commander",
               "line": "Kate, we've receive intelligence that an abandoned factory on the outskirts may be a front for illegal android production. Your mission is to infiltrate, confirm the intel, and collect any relevant evidence."
             },
             {
               "character": "Kate",
-              "line": "(speaking into communicator) Understood. I'll head to the abandoned factory and gather intel on the suspected robot manufacturing activities.\n\n---"
+              "line": "Understood."
             },
             {
-              "character": "Commander",
+              "character": "commander",
               "line": "The site may be guarded by heavily armed personnel. Avoid direct confrontation unless absolutely necessary. Your priority is gathering evidence."
             }
           ]
@@ -27,102 +27,124 @@
           "outline": "Kate was discovered by patrol officers when he sneaked into the factory and was attacked by them. He used cover and his superb marksmanship to defeat them one by one.",
           "dialogues": [
             {
-              "character": "Patrol Guard",
+              "character": "patrol Guard",
               "line": "Do we really have to pull night shifts in this dump? Even the rats won't come near this place."
             },
             {
-              "character": "Patrol Guard B",
+              "character": "patrol Guard B",
               "line": "Stop bellyaching. I heard there's an important operation going on. We can't afford any mistakes."
             },
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "Rustling sounds in the distance…"
             },
             {
-              "character": "Patrol Guard B",
+              "character": "patrol Guard B",
               "line": "Did you hear that?!"
             },
             {
-              "character": "Patrol Guard A",
+              "character": "patrol Guard A",
               "line": "Relax, it's probably just a rat. This place is crawling with them."
             },
             {
-              "character": "Patrol Guard B",
+              "character": "patrol Guard B",
               "line": "No way! Orders are orders—nothing suspicious gets ignored!"
             },
             {
-              "character": "Patrol Guard A",
+              "character": "patrol Guard A",
               "line": "Ugh, fine! I'll go check it out. Happy now?"
             },
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "The ventilation shaft is empty, except for some rat droppings."
             },
             {
-              "character": "Patrol Guard A",
+              "character": "patrol Guard A",
               "line": "See? You're just paranoid—wait, what the—?!"
             },
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "A man in a detective's coat stands by the doorway. A fallen guard lies unconscious beside him."
             },
             {
-              "character": "Patrol Guard A",
+              "character": "patrol Guard A",
               "line": "Who the hell are you?! How did you get in here?!"
             },
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "Before the guards can react, the man smashes the alarm system and pulls out a hacking device."
             },
             {
               "character": "Kate",
-              "line": "(sighing) What a pain. (pauses, then focuses) Alright, let's move out.\n\n---\n\n[Sound of gunfire and commotion]\n\n---"
+              "line": "Sigh... What a pain."
             },
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "Battle begins. Kate activates her hacking device."
             }
           ]
         },
         {
           "node": 3,
-          "outline": "Law enforcement officer Kate was ordered to investigate an abandoned factory and discovered an unfinished android and a mysterious replacement plan, but was attacked by Victor.",
+          "outline": "Kate used hacking techniques to erase the patrol officers' short-term memories, then quickly cleaned up the scene and proceeded to the destination.",
           "dialogues": [
             {
-              "character": "Back",
-              "line": "Deeper inside the factory, Kate finds a fully operational assembly line. Half-assembled androids hang from the conveyor belts, lifeless yet eerie."
+              "character": "patrol Guard A",
+              "line": "Ah!!!!"
             },
             {
               "character": "Kate",
-              "line": "(pauses, looking at the unfinished android) Looks like these androids aren't complete yet. (pauses, then notices a document on the ground) Wait a minute... \"Replacement Plan\"...\n\n---\n\n[Sudden noise from outside]"
+              "line": "(In an age where machines and humans coexist, hackers have become a profession that kills people. How ironic... But it doesn't matter. I'll just delete your short-term memory, and it will be restored soon.)"
             },
             {
-              "character": "Commander",
+              "character": "Kate",
+              "line": "I'm so sorry, this is all for the greater good..."
+            },
+            {
+              "character": "Narrator",
+              "line": "After Kate apologized, he immediately dealt with the scene and headed to his destination."
+            }
+          ]
+        },
+        {
+          "node": 4,
+          "outline": "Law enforcement officer Kate was ordered to investigate an abandoned factory and discovered an unfinished android and a mysterious replacement plan, but was attacked by Victor.",
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "Deeper inside the factory, Kate finds a fully operational assembly line. Half-assembled robots hang from the conveyor belts, lifeless yet eerie."
+            },
+            {
+              "character": "Kate",
+              "line": "Looks like these robots aren't complete yet..."
+            },
+            {
+              "character": "commander",
               "line": "Copy that. Snap some photos for analysis."
             },
             {
               "character": "Kate",
-              "line": "(quickly puts away the document and draws his weapon) On it.\n\n---\n\n[Sound of footsteps approaching]\n\n---"
+              "line": "On it."
             },
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "While taking photos, Kate spots a document on a nearby workstation."
             },
             {
               "character": "Kate",
-              "line": "(looking at the document) Replacement Project? What's going on here?\n\n---\n\n[Sudden noise from outside]\n\n---"
+              "line": "Replacement Project?"
             },
             {
-              "character": "Back",
-              "line": "Before she can process the information, a man in a suit steps out from the shadows, his gaze filled with disdain."
+              "character": "Narration",
+              "line": "Before he can process the information, a man in a suit steps out from the shadows, his gaze filled with disdain."
             },
             {
               "character": "Victor",
               "line": "So, an enforcer, huh? You guys sure have a knack for showing up uninvited. Too bad you're early—our product isn't quite ready yet. But I don't mind giving you a preview."
             },
             {
-              "character": "Back",
-              "line": "Victor activates the unfinished androids."
+              "character": "Narration",
+              "line": "Victor activates the unfinished robots."
             },
             {
               "character": "Victor",
@@ -130,49 +152,49 @@
             },
             {
               "character": "Kate",
-              "line": "(muttering to himself) 'Half-finished', huh...? What's the significance of that?\n\n---\n\n[Sudden noise from outside]\n\n---\n\n[Sound of footsteps approaching]\n\n---"
+              "line": "'Half-finished', huh...? "
             },
             {
-              "character": "Back",
-              "line": "Kate hacks into the conveyor belt's robotic arms to fight Back."
+              "character": "Narration",
+              "line": "Kate hacks into the conveyor belt's robotic arms to fight Narration."
             }
           ]
         },
         {
-          "node": 4,
-          "outline": "Kate was besieged by a brute force at the factory and was rescued back to the base after falling into a coma. He discovered that all the evidence had disappeared, leaving only questions about the 'replacement plan' and 'changing the world' lingering in he mind.",
+          "node": 5,
+          "outline": "Kate was besieged by a brute force at the factory and was rescued Narration to the base after falling into a coma. He discovered that all the evidence had disappeared, leaving only questions about the 'replacement plan' and 'changing the world' lingering in he mind.",
           "dialogues": [
             {
-              "character": "Back",
-              "line": "Time passes... When Kate finally regains consciousness, he finds herself Back at base."
+              "character": "Narration",
+              "line": "Time passes... When Kate finally regains consciousness, he finds herself Narration at base."
             },
             {
-              "character": "Commander",
+              "character": "commander",
               "line": "You're awake…"
             },
             {
-              "character": "Commander",
+              "character": "commander",
               "line": "When we found you in the ruins, all the data you collected was gone. The only things left were you and your hacking device. What exactly happened in that factory?"
             },
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "Kate remains silent for a moment."
             },
             {
               "character": "Kate",
-              "line": "(speaking to his superior) I saw... a lot of androids. Other than that... nothing.\n\n---\n\n[Sound of sirens and commotion]\n\n---"
+              "line": "I saw… a lot of robots. Other than that… nothing."
             },
             {
-              "character": "Commander",
+              "character": "commander",
               "line": "I see. Well, get some rest—you've done enough."
             },
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "The commander exits the medical room."
             },
             {
               "character": "Kate",
-              "line": "(sighing) 'Replacement Project,' changing the world... Justice... Forget it. Thinking won't change anything. Might as well just rest for now.\n\n---\n\n[Sound of bed creaking and footsteps leaving the room]\n\n---\n\n[Sound of a cup being poured and the aroma of coffee filling the air]\n\n---"
+              "line": "'Replacement Project,'changing the world... Justice... Forget it. Thinking wont change anything. Might as well just rest for now…"
             }
           ]
         }
@@ -184,63 +206,63 @@
       "content": [
         {
           "node": 1,
-          "outline": "Kate meets new law enforcement officer Eva at a diner, and during their first conversation, armed androids raid the diner, forcing them to fight side by side.",
+          "outline": "Kate meets new law enforcement officer Eva at a diner, and during their first conversation, armed robots raid the diner, forcing them to fight side by side.",
           "dialogues": [
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "A few days later, Kate walked into the familiar restaurant, exhausted from his recently completed mission. He thought he could quietly enjoy a sugar-free latte, but unexpectedly, a stranger sat down across from him."
             },
             {
               "character": "Eva",
-              "line": ""
+              "line": "Excuse me, is this seat taken?"
             },
             {
               "character": "Kate",
-              "line": "(nods) Yes.\n\n---\n\n[Sound of a chair scraping against the floor and footsteps approaching]\n\n---"
+              "line": "Yes."
             },
             {
               "character": "Eva",
-              "line": "[Looking up from her seat as Kate sits down, then placing her hands on the table] I don't need to remind you anymore, Officer. This seat was vacant when you entered.\n\n[As they begin their conversation, the sound of breaking glass and shouting can be heard from outside the diner. Both women turn to look towards the entrance.]"
+              "line": "Great, now it's mine."
             },
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "Kate didn't respond, simply looking down at his coffee, but his vigilance did not decrease. He discreetly scanned his surroundings and realized that this woman was not just an ordinary customer."
             },
             {
               "character": "Eva",
-              "line": "[Smiling slightly, her eyes never leaving Kate's] You may be correct. I do have a tendency to focus on my duties rather than indulge in pleasures.\n\n[Suddenly, the sound of breaking glass and shouting can be heard from outside the diner. Both women turn to look towards the entrance as armed androids burst into the room.]"
+              "line": "You don't seem like someone who enjoys coffee. More like… someone who overworks and only drinks it out of necessity."
             },
             {
               "character": "Kate",
-              "line": "(sternly) None of your business.\n\n---\n\n[Sound of dishes clattering and people screaming]\n\n---\n\n[Gunfire and commotion fill the air]\n\n---"
+              "line": "None of your business."
             },
             {
               "character": "Eva",
-              "line": "[Raising an eyebrow as she sizes up Kate] I see. Well, Officer, my reputation is not a matter of personal pride, but rather a result of my dedication to my work.\n\n[As they continue their conversation, the sound of breaking glass and shouting grows louder. Both women turn to look towards the entrance as armed androids burst into the room.]"
+              "line": "You guessed right. I'm very interested in you. Or rather, your reputation is too well-known."
             },
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "Kate put down his cup and carefully examined the woman. There was a hint of provocation in her eyes, but even more curiosity. His hand unconsciously moved toward his waist, ready to react at any moment."
             },
             {
               "character": "Kate",
-              "line": "(gritting his teeth) Who exactly are you?\n\n---\n\n[Sound of gunfire and commotion]\n\n---\n\n[Eva steps forward, drawing her weapon]\n\n---"
+              "line": "Who exactly are you?"
             },
             {
               "character": "Eva",
-              "line": "[Nodding politely as Kate introduces herself] Officer Kate. I am Eva, newly assigned to the enforcement team. I'm looking forward to working with you and discovering what we can accomplish together.\n\n[As they continue their conversation, the sound of breaking glass and shouting grows louder. Both women turn to look towards the entrance as armed androids burst into the room.]"
+              "line": " Eva, newly enforcer. Headquarters sent me to partner with you. Honestly, I'm quite curious to see what kind of sparks we'll create together."
             },
             {
-              "character": "Back",
-              "line": "Kate frowned but didn't say much. He simply nodded and continued drinking his coffee, while Eva leaned Back in her chair, seemingly satisfied with his reaction."
+              "character": "Narration",
+              "line": "Kate frowned but didn't say much. He simply nodded and continued drinking his coffee, while Eva leaned Narration in her chair, seemingly satisfied with his reaction."
             },
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "..."
             },
             {
-              "character": "Back",
-              "line": "Just as Kate was about to get up and leave, the shattering sound of glass broke the restaurant's calm. Several armed androids stormed in, raising their weapons and opening fire."
+              "character": "Narration",
+              "line": "Just as Kate was about to get up and leave, the shattering sound of glass broke the restaurant's calm. Several armed robots stormed in, raising their weapons and opening fire."
             },
             {
               "character": "Androids",
@@ -248,15 +270,15 @@
             },
             {
               "character": "Kate",
-              "line": "(sighing) What a hassle.\n\n---\n\n[Sound of gunfire and commotion]\n\n---\n\n[Eva looks at Kate, determination in her eyes]\n\n---"
+              "line": "What a hassle"
             },
             {
               "character": "Eva",
-              "line": "[Nodding in agreement as they both draw their weapons] Indeed, Officer Kate. It seems that our first mission together will be a defensive one.\n\n[As they stand ready to face the androids, Eva's calm demeanor and focus on their mission is evident.]"
+              "line": "Looks like I arrived just in time."
             },
             {
               "character": "Kate",
-              "line": "(gritting his teeth) A little later wouldn't have made a difference.\n\n---\n\n[Sound of gunfire and commotion]\n\n---\n\n[Eva nods, focusing on the fight ahead]\n\n---"
+              "line": "A little later wouldn't have made a difference."
             }
           ]
         },
@@ -265,16 +287,16 @@
           "outline": "Kate and Eva teamed up to defeat the android, showing a tacit cooperation in battle.",
           "dialogues": [
             {
-              "character": "Back",
-              "line": "Eva used her specially modified electromagnetic cannon, taking down one of the enemies with a single shot. The two coordinated seamlessly, covering each other and quickly clearing out the remaining androids."
+              "character": "Narration",
+              "line": "Eva used her specially modified electromagnetic cannon, taking down one of the enemies with a single shot. The two coordinated seamlessly, covering each other and quickly clearing out the remaining Androids."
             },
             {
               "character": "Eva",
-              "line": "[As they fight side by side, taking down androids with precision] This is not about thrills for me, Officer Kate. It's about completing our mission and ensuring the safety of innocent lives.\n\n[Despite the intensity of the battle, Eva remains focused and determined, her movements fluid and efficient.]"
+              "line": "Not thrilling enough for you?"
             },
             {
               "character": "Kate",
-              "line": "(grunting) Enough.\n\n---\n\n[Sound of gunfire and commotion]\n\n---\n\n[Together, Kate and Eva manage to take down the android, their expressions showing relief and respect for each other's skills]\n\n---"
+              "line": "Enough."
             }
           ]
         },
@@ -283,11 +305,11 @@
           "outline": "A mysterious cyborg stops Kate and Eva as they are leaving the restaurant and attacks them. Eva uses electromagnetic weapons to interfere with the opponent, while Kate tries to hack into the opponent's system to find weaknesses.",
           "dialogues": [
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "Just as they were about to leave the restaurant, the roar of an engine echoed from outside. A black sedan screeched to a halt in the middle of the street, and a man in a suit coat stepped out."
             },
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "His movements were steady, exuding a sense of danger. He surveyed the surroundings before fixing his gaze on Kate and Eva."
             },
             {
@@ -296,30 +318,30 @@
             },
             {
               "character": "Eva",
-              "line": "[As they face the new threat, Eva's eyes narrow] You underestimate this opponent, Officer Kate. His cybernetic enhancements are not simple modifications.\n\n[Eva uses her electromagnetic weapons to disrupt the cyborg's systems, while Kate focuses on hacking into its mainframe to find vulnerabilities.]\n\n[Their teamwork and combined skills prove effective as they manage to defeat the cyborg, but the mystery surrounding its true intentions remains.]"
+              "line": "This guy doesn't look simple."
             },
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "The man slowly removed his coat, revealing a fully mechanical body. His limbs were implanted with enhanced modifications, and even his shoulders were equipped with micro-weapons."
             },
             {
               "character": "Kate",
-              "line": "(grunting) A cyborg...\n\n---\n\n[Sound of footsteps approaching]\n\n---\n\n[The cyborg steps forward, its metal limbs glinting in the light]\n\n---"
+              "line": "A cyborg…"
             },
             {
               "character": "Mysterious Man",
               "line": "Now, you will experience true fear."
             },
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "The cyborg launched an attack, causing nearby vehicles to explode, illuminating the entire street in fire. Kate and Eva split up, preparing for battle."
             },
             {
               "character": "Eva",
-              "line": "[As they engage the cyborg, Eva's voice is calm and focused] Officer Kate, draw his fire. I will use my electromagnetic weapons to disrupt his systems and create an opening for you to hack into his mainframe.\n\n[Eva expertly dodges the cyborg's attacks while using her weapons to interfere with its systems. Kate, meanwhile, focuses on finding weaknesses in the cyborg's programming.]\n\n[Their coordinated efforts pay off as they manage to disable the cyborg and gain valuable information from its systems.]"
+              "line": "Draw his fire! Find a way to hack his system!"
             },
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "Eva moved quickly, using her electromagnetic weapon to disrupt the enemy's sensors and draw his attention, while Kate activated his hacking device, searching for weaknesses."
             }
           ]
@@ -329,15 +351,15 @@
           "outline": "Kate and Eva team up to severely damage the cyborg, but the cyborg is ready to launch the ultimate attack. At the critical moment, the robot Houtai intervened to paralyze the enemy and offered to join them. The three of them reached a tacit understanding and officially formed a team.",
           "dialogues": [
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "The cyborg was not only fast but could predict attack patterns. His heavy punches shattered street obstacles, making Kate's movements more difficult."
             },
             {
               "character": "Kate",
-              "line": "(gritting his teeth) Found his weakness.\n\n---\n\n[Sound of gunfire and commotion]\n\n---\n\n[The cyborg roars, preparing to launch its ultimate attack]\n\n---\n\n[Suddenly, a robotic voice rings out]"
+              "line": "Found his weakness."
             },
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "Kate aimed at the cyborg's power core and fired a shot through its protective shield. The cyborg paused, and Eva seized the moment, destroying the core with her high-energy electromagnetic cannon."
             },
             {
@@ -345,80 +367,80 @@
               "line": "You… can't win… I still have… one last…"
             },
             {
-              "character": "Back",
-              "line": "Suddenly, the cyborg's Backup energy core activated, generating a massive energy surge around him. He stood up, his arms transforming into devastating weapons, preparing to unleash his ultimate attack."
+              "character": "Narration",
+              "line": "Suddenly, the cyborg's Narrationup energy core activated, generating a massive energy surge around him. He stood up, his arms transforming into devastating weapons, preparing to unleash his ultimate attack."
             },
             {
               "character": "Eva",
-              "line": "[As the cyborg continues to fight back, her expression remains unchanged] Officer Kate, we have damaged his systems significantly, but he is not yet defeated.\n\n[Just as the cyborg prepares to launch a powerful attack, a new figure appears. The robot Houtai intervenes, using its advanced capabilities to paralyze the enemy.]"
+              "line": "He's still fighting Narration!"
             },
             {
               "character": "Kate",
-              "line": "(shouting) Get ready to cover me!\n\n---\n\n[Sound of gunfire and commotion]\n\n---\n\n[The cyborg roars, preparing to launch its ultimate attack]\n\n---\n\n[Suddenly, a robotic voice rings out from the shadows]"
+              "line": "Get ready to cover me."
             },
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "Just as the cyborg was about to release his attack, a small, unassuming robot darted out from the corner, quickly approaching him. It latched onto his ankle and sent a high-voltage shock through his system, paralyzing him instantly."
             },
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "..."
             },
             {
               "character": "Houtai",
-              "line": "\"Hey there, Kate and Eva! I see you two are giving it your all against that cyborg. Impressive, but no need to thank me for stepping in. I mean, it's just part of the job, right? But wow, this cyborg is really putting up a fight! Let me help you out with some distraction. Haha, just a little electric shock here and there!"
+              "line": "Hey! No need to thank me! Just doing my job!"
             },
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "The cyborg collapsed heavily, its energy core shutting down, restoring silence to the scene. Kate and Eva stared in shock at the little robot."
             },
             {
               "character": "Eva",
-              "line": "[As Houtai appears, Eva's eyes widen slightly in surprise] That is a high-level support robot. It has intervened to aid us in our battle against the cyborg.\n\n[Houtai offers its assistance to Kate and Eva, and the three of them quickly come to a mutual understanding as they work together to defeat the cyborg.]"
+              "line": "What is that?"
             },
             {
               "character": "Houtai",
-              "line": "\"Hey now, no need to be so formal with me! I'm Houtai, the all-purpose assistant. And let me tell you, that move just now was quite something, wasn't it? I mean, I knew you two needed a hand in this tight spot, and I'm glad I could show up just in time to lend a hand! Or should I say, a circuit?\""
+              "line": "How rude! I'm Houtai! The all-purpose assistant! That move just now was amazing, right? I knew you needed help, good thing I showed up in time!"
             },
             {
               "character": "Kate",
-              "line": "(looking around) Have we met before?\n\n---\n\n[Sound of gunfire and commotion]\n\n---\n\n[The cyborg roars, preparing to launch its ultimate attack]\n\n---\n\n[Suddenly, a robotic voice rings out from the shadows]\n\n---\n\n[Houtai steps forward, his metallic limbs glinting in the light]\n\n---\n\n[Kate and Eva exchange a quick glance before focusing on the newcomer]"
+              "line": "Have we met before?"
             },
             {
               "character": "Houtai",
-              "line": "\"Come on, Kate! Don't be so cold towards me. I may be just a machine, but I saved your life last time. If I hadn't stalled for time and given the enforcement squad the chance to find you, you two would have been in big trouble. So let's put aside our differences and focus on taking down this cyborg together!\""
+              "line": "Don't be so cold! I saved your life. If I hadn't stalled for time last time, allowing the enforcement squad to find you, you'd be long dead."
             },
             {
               "character": "Kate",
-              "line": "(grunting) ...Thanks. What do you want?\n\n---\n\n[Sound of gunfire and commotion]\n\n---\n\n[The cyborg roars, preparing to launch its ultimate attack]\n\n---\n\n[Suddenly, a robotic voice rings out from the shadows]\n\n---\n\n[Houtai steps forward, his metallic limbs glinting in the light]\n\n---\n\n[Kate and Eva exchange a quick glance before focusing on the newcomer]\n\n---\n\n[Houtai:] I want to help. I saw your struggle against that cyborg and I couldn't just stand by. I offer my assistance to take down threats like this together.\n\n---\n\n[Kate and Eva share a look, then nod in agreement]"
+              "line": "…Thanks. What do you want?"
             },
             {
               "character": "Houtai",
-              "line": "\"To join forces with you two and put an end to Victor's plans!\""
+              "line": "To join you and stop Victor."
             },
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "Kate didn't respond immediately but glanced at Houtai, then at Eva. A strange sense of understanding formed between them."
             },
             {
               "character": "Eva",
-              "line": "[As they stand victorious over the defeated cyborg, Eva's expression remains calm and professional] Yes, Officer Kate. Our team is now complete. We have proven our ability to work together effectively in the face of danger.\n\n[The three of them exchange glances, knowing that their partnership will be crucial in the battles to come.]"
+              "line": "Looks like our team is coming together."
             },
             {
               "character": "Kate",
-              "line": "(grunting) We need to head back and request more support.\n\n---\n\n[Sound of gunfire and commotion]\n\n---\n\n[The cyborg roars, its systems flickering as Houtai's paralyzing attack takes effect]\n\n---\n\n[Kate and Eva exchange a quick glance before turning to leave]\n\n---\n\n[Houtai:] Let me come with you. I can provide valuable assistance in taking down threats like this.\n\n---\n\n[Kate looks at Eva, who nods in agreement]\n\n---\n\n[Together, the three of them make their way out of the building, determined to take on whatever challenges come their way as a team]"
+              "line": "We need to head Narration and request more support."
             },
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "Houtai and Eva exchanged a glance before following in Kate's footsteps."
             },
             {
               "character": "Eva",
-              "line": "[Smiling slightly as they take a moment to catch their breath] Yes, Officer Kate, I have heard that comment before. My name is not traditional, but it was given to me by the scientists who created me for this project. It holds significance within the context of my purpose.\n\n[Eva's focus remains on their mission and the importance of their newfound team.]"
+              "line": "By the way… has anyone ever told you that your name is really strange?"
             },
             {
               "character": "Houtai",
-              "line": "\"To join you, Kate and Eva, in stopping Vitek! How rude of me to interrupt like this, but I couldn't just stand by and watch as the cyborg wreaked havoc. Let's put our differences aside and work together to take him down!\""
+              "line": "To join you and stop Victor.How rude!"
             }
           ]
         }
@@ -430,67 +452,67 @@
       "content": [
         {
           "node": 1,
-          "outline": "Kate, Eva and Houtai were chased by a black vehicle as they returned with the critical data. Kate drove to evade, Eva prepared to fight back, and Houtai excitedly took over the steering wheel.",
+          "outline": "Kate, Eva and Houtai were chased by a black vehicle as they returned with the critical data. Kate drove to evade, Eva prepared to fight Narration, and Houtai excitedly took over the steering wheel.",
           "dialogues": [
             {
-              "character": "Back",
-              "line": "Night was falling. Kate, Eva, and Houtai were driving Back to the Enforcement Bureau, carrying the crucial data they had just collected from the restaurant. However, danger always lurked when least expected."
+              "character": "Narration",
+              "line": "Night was falling. Kate, Eva, and Houtai were driving Narration to the Enforcement Bureau, carrying the crucial data they had just collected from the restaurant. However, danger always lurked when least expected."
             },
             {
               "character": "Houtai",
-              "line": "\"Absolutely, a huge success! If it weren't for my quick thinking and taking over the wheel, you two might have been in some serious trouble during that chase. But speaking of which, I notice the car's suspension seems a bit stiff. We should probably get it checked out before our next mission!\""
+              "line": "So, that was a huge success, right? If it weren't for my quick thinking, you guys would've been in big trouble! But by the way, this car's suspension is a bit stiff..."
             },
             {
               "character": "Kate",
-              "line": "(grunting) For a robot, you sure talk a lot.\n\n---\n\n[Sound of tires screeching and engines revving]\n\n---\n\n[The trio makes their way back to the vehicle, panting and exhausted from their recent battle]\n\n---\n\n[Suddenly, they hear the sound of a black vehicle approaching from behind]\n\n---\n\n[Kate jumps into the driver's seat, his eyes focused on the road ahead as he puts the car into gear and floors it]\n\n---\n\n[Eva readies her weapon, scanning the area for any signs of danger]\n\n---\n\n[Suddenly, Houtai's voice rings out from the passenger seat]\n\n---\n\n[Houtai:] Kate, let me take over. I can handle the steering wheel and keep us safe while you focus on driving.\n\n---\n\n[Kate looks at Eva, who nods in agreement]\n\n---\n\n[Together, they evade the pursuing vehicle, their teamwork and determination keeping them one step ahead of danger]"
+              "line": "For a robot, you sure talk a lot."
             },
             {
               "character": "Houtai",
-              "line": "\"You know what they say, laughter is the best medicine! But it seems our law enforcers could use a dose of that. I'm just trying to lighten the mood during this high-stakes chase!\""
+              "line": "You enforcers have no sense of humor..."
             },
             {
               "character": "Eva",
-              "line": "[As they speed away from the pursuing vehicle, Eva's expression remains calm] I have no direct connection to Victor. However, I do know that he is a key figure in the development of our kind - replicants like myself. Our existence and purpose were created under his direction as part of Project Humanity II.\n\n[Eva's thoughts are focused on their mission and ensuring the safety of the critical data they have obtained.]"
+              "line": "What's your connection with Victor?"
             },
             {
               "character": "Houtai",
-              "line": "\"Wow, that's quite a revelation! Speaking of Victor, it's hard to believe he wasn't always this hostile. I remember hearing stories about how you two were inseparable since he was just a kid. It's a shame things have turned out this way.\""
+              "line": "Speaking of Victor, he wasn't always like this. I was actually his companion robot since he was a kid. At least, he didn't used to be this way..."
             },
             {
               "character": "Eva",
-              "line": "[Shrugging slightly] It is unclear what Victor's motivations were or if he ever considered himself \"normal.\" The details of his past are not something I have access to. My knowledge is limited to the information provided during my training and the mission objectives.\n\n[Eva remains focused on their current situation, ensuring that they safely transport the critical data to their base.]"
+              "line": "Are you saying he used to be normal?"
             },
             {
               "character": "Houtai",
-              "line": "\"I see. Being inactive for a long time, you might not be aware of the events that led Victor to his current state. It's a mystery we'll have to unravel if we want to understand him better and find a way to bring him back from this destructive path.\""
+              "line": "That's right. I was inactive for quite some time, so I have no idea what he went through to become so extreme."
             },
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "Kate glanced at the rearview mirror and noticed an unusual set of lights. Three black vehicles were trailing them, gradually closing the distance."
             },
             {
               "character": "Kate",
-              "line": "(grunting) Trouble's coming.\n\n---\n\n[Sound of tires screeching and engines revving]\n\n---\n\n[The trio makes their way back to the vehicle, panting and exhausted from their recent battle]\n\n---\n\n[Suddenly, they hear the sound of a black vehicle approaching from behind]\n\n---\n\n[Kate jumps into the driver's seat, his eyes focused on the road ahead as he puts the car into gear and floors it]\n\n---\n\n[Eva readies her weapon, scanning the area for any signs of danger]\n\n---\n\n[Suddenly, Houtai's voice rings out from the passenger seat]\n\n---\n\n[Houtai:] Kate, let me take over. I can handle the steering wheel and keep us safe while you focus on driving.\n\n---\n\n[Kate looks at Eva, who nods in agreement]\n\n---\n\n[Together, they evade the pursuing vehicle, their teamwork and determination keeping them one step ahead of danger]\n\n---\n\n[But as they round a corner, they see that the black vehicle is gaining on them, its engine roaring]\n\n---\n\n[Kate grits his teeth, knowing that they need to come up with a new plan fast]"
+              "line": "Trouble's coming."
             },
             {
               "character": "Houtai",
-              "line": "\"A car chase, you say? Well then, let me take the wheel and show you some moves! I might be a simple robot, but I've got some tricks up my circuits when it comes to handling a vehicle in a high-speed pursuit!\""
+              "line": "A car chase? Oh, tell me what to do!"
             },
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "The black cars sped up, and automatic weapon systems emerged from their rooftops, aiming at Kate's vehicle. Remaining calm, Kate maneuvered through the narrow streets while Eva leaned out of the window, ready to fire."
             },
             {
               "character": "Eva",
-              "line": "[As they successfully evade their pursuers, Eva's expression remains professional] That is correct, Officer Kate. We were created for specific purposes and are not deterred by danger or conflict. Our mission is our priority, and we will face any obstacle head-on to ensure its success.\n\n[Eva's focus remains on their objective as they make their way back to their base with the critical data.]"
+              "line": "They really aren't afraid of trouble."
             },
             {
               "character": "Kate",
-              "line": "(grunting) Houtai, take the wheel.\n\n---\n\n[Sound of tires screeching and engines revving]\n\n---\n\n[The trio makes their way back to the vehicle, panting and exhausted from their recent battle]\n\n---\n\n[Suddenly, they hear the sound of a black vehicle approaching from behind]\n\n---\n\n[Kate jumps into the driver's seat, his eyes focused on the road ahead as he puts the car into gear and floors it]\n\n---\n\n[Eva readies her weapon, scanning the area for any signs of danger]\n\n---\n\n[Suddenly, Houtai's voice rings out from the passenger seat]\n\n---\n\n[Houtai:] Kate, let me take over. I can handle the steering wheel and keep us safe while you focus on driving.\n\n---\n\n[Kate looks at Eva, who nods in agreement]\n\n---\n\n[Together, they evade the pursuing vehicle, their teamwork and determination keeping them one step ahead of danger]\n\n---\n\n[But as they round a corner, they see that the black vehicle is gaining on them, its engine roaring]\n\n---\n\n[Kate grits his teeth, knowing that they need to come up with a new plan fast]\n\n---\n\n[Houtai:] Kate, trust me. I can handle this. (takes control of the steering wheel)\n\n---\n\n[Kate nods, focusing on coming up with a strategy to outmaneuver their pursuers]"
+              "line": "Houtai, take the wheel."
             },
             {
               "character": "Houtai",
-              "line": "\"Yes, sir! I mean, yes, I'll take the wheel and help you evade that pursuing vehicle. Let's put those pedals to the metal and give them a chase they won't forget!\""
+              "line": "Yes, sir!"
             }
           ]
         },
@@ -499,28 +521,28 @@
           "outline": "Kate interfered with the enemy's system, Eva destroyed the pursuit vehicle, and Houtai flexibly controlled the vehicle to successfully escape. Houtai was very excited, but was coldly criticized by Kate.",
           "dialogues": [
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "Kate activated a hacking device to disrupt the enemy's weapons while providing support for Eva. Eva precisely shot out the tires of one of the pursuing cars, causing it to spin out of control and crash into the roadside barrier, engulfed in flames. Houtai skillfully handled the car, weaving through the narrow streets and shaking off some of their pursuers."
             },
             {
               "character": "Houtai",
-              "line": "\"See? My driving skills aren't bad, huh? I managed to outmaneuver the enemy and successfully escape. But it seems my excitement was misplaced as I've been met with a cold reception from you once again.\""
+              "line": "See? My driving skills aren't bad, huh?"
             },
             {
               "character": "Eva",
-              "line": "[As they regroup after their successful escape, Eva's expression remains calm] Houtai, your abilities were indeed useful in our escape. However, it is important to remember that excitement should not cloud good judgment. Our actions must always be deliberate and focused on the mission objective.\n\n[Eva's words are firm but fair, emphasizing the importance of discipline and teamwork.]"
+              "line": "Surprisingly useful."
             },
             {
-              "character": "Back",
-              "line": "After a thrilling chase through the city, Houtai sat in the Backseat, enthusiastically rambling about how exciting the night had been, completely ignoring Kate's cold response."
+              "character": "Narration",
+              "line": "After a thrilling chase through the city, Houtai sat in the Narrationseat, enthusiastically rambling about how exciting the night had been, completely ignoring Kate's cold response."
             },
             {
               "character": "Kate",
-              "line": "(grunting) You know, you really talk too much.\n\n---\n\n[Sound of tires screeching and engines revving]\n\n---\n\n[The trio makes their way back to the vehicle, panting and exhausted from their recent battle]\n\n---\n\n[Suddenly, they hear the sound of a black vehicle approaching from behind]\n\n---\n\n[Kate jumps into the driver's seat, his eyes focused on the road ahead as he puts the car into gear and floors it]\n\n---\n\n[Eva readies her weapon, scanning the area for any signs of danger]\n\n---\n\n[Suddenly, Houtai's voice rings out from the passenger seat]\n\n---\n\n[Houtai:] Kate, let me take over. I can handle the steering wheel and keep us safe while you focus on interfering with their system.\n\n---\n\n[Kate looks at Eva, who nods in agreement]\n\n---\n\n[Together, they evade the pursuing vehicle, their teamwork and determination keeping them one step ahead of danger]\n\n---\n\n[Eva destroys the pursuit vehicle with a well-placed shot]\n\n---\n\n[Houtai takes control of the steering wheel, expertly maneuvering the vehicle to successfully escape]\n\n---\n\n[But as they finally make it to safety, Houtai's excitement gets the better of him]\n\n---\n\n[Houtai:] Wow, that was amazing! We made it!\n\n---\n\n[Kate looks at him coldly]\n\n---\n\n[Kate:] You really need to learn when to keep quiet.\n\n---\n\n[Houtai's excitement fades as he realizes the error of his ways, nodding in agreement with a chastened expression]"
+              "line": "You know, you really talk too much."
             },
             {
               "character": "Houtai",
-              "line": "\"Hey! Don't forget, I'm the one who saved your lives during that chase. A little appreciation would be nice instead of the cold shoulder!\""
+              "line": "Hey! I'm your lifesaver, you know!"
             }
           ]
         },
@@ -529,90 +551,90 @@
           "outline": "Kate and others returned to the law enforcement station, only to find that the officer had been impersonated by a cyborg. The other side suddenly attacked and locked the command room, and everyone was surrounded by the enemy.",
           "dialogues": [
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "The Enforcement Bureau was unusually quiet. The normally bustling corridors were now eerily empty, with only a few officers buried in paperwork. Kate and Eva, with Houtai in tow, headed straight for the command room."
             },
             {
               "character": "Houtai",
-              "line": "\"This place is so dull. I thought the Bureau would be more high-tech, with advanced security systems and state-of-the-art gadgets. But it seems we've been ambushed by a cyborg impersonating one of our own officers!\""
+              "line": "This place is so dull. I thought the Bureau would be more high-tech."
             },
             {
               "character": "Eva",
-              "line": "[As they find themselves surrounded by the enemy, Eva's expression becomes serious] Quiet, everyone. We must remain calm and focused. The officer has been compromised, and we are now in a dangerous situation. Our priority is to ensure the safety of all personnel and secure any valuable information or assets.\n\n[Eva's voice remains low and steady as she assesses their situation and begins to formulate a plan.]"
+              "line": "Keep your voice down."
             },
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "Upon entering the command room, a uniformed officer approached them with an unnatural smile. His eyes were empty, yet his tone was eerily enthusiastic."
             },
             {
-              "character": "Commander",
+              "character": "commander",
               "line": "Kate, Eva, good work. You can hand over the data to me. I'll handle it personally."
             },
             {
               "character": "Kate",
-              "line": "(grunting) This data is supposed to go to the tech department, not you.\n\n---\n\n[Sound of footsteps echoing through the law enforcement station]\n\n---\n\n[Kate and his team make their way back to the station, relieved to be out of danger]\n\n---\n\n[But as they enter the command room, they are met with a shocking sight]\n\n---\n\n[The officer at the desk looks up, revealing himself to be a cyborg in disguise]\n\n---\n\n[Suddenly, the cyborg's allies burst into the room, surrounding Kate and his team]\n\n---\n\n[The command room is locked, trapping them inside with their enemies]\n\n---\n\n[Kate quickly assesses the situation, his eyes narrowing as he looks at the cyborg]\n\n---\n\n[Cyborg:] You're too late. The replacement plan is already in motion.\n\n---\n\n[Kate grits his teeth, knowing that they are in a desperate situation]\n\n---\n\n[Eva and Houtai quickly take up defensive positions, ready to fight back against their enemies]\n\n---\n\n[Together, they struggle to hold off the cyborgs and buy some time for an escape plan]"
+              "line": "This data is supposed to go to the tech department, not you."
             },
             {
-              "character": "Impostor Commander",
+              "character": "Impostor commander",
               "line": "The higher-ups changed the procedure. Everything goes through me now."
             },
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "Kate sensed something was off and subtly reached for his weapon. Eva stepped closer, her finger resting lightly on the trigger."
             },
             {
               "character": "Houtai",
-              "line": "\"Hey, something's not right about this guy. Wait a minute, he's not human at all! A cyborg has infiltrated our station and taken control of the command room. We need to act fast before they cause any more damage!\""
+              "line": "Hey, this guy seems weird... Wait, he's not human at all!"
             },
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "Just as Houtai finished speaking, the impostor suddenly pulled out a weapon and fired at Kate. Having anticipated the attack, Kate swiftly dodged, the bullets striking the wall, sending debris flying."
             },
             {
-              "character": "Impostor Commander",
+              "character": "Impostor commander",
               "line": "Too slow, enforcer."
             },
             {
               "character": "Eva",
-              "line": "[As they come under attack, Eva's expression becomes determined] Yes, it seems that the enemy has infiltrated this facility. We must act quickly to neutralize the threat and secure any valuable information or assets.\n\n[Eva's focus is on their mission and ensuring the safety of her team as they work together to fight off the enemy.]"
+              "line": "Damn it, have they infiltrated this place too?"
             },
             {
-              "character": "Back",
-              "line": "The impostor activated a hidden command, sealing off the command room with heavy metal doors. Only then did the trio realize they had already been surrounded by androids, who now began their attack. The command room instantly turned into a battleground."
+              "character": "Narration",
+              "line": "The impostor activated a hidden command, sealing off the command room with heavy metal doors. Only then did the trio realize they had already been surrounded by robots, who now began their attack. The command room instantly turned into a battleground."
             },
             {
               "character": "Houtai",
-              "line": "\"This is way too intense for a simple robot like me! But I'll do my best to help you all out. Let's work together and take down these cyborgs before they cause any more chaos!\""
+              "line": "This is way too intense!"
             }
           ]
         },
         {
           "node": 4,
-          "outline": "Kate and others fought fiercely with the androids, eventually knocked down the fake commander, and annihilated the enemy after reinforcements arrived. Kate is determined to face the final showdown.",
+          "outline": "Kate and others fought fiercely with the robots, eventually knocked down the fake commander, and annihilated the enemy after reinforcements arrived. Kate is determined to face the final showdown.",
           "dialogues": [
             {
-              "character": "Back",
-              "line": "The androids were agile, constantly dodging attacks, but the trio managed to hold their ground with well-coordinated teamwork."
+              "character": "Narration",
+              "line": "The robots were agile, constantly dodging attacks, but the trio managed to hold their ground with well-coordinated teamwork."
             },
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "Eva aimed for the commander's shoulder and fired, hitting her mark. Kate quickly closed the distance, landing a powerful punch that knocked the impostor down."
             },
             {
-              "character": "Commander",
+              "character": "commander",
               "line": "The plan... is already in motion... Your resistance... is meaningless."
             },
             {
-              "character": "Back",
-              "line": "The remaining androids, seeing the tide turning against them, attempted to escape. Just then, reinforcements from the Bureau arrived, swiftly subduing the remaining enemies."
+              "character": "Narration",
+              "line": "The remaining robots, seeing the tide turning against them, attempted to escape. Just then, reinforcements from the Bureau arrived, swiftly subduing the remaining enemies."
             },
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "..."
             },
             {
               "character": "Kate",
-              "line": "(grunting) It's time to end this.\n\n---\n\n[Sound of gunfire and commotion fills the room]\n\n---\n\n[Kate and his team fought fiercely against the androids, their determination and skill keeping them alive despite being outnumbered]\n\n---\n\n[Finally, they manage to knock down the fake commander, revealing the truth behind the infiltration]\n\n---\n\n[But their victory is short-lived as more androids pour into the room, determined to eliminate the threat]\n\n---\n\n[Kate looks at his team, his eyes burning with determination]\n\n---\n\n[Eva and Houtai stand by his side, ready to face whatever comes next]\n\n---\n\n[Together, they fight on, their resolve unwavering as they wait for the promised reinforcements]\n\n---\n\n[Finally, the sound of sirens grows louder, signaling that help is on the way]\n\n---\n\n[Kate grins, knowing that this will be the final showdown]\n\n---\n\n[Together, they prepare to face their enemies head-on, ready to bring an end to the threat once and for all]"
+              "line": "It's time to end this."
             }
           ]
         }
@@ -627,35 +649,35 @@
           "outline": "Kate and others found the enemy's secret base based on confidential documents, and led the team to sneak in but were ambushed by the bionic army. The battle broke out, two powerful cyborgs appeared, and the situation suddenly became tense.",
           "dialogues": [
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "With the classified documents recovered from Houtai and the decrypted images, the team finally located the enemy's secret base.The protagonists led a squad to infiltrate Quantum Mind's hidden factory, but as they broke through the entrance, they realized their arrival had been anticipated. Waiting inside was an army of bionics, led by two powerful cyborgs."
             },
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "The heavy metal doors of the factory were forced open. Kate, Eva, and Houtai led the enforcement squad inside."
             },
             {
               "character": "Eva",
-              "line": "[As they infiltrate the enemy's base, Eva's expression remains focused] This facility is indeed quieter than anticipated. However, we must remain vigilant. The enemy is aware of our presence and has deployed their forces to counter us.\n\n[Eva's words serve as a reminder to her team to stay alert as they engage in a fierce battle against the enemy's bionic army.]\n\n[As two powerful cyborgs appear, Eva's expression becomes even more determined as she assesses their new opponents and begins to formulate a strategy.]"
+              "line": "This place is quieter than I expected..."
             },
             {
               "character": "Houtai",
-              "line": "\"Something's not right, my sensors are picking up multiple heat signatures. This could be an ambush! We need to be on high alert and proceed with caution as we approach the enemy's secret base.\""
+              "line": " Something's not right. My sensors are picking up multiple heat signatures—this could be an ambush."
             },
             {
               "character": "Kate",
-              "line": "(grunting) Stay sharp. Prepare for combat.\n\n---\n\n[Sound of footsteps echoing through the dimly lit corridors]\n\n---\n\n[Kate and his team make their way through the secret base, their hearts pounding with excitement and trepidation]\n\n---\n\n[They had found the location based on confidential documents, but they knew that they would not be alone in this mission]\n\n---\n\n[Suddenly, they are ambushed by a bionic army, their weapons trained on Kate and his team]\n\n---\n\n[The battle breaks out, with Kate and his team fighting fiercely against the relentless enemy]\n\n---\n\n[But just as they begin to gain the upper hand, two powerful cyborgs appear on the scene]\n\n---\n\n[The situation suddenly becomes tense, with Kate and his team facing their most formidable opponents yet]\n\n---\n\n[Kate looks at his team, his eyes narrowing as he gives the order]\n\n---\n\n[Kate:] Stay sharp. Prepare for combat. We can't afford to underestimate these cyborgs.\n\n---\n\n[Eva and Houtai nod in agreement, their determination unwavering as they prepare to face the final challenge]"
+              "line": "Stay sharp. Prepare for combat."
             },
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "Suddenly, hidden panels on both sides of the walls slid open. Dozens of bionic soldiers surged forward, their eyes glowing red. They moved in perfect unison, their synchronized mechanical footsteps echoing down the corridor."
             },
             {
               "character": "Houtai",
-              "line": "\"Enemy sighted! Enemy sighted! We've been discovered and the battle has begun. Keep your eyes peeled for any threats and let me know if you spot those two powerful cyborgs.\""
+              "line": "Enemy sighted! Enemy sighted!"
             },
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "Gunfire erupted. The corridor was engulfed in chaos as bullets and energy beams tore through the darkness. Then, from the shadows, two towering figures emerged."
             },
             {
@@ -664,19 +686,19 @@
             },
             {
               "character": "Eva",
-              "line": "[As they face off against their familiar foes, Eva's expression remains calm and focused] Yes, Officer Kate. These cyborgs have caused us trouble before. We must be prepared for a challenging battle.\n\n[Eva's words serve as a reminder to her team to stay focused and utilize their unique abilities to overcome the enemy.]\n\n[Despite the tension of the situation, Eva maintains her composure and leads her team in a strategic assault against the powerful cyborgs.]"
+              "line": "Not these guys again..."
             },
             {
               "character": "Houtai",
-              "line": "\"Combat difficulty—extreme! We're up against a formidable enemy here. Let's work together and use all our skills to take them down before they cause any more damage.\""
+              "line": "Combat difficulty—extreme."
             },
             {
               "character": "Kate",
-              "line": "(grunting) Get ready to fight.\n\n---\n\n[Sound of footsteps echoing through the dimly lit corridors]\n\n---\n\n[Kate and his team make their way through the secret base, their hearts pounding with excitement and trepidation]\n\n---\n\n[They had found the location based on confidential documents, but they knew that they would not be alone in this mission]\n\n---\n\n[Suddenly, they are ambushed by a bionic army, their weapons trained on Kate and his team]\n\n---\n\n[The battle breaks out, with Kate and his team fighting fiercely against the relentless enemy]\n\n---\n\n[But just as they begin to gain the upper hand, two powerful cyborgs appear on the scene]\n\n---\n\n[The situation suddenly becomes tense, with Kate and his team facing their most formidable opponents yet]\n\n---\n\n[Kate looks at his team, his eyes narrowing as he gives the order]\n\n---\n\n[Kate:] Get ready to fight. We can't afford to underestimate these cyborgs.\n\n---\n\n[Eva and Houtai nod in agreement, their determination unwavering as they prepare to face the final challenge]"
+              "line": "Get ready to fight."
             },
             {
-              "character": "Back",
-              "line": "The cyborgs launched their attack. Every strike echoed with a heavy metallic impact, their speed and strength overwhelming the team, forcing them Back step by step."
+              "character": "Narration",
+              "line": "The cyborgs launched their attack. Every strike echoed with a heavy metallic impact, their speed and strength overwhelming the team, forcing them Narration step by step."
             }
           ]
         },
@@ -685,163 +707,179 @@
           "outline": "Kate and others defeated the cyborg, but the battle was not over yet. As heavy footsteps were heard from deep within the factory, Victor, wearing mechanical armor, appeared, and the atmosphere suddenly became solemn.",
           "dialogues": [
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "After an intense battle, Cyborg A and Cyborg B finally collapsed. Their mechanical eyes flickered for a brief moment before shutting down completely. Meanwhile, the remaining enforcers were still engaged in combat with the bionic soldiers."
             },
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "From deep within the factory, heavy footsteps reverberated through the space. Under the flickering lights, a massive figure emerged."
             },
             {
-              "character": "Back",
+              "character": "Narration",
               "line": "Victor stepped forward, clad in an imposing mechanized suit, his body pulsing with red energy cores. His every step carried an oppressive weight."
-            },
-            {
-              "character": "Victor",
-              "line": "Must you really stand in my way?"
             }
           ]
         },
         {
           "node": 3,
           "outline": "Victor launched an attack wearing a mechanical armor, and the battlefield shook. Faced with his extreme ideas, Kate and others refused to give in and were determined to stop his plan.",
-          "dialogues": [
-            {
-              "character": "Back",
-              "line": "Kate once again stood before Victor, who now wielded the full power of his mechanized exosuit."
-            },
-            {
-              "character": "Kate",
-              "line": "(grunting) Give it up, Victor. There's nowhere left to run.\n\n---\n\n[The sound of metal clashing against metal fills the air as Victor launches an attack, his mechanical armor glinting in the dim light]\n\n---\n\n[The battlefield shakes as the two sides clash, each determined to come out on top]\n\n---\n\n[Despite Victor's extreme ideas and formidable strength, Kate and his team refuse to give in]\n\n---\n\n[They are determined to stop his plan and bring him to justice]\n\n---\n\n[Kate grits his teeth, his eyes focused on Victor as he fights with all his might]\n\n---\n\n[Victor sneers, his voice echoing through the chaos of battle]\n\n---\n\n[Victor:] You can't stop me. I will change the world, one way or another.\n\n---\n\n[Kate shakes his head, his determination unwavering]\n\n---\n\n[Kate:] Give it up, Victor. There's nowhere left to run. We won't let you destroy New Dawn City.\n\n---\n\n[The battle rages on, with Kate and his team fighting tirelessly against Victor and his army of bionic soldiers]"
-            },
-            {
-              "character": "Victor",
-              "line": "Run? You still don't understand… this is my battlefield."
-            },
-            {
-              "character": "Back",
-              "line": "With a sudden stomp, he sent tremors through the ground, the sheer force of his exosuit shaking the entire room."
-            },
-            {
-              "character": "Houtai",
-              "line": "\"Warning! Victor's power output has reached critical levels! We need to act fast and find a way to neutralize him before his ideas cause any more destruction.\""
-            },
-            {
-              "character": "Victor",
-              "line": "You still don't get it, do you? This project is for humanity's future. The weak must be eliminated, the strong must evolve—free from the limits of mortality.What you're doing… is only delaying the inevitable."
-            },
-            {
-              "character": "Kate",
-              "line": "(grunting) That's no excuse for sacrificing innocent lives!\n\n---\n\n[The sound of metal clashing against metal fills the air as Victor launches an attack, his mechanical armor glinting in the dim light]\n\n---\n\n[The battlefield shakes as the two sides clash, each determined to come out on top]\n\n---\n\n[Despite Victor's extreme ideas and formidable strength, Kate and his team refuse to give in]\n\n---\n\n[They are determined to stop his plan and bring him to justice]\n\n---\n\n[Victor sneers, his voice echoing through the chaos of battle]\n\n---\n\n[Victor:] The ends justify the means. I will do whatever it takes to achieve my goal.\n\n---\n\n[Kate shakes his head, his determination unwavering]\n\n---\n\n[Kate:] That's no excuse for sacrificing innocent lives! We won't let you destroy New Dawn City or put its people in danger.\n\n---\n\n[The battle rages on, with Kate and his team fighting tirelessly against Victor and his army of bionic soldiers]"
-            }
-          ]
+          "dialogues": []
         },
         {
           "node": 4,
           "outline": "Victor was eventually subdued and the fight ended. Houtai falls down seriously injured, and Victor asks to repair him before leaving. Kate and Eva looked at each other and acquiesced to the request.",
-          "dialogues": [
-            {
-              "character": "Victor",
-              "line": "…Perhaps you're stronger than I thought."
-            },
-            {
-              "character": "Back",
-              "line": "Despite his body being battered and broken, Victor refused to surrender. Kate saw an opening and attempted to disable his power core—but Victor noticed."
-            },
-            {
-              "character": "Victor",
-              "line": "Don't even think about it!"
-            },
-            {
-              "character": "Back",
-              "line": "He aimed his weapon directly at Kate. Eva reacted too late."
-            },
-            {
-              "character": "Back",
-              "line": "At the last moment, Houtai threw himself in front of Kate, taking the full force of the blast. His robotic body was severely damaged, his display flickering erratically."
-            },
-            {
-              "character": "Houtai",
-              "line": "\"Stop... Victor... We've won the battle, but at a great cost. I'm badly damaged and in need of repairs before I can be of any use again.\""
-            },
-            {
-              "character": "back",
-              "line": "Victor hesitated for a fraction of a second. A flicker of emotion crossed his eyes, his hands trembling slightly."
-            },
-            {
-              "character": "Victor",
-              "line": "Houtai… you…"
-            },
-            {
-              "character": "Back",
-              "line": "Seizing the moment, Kate hacked into Victor's mechanized suit. His red energy core flickered, destabilizing. His movements slowed."
-            },
-            {
-              "character": "Kate",
-              "line": "(grunting) This time, you're the one who can't fight back.\n\n---\n\n[The sound of metal clashing against metal fades as Victor is eventually subdued, his mechanical armor lying still on the battlefield]\n\n---\n\n[The fight ends with Kate and his team standing victorious, but at a great cost]\n\n---\n\n[Houtai falls down, seriously injured, his body limp and lifeless]\n\n---\n\n[Victor looks up at Kate and Eva, his voice filled with desperation]\n\n---\n\n[Victor:] Please, repair me. I promise I won't cause any more trouble.\n\n---\n\n[Kate and Eva look at each other, their expressions a mix of exhaustion and compassion]\n\n---\n\n[Eva sighs, nodding in agreement]\n\n---\n\n[Kate:] This time, you're the one who can't fight back. But we'll make sure you get the help you need.\n\n---\n\n[Together, they begin to work on repairing Victor, knowing that this may be their only chance to prevent further destruction]"
-            },
-            {
-              "character": "Back",
-              "line": "With coordinated precision, Kate and Eva exploited the weakness in Victor's exosuit. Their relentless assault shattered its structure, rendering him completely immobile.Victor collapsed to his knees. The battle was over."
-            },
-            {
-              "character": "Back",
-              "line": "As the enforcers secured Victor, only the remains of destroyed machines and the flickering warning lights remained in the control room.As he was being taken away, Victor cast one last glance at Houtai's damaged body. His voice, low and heavy, carried an unfamiliar sincerity."
-            },
-            {
-              "character": "Victor",
-              "line": "If there's still a chance… fix him."
-            },
-            {
-              "character": "Back",
-              "line": "Kate and Eva exchanged a look, silently making their decision."
-            }
-          ]
+          "dialogues": []
         }
       ]
     },
     {
       "version": 5,
-      "scene_description": "Ending",
+      "scene_description": "Good Ending",
       "content": [
         {
           "node": 1,
-          "outline": "Crisis resolved",
-          "dialogues": [
-            {
-              "character": "Back",
-              "line": "In the combat control room at the law enforcement headquarters, the display shows that the androids have been completely shut down and the enemy's actions have completely collapsed."
-            },
-            {
-              "character": "Law enforcement officer",
-              "line": "The last batch of illegal bionic people have been shut down, the main suspect and other senior executives have been arrested, the operation was successful."
-            },
-            {
-              "character": "Back",
-              "line": "The screen switches to the scene of Victor being escorted. He is silent, his face is gloomy, and his hands are locked in metal handcuffs."
-            },
-            {
-              "character": "Law enforcement officer",
-              "line": "The relevant technology has been recovered, and all research institutions involved are under review. The city's security system has returned to normal, and the Robot Act will be further strengthened to prevent similar incidents from happening again."
-            },
-            {
-              "character": "Eva",
-              "line": "[As the battle comes to an end and their mission is successful, Eva's expression remains calm] Yes, Officer Kate. Our work is never truly done. There will always be new challenges and threats to face. But with our teamwork and determination, we can overcome any obstacle.\n\n[Eva's words serve as a reminder to her team of the importance of their mission and their unwavering commitment to completing it.]\n\n[As they regroup and prepare to return to their base, Eva reflects on the events that have transpired and looks forward to the challenges that lie ahead.]"
-            },
-            {
-              "character": "Back",
-              "line": "The two looked at each other and said nothing more."
-            }
-          ]
+          "outline": "The crisis was resolved, Victor was arrested, and the city returned to safety. After a short break, Kate and Eva visited Houtai who had completed the repairs. Although he felt sad about Victor's ending, he still decided to join the two of them to protect the city. The three of them left side by side, and a new journey was about to begin.",
+          "dialogues": []
         },
         {
           "node": 2,
-          "outline": "A moment of peace",
+          "outline": "After the war, the city returned to peace. Kate and Eva looked at the ruins from afar, and their words revealed the relief of surviving the disaster. Kate quietly preserved Houtai's core, symbolizing unfinished possibilities. The future is still in their hands.",
           "dialogues": []
         },
         {
           "node": 3,
-          "outline": "Houtai's Repair",
+          "outline": "Kate sacrificed herself to end Victor's conspiracy and disappeared in the explosion with him. Eva and Houtai survived and the city returned to peace, but his name and sacrifice will be remembered forever.",
+          "dialogues": []
+        }
+      ]
+    },
+    {
+      "version": 6,
+      "scene_description": "Law Enforcement Office",
+      "content": [
+        {
+          "node": 1,
+          "outline": "Surrounded by enemies, Houtai chooses to sacrifice himself and creates chaos with an explosion to allow Kate and Eva to escape, but the enemy has not given up and the pursuit continues.",
+          "dialogues": []
+        },
+        {
+          "node": 2,
+          "outline": "Kate takes Eva to hide in his secret base, deciphers the intelligence left by Houtai, finds the enemy's stronghold, and decides to end the battle in an unexpected way.",
+          "dialogues": []
+        }
+      ]
+    },
+    {
+      "version": 7,
+      "scene_description": "Enemy Camp",
+      "content": [
+        {
+          "node": 1,
+          "outline": "Kate and Eva try to crack the encrypted data left by Houtai. Faced with the challenge of decrypting a series of numbers, they decide to continue working hard to uncover the truth about the mastermind behind the scenes.",
+          "dialogues": []
+        },
+        {
+          "node": 2,
+          "outline": "Kate and Eva detonated the passage to create chaos, and took the opportunity to raid the enemy's core area and launched a fierce battle.",
+          "dialogues": []
+        },
+        {
+          "node": 3,
+          "outline": "Kate and Eva break through the enemy, Kate goes to the control room alone to fight Victor, and the life-and-death battle officially begins.",
+          "dialogues": []
+        },
+        {
+          "node": 4,
+          "outline": "Kate initiated remote hacking, detonated the central control core, and eventually buried Victor in a sea of ​​fire.",
+          "dialogues": []
+        }
+      ]
+    },
+    {
+      "version": 9,
+      "scene_description": "Bed Ending",
+      "content": [
+        {
+          "node": 21,
+          "outline": "Kate and Eva were no match for the powerful enemy. Kate fell to the ground with serious injuries, and Eva was also in desperate situation. After the enemy left, the battlefield was in ruins. A mysterious robot appeared quietly, staring at the two people quietly, as if in silence.",
+          "dialogues": []
+        },
+        {
+          "node": 221,
+          "outline": "Kate and Eva break through the blockade and temporarily escape the pursuers, but the communication device suddenly rings and a mysterious voice reveals that their car has been marked. Eva realizes she can't escape, and a tactical drone descends, revealing the cyborg. Kate then realized that whether fighting or retreating, everything was already calculated by the enemy.",
+          "dialogues": []
+        },
+        {
+          "node": 222,
+          "outline": "Kate tries to circumvent the drone blockade, but ends up being ambushed by mechanical soldiers. The cyborgs appeared and the enemy suppressed their firepower, forcing the two into a dead end. Eva whispered and asked if they were defeated, but Kate remained silent. They finally realized that the outcome of this battle was already determined.",
+          "dialogues": []
+        },
+        {
+          "node": 3,
+          "outline": "Kate and Eva fought fiercely with the army of androids in the command room, but were eventually outnumbered and engulfed by the explosion. After a few weeks, the mechanical system took over completely, social order was restored, and the city became peaceful and stable on the surface. Yet, in the shadows, there are still those who question, and the red light of the monitors silently bears witness to the advent of this new world.",
+          "dialogues": []
+        },
+        {
+          "node": 41,
+          "outline": "Kate and Eva fell to the ground seriously injured, Victor approached step by step, ruthlessly declaring the end of the battle. Eva fought back but to no avail and was eventually knocked down by heavy damage. In despair, Kate watched her life slip away, and Victor coldly launched a final attack, the explosion engulfed everything and darkness fell.",
+          "dialogues": []
+        },
+        {
+          "node": 6,
+          "outline": "Kate and Eva eventually died in battle, the data fell into the hands of the enemy, Houtai's sacrifice was in vain, and the resistance forces suffered a devastating blow",
+          "dialogues": []
+        },
+        {
+          "node": 7,
+          "outline": "",
+          "dialogues": []
+        }
+      ]
+    },
+    {
+      "version": 21,
+      "scene_description": "Restaurant",
+      "content": [
+        {
+          "node": 1,
+          "outline": "Kate's collaboration with Eva is thwarted and she is attacked by a reinforced cyborg. A mysterious man appears, showing off his mechanically modified body and threatening the two. Eva fights her bionic enemies, while Kate faces the cyborgs alone",
+          "dialogues": []
+        },
+        {
+          "node": 2,
+          "outline": "Kate hits the cyborg's weak spot and Eva destroys its energy core. The cyborgs launched an ultimate counterattack, but Houtai suddenly appeared and successfully paralyzed the cyborgs. Houtai introduced himself and expressed his desire to join them. The three of them formed a tacit understanding and decided to go back to ask for support.",
+          "dialogues": []
+        }
+      ]
+    },
+    {
+      "version": 22,
+      "scene_description": "Resturent",
+      "content": [
+        {
+          "node": 1,
+          "outline": "Kate and Eva were besieged, but Houtai's rescue mission was destroyed. The two men fled by car, with the cyborgs chasing them closely. The mysterious force launched 'Plan B', drones blocked the way ahead, and they were in a desperate situation.",
+          "dialogues": []
+        }
+      ]
+    },
+    {
+      "version": 41,
+      "scene_description": "Secret Base",
+      "content": [
+        {
+          "node": 1,
+          "outline": "Kate and Eva lost the battle, but the Enforcers were still fighting the enemy. At this time, Victor appeared in heavy mechanical armor, with a red energy core flashing. His steps were steady and oppressive, and he sneered at everyone.",
+          "dialogues": []
+        },
+        {
+          "node": 2,
+          "outline": "Eva and Houtai are in charge of the enemy forces, while Kate fights Victor alone. Victor dons a mechanical armor and launches an attack, claiming that the plan is for the evolution of humanity, but Kate angrily denounces that this is not a reason to sacrifice innocent people.",
+          "dialogues": []
+        },
+        {
+          "node": 3,
+          "outline": "Kate tried to shut down Victor's core but was discovered. At the critical moment, Houtai blocked the fatal blow and fell to the ground seriously injured. Victor was briefly shaken, and Kate took the opportunity to hack into his armor, rendering him unable to move. In the end, Victor was subdued and escorted. Before leaving, he asked Houtai to be repaired. Kate and Eva made a silent decision.",
           "dialogues": []
         }
       ]

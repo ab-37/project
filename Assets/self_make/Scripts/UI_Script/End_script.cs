@@ -18,12 +18,16 @@ public class End_script : MonoBehaviour
     private GameObject wordObject;
 
     private TextMeshProUGUI title;
-    private TextMeshProUGUI word;
+    private Text word;
     JsonData fullDialogueData;
     private void changeTitleWordLog()
     {
         string unicodeWord = JsonMapper.ToJson(fullDialogueData["acts"][Static_Variables.currentAct - 1]["content"][Static_Variables.currentPart - 1]["outline"]);
-        string wordtext = Regex.Unescape(unicodeWord);
+        string wordtext= unicodeWord;
+
+        if(Static_Variables.dialogueMode==0)
+            wordtext = Regex.Unescape(unicodeWord);
+
         word.text = wordtext;
         if (Static_Variables.currentAct == 9)
         {
@@ -65,7 +69,7 @@ public class End_script : MonoBehaviour
         titleObject = End.transform.GetChild(0).gameObject;
         wordObject = End.transform.GetChild(1).gameObject;
         title = titleObject.GetComponent<TextMeshProUGUI>();
-        word = wordObject.GetComponent<TextMeshProUGUI>();
+        word = wordObject.GetComponent<Text>();
         hideEndTitle();
     }
     void Start()
