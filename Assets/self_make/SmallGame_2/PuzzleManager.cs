@@ -16,6 +16,7 @@ public class PuzzleManager : MonoBehaviour
 
     void Start()
     {
+        winMessage = gameObject.transform.parent.Find("WinMessage").gameObject;
         // �T�O�C���}�l�����óӧQ�M�C�������T��
         if (winMessage != null)
         {
@@ -27,7 +28,6 @@ public class PuzzleManager : MonoBehaviour
         for (int i = 0 ; i < 9 ; ++i) {
             pieces[i] = gameObject.transform.parent.Find("Piece_" + (i + 1).ToString()).gameObject;
         }
-        winMessage = gameObject.transform.parent.Find("WinMessage").gameObject;
     }
 
     void Awake()
