@@ -65,7 +65,7 @@ public class LoadAI : MonoBehaviour
     public void StartAI()
     {
         Debug.Log("ok");
-        //SceneManager.LoadScene("Dialogue Main");
+        //SceneManager.LoadScene("Dialogue Main", LoadSceneMode.Single);
         StartTransAI();
 
     }
@@ -193,7 +193,7 @@ public class LoadAI : MonoBehaviour
             Debug.Log("\n========================\n All acts completed!");
             WriteResponseToFile("\n========================\n All acts completed!");
             //StartCoroutine(FixTranslationErrors());
-            SceneManager.LoadScene("Dialogue Main");
+            SceneManager.LoadScene("Dialogue Main", LoadSceneMode.Single);
         }
     }
     private IEnumerator GenerateLineCoroutine(string characterName, string originalLine, int actVersion, int contentNode)
@@ -414,7 +414,7 @@ public class LoadAI : MonoBehaviour
         //}
         //SolveBOM();
         //File.WriteAllText(jsonFilePath, JsonConvert.SerializeObject(outputfile, Formatting.Indented));
-        SceneManager.LoadScene("Dialogue Main");
+        SceneManager.LoadScene("Dialogue Main", LoadSceneMode.Single);
     }
     public void LastJson()
     {
@@ -423,7 +423,7 @@ public class LoadAI : MonoBehaviour
         {
             Debug.Log("null!\n");
         }
-        SceneManager.LoadScene("Dialogue Main");
+        SceneManager.LoadScene("Dialogue Main", LoadSceneMode.Single);
     }
     private void ReDialogueLogToJson(string filepath, Script script, Dialogue newDialogue, int actVersion, int contentNode)
     {

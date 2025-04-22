@@ -86,21 +86,22 @@ public class ControlUI : MonoBehaviour
     //change scence and tell what is stage running
     public void changeScene(string sceneName,string blockRunning)
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
         Static_Variables.blockRunning = blockRunning;
     }
     */
 
     public void loadGameplayScene()
     {
-        SceneManager.LoadScene("Gameplay Main");
+        SceneManager.LoadScene("Gameplay Main", LoadSceneMode.Single);
     }
 
-
+    /*
     private void playBlockStage(string blockName)
     {
         flowchart.ExecuteBlock(blockName);
     }
+    */
     
     /*
     private JsonData selectStage(string chosen_id)
@@ -194,6 +195,7 @@ public class ControlUI : MonoBehaviour
         }
         return null;
     }
+    /*
     private JsonData fetchJsonData(JsonData json, string targetAttribute, string targetData) {
         foreach (JsonData childJson in json) {
             if ((string)childJson[targetAttribute] == targetData) {
@@ -202,6 +204,7 @@ public class ControlUI : MonoBehaviour
         }
         return null;
     }
+    */
 
     //load act node
     private bool loadNode(int act, int part) {
@@ -365,11 +368,11 @@ public class ControlUI : MonoBehaviour
                 break;
             case "smallgame1":
                 Debug.Log("Loading small game 1");
-                SceneManager.LoadScene("SmallGame_1");
+                SceneManager.LoadScene("SmallGame_1", LoadSceneMode.Single);
                 break;
             case "smallgame2": 
                 Debug.Log("Loading small game 2");
-                SceneManager.LoadScene("SmallGame_2");
+                SceneManager.LoadScene("SmallGame_2", LoadSceneMode.Single);
                 break;
             case "end":
                 endScript.setEnd();

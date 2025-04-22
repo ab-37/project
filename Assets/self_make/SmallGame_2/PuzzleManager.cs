@@ -56,7 +56,7 @@ public class PuzzleManager : MonoBehaviour
     private IEnumerator gameOverCoroutine() {
         isCoroutinePlaying = true;
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene("Dialogue Main");
+        SceneManager.LoadScene("Dialogue Main", LoadSceneMode.Single);
     }
 
     public void CheckWinCondition()

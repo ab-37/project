@@ -41,7 +41,7 @@ public class GameController : MonoBehaviour
     private IEnumerator gameOverCoroutine() {
         isCoroutinePlaying = true;
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene("Dialogue Main");
+        SceneManager.LoadScene("Dialogue Main", LoadSceneMode.Single);
     }
 
     void OnInputSubmit(string text)

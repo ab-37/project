@@ -366,7 +366,7 @@ public class Select_Square_Script : MonoBehaviour
         isOutroRunning = false;
 
         //switch scenes
-        SceneManager.LoadScene("Dialogue Main");
+        SceneManager.LoadScene("Dialogue Main", LoadSceneMode.Single);
     }
     
     private void Awake() {
