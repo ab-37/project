@@ -64,7 +64,7 @@ public class LoadAI : MonoBehaviour
 
     public void StartAI()
     {
-        Debug.Log("ok");
+        //Debug.Log("ok");
         //SceneManager.LoadScene("Dialogue Main", LoadSceneMode.Single);
         StartTransAI();
 
@@ -80,7 +80,7 @@ public class LoadAI : MonoBehaviour
         }
         acts = JsonUtility.FromJson<Script>(scriptfile.text).acts;
         if (acts == null) { Debug.Log("script is null!"); }
-        Debug.Log($"Loaded {acts.Count} acts from script.");
+        //Debug.Log($"Loaded {acts.Count} acts from script.");
         if (scriptfile != null)
         {
             Debug.Log("scriptfile contents: " + scriptfile.text);
@@ -182,14 +182,14 @@ public class LoadAI : MonoBehaviour
 
             //CurrntAct = actNumber+1;
             //CurrentContent = 0;
-            Debug.Log($"Current number={contents.Count}");
+            //Debug.Log($"Current number={contents.Count}");
             CurrntAct = actNumber + 1;
             StartCoroutine(PlayAct(actNumber + 1, 0));
             //StartCoroutine(PlayAct(CurrntAct, CurrentContent));
         }
         else
         {
-            Debug.Log($"Current Act={CurrntAct}, Current Content={CurrentContent}");
+            //Debug.Log($"Current Act={CurrntAct}, Current Content={CurrentContent}");
             Debug.Log("\n========================\n All acts completed!");
             WriteResponseToFile("\n========================\n All acts completed!");
             //StartCoroutine(FixTranslationErrors());
@@ -488,6 +488,11 @@ public class LoadAI : MonoBehaviour
             }
         }
         Debug.Log("Translation corrections saved successfully.");
+    }
+    public void ExitGame()
+    {
+        Debug.Log("Exit Game");
+        Application.Quit();
     }
 }
 

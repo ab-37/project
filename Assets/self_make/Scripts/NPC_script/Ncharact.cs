@@ -11,7 +11,6 @@ using System;
 using Unity.VisualScripting;
 using LLMUnitySamples;
 using System.Text.RegularExpressions;
-
 using System.Collections;
 using UnityEngine.SceneManagement;
 using Newtonsoft.Json;
@@ -34,13 +33,17 @@ public class Ncharact : MonoBehaviour
     public Button AI;
     public Button Last;
     public Button CheckOK;
+    public Button Panel;
+    //public Button Cancel;
 
     [Header("Panels")]
+    
     public GameObject ChoosePanel;
     public GameObject CheckPanel;
     //public GameObject CheckOKPanel;
     public GameObject LoadPanel;
     public GameObject Loadimage;
+    public GameObject panel;
     public Text Loadtxt;
 
     bool isAIReady = false;
@@ -73,6 +76,8 @@ public class Ncharact : MonoBehaviour
         AI.onClick.AddListener(ShowCheck);
         Last.onClick.AddListener(LastDia);
         CheckOK.onClick.AddListener(StartAI);
+        Panel.onClick.AddListener(DeletAlart);
+        //Cancel.onClick.AddListener(DeletAlart);
     }
 
     private void Awake()
@@ -98,11 +103,19 @@ public class Ncharact : MonoBehaviour
     }
     private void ShowChoose()
     {
-        ChoosePanel.gameObject.SetActive(true);
+        panel.SetActive(true);
+        //ChoosePanel.gameObject.SetActive(true);
     }
     private void ShowCheck()
     {
         CheckPanel.gameObject.SetActive(true);
+    }
+
+    private void DeletAlart()
+    {
+        panel.gameObject.SetActive(false);
+        //ChoosePanel.gameObject.SetActive(false);
+        CheckPanel.gameObject.SetActive(false);
     }
 
     private void ShowLoad()
@@ -166,4 +179,5 @@ public class Ncharact : MonoBehaviour
             Loadtxt.text = Mathf.RoundToInt(percent).ToString() + "%";
         }
     }
+    
 }

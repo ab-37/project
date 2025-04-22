@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657832, g: 0.49641222, b: 0.57481664, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2044,7 +2043,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &758599402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4357,11 +4356,11 @@ MonoBehaviour:
   save: 
   saveCache: 0
   debugPrompt: 0
+  numPredict: 256
   slot: -1
   grammar: 
   cachePrompt: 1
   seed: 0
-  numPredict: 256
   temperature: 0.2
   topK: 40
   topP: 0.9
@@ -5177,7 +5176,6 @@ GameObject:
   - component: {fileID: 1400265389}
   - component: {fileID: 1400265393}
   - component: {fileID: 1400265392}
-  - component: {fileID: 1400265395}
   - component: {fileID: 1400265394}
   m_Layer: 0
   m_Name: RAG
@@ -5185,7 +5183,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1400265389
 Transform:
   m_ObjectHideFlags: 0
@@ -5215,7 +5213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   advancedOptions: 0
   remote: 0
-  _llm: {fileID: 758599402}
+  _llm: {fileID: 0}
   APIKey: 
   host: localhost
   port: 13333
@@ -5232,12 +5230,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2496546d1575771597fc8cbdd0d852d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  searchClass: 1
-  search: {fileID: 1400265395}
-  chunkingClass: 3
-  chunking: {fileID: 1400265394}
-  preSearchClass: 0
-  preChunkingClass: 0
+  searchType: 1
+  search: {fileID: 1400265394}
+  chunkingType: 0
+  chunking: {fileID: 0}
 --- !u!114 &1400265394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5247,31 +5243,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1400265384}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 354c2418b0d6913efbfb73dccd540d23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  search: {fileID: 1400265395}
-  returnChunks: 0
-  delimiters: 2e0021003a003b003f000a000d00
---- !u!114 &1400265395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1400265384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8c6492f8c97ab9a09b0eb0f93a158da, type: 3}
+  m_Script: {fileID: 11500000, guid: 5102d32385d84d87f98c64d376cbcc90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   llmEmbedder: {fileID: 1400265392}
-  advancedOptions: 0
-  quantization: 3
-  metricKind: 1
-  connectivity: 32
-  expansionAdd: 40
-  expansionSearch: 16
 --- !u!1 &1468962044
 GameObject:
   m_ObjectHideFlags: 0
