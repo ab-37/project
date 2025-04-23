@@ -11,8 +11,8 @@ public static class Static_Variables
     public static int currentPart = 1;
     public static int lastGameScore = 0;
     public static float lastGameTime = 0;
-    public static string blockSelect;//return what stage need to play 
-    public static string blockRunning;//save what is it stage
+    //public static string blockSelect;//return what stage need to play 
+    //public static string blockRunning;//save what is it stage
     public static string currentBg = "1"; //bg data
 
     //act directories

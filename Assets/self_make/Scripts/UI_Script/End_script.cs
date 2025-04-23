@@ -78,10 +78,10 @@ public class End_script : MonoBehaviour
         mmWordObject = End.transform.GetChild(2).gameObject;
         title = titleObject.GetComponent<TextMeshProUGUI>();
         word = wordObject.GetComponent<Text>();
-        hideEndTitle();
     }
     private void Start()
     {
+        hideEndTitle();
         endFlag = false;
     }
 

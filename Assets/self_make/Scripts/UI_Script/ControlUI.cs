@@ -399,7 +399,7 @@ public class ControlUI : MonoBehaviour
         //LoadData = File.ReadAllText(Application.dataPath + "/self_make/stage/stage.json");
         //StageData = JsonMapper.ToObject(LoadData);
 
-        blockSelect = Static_Variables.blockSelect;
+        //blockSelect = Static_Variables.blockSelect;
         //mainMenu = GameObject.Find("MainUI");
 
         //load dialogue, temp file path

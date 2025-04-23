@@ -11,14 +11,12 @@ using System;
 using Unity.VisualScripting;
 using LLMUnitySamples;
 using System.Text.RegularExpressions;
-using UnityEditor.U2D.Animation;
 using System.Collections;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using UnityEngine.Rendering;
 using UnityEngine.Networking;
 using System.Text;
-using UnityEditor.PackageManager.Requests;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
