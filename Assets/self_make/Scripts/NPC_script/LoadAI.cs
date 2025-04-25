@@ -39,11 +39,12 @@ public class LoadAI : MonoBehaviour
     //public Button AITXT;
     //public Text AIText;
 
-    private string outputFilePath = "acter.txt";
-    private string translateFilepath = "translate.txt";
-    private string jsonFilePath = "Assets\\self_make\\Scripts\\dialogues.json";
-    private string jsonFilePath2 = "Assets\\self_make\\Scripts\\CNdialogues.json";
-    private string CNacts = "Assets\\self_make\\Scripts\\NPC_script\\CNact.json";
+    //private string outputFilePath = "acter.txt";
+    //private string translateFilepath = "translate.txt";
+    private string jsonFilePath = "SaveFile\\dialogues.json";
+    private string jsonFilePath2 = "SaveFile\\CNdialogues.json";
+    private string CNacts;
+    //private string CNacts;
     //  private string newtrans = "trans2.txt";
     //  private string newdia = "dia3.json";
     private string CharacterName;
@@ -70,7 +71,9 @@ public class LoadAI : MonoBehaviour
 
     void Start()
     {
-        InitializeFile();
+        //InitializeFile();
+        TextAsset textAsset = Resources.Load<TextAsset>("GameJson/CNact");
+        CNacts = textAsset.text;
         if (scriptfile == null)
         {
             Debug.LogError("scriptfile is null! Please assign it in the Inspector.");
@@ -121,21 +124,21 @@ public class LoadAI : MonoBehaviour
         //Normal.onClick.AddListener();
         StartCoroutine(PlayAct(CurrntAct, CurrentContent));
     }
-    private void InitializeFile()
-    {
-        try
-        {
-            File.Delete(outputFilePath);
-            File.Delete(translateFilepath);
+    //private void InitializeFile()
+    //{
+    //    try
+    //    {
+    //        File.Delete(outputFilePath);
+    //        File.Delete(translateFilepath);
 
-            File.WriteAllText(outputFilePath, "Dialogue Log\n========================");
-            File.WriteAllText(translateFilepath, "Translated Dialogue Log\n========================");
-        }
-        catch (IOException e)
-        {
-            Debug.LogError("Failed to initialize file: " + e.Message);
-        }
-    }
+    //        File.WriteAllText(outputFilePath, "Dialogue Log\n========================");
+    //        File.WriteAllText(translateFilepath, "Translated Dialogue Log\n========================");
+    //    }
+    //    catch (IOException e)
+    //    {
+    //        Debug.LogError("Failed to initialize file: " + e.Message);
+    //    }
+    //}
 
     private IEnumerator PlayAct(int actNumber, int ContentNode)
     {
@@ -146,7 +149,7 @@ public class LoadAI : MonoBehaviour
             Debug.LogError($"Act {actNumber} not found!");
             yield break;
         }
-        WriteResponseToFile($"Playing Act {act.version}: {act.scene_description}\n");
+        //WriteResponseToFile($"Playing Act {act.version}: {act.scene_description}\n");
         Debug.Log($"Playing Act {act.version}: {act.scene_description}");
 
         Content content = GetContent(ContentNode);
@@ -159,7 +162,7 @@ public class LoadAI : MonoBehaviour
             Debug.LogError($"Act {ContentNode} not found!");
             yield break;
         }
-        WriteResponseToFile($"Playing Content {actualNode}\n");
+        //WriteResponseToFile($"Playing Content {actualNode}\n");
         Debug.Log($"Playing Content {actualNode}");
         foreach (Dialogue dialogue in content.dialogues)
         {
@@ -189,7 +192,7 @@ public class LoadAI : MonoBehaviour
         {
             //Debug.Log($"Current Act={CurrntAct}, Current Content={CurrentContent}");
             Debug.Log("\n========================\n All acts completed!");
-            WriteResponseToFile("\n========================\n All acts completed!");
+            //WriteResponseToFile("\n========================\n All acts completed!");
             //StartCoroutine(FixTranslationErrors());
             SceneManager.LoadScene("Dialogue Main", LoadSceneMode.Single);
         }
@@ -212,7 +215,7 @@ public class LoadAI : MonoBehaviour
         }
 
         Debug.Log($"{characterName}: {generatedLine}");
-        WriteResponseToFile($"{generatedLine}");
+        //WriteResponseToFile($"{generatedLine}");
         ReDialogueLogToJson(jsonFilePath, outputfile, new Dialogue(characterName, generatedLine), actVersion, contentNode);
 
     }
@@ -292,7 +295,7 @@ public class LoadAI : MonoBehaviour
                 yield return StartCoroutine(TranslateCoroutine("en", "zh-TW", originalLine, result => { translated = result; }));
                 cont.dialogues[i].line = translated;
 
-                File.AppendAllText(translateFilepath, $"{cont.dialogues[i].character}: {translated}\n");
+                //File.AppendAllText(translateFilepath, $"{cont.dialogues[i].character}: {translated}\n");
                 ReDialogueLogToJson(jsonFilePath2, outputfile2, new Dialogue(cont.dialogues[i].character, translated), Actnumber, ContNumber);
             }
 
@@ -319,17 +322,17 @@ public class LoadAI : MonoBehaviour
         return contents[node];
     }
 
-    private void WriteResponseToFile(string response)
-    {
-        try
-        {
-            File.AppendAllText(outputFilePath, $"{CharacterName}: {response}\n");
-        }
-        catch (IOException e)
-        {
-            Debug.LogError("Failed to write to file: " + e.Message);
-        }
-    }
+    //private void WriteResponseToFile(string response)
+    //{
+    //    try
+    //    {
+    //        File.AppendAllText(outputFilePath, $"{CharacterName}: {response}\n");
+    //    }
+    //    catch (IOException e)
+    //    {
+    //        Debug.LogError("Failed to write to file: " + e.Message);
+    //    }
+    //}
     private void SaveDialogueLogToJson()
     {
         outputfile = JsonConvert.DeserializeObject<Script>(scriptfile.text);
@@ -451,13 +454,13 @@ public class LoadAI : MonoBehaviour
             yield break;
         }
 
-        if (!File.Exists(translateFilepath) || !File.Exists(jsonFilePath))
-        {
-            Debug.LogError("Translation or dialogue file missing!");
-            yield break;
-        }
+        //if (!File.Exists(translateFilepath) || !File.Exists(jsonFilePath))
+        //{
+        //    Debug.LogError("Translation or dialogue file missing!");
+        //    yield break;
+        //}
 
-        string[] translatedLines = File.ReadAllLines(translateFilepath);
+        //string[] translatedLines = File.ReadAllLines(translateFilepath);
         Script translatedScript = JsonConvert.DeserializeObject<Script>(File.ReadAllText(jsonFilePath));
 
         List<string> fixedTranslations = new List<string>();
