@@ -404,11 +404,15 @@ public class ControlUI : MonoBehaviour
 
         //load dialogue, temp file path
         //fullDialogueData = JsonMapper.ToObject(File.ReadAllText(Application.dataPath + "/self_make/Scripts/dialogues.json"));
-        Static_Variables.isDialogueLoaded = false;
+        Static_Variables.isDialogueLoadedControlUI = false;
         
         //load other jsons
-        dialogueJumpData = JsonMapper.ToObject(File.ReadAllText(Application.dataPath + "/self_make/Scripts/dialogue_jump.json"));
-        levelsData = JsonMapper.ToObject(File.ReadAllText(Application.dataPath + "/self_make/Scripts/levels.json"));
+        //dialogueJumpData = JsonMapper.ToObject(File.ReadAllText(Application.dataPath + "/Resources/GameJson/dialogue_jump.json"));
+        //levelsData = JsonMapper.ToObject(File.ReadAllText(Application.dataPath + "/Resources/GameJson/levels.json"));
+        TextAsset dialogueJumpTextAsset = Resources.Load<TextAsset>("GameJson/dialogue_jump");
+        dialogueJumpData = JsonMapper.ToObject(dialogueJumpTextAsset.ToString());
+        TextAsset levelsTextAsset = Resources.Load<TextAsset>("GameJson/levels");
+        levelsData = JsonMapper.ToObject(levelsTextAsset.ToString());
 
         newBgName = "1";
     }
@@ -416,9 +420,21 @@ public class ControlUI : MonoBehaviour
     private void Start()
     {
         //load the dialogue if haven't
-        if (!Static_Variables.isDialogueLoaded) {
-            fullDialogueData = JsonMapper.ToObject(File.ReadAllText(Static_Variables.actDirectories[Static_Variables.dialogueMode]));
-            Static_Variables.isDialogueLoaded = true;
+        if (!Static_Variables.isDialogueLoadedControlUI) {
+            TextAsset fullDialogueTextAsset = new TextAsset();
+            if (Static_Variables.dialogueMode == 0) {
+                fullDialogueTextAsset = Resources.Load<TextAsset>("GameJson/CNact");
+                Debug.Log(Application.dataPath.ToString()); //for testing
+            }
+            else if (Static_Variables.dialogueMode == 2) {
+                Debug.Log("Last Dialogue WIP...");
+            }
+            else {
+                Debug.Log("Invalid Dialogue Mode");
+            }
+            //fullDialogueData = JsonMapper.ToObject(File.ReadAllText(Static_Variables.actDirectories[Static_Variables.dialogueMode]));
+            fullDialogueData = JsonMapper.ToObject(fullDialogueTextAsset.ToString());
+            Static_Variables.isDialogueLoadedControlUI = true;
             StartCoroutine(waitCoroutine(1));
         }
 

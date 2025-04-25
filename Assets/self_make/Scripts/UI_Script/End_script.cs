@@ -71,7 +71,7 @@ public class End_script : MonoBehaviour
     }
     private void Awake()
     {
-        fullDialogueData = JsonMapper.ToObject(File.ReadAllText(Static_Variables.actDirectories[Static_Variables.dialogueMode]));
+        Static_Variables.isDialogueLoadedEndScript = false;
         End = gameObject.transform.parent.gameObject;
         titleObject = End.transform.GetChild(0).gameObject;
         wordObject = End.transform.GetChild(1).gameObject;
@@ -81,6 +81,23 @@ public class End_script : MonoBehaviour
     }
     private void Start()
     {
+        if (!Static_Variables.isDialogueLoadedEndScript) {
+            TextAsset fullDialogueTextAsset = new TextAsset();
+            if (Static_Variables.dialogueMode == 0) {
+                fullDialogueTextAsset = Resources.Load<TextAsset>("GameJson/CNact");
+                Debug.Log(Application.dataPath.ToString()); //for testing
+            }
+            else if (Static_Variables.dialogueMode == 2) {
+                Debug.Log("Last Dialogue WIP...");
+            }
+            else {
+                Debug.Log("Invalid Dialogue Mode");
+            }
+            //fullDialogueData = JsonMapper.ToObject(File.ReadAllText(Static_Variables.actDirectories[Static_Variables.dialogueMode]));
+            fullDialogueData = JsonMapper.ToObject(fullDialogueTextAsset.ToString());
+            Static_Variables.isDialogueLoadedEndScript = true;
+        }
+        //fullDialogueData = JsonMapper.ToObject(File.ReadAllText(Static_Variables.actDirectories[Static_Variables.dialogueMode]));
         hideEndTitle();
         endFlag = false;
     }

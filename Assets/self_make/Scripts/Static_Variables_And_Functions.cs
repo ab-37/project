@@ -27,7 +27,9 @@ public static class Static_Variables
     public static int dialogueMode;
 
     //is the dialogue loaded by ControlUI
-    public static bool isDialogueLoaded;
+    public static bool isDialogueLoadedControlUI;
+    //is the dialogue loaded by End_script
+    public static bool isDialogueLoadedEndScript;
 
     //level number
     public static int level_id;

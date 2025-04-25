@@ -458,7 +458,7 @@
                     "next": {
                         "type": "dialogue",
                         "act": 5,
-                        "part": 2
+                        "part": 3
                     }
                 }
             ]
