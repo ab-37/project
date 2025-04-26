@@ -14,8 +14,10 @@ public class ControlUI : MonoBehaviour
     public Flowchart flowchart;
     public string blockSelect;
 
+    /*
     private string LoadData;
     private JsonData StageData;
+    */
 
     //the full dialogue data
     private JsonData fullDialogueData;
@@ -38,7 +40,20 @@ public class ControlUI : MonoBehaviour
     //check if currently between dialogues
     private bool isBetweenDialogues;
 
-    private GameObject mainMenu;
+    //design other chracater name
+    public Character targetCharacter;
+
+    //variable to load next bg
+    private string newBgName;
+
+    //private GameObject mainMenu;
+
+    //public Transform test;
+
+
+    public BG_Script bgScript;
+
+    /*
     public void hideMainUI()
     {
         mainMenu.SetActive(false);
@@ -47,7 +62,8 @@ public class ControlUI : MonoBehaviour
     {
         mainMenu.SetActive(true);
     }
-
+    */
+    /*
     public void chooseStage(int value)
     {
         switch(value)
@@ -63,13 +79,17 @@ public class ControlUI : MonoBehaviour
                 break;
         }
     }
+    */
 
+    /*
     //change scence and tell what is stage running
     public void changeScene(string sceneName,string blockRunning)
     {
         SceneManager.LoadScene(sceneName);
         Static_Variables.blockRunning = blockRunning;
     }
+    */
+
     public void loadGameplayScene()
     {
         SceneManager.LoadScene("Gameplay Main");
@@ -81,6 +101,7 @@ public class ControlUI : MonoBehaviour
         flowchart.ExecuteBlock(blockName);
     }
     
+    /*
     private JsonData selectStage(string chosen_id)
     {
         for(int i=0;i< StageData["stage"].Count;i++)
@@ -90,6 +111,7 @@ public class ControlUI : MonoBehaviour
         }
         return null;
     }
+    */
     /*
     private void changeDialogueTest()
     {
@@ -132,17 +154,21 @@ public class ControlUI : MonoBehaviour
             case "Eva":
                 flowchart.ExecuteBlock("EvaSaying");
                 break;
-            case "Mysterious Man":
-                flowchart.ExecuteBlock("MysteriousManSaying");
+            case "Houtai":
+                flowchart.ExecuteBlock("HoutaiSaying");
                 break;
-            case "Back":
-                flowchart.ExecuteBlock("BackSaying");
+            case "Narration":
+                flowchart.ExecuteBlock("NarrationSaying");
                 break;
             case "Commander":
                 flowchart.ExecuteBlock("CommanderSaying");
                 break;
             case "Victor":
                 flowchart.ExecuteBlock("VictorSaying");
+                break;
+            default:
+                targetCharacter.SetStandardText(character);
+                flowchart.ExecuteBlock("OtherCharacterSaying");
                 break;
         }
     }
@@ -158,9 +184,18 @@ public class ControlUI : MonoBehaviour
 
     }*/
 
+    //find target data of target attribute of json
     private JsonData fetchJsonData(JsonData json, string targetAttribute, int targetData) {
         foreach (JsonData childJson in json) {
             if ((int)childJson[targetAttribute] == targetData) {
+                return childJson;
+            }
+        }
+        return null;
+    }
+    private JsonData fetchJsonData(JsonData json, string targetAttribute, string targetData) {
+        foreach (JsonData childJson in json) {
+            if ((string)childJson[targetAttribute] == targetData) {
                 return childJson;
             }
         }
@@ -206,9 +241,12 @@ public class ControlUI : MonoBehaviour
             Debug.Log("Failed to fetch node in version " + act.ToString());
             return false;
         }
+
+        newBgName = (string)fetchJsonData(fetchJsonData(dialogueJumpData["acts"], "act", act)["parts"], "part", part)["bg"];
         currentNodeDialogue = nodeJson["dialogues"];
         Static_Variables.currentAct = act;
         Static_Variables.currentPart = part;
+        Debug.Log(act.ToString() + "-" + part.ToString());
         return true;
     }
 
@@ -249,7 +287,7 @@ public class ControlUI : MonoBehaviour
         //bool successFlag = false;
 
         //fetch current act and part
-        JsonData json = findNextFromDialogueJump(Static_Variables.currentAct, Static_Variables.currentPart);
+        JsonData lastJson = findNextFromDialogueJump(Static_Variables.currentAct, Static_Variables.currentPart);
         
         //JsonData json = fetchJsonData(dialogueJumpData["acts"], "act", Static_Variables.currentAct)["parts"];
         /*
@@ -263,29 +301,35 @@ public class ControlUI : MonoBehaviour
             return (0, 0);
         }
         */
-        if (json == null) {
+        if (lastJson == null) {
             return (0, 0);
         }
 
         //check type
-        switch ((string)json["type"]) {
+        switch ((string)lastJson["type"]) {
             case "dialogue":
-                return ((int)json["act"], (int)json["part"]);
+            case "smallgame1":
+            case "smallgame2":
+                return ((int)lastJson["act"], (int)lastJson["part"]);
             case "level":
-                JsonData levelJson = fetchJsonData(levelsData["levels"], "level_number", (int)json["level_number"]);
+                JsonData levelJson = fetchJsonData(levelsData["levels"], "level_number", (int)lastJson["level_number"]);
                 if ((int)levelJson["type"] == 1) {
                     //countdown
-                    if (Static_Variables.lastGameScore >= (int)levelJson["target"]) {
-                        return ((int)levelJson["pass"]["act"], (int)levelJson["pass"]["part"]);
+                    if (Static_Variables.lastGameScore >= (int)lastJson["target"]) {
+                        Debug.Log("Passed");
+                        return ((int)lastJson["pass"]["act"], (int)lastJson["pass"]["part"]);
                     }
-                    return ((int)levelJson["fail"]["act"], (int)levelJson["fail"]["part"]);
+                    Debug.Log("Failed");
+                    return ((int)lastJson["fail"]["act"], (int)lastJson["fail"]["part"]);
                 }
                 else {
                     //countup
-                    if (Static_Variables.lastGameTime <= (int)levelJson["target"]) {
-                        return ((int)levelJson["pass"]["act"], (int)levelJson["pass"]["part"]);
+                    if (Static_Variables.lastGameTime <= (int)lastJson["target"]) {
+                        Debug.Log("Passed");
+                        return ((int)lastJson["pass"]["act"], (int)lastJson["pass"]["part"]);
                     }
-                    return ((int)levelJson["fail"]["act"], (int)levelJson["fail"]["part"]);
+                    Debug.Log("Failed");
+                    return ((int)lastJson["fail"]["act"], (int)lastJson["fail"]["part"]);
                 }
             default:
                 Debug.Log("Failed to fetch dialogue");
@@ -296,14 +340,16 @@ public class ControlUI : MonoBehaviour
     //LOAD THE NEXT DIALOGUE OR LEVEL (COROUTINE)
     private IEnumerator loadNextThingCoroutine() {
         JsonData lastPart = findNextFromDialogueJump(Static_Variables.currentAct, Static_Variables.currentPart);
+        flowchart.ExecuteBlock("CleanAllChatacter");
         switch ((string)lastPart["type"]) {
             case "dialogue":
                 (int, int) nextPart = nextDialogue();
                 if (loadNode(nextPart.Item1, nextPart.Item2)) {
-                    Debug.Log("Dialogue loaded successfully");
+                    Debug.Log("Dialogue " + nextPart.Item1.ToString() + "-" + nextPart.Item2.ToString() + " loaded successfully");
                     isDialogueDone = false;
                     currentLine = -1;
                     yield return new WaitForSeconds(1);
+                    bgScript.setBg(newBgName);
                 }
                 else {
                     Debug.Log("Failed to load dialogue");
@@ -311,9 +357,21 @@ public class ControlUI : MonoBehaviour
                 }
                 break;
             case "level":
-                Static_Variables.level_id = (int)lastPart["level_number"];
+                //Static_Variables.level_id = (int)lastPart["level_number"];
+                Static_Variables.level_id = (int)fetchJsonData(levelsData["levels"], "level_number", (int)lastPart["level_number"])["level_id"];
+                Debug.Log("Loading level ID " + Static_Variables.level_id);
                 loadGameplayScene();
                 break;
+            case "smallgame1":
+                Debug.Log("Loading small game 1");
+                SceneManager.LoadScene("SmallGame_1");
+                break;
+            case "smallgame2": 
+                Debug.Log("Loading small game 2");
+                SceneManager.LoadScene("SmallGame_2");
+                break;
+            case "end":
+                //end code here idk
             default:
                 Debug.Log("Failed to fetch next dialogue or level");
                 break;
@@ -321,28 +379,48 @@ public class ControlUI : MonoBehaviour
         isBetweenDialogues = false;
     }
 
+    private IEnumerator waitCoroutine(int seconds) {
+        yield return new WaitForSeconds(seconds);
+    }
+
     private void Awake()
     {
-        LoadData = File.ReadAllText(Application.dataPath + "/self_make/stage/stage.json");
-        StageData = JsonMapper.ToObject(LoadData);
+        bgScript = gameObject.transform.Find("BG/BGHandler").GetComponent<BG_Script>();
+
+        //test = gameObject.transform.parent;
+
+
+        //LoadData = File.ReadAllText(Application.dataPath + "/self_make/stage/stage.json");
+        //StageData = JsonMapper.ToObject(LoadData);
 
         blockSelect = Static_Variables.blockSelect;
-        mainMenu = GameObject.Find("MainUI");
+        //mainMenu = GameObject.Find("MainUI");
 
         //load dialogue, temp file path
-        fullDialogueData = JsonMapper.ToObject(File.ReadAllText(Application.dataPath + "/self_make/Scripts/dialogues.json"));
+        //fullDialogueData = JsonMapper.ToObject(File.ReadAllText(Application.dataPath + "/self_make/Scripts/dialogues.json"));
+        Static_Variables.isDialogueLoaded = false;
         
         //load other jsons
         dialogueJumpData = JsonMapper.ToObject(File.ReadAllText(Application.dataPath + "/self_make/Scripts/dialogue_jump.json"));
         levelsData = JsonMapper.ToObject(File.ReadAllText(Application.dataPath + "/self_make/Scripts/levels.json"));
+
+        newBgName = "1";
     }
 
     private void Start()
     {
+        //load the dialogue if haven't
+        if (!Static_Variables.isDialogueLoaded) {
+            fullDialogueData = JsonMapper.ToObject(File.ReadAllText(Static_Variables.actDirectories[Static_Variables.dialogueMode]));
+            Static_Variables.isDialogueLoaded = true;
+            StartCoroutine(waitCoroutine(1));
+        }
+
         isBetweenDialogues = true;
         isDialogueDone = false;
         (int, int) nextPart = nextDialogue();
         if (loadNode(nextPart.Item1, nextPart.Item2)) {
+            bgScript.setBg(newBgName);
             Debug.Log("Dialogue loaded successfully");
             isDialogueDone = false;
             currentLine = -1;

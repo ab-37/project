@@ -1,10 +1,27 @@
 {
     "acts": [
         {
+            "act": 0,
+            "parts": [
+                {
+                    "part": 1,
+                    "bg": "1",
+                    "next": {
+                        "type": "dialogue",
+                        "act": 1,
+                        "part": 1
+                    }
+                }
+            ]
+        },
+
+
+        {
             "act": 1,
             "parts": [
                 {
                     "part": 1,
+                    "bg": "1",
                     "next": {
                         "type": "dialogue",
                         "act": 1,
@@ -13,20 +30,50 @@
                 },
                 {
                     "part": 2,
+                    "bg": "1",
                     "next": {
                         "type": "level",
-                        "level_number": 0
+                        "level_number": 11,
+                        "target": 0,
+                        "pass": {
+                            "act": 1,
+                            "part": 3
+                        },
+                        "fail": {
+                            "act": 1,
+                            "part": 3
+                        }
                     }
                 },
                 {
                     "part": 3,
+                    "bg": "1",
                     "next": {
-                        "type": "level",
-                        "level_number": 1
+                        "type": "dialogue",
+                        "act": 1,
+                        "part": 4
                     }
                 },
                 {
                     "part": 4,
+                    "bg": "1",
+                    "next": {
+                        "type": "level",
+                        "level_number": 12,
+                        "target": 0,
+                        "pass": {
+                            "act": 1,
+                            "part": 5
+                        },
+                        "fail": {
+                            "act": 1,
+                            "part": 5
+                        }
+                    }
+                },
+                {
+                    "part": 5,
+                    "bg": "1",
                     "next": {
                         "type": "dialogue",
                         "act": 2,
@@ -35,18 +82,31 @@
                 }
             ]
         },
+
+
         {
             "act": 2,
             "parts": [
                 {
                     "part": 1,
+                    "bg": "2",
                     "next": {
                         "type": "level",
-                        "level_number": 2
+                        "level_number": 21,
+                        "target": 120,
+                        "pass": {
+                            "act": 2,
+                            "part": 2
+                        },
+                        "fail": {
+                            "act": 21,
+                            "part": 1
+                        }
                     }
                 },
                 {
                     "part": 2,
+                    "bg": "2",
                     "next": {
                         "type": "dialogue",
                         "act": 2,
@@ -55,17 +115,399 @@
                 },
                 {
                     "part": 3,
+                    "bg": "2",
                     "next": {
                         "type": "level",
-                        "level_number": 3
+                        "level_number": 22,
+                        "target": 120,
+                        "pass": {
+                            "act": 2,
+                            "part": 4
+                        },
+                        "fail": {
+                            "act": 22,
+                            "part": 1
+                        }
                     }
                 },
                 {
                     "part": 4,
+                    "bg": "2",
                     "next": {
                         "type": "dialogue",
                         "act": 3,
-                        "part": 4
+                        "part": 1
+                    }
+                }
+            ]
+        },
+        {
+            "act": 21,
+            "parts": [
+                {
+                    "part": 1,
+                    "bg": "2",
+                    "next": {
+                        "type": "level",
+                        "level_number": 22,
+                        "target": 180,
+                        "pass": {
+                            "act": 21,
+                            "part": 2
+                        },
+                        "fail": {
+                            "act": 9,
+                            "part": 21
+                        }
+                    }
+                },
+                {
+                    "part": 2,
+                    "bg": "2",
+                    "next": {
+                        "type": "dialogue",
+                        "act": 3,
+                        "part": 1
+                    }
+                }
+            ]
+        },
+        {
+            "act": 22,
+            "parts": [
+                {
+                    "part": 1,
+                    "bg": "3",
+                    "next": {
+                        "type": "level",
+                        "level_number": 31,
+                        "target": 360,
+                        "pass": {
+                            "act": 9,
+                            "part": 221
+                        },
+                        "fail": {
+                            "act": 9,
+                            "part": 222
+                        }
+                    }
+                }
+            ]
+        },
+
+
+        {
+            "act": 3,
+            "parts": [
+                {
+                    "part": 1,
+                    "bg": "3",
+                    "next": {
+                        "type": "level",
+                        "level_number": 31,
+                        "target": 300,
+                        "pass": {
+                            "act": 3,
+                            "part": 2
+                        },
+                        "fail": {
+                            "act": 6,
+                            "part": 1
+                        }
+                    }
+                },
+                {
+                    "part": 2,
+                    "bg": "3",
+                    "next": {
+                        "type": "dialogue",
+                        "act": 3,
+                        "part": 3
+                    }
+                },
+                {
+                    "part": 3,
+                    "bg": "3",
+                    "next": {
+                        "type": "level",
+                        "level_number": 32,
+                        "target": 360,
+                        "pass": {
+                            "act": 3,
+                            "part": 4
+                        },
+                        "fail": {
+                            "act": 9,
+                            "part": 3
+                        }
+                    }
+                },
+                {
+                    "part": 4,
+                    "bg": "3",
+                    "next": {
+                        "type": "smallgame1",
+                        "act": 4,
+                        "part": 1
+                    }
+                }
+            ]
+        },
+
+
+        {
+            "act": 4,
+            "parts": [
+                {
+                    "part": 1,
+                    "bg": "4_1",
+                    "next": {
+                        "type": "level",
+                        "level_number": 41,
+                        "target": 100,
+                        "pass": {
+                            "act": 4,
+                            "part": 2
+                        },
+                        "fail": {
+                            "act": 41,
+                            "part": 1
+                        }
+                    }
+                },
+                {
+                    "part": 2,
+                    "bg": "4_1",
+                    "next": {
+                        "type": "dialogue",
+                        "act": 4,
+                        "part": 3
+                    }
+                },
+                {
+                    "part": 3,
+                    "bg": "4_1",
+                    "next": {
+                        "type": "level",
+                        "level_number": 42,
+                        "target": 700,
+                        "pass": {
+                            "act": 4,
+                            "part": 4
+                        },
+                        "fail": {
+                            "act": 5,
+                            "part": 3
+                        }
+                    }
+                },
+                {
+                    "part": 4,
+                    "bg": "4_1",
+                    "next": {
+                        "type": "dialogue",
+                        "act": 5,
+                        "part": 1
+                    }
+                }
+            ]
+        },
+        {
+            "act": 41,
+            "parts": [
+                {
+                    "part": 1,
+                    "bg": "4_2",
+                    "next": {
+                        "type": "level",
+                        "level_number": 42,
+                        "target": 850,
+                        "pass": {
+                            "act": 41,
+                            "part": 2
+                        },
+                        "fail": {
+                            "act": 9,
+                            "part": 41
+                        }
+                    }
+                },
+                {
+                    "part": 2,
+                    "bg": "4_2",
+                    "next": {
+                        "type": "dialogue",
+                        "act": 5,
+                        "part": 1
+                    }
+                }
+            ]
+        },
+
+
+        {
+            "act": 5,
+            "parts": [
+                {
+                    "part": 1,
+                    "bg": "5_1",
+                    "next": {
+                        "type": "end"
+                    }
+                },
+                {
+                    "part": 2,
+                    "bg": "5_2",
+                    "next": {
+                        "type": "end"
+                    }
+                },
+                {
+                    "part": 3,
+                    "bg": "5_2",
+                    "next": {
+                        "type": "end"
+                    }
+                }
+            ]
+        },
+
+
+        {
+            "act": 6,
+            "parts": [
+                {
+                    "part": 1,
+                    "bg": "3",
+                    "next": {
+                        "type": "level",
+                        "level_number": 32,
+                        "target": 120,
+                        "pass": {
+                            "act": 6,
+                            "part": 2
+                        },
+                        "fail": {
+                            "act": 9,
+                            "part": 6
+                        }
+                    }
+                },
+                {
+                    "part": 2,
+                    "bg": "3",
+                    "next": {
+                        "type": "smallgame2",
+                        "act": 7,
+                        "part": 1
+                    }
+                }
+            ]
+        },
+
+
+        {
+            "act": 7,
+            "parts": [
+                {
+                    "part": 1,
+                    "bg": "4_7",
+                    "next": {
+                        "type": "level",
+                        "level_number": 71,
+                        "target": 300,
+                        "pass": {
+                            "act": 7,
+                            "part": 1
+                        },
+                        "fail": {
+                            "act": 9,
+                            "part": 7
+                        }
+                    }
+                },
+                {
+                    "part": 2,
+                    "bg": "4_7",
+                    "next": {
+                        "type": "dialogue",
+                        "act": 7,
+                        "part": 3
+                    }
+                },
+                {
+                    "part": 3,
+                    "bg": "4_7",
+                    "next": {
+                        "type": "level",
+                        "level_number": 72,
+                        "target": 1000,
+                        "pass": {
+                            "act": 7,
+                            "part": 4
+                        },
+                        "fail": {
+                            "act": 9,
+                            "part": 7
+                        }
+                    }
+                },
+                {
+                    "part": 4,
+                    "bg": "4_7",
+                    "next": {
+                        "type": "dialogue",
+                        "act": 5,
+                        "part": 2
+                    }
+                }
+            ]
+        },
+
+
+        {
+            "act": 9,
+            "parts": [
+                {
+                    "part": 21,
+                    "next": {
+                        "type": "end"
+                    }
+                },
+                {
+                    "part": 221,
+                    "next": {
+                        "type": "end"
+                    }
+                },
+                {
+                    "part": 222,
+                    "next": {
+                        "type": "end"
+                    }
+                },
+                {
+                    "part": 3,
+                    "next": {
+                        "type": "end"
+                    }
+                },
+                {
+                    "part": 41,
+                    "next": {
+                        "type": "end"
+                    }
+                },
+                {
+                    "part": 6,
+                    "next": {
+                        "type": "end"
+                    }
+                },
+                {
+                    "part": 7,
+                    "next": {
+                        "type": "end"
                     }
                 }
             ]

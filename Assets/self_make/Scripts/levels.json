@@ -1,61 +1,58 @@
 {
 	"levels": [
 		{
-            "level_number": 0,
+            "level_number": 11,
             "level_id": 0,
-            "type": 2,
-            "target": 0,
-            "pass": {
-                "act": 1,
-                "part": 3
-            },
-            "fail": {
-                "act": 1,
-                "part": 3
-            }
+            "type": 2
 		},
         {
-            "level_number": 1,
+            "level_number": 12,
             "level_id": 2,
-            "type": 2,
-            "target": 210,
-            "pass": {
-                "act": 1,
-                "part": 4
-            },
-            "fail": {
-                "act": 1,
-                "part": 4
-            }
+            "type": 2
         },
 
         {
-            "level_number": 2,
+            "level_number": 21,
             "level_id": 4,
-            "type": 1,
-            "target": 150,
-            "pass": {
-                "act": 2,
-                "part": 2
-            },
-            "fail": {
-                "act": 2,
-                "part": 2
-            }
+            "type": 1
 		},
         {
-            "level_number": 3,
+            "level_number": 22,
             "level_id": 9,
-            "type": 1,
-            "target": 150,
-            "pass": {
-                "act": 2,
-                "part": 4
-            },
-            "fail": {
-                "act": 2,
-                "part": 4
-            }
+            "type": 1
+		},
+
+        {
+            "level_number": 31,
+            "level_id": 7,
+            "type": 1
+		},
+        {
+            "level_number": 32,
+            "level_id": 10,
+            "type": 1
+		},
+
+        {
+            "level_number": 41,
+            "level_id": 5,
+            "type": 2
+		},
+        {
+            "level_number": 42,
+            "level_id": 11,
+            "type": 1
+		},
+
+        {
+            "level_number": 71,
+            "level_id": 8,
+            "type": 1
+		},
+        {
+            "level_number": 72,
+            "level_id": 11,
+            "type": 1
 		}
 	]
 }

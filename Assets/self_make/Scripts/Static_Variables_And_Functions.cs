@@ -7,15 +7,29 @@ public static class Static_Variables
 {
 
     //current part
-    public static int currentAct = 1;
-    public static int currentPart = 4;
+    public static int currentAct = 0;
+    public static int currentPart = 1;
     public static int lastGameScore = 0;
     public static float lastGameTime = 0;
     public static string blockSelect;//return what stage need to play 
     public static string blockRunning;//save what is it stage
 
+    //act directories
+    public static string[] actDirectories = {
+        Application.dataPath + "/self_make/Scripts/NPC_script/CNact.json", //original
+        "", //unused
+        Application.dataPath + "/self_make/Scripts/CNdialogues.json", //AI, last
+    };
+
+    //mode of the dialogue
+    //0 = original, 2 = last
+    public static int dialogueMode;
+
+    //is the dialogue loaded by ControlUI
+    public static bool isDialogueLoaded;
+
     //level number
-    public static int level_id = 4;
+    public static int level_id;
     //level data
 
     public static string[][] specialPaths = {
@@ -29,7 +43,7 @@ public static class Static_Variables
 
     //needs ? levels
     public static QuestionParameters[] levelQuestionParameters = {
-        //id 0, tutorial
+        //id 0, tutorial (1-1)
         new QuestionParameters(
             200, 0, (10, 50), (1, 50), 
             ((2, 5), (2, 5), (2, 5), (2, 5), (2, 5)),
@@ -42,7 +56,7 @@ public static class Static_Variables
             (3, 5), (2, 2), 0,
             true, false, false, false
         ),
-        //id 2, level 1
+        //id 2, level 1-2, no target
         new QuestionParameters(
             300, 2, (10, 50), (1, 50),
             ((1, 7), (1, 7), (1, 7), (1, 7), (1, 7)),
@@ -54,15 +68,15 @@ public static class Static_Variables
             ((1, 7), (1, 7), (1, 7), (1, 7), (1, 7)),
             (2, 4), (1, 1), 1
         ),
-        //id 4, level 2
+        //id 4, level 2-1, target 120p
         new QuestionParameters(
             120, 1, (10, 50), (1, 50), 
             ((1, 7), (1, 7), (1, 7), (1, 7), (1, 7)),
             (2, 4), (1, 2), 1
         ),
-        //id 5, special level
+        //id 5, level 4-1 (special), target 100s
         new QuestionParameters(
-            60, 1, (75, 400), (0, 500), 
+            300, 2, (75, 400), (0, 500), 
             ((15, 75), (15, 75), (300, 500), (15, 75), (15, 75)),
             ref specialPaths[0], (1, 1), 0,
             false, true, false, false, 1
@@ -73,25 +87,43 @@ public static class Static_Variables
             ((1, 7), (1, 7), (1, 7), (1, 7), (1, 7)),
             (2, 4), (1, 1), 1
         ),
-        //id 7, special level
+        //id 7, level 3-1 (special), target 300p/360p
         new QuestionParameters(
-            30, 1, (1, 99), (1, 99),
+            40, 1, (1, 99), (1, 99),
             ((1, 9), (1, 9), (1, 9), (1, 9), (1, 9)),
             (2, 2), (1, 1), 0,
             true, true, true, false, 1
         ),
-        //id 8, special level
+        //id 8, level 7-1 (special), target 300p
         new QuestionParameters(
             120, 1, (1000, 10000), (10, 10000),
             ((10, 25), (10, 25), (10, 25), (10, 25), (10, 25)),
             (3, 3), (1, 1), 0,
             false, false, true, false, 1
         ),
-        //id 9, level 3
+        //id 9, level 2-2, target 120p/180p
         new QuestionParameters(
             120, 1, (10, 99), (1, 99),
             ((1, 9), (1, 9), (1, 9), (1, 9), (1, 9)),
-            (2, 5), (1, 1), 1
+            (2, 5), (1, 2), 1
+        ),
+        //id 10, level 3-2, target 360p/480p
+        new QuestionParameters(
+            240, 1, (10, 99), (1, 99),
+            ((1, 9), (1, 9), (1, 9), (1, 9), (1, 9)),
+            (2, 5), (1, 2), 1
+        ),
+        //id 11, level 4-2/7-2, target 700p/850p/1000p
+        new QuestionParameters(
+            600, 1, (13, 144), (-144, 144),
+            ((1, 12), (1, 12), (1, 12), (1, 12), (1, 12)),
+            (3, 5), (1, 2), 1
+        ),
+        //id 12, unused
+        new QuestionParameters(
+            600, 1, (13, 144), (-144, 144),
+            ((1, 12), (1, 12), (1, 12), (1, 12), (1, 12)),
+            (3, 5), (1, 2), 1
         )
     };
 }
