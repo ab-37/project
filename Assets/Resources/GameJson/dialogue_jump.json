@@ -418,7 +418,7 @@
                         "target": 300,
                         "pass": {
                             "act": 7,
-                            "part": 1
+                            "part": 2
                         },
                         "fail": {
                             "act": 9,
