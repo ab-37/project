@@ -424,16 +424,18 @@ public class ControlUI : MonoBehaviour
             TextAsset fullDialogueTextAsset = new TextAsset();
             if (Static_Variables.dialogueMode == 0) {
                 fullDialogueTextAsset = Resources.Load<TextAsset>("GameJson/CNact");
-                Debug.Log(Application.dataPath.ToString()); //for testing
+                //Debug.Log(Application.dataPath.ToString()); //for testing
+                fullDialogueData = JsonMapper.ToObject(fullDialogueTextAsset.ToString());
             }
             else if (Static_Variables.dialogueMode == 2) {
-                Debug.Log("Last Dialogue WIP...");
+                fullDialogueData = JsonMapper.ToObject(File.ReadAllText("SaveFile/CNdialogues.json"));
+                //Debug.Log(File.ReadAllText("SaveFile/CNdialogues.json"));
+                //Debug.Log("Last Dialogue WIP...");
             }
             else {
                 Debug.Log("Invalid Dialogue Mode");
             }
             //fullDialogueData = JsonMapper.ToObject(File.ReadAllText(Static_Variables.actDirectories[Static_Variables.dialogueMode]));
-            fullDialogueData = JsonMapper.ToObject(fullDialogueTextAsset.ToString());
             Static_Variables.isDialogueLoadedControlUI = true;
             StartCoroutine(waitCoroutine(1));
         }
