@@ -492,5 +492,24 @@ public class ControlUI : MonoBehaviour
                 }
             }
         }
+        // press crtl to skip
+        if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl))
+        {
+            JsonData lastPart = findNextFromDialogueJump(Static_Variables.currentAct, Static_Variables.currentPart);
+
+            if ((string)lastPart["type"] != "end")
+            {
+                flowchart.ExecuteBlock("CleanAllChatacter");
+                StartCoroutine(loadNextThingCoroutine());
+                Debug.Log("skip_stage");
+            }
+            else
+            {
+                Debug.Log("Cant_skip_stage");
+            }
+                
+            
+        }
+            
     }
 }
