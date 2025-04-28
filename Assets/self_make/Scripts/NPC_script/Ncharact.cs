@@ -22,10 +22,12 @@ using System.Runtime.CompilerServices;
 using UnityEditor;
 using UnityEngine.Analytics;
 //using static System.Net.Mime.MediaTypeNames;
+//using static System.Net.Mime.MediaTypeNames;
 public class Ncharact : MonoBehaviour
 {
 
     private LoadAI test;
+    private string filePath = Path.Combine(Directory.GetCurrentDirectory(), "SaveFile");
 
     [Header("Buttons")]
     public Button start;
@@ -40,14 +42,14 @@ public class Ncharact : MonoBehaviour
     
     public GameObject ChoosePanel;
     public GameObject CheckPanel;
-    //public GameObject CheckOKPanel;
+    public GameObject AlartPanel;
     public GameObject LoadPanel;
     public GameObject Loadimage;
     public GameObject panel;
     public Text Loadtxt;
 
     bool isAIReady = false;
-
+   
 
 
 
@@ -116,6 +118,7 @@ public class Ncharact : MonoBehaviour
         panel.gameObject.SetActive(false);
         //ChoosePanel.gameObject.SetActive(false);
         CheckPanel.gameObject.SetActive(false);
+        AlartPanel.gameObject.SetActive(false);
     }
 
     private void ShowLoad()
@@ -132,8 +135,16 @@ public class Ncharact : MonoBehaviour
     }
     private void LastDia()
     {
-        Static_Variables.dialogueMode = 2;
-        test.LastJson();
+        if (!Directory.Exists(filePath))
+        {
+            AlartPanel.gameObject.SetActive(true);
+        }
+        else
+        {
+            Static_Variables.dialogueMode = 2;
+            test.LastJson();
+        }
+
     }
     private IEnumerator DisplayLoading()
     {
@@ -179,5 +190,12 @@ public class Ncharact : MonoBehaviour
             Loadtxt.text = Mathf.RoundToInt(percent).ToString() + "%";
         }
     }
-    
+    public void ExitGame()
+    {
+        Debug.Log("Exit Game");
+        Application.Quit();
+        //EditorApplication.isPlaying = false;
+
+    }
+
 }

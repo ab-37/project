@@ -89,7 +89,7 @@ public class End_script : MonoBehaviour
                 fullDialogueData = JsonMapper.ToObject(fullDialogueTextAsset.ToString());
             }
             else if (Static_Variables.dialogueMode == 2) {
-                fullDialogueData = JsonMapper.ToObject(File.ReadAllText("SaveFile/CNdialogues.json"));
+                fullDialogueData = JsonMapper.ToObject(File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "SaveFile", "CNdialogues.json")));
                 //Debug.Log("Last Dialogue WIP...");
             }
             else {

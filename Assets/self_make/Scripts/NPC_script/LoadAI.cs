@@ -41,8 +41,9 @@ public class LoadAI : MonoBehaviour
 
     //private string outputFilePath = "acter.txt";
     //private string translateFilepath = "translate.txt";
-    private string jsonFilePath = "SaveFile\\dialogues.json";
-    private string jsonFilePath2 = "SaveFile\\CNdialogues.json";
+    private string filepath = Path.Combine(Directory.GetCurrentDirectory(), "SaveFile");
+    private string jsonFilePath = Path.Combine(Directory.GetCurrentDirectory(), "SaveFile", "dialogues.json");
+    private string jsonFilePath2 = Path.Combine(Directory.GetCurrentDirectory(), "SaveFile", "CNdialogues.json");
     private string CNacts;
     //private string CNacts;
     //  private string newtrans = "trans2.txt";
@@ -86,6 +87,7 @@ public class LoadAI : MonoBehaviour
         {
             Debug.Log("scriptfile contents: " + scriptfile.text);
         }
+        
     }
 
 
@@ -118,6 +120,14 @@ public class LoadAI : MonoBehaviour
             {
                 Debug.LogError($"Character {kvp.Key} is not assigned!");
             }
+        }
+        if (!Directory.Exists(filepath))
+        {
+            Directory.CreateDirectory(filepath);
+        }
+        else
+        {
+            Debug.Log("The folder is exist!");
         }
 
         SaveDialogueLogToJson();
@@ -231,8 +241,21 @@ public class LoadAI : MonoBehaviour
         string prompt = $"Script Line: {originalLine}\n";
         //prompt += $"Script Outline: {CurrentOutline}";
         string response = await characters[characterName].Chat(prompt);
-        response = Regex.Replace(response, @"\n\n---", "").Trim();
-        response = response.Replace("\"", "");
+        //response = Regex.Replace(response, @"\n\n", "").Trim();
+        if (characterName == "Eva")
+        {
+            response = Regex.Replace(response, @".*?:", "").Trim();
+        }
+        else if (characterName == "Houtai")
+        {
+            response = Regex.Replace(response, @".*?\n\n", "").Trim();
+        }
+        else if (characterName == "Kate")
+        {
+            response = Regex.Replace(response, @"\([^)]*\)", "").Trim();
+        }
+        response = response.Replace("\n", "").Replace("\"", "");
+        //response = Regex.Replace(response, @".*?:", "").Trim();
         return response;
 
     }
@@ -490,11 +513,7 @@ public class LoadAI : MonoBehaviour
         }
         Debug.Log("Translation corrections saved successfully.");
     }
-    public void ExitGame()
-    {
-        Debug.Log("Exit Game");
-        Application.Quit();
-    }
+    
 }
 
 [System.Serializable]
