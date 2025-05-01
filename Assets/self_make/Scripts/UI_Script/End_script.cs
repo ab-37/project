@@ -26,13 +26,14 @@ public class End_script : MonoBehaviour
     private bool endFlag;
     private void changeTitleWordLog()
     {
-        string unicodeWord = JsonMapper.ToJson(fullDialogueData["acts"][Static_Variables.currentAct - 1]["content"][Static_Variables.currentPart - 1]["outline"]);
-        string wordtext= unicodeWord;
+        //string unicodeWord = JsonMapper.ToJson(fullDialogueData["acts"][Static_Variables.currentAct - 1]["content"][Static_Variables.currentPart - 1]["outline"]);
 
-        if(Static_Variables.dialogueMode==0)
-            wordtext = Regex.Unescape(unicodeWord);
+        //string wordtext= unicodeWord;
 
-        word.text = wordtext;
+        ////if(Static_Variables.dialogueMode==0)
+        ////    wordtext = Regex.Unescape(unicodeWord);
+
+        //word.text = wordtext;
         if (Static_Variables.currentAct == 9)
         {
             title.text = "Bad End";

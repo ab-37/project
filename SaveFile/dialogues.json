@@ -11,88 +11,18 @@
             {
               "character": "Commander",
               "line": "Kate, we've receive intelligence that an abandoned factory on the outskirts may be a front for illegal android production. Your mission is to infiltrate, confirm the intel, and collect any relevant evidence."
-            },
-            {
-              "character": "Kate",
-              "line": "Very unfortunate that another replicant incident occurred. I'm glad you're here to assist me in handling the situation."
-            },
-            {
-              "character": "Commander",
-              "line": "The site may be guarded by heavily armed personnel. Avoid direct confrontation unless absolutely necessary. Your priority is gathering evidence."
             }
           ]
         },
         {
           "node": 2,
           "outline": "Kate was discovered by patrol officers when he sneaked into the factory and was attacked by them. He used cover and his superb marksmanship to defeat them one by one.",
-          "dialogues": [
-            {
-              "character": "Patrol Guard A",
-              "line": "Do we really have to pull night shifts in this dump? Even the rats won't come near this place."
-            },
-            {
-              "character": "Patrol Guard B",
-              "line": "Stop bellyaching. I heard there's an important operation going on. We can't afford any mistakes."
-            },
-            {
-              "character": "Narration",
-              "line": "Rustling sounds in the distance…"
-            },
-            {
-              "character": "Patrol Guard B",
-              "line": "Did you hear that?!"
-            },
-            {
-              "character": "Patrol Guard A",
-              "line": "Relax, it's probably just a rat. This place is crawling with them."
-            },
-            {
-              "character": "Patrol Guard B",
-              "line": "No way! Orders are orders—nothing suspicious gets ignored!"
-            },
-            {
-              "character": "Patrol Guard A",
-              "line": "Ugh, fine! I'll go check it out. Happy now?"
-            },
-            {
-              "character": "Narration",
-              "line": "The ventilation shaft is empty, except for some rat droppings."
-            },
-            {
-              "character": "Patrol Guard A",
-              "line": "See? You're just paranoid—wait, what the—?!"
-            },
-            {
-              "character": "Narration",
-              "line": "A man in a detective's coat stands by the doorway. A fallen guard lies unconscious beside him."
-            },
-            {
-              "character": "Patrol Guard A",
-              "line": "Who the hell are you?! How did you get in here?!"
-            },
-            {
-              "character": "Narration",
-              "line": "Before the guards can react, the man smashes the alarm system and pulls out a hacking device."
-            },
-            {
-              "character": "Kate",
-              "line": "Sigh... Another day, another pain. Let's focus on the task at hand and resolve this replicant issue efficiently."
-            },
-            {
-              "character": "Narration",
-              "line": "Battle begins. Kate activates her hacking device."
-            }
-          ]
+          "dialogues": []
         },
         {
           "node": 3,
           "outline": "Kate used hacking techniques to erase the patrol officers' short-term memories, then quickly cleaned up the scene and proceeded to the destination.",
-          "dialogues": [
-            {
-              "character": "Patrol Guard A",
-              "line": "Ah!!!!"
-            }
-          ]
+          "dialogues": []
         },
         {
           "node": 4,

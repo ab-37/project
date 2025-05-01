@@ -6,7 +6,7 @@
       "content": [
         {
           "node": 1,
-          "outline": "凱特接到命令，調查一處廢棄工廠，這裡被懷疑是非法製造機器人活動的據點",
+          "outline": "第一幕開場",
           "dialogues": [
             {
               "character": "Commander",
@@ -28,7 +28,7 @@
         },
         {
           "node": 2,
-          "outline": "潛入工廠",
+          "outline": "第一幕遊戲一前",
           "dialogues": [
             {
               "character": "Patrol Guard A",
@@ -90,7 +90,7 @@
         },
         {
           "node": 3,
-          "outline": "遊戲一結束",
+          "outline": "第一幕遊戲一後",
           "dialogues": [
             {
               "character": "Patrol Guard A",
@@ -112,7 +112,7 @@
         },
         {
           "node": 4,
-          "outline": "發現未完成的仿生人",
+          "outline": "第一幕遊戲二前",
           "dialogues": [
             {
               "character": "Narration",
@@ -166,7 +166,7 @@
         },
         {
           "node": 5,
-          "outline": "遊戲二結束",
+          "outline": "第一幕遊戲二後",
           "dialogues": [
             {
               "character": "Kate",
@@ -227,7 +227,7 @@
       "content": [
         {
           "node": 1,
-          "outline": "遊戲1",
+          "outline": "第二幕遊戲一前",
           "dialogues": [
             {
               "character": "Narration",
@@ -310,7 +310,7 @@
         },
         {
           "node": 2,
-          "outline": "遊戲一結束",
+          "outline": "第二幕遊戲一後",
           "dialogues": [
             {
               "character": "Narration",
@@ -328,7 +328,7 @@
         },
         {
           "node": 3,
-          "outline": "第二場戰鬥",
+          "outline": "第二幕遊戲二前",
           "dialogues": [
             {
               "character": "Narration",
@@ -375,7 +375,7 @@
 
         {
           "node": 4,
-          "outline": "遊戲二結束",
+          "outline": "第二幕遊戲二後",
           "dialogues": [
             {
               "character": "Narration",
@@ -472,7 +472,7 @@
       "content": [
         {
           "node": 1,
-          "outline": "遊戲一",
+          "outline": "第三幕遊戲一前",
           "dialogues": [
             {
               "character": "Narration",
@@ -539,7 +539,7 @@
         },
         {
           "node": 2,
-          "outline": "遊戲一結束",
+          "outline": "第三幕遊戲一後",
           "dialogues": [
 
             {
@@ -568,10 +568,9 @@
             }
           ]
         },
-
         {
           "node": 3,
-          "outline": "執法所的內部危機",
+          "outline": "第三幕遊戲二前",
           "dialogues": [
 
             {
@@ -634,7 +633,7 @@
         },
         {
           "node": 4,
-          "outline": "遊戲二結束",
+          "outline": "第三幕遊戲二後",
           "dialogues": [
 
             {
@@ -667,7 +666,7 @@
       "content": [
         {
           "node": 1,
-          "outline": "遊戲一",
+          "outline": "第四目遊戲一前",
           "dialogues": [
             {
               "character": "Narration",
@@ -726,7 +725,7 @@
         },
         {
           "node": 2,
-          "outline": "遊戲一結束",
+          "outline": "第四幕遊戲一結束",
           "dialogues": [
             {
               "character": "Narration",
@@ -744,7 +743,7 @@
         },
         {
           "node": 3,
-          "outline": "遊戲二",
+          "outline": "第四幕遊戲二前",
           "dialogues": [
 
             {
@@ -783,7 +782,7 @@
         },
         {
           "node": 4,
-          "outline": "遊戲二結束",
+          "outline": "第四幕遊戲二結束",
           "dialogues": [
 
             {
@@ -856,7 +855,7 @@
       "content": [
         {
           "node": 1,
-          "outline": "危機解除",
+          "outline": "結局一",
           "dialogues": [
             {
               "character": "Narration",
@@ -1320,7 +1319,7 @@
       "content": [
         {
           "node": 1,
-          "outline": "第三幕遊戲一失敗",
+          "outline": "第三幕三-2前",
           "dialogues": [
             {
               "character": "Narration",
@@ -1422,7 +1421,7 @@
         },
         {
           "node": 2,
-          "outline": "遊戲二勝利",
+          "outline": "第三幕三-2後",
           "dialogues": [
             {
               "character": "Narration",
@@ -1514,11 +1513,11 @@
     },
     {
       "version": 7,
-      "scene_description": "",
+      "scene_description": "極難關",
       "content": [
         {
           "node": 1,
-          "outline": "小遊戲前",
+          "outline": "第4.5幕-1前",
           "dialogues": [
             {
               "character": "Narration",
@@ -1568,7 +1567,7 @@
         },
         {
           "node": 2,
-          "outline": "極難一",
+          "outline": "第4.5幕-1後",
           "dialogues": [
             {
               "character": "Narration",
@@ -1638,7 +1637,7 @@
         },
         {
           "node": 3,
-          "outline": "極難一結束",
+          "outline": "第4.5幕-2前",
           "dialogues": [
             {
               "character": "Narration",
@@ -1700,7 +1699,7 @@
         },
         {
           "node": 4,
-          "outline": "極難二結束",
+          "outline": "第4.5幕-2後",
           "dialogues": [
             {
               "character": "Narration",
@@ -1762,7 +1761,7 @@
         },
         {
           "node": 221,
-          "outline": "第二幕遊戲二失敗結束",
+          "outline": "第二幕遊戲三-1成功結束",
           "dialogues": [
 
             {
@@ -1822,7 +1821,7 @@
         },
         {
           "node": 222,
-          "outline": "",
+          "outline": "第二幕遊戲三-1失敗結束",
           "dialogues": [
             {
               "character": "Narration",
@@ -1860,7 +1859,7 @@
         },
         {
           "node": 3,
-          "outline": "",
+          "outline": "第三幕遊戲二失敗",
           "dialogues": [
             {
               "character": "Narration",
@@ -1938,7 +1937,7 @@
         },
         {
           "node": 41,
-          "outline": "遊戲二輸",
+          "outline": "第四幕-2失敗結束",
           "dialogues": [
             {
               "character": "Narration",
@@ -2032,7 +2031,7 @@
         },
         {
           "node": 6,
-          "outline": "遊戲二失敗",
+          "outline": "第三幕三-2失敗結束",
           "dialogues": [
             {
               "character": "Narration",
@@ -2066,7 +2065,7 @@
         },
         {
           "node": 7,
-          "outline": "遊戲一失敗",
+          "outline": "第4.5幕失敗結束",
           "dialogues": [
             {
               "character": "Narration",
@@ -2141,84 +2140,6 @@
               "line": "無人回答，監視器的紅光靜靜閃爍，見證著未來降臨"
             }
           ]
-        },
-        {
-          "node": 8,
-          "outline": "遊戲二輸",
-          "dialogues": [
-            {
-              "character": "Narration",
-              "line": "伊娃守在外部苦戰，堅守出入口不讓任何一個敵人突入。她的手臂中彈，血流不止，但仍撐著不退"
-            },
-            {
-              "character": "Eva",
-              "line": "快點...凱特...你到底在裡面怎麼樣了..."
-            },
-            {
-              "character": "Narration",
-              "line": "中控室內，凱特與維克特已交鋒十數分鐘。煙霧瀰漫，兩人皆受傷，但差距逐漸顯現"
-            },
-            {
-              "character": "Victor",
-              "line": "很可惜，我已經不是你能擊敗的存在"
-            },
-            {
-              "character": "Narration",
-              "line": "凱特的子彈用盡，近戰被壓制，一記重拳擊中胸甲，他重重倒在地上，口吐鮮血"
-            },
-            {
-              "character": "Kate",
-              "line": "任務...還沒..."
-            },
-            {
-              "character": "Victor",
-              "line": "結束了"
-            },
-            {
-              "character": "Narration",
-              "line": "他抬起手臂，能量脈衝閃爍，最後一擊貫穿凱特的身體"
-            },
-            {
-              "character": "Narration",
-              "line": "控制室的門打開，伊娃驚恐衝入，卻只看到維克特立於火光中，而凱特，已然倒地不動"
-            },
-            {
-              "character": "Eva",
-              "line": "凱特——!!"
-            },
-            {
-              "character": "Victor",
-              "line": "沒必要再掙扎了。你的戰鬥，早就已經輸了"
-            },
-            {
-              "character": "Narration",
-              "line": "伊娃舉槍，但身後敵軍湧入。她在爆炸與槍聲中消失"
-            },
-            {
-              "character": "Narration",
-              "line": "..."
-            },
-            {
-              "character": "Narration",
-              "line": "數週後"
-            },
-            {
-              "character": "Journalist",
-              "line": "叛亂落幕，社會秩序恢復，犯罪率驟降。機械管理系統全面接管，城市安全與穩定達到前所未有的水平"
-            },
-            {
-              "character": "Narration",
-              "line": "人們適應了新的世界，街道井然有序，生活規律而穩定。但在某些角落，還是有人低聲耳語"
-            },
-            {
-              "character": "???",
-              "line": "這真的是「和平」嗎?"
-            },
-            {
-              "character": "Narration",
-              "line": "無人回答，監視器的紅光靜靜閃爍，見證著未來降臨"
-            }
-          ]
         }
       ]
     },
@@ -2228,7 +2149,7 @@
       "content": [
         {
           "node": 1,
-          "outline": "遊戲一失敗",
+          "outline": "第二幕二-2前",
           "dialogues": [
             {
               "character": "Narration",
@@ -2287,7 +2208,7 @@
         },
         {
           "node": 2,
-          "outline": "遊戲二結束",
+          "outline": "第二幕二-2後",
           "dialogues": [
             {
               "character": "Kate",
@@ -2375,12 +2296,12 @@
     },
     {
       "version": 22,
-      "scene_description": "",
+      "scene_description": "廢棄工廠",
       "content": [
 
         {
           "node": 1,
-          "outline": "第二幕遊戲二失敗",
+          "outline": "第二幕三-1前",
           "dialogues": [
             {
               "character": "Kate",
@@ -2508,7 +2429,7 @@
       "content": [
         {
           "node": 1,
-          "outline": "遊戲一輸",
+          "outline": "第四幕遊戲一失敗後",
           "dialogues": [
             {
               "character": "Narration",
@@ -2542,7 +2463,7 @@
         },
         {
           "node": 2,
-          "outline": "遊戲二",
+          "outline": "第四幕四-2前",
           "dialogues": [
             {
               "character": "Eva",
@@ -2568,7 +2489,7 @@
         },
         {
           "node": 3,
-          "outline": "遊戲二贏",
+          "outline": "第四幕四-2後",
           "dialogues": [
             {
               "character": "Victor",

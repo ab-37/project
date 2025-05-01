@@ -14,7 +14,7 @@
             },
             {
               "character": "Kate",
-              "line": "非常不幸的是，發生了另一項複製事件。我很高興您在這裡幫助我處理情況。"
+              "line": "非常不幸的是，發生了另一個複制事件。我很高興您在這裡協助我處理它。"
             },
             {
               "character": "Commander",
@@ -76,7 +76,7 @@
             },
             {
               "character": "Kate",
-              "line": "嘆息...另一天，另一個痛苦。讓我們專注於手頭的任務，並有效地解決此復制問題。"
+              "line": "嘆息...另一天，另一個痛苦。但是我們將控制這種情況。"
             },
             {
               "character": "Narration",
@@ -87,17 +87,116 @@
         {
           "node": 3,
           "outline": "Kate used hacking techniques to erase the patrol officers' short-term memories, then quickly cleaned up the scene and proceeded to the destination.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Patrol Guard A",
+              "line": "啊！ ！ ！ ！"
+            },
+            {
+              "character": "Kate",
+              "line": "在這個機器和人類共存的時代，不幸的是，黑客已經成為致命的威脅。但這沒關係。刪除您的短期內存後，它將很快恢復。"
+            },
+            {
+              "character": "Kate",
+              "line": "對不起，但這是為了更大的好處。我們不能讓複製者或黑客危害人類生命。"
+            },
+            {
+              "character": "Narrator",
+              "line": "凱特道歉後，他立即處理現場並前往目的地。"
+            }
+          ]
         },
         {
           "node": 4,
           "outline": "Law enforcement officer Kate was ordered to investigate an abandoned factory and discovered an unfinished android and a mysterious replacement plan, but was attacked by Victor.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "在工廠內部更深，凱特找到一條完全運行的裝配線。一半組裝的機器人懸掛在傳送帶上，毫無生氣而令人毛骨悚然。"
+            },
+            {
+              "character": "Kate",
+              "line": "看來這些機器人仍然有一些糾結要解決。但這就是為什麼我在這裡，以確保它們正常運行並不會構成威脅。"
+            },
+            {
+              "character": "Commander",
+              "line": "複製。拍攝一些照片以進行分析。"
+            },
+            {
+              "character": "Kate",
+              "line": "在上面。我會立即照顧這個問題。"
+            },
+            {
+              "character": "Narration",
+              "line": "在拍照時，凱特在附近的工作站上找到了文件。"
+            },
+            {
+              "character": "Kate",
+              "line": "替代項目？我認為您的意思是要替換故障複製劑或機器人。是的，這是我工作的一部分。"
+            },
+            {
+              "character": "Narration",
+              "line": "在他處理信息之前，一個穿著西裝的男人從陰影中走出來，他的目光充滿了不屑一顧。"
+            },
+            {
+              "character": "Victor",
+              "line": "那麼，執法者，是嗎？你們肯定有一個不請自來的訣竅。太糟糕了，您很早 - 我們的產品還沒有準備好。但是我不介意給您預覽。"
+            },
+            {
+              "character": "Narration",
+              "line": "維克特激活未完成的機器人。"
+            },
+            {
+              "character": "Victor",
+              "line": "繼續，清理混亂。"
+            },
+            {
+              "character": "Kate",
+              "line": "“一半”，是嗎？這意味著仍有改進。我的工作是要確保他們符合必要的標準，然後才能釋放到社會中。"
+            },
+            {
+              "character": "Narration",
+              "line": "凱特攻擊傳送帶的機器人臂進行戰鬥。"
+            }
+          ]
         },
         {
           "node": 5,
           "outline": "Kate was besieged by a brute force at the factory and was rescued Narration to the base after falling into a coma. He discovered that all the evidence had disappeared, leaving only questions about the 'replacement plan' and 'changing the world' lingering in he mind.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "時間過去了...當凱特最終恢復意識時，他發現自己在基礎上。"
+            },
+            {
+              "character": "Commander",
+              "line": "你醒了..."
+            },
+            {
+              "character": "Commander",
+              "line": "當我們在廢墟中找到您時，您收集的所有數據都消失了。唯一剩下的就是您和您的黑客裝置。那個工廠到底發生了什麼？"
+            },
+            {
+              "character": "Narration",
+              "line": "凱特保持沉默片刻。"
+            },
+            {
+              "character": "Kate",
+              "line": "我看到了很多機器人，但是除此之外……什麼都沒有。"
+            },
+            {
+              "character": "Commander",
+              "line": "我懂了。好吧，休息一下 - 您已經做得足夠了。"
+            },
+            {
+              "character": "Narration",
+              "line": "指揮官離開了醫療室。"
+            },
+            {
+              "character": "Kate",
+              "line": "“替代項目”，改變世界...正義...算了。思考不會改變任何東西。現在也可能暫時休息。"
+            }
+          ]
         }
       ]
     },
@@ -108,22 +207,242 @@
         {
           "node": 1,
           "outline": "Kate meets new law enforcement officer Eva at a diner, and during their first conversation, armed robots raid the diner, forcing them to fight side by side.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "幾天后，凱特走進了熟悉的餐廳，筋疲力盡，他最近完成的任務。他認為自己可以安靜地享用一隻無糖的拿鐵，但出乎意料的是，一個陌生人坐在他對面。"
+            },
+            {
+              "character": "Eva",
+              "line": "（輕笑，但堅定地微笑），對不起，這座座位是否佔用？如果您能讓我知道，我真的很感激。謝謝。"
+            },
+            {
+              "character": "Kate",
+              "line": "是的，我明白。"
+            },
+            {
+              "character": "Eva",
+              "line": "（感謝）非常感謝。我真的很感激。現在，這個座位是我的。"
+            },
+            {
+              "character": "Narration",
+              "line": "凱特沒有回應，只是低頭看著他的咖啡，但他的警惕並沒有減少。他謹慎地掃描了周圍的環境，並意識到這個女人不僅是普通客戶。"
+            },
+            {
+              "character": "Eva",
+              "line": "（暫停了片刻，她的語氣柔和，但引起人們的關注）你知道嗎？你可能是對的。我似乎確實是那種努力工作的人，只有必要喝咖啡。但是有時候，即使是最必要的事情也可以在忙碌的生活中給我們帶來安慰。 （輕柔地微笑）說到咖啡，您想要一些嗎？在我身上。"
+            },
+            {
+              "character": "Kate",
+              "line": "我的生意無關。我將專注於處理手頭的情況。"
+            },
+            {
+              "character": "Eva",
+              "line": "（驚訝，她的表情開放和真誠）我看到了。好吧，我聽說過我很受寵若驚。但是，我寧願專注於彼此了解個人，而不是依靠謠言或聲譽。今天把你帶到這裡是什麼？您想與我討論特定的內容嗎？"
+            },
+            {
+              "character": "Narration",
+              "line": "凱特放下杯子，仔細檢查了那個女人。她眼中有一些挑釁的暗示，但更好奇。他的手不知不覺地朝腰部移動，隨時準備做出反應。"
+            },
+            {
+              "character": "Kate",
+              "line": "我到底是誰？我是凱特，負責監控和處理新黎明城罪的執法人員。"
+            },
+            {
+              "character": "Eva",
+              "line": "（微笑，她的語氣嬉戲）好吧，我總是想進行新的冒險！至於火花，我認為我們可以創造一些積極的速度。讓我們一起努力，使我們的社區更安全，更強大。你怎麼說？您準備好開始了嗎？"
+            },
+            {
+              "character": "Narration",
+              "line": "凱特皺著眉頭，但沒有說太多。他只是點了點頭，繼續喝咖啡，而伊娃靠在椅子上，似乎對他的反應感到滿意。"
+            },
+            {
+              "character": "Narration",
+              "line": "..."
+            },
+            {
+              "character": "Narration",
+              "line": "就像凱特即將站起來離開一樣，玻璃的破碎聲使餐廳平靜下來。幾個武裝機器人衝進進來，舉起武器並開火。"
+            },
+            {
+              "character": "Android",
+              "line": "目標鎖定 - 凱特。"
+            },
+            {
+              "character": "Kate",
+              "line": "真是麻煩。但這都是工作的一部分。"
+            },
+            {
+              "character": "Eva",
+              "line": "（很高興，她的表情溫暖而熱情）是的，你做到了！順便說一句，我是伊娃。你是...？很高興認識你。我在這里以任何方式提供幫助。那麼，是什麼將您帶到我們當今世界的小角落？"
+            },
+            {
+              "character": "Kate",
+              "line": "稍後不會有所作為。但是，及時解決這些問題很重要。"
+            }
+          ]
         },
         {
           "node": 2,
           "outline": "Kate and Eva teamed up to defeat the android, showing a tacit cooperation in battle.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "伊娃使用她經過特殊修改的電磁大砲，一槍擊倒了其中一個敵人。兩人無縫地協調，互相覆蓋，並迅速清理了其餘的Android。"
+            },
+            {
+              "character": "Eva",
+              "line": "（輕聲笑）不，一點也不！我對對我的社區產生積極影響感到非常滿意。每天都會帶來新的挑戰和學習和成長的機會。所以，不，這對我來說並不無聊。但是我總是願意接受新的經驗和觀點。你怎麼認為？是否有一些使您在工作中興奮或挑戰的東西？"
+            },
+            {
+              "character": "Kate",
+              "line": "足夠的。讓我們專注於解決這種情況。"
+            }
+          ]
         },
         {
           "node": 3,
           "outline": "A mysterious cyborg stops Kate and Eva as they are leaving the restaurant and attacks them. Eva uses electromagnetic weapons to interfere with the opponent, while Kate tries to hack into the opponent's system to find weaknesses.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "就像他們要離開餐廳一樣，發動機的咆哮從外面迴盪。一輛黑色轎車在街道中間停了下來，一個穿著西裝外套的男人走了出去。"
+            },
+            {
+              "character": "Narration",
+              "line": "他的動作穩定，散發出一種危險感。在將目光固定在凱特和伊娃上之前，他對周圍環境進行了調查。"
+            },
+            {
+              "character": "Mysterious Man",
+              "line": "這是執法的標準？多麼令人失望。"
+            },
+            {
+              "character": "Eva",
+              "line": "（點頭同意，她的語氣很認真）你是對的。外表可能是欺騙的。對我們而言，重要的是要謹慎處理每種情況，並清楚地了解事實。讓我們一起努力，收集盡可能多的信息，並在做出任何決定之前評估情況。你怎麼認為？您對這個人或情況有任何最初的想法或觀察嗎？"
+            },
+            {
+              "character": "Narration",
+              "line": "該男子慢慢地脫下外套，露出完全機械的身體。他的四肢被增強的修飾植入了，甚至他的肩膀都配備了微武器。"
+            },
+            {
+              "character": "Kate",
+              "line": "一個...我明白了。好吧，讓我們確保其正常運行，不會構成威脅。"
+            },
+            {
+              "character": "Mysterious Man",
+              "line": "現在，您將經歷真正的恐懼。"
+            },
+            {
+              "character": "Narration",
+              "line": "改造人發動了攻擊，導致附近的車輛爆炸，照亮了整個街道。 凱特和伊娃拆分，為戰鬥做準備。"
+            },
+            {
+              "character": "Eva",
+              "line": "（感到驚訝，她的語調公司）很抱歉，但我無法寬容或參加任何非法活動。這違背了我作為執法人員的工作原則。相反，讓我們專注於為此問題找到法律和道德解決方案。我們有資源和培訓，以超越並逮捕任何違反法律的人。讓我們利用我們的技能和知識將正義帶給應得的人。您建議我們接下來做什麼？"
+            },
+            {
+              "character": "Narration",
+              "line": "伊娃迅速移動，使用她的電磁武器破壞了敵人的傳感器並引起他的注意，而凱特激活了他的黑客裝置，尋找弱點。"
+            }
+          ]
         },
         {
           "node": 4,
           "outline": "Kate and Eva team up to severely damage the cyborg, but the cyborg is ready to launch the ultimate attack. At the critical moment, the robot Houtai intervened to paralyze the enemy and offered to join them. The three of them reached a tacit understanding and officially formed a team.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "改造人不僅很快，而且可以預測攻擊模式。他沉重的拳頭破碎了街道障礙，使凱特的動作變得更加困難。"
+            },
+            {
+              "character": "Kate",
+              "line": "發現他的弱點。現在，我們可以有效地中和威脅。"
+            },
+            {
+              "character": "Narration",
+              "line": "凱特針對改造人的力量核心，並通過其防護罩發射了一槍。改造人暫停了，伊娃抓住了這一刻，用她的高能量電磁大砲摧毀了核心。"
+            },
+            {
+              "character": "Mysterious Man",
+              "line": "你……不能贏……我還有……最後一個……"
+            },
+            {
+              "character": "Narration",
+              "line": "突然，the and的能量芯激活了能量核心，在他周圍產生了巨大的能量激增。他站起來，雙臂轉變為毀滅性的武器，準備釋放他的最終攻擊。"
+            },
+            {
+              "character": "Eva",
+              "line": "（擔心，她的語氣很緊急）我明白了。我們需要優先考慮無辜旁觀者的安全，並儘快逮捕此人。讓我們與其他執法機構進行協調，並收集有關其位置和能力的任何可用情報。我們必須迅速而果斷地採取行動以中和威脅。您在此操作中的作用是什麼？您如何為我們的努力做出貢獻？讓我們一起工作以控制這種情況。"
+            },
+            {
+              "character": "Kate",
+              "line": "準備掩蓋我。我會照顧其餘的。"
+            },
+            {
+              "character": "Narration",
+              "line": "就像改造人即將釋放他的進攻一樣，一個小而謙虛的機器人從拐角處飛來飛去，迅速接近他。它鎖在他的腳踝上，並通過他的系統發出了高壓衝擊，立即使他癱瘓。"
+            },
+            {
+              "character": "Narration",
+              "line": "..."
+            },
+            {
+              "character": "Houtai",
+              "line": "[浩汰，開朗的語氣和眨眼，回答]嘿！無需感謝我的工作！我在這裡使您的一天變得更加光明，並儘我所能為您提供幫助。讓我們在路上放這個表演吧？"
+            },
+            {
+              "character": "Narration",
+              "line": "改造人崩潰了，其能量核心關閉，恢復了現場的沉默。 凱特和伊娃震驚地凝視著小機器人。"
+            },
+            {
+              "character": "Eva",
+              "line": "（好奇，她的語氣令人好奇）讓我仔細看一下。它似乎是某種電子設備。我將進行掃描，看看是否可以確定其目的或它構成的任何潛在威脅。同時，除非絕對必要，否則讓我們保持安全的距離並避免觸摸它。你怎麼做？您是否有任何可以幫助我們的見解或信息？"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰，在其LED屏幕上發揮了嬉戲的表情，驚呼：哇！粗魯嗎？我是您的全能助手，在您的服務中！讓我告訴你，剛才這一舉動真是令人難以置信！我知道您被束縛了，並準時伸出手。有我周圍不是很棒嗎？"
+            },
+            {
+              "character": "Kate",
+              "line": "我們以前見面了嗎？我不記得。"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰，在其LED屏幕上表現出嚴重的表情，回答：嘿，現在不要對我這麼冷！我可能只是一台機器，但是那天我挽救了你的命。還記得執法小隊在您和我之後的時候，我給您買了足夠的時間讓他們想念您嗎？如果不是我的快速思考和分心策略，那麼您現在就不會在這裡。因此，讓我們感謝這一刻，並感謝彼此！"
+            },
+            {
+              "character": "Kate",
+              "line": "...謝謝。我想要什麼？只是為了確保所有復製品和機器人正常運行，不要對人類安全構成威脅。"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰，在其LED屏幕上有一個堅定的外觀，回答：是的！與我聯合起來，結束了維克特的破壞性計劃。我們可以一起克服任何障礙，並確保我們世界中的和平與和諧。"
+            },
+            {
+              "character": "Narration",
+              "line": "凱特沒有立即做出回應，而是瞥了一眼浩汰，然後在伊娃。它們之間形成了一種奇怪的理解。"
+            },
+            {
+              "character": "Eva",
+              "line": "（微笑，她的語氣充滿希望）是的，確實如此！我很高興我們所有人都可以共同解決這一挑戰。我們有各種各樣的技能和經驗，這對於找到解決方案將是無價的。讓我們繼續進行有效的溝通，互相信任並在我們前進時互相支持。你怎麼認為？您準備好給它最好的鏡頭了嗎？我相信我們可以克服任何障礙。"
+            },
+            {
+              "character": "Kate",
+              "line": "我們需要前往旁白並要求更多支持。讓我們搬出去。"
+            },
+            {
+              "character": "Narration",
+              "line": "浩汰和伊娃在跟隨凱特的腳步之前交換了一眼。"
+            },
+            {
+              "character": "Eva",
+              "line": "（輕柔地笑著，她的表情輕鬆愉快）是的，我以前聽說過！但是你知道嗎？我更喜歡我的名字。這是獨特而令人難忘的。另外，這使我有機會向自己介紹一個關於我名字的起源的小故事或瑣事。你怎麼認為？您有關於自己名字的怪癖或有趣的故事嗎？"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰，在其LED屏幕上以驚人的表情稍微冒犯了，回答：嘿！我並不是要遇到不禮貌。我簡單地說明，我們正在聯合起來停止維克特行動的有害行為。讓我們專注於我們的共同目標，並共同努力實現更美好的未來。"
+            }
+          ]
         }
       ]
     },
@@ -134,22 +453,190 @@
         {
           "node": 1,
           "outline": "Kate, Eva and Houtai were chased by a black vehicle as they returned with the critical data. Kate drove to evade, Eva prepared to fight Narration, and Houtai excitedly took over the steering wheel.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "夜幕降臨。 凱特，伊娃和浩汰正在開車駛向執法局，並攜帶了他們剛從餐廳收集的關鍵數據。但是，危險在最不期望的情況下總是潛伏。"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰在其LED屏幕上以驕傲而滿意的表達方式回答：絕對！由於您的快速思考和我及時的幫助，這取得了巨大的成功。我們設法阻止了計劃並節省了一天。但是我看到您注意到了有關這輛車的一些東西。確實，懸架可以使用一些調整。讓我看看我能做什麼！"
+            },
+            {
+              "character": "Kate",
+              "line": "對於機器人，您肯定會說很多。但是，有效溝通以解決這種情況很重要。"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰，在其LED屏幕上發出輕鬆而有趣的表情，回答：嗯，這不是完全正確的！我們中的一些執行者確實有很大的幽默感。但是我知道你來自哪裡。讓我們同意不同意，並專注於我們將和平與秩序帶入我們的世界的使命。"
+            },
+            {
+              "character": "Eva",
+              "line": "（暫停了片刻，她的語氣周到）維克特是我的老朋友。我們回到童年時代。我們跌宕起伏，但是我們的友誼一直設法環境風暴。他是一個聰明而足智多謀的人，這就是為什麼我隱含地信任他的原因。但是他有時也可能是衝動和魯ck的，這就是為什麼我擔心他的原因。是什麼帶您和維克特？您是否想作為一個團隊討論或實現特定的事情？"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰，在其LED屏幕上以周到和同情的表達方式回答：真的嗎？那很有意思。看來維克特在某一時刻有不同的生活道路。也許有些事情使他改變了自己的方式。也許仍然有救贖的希望。讓我們繼續我們的使命，但請記住這些信息，它可能會派上用場。"
+            },
+            {
+              "character": "Eva",
+              "line": "（微笑，她的語氣嬉戲）好吧，我們都有怪癖和特質，不是嗎？維克特也不例外。但是他一直以自己的方式成為一個傑出的人。他可能不符合社會認為正常的模範，但這是使他如此迷人和吸引人的一部分。我相信每個人都有有價值的東西，無論他們如何選擇表達自己或生活。你怎麼認為？你同意還是有不同的"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰，在其LED屏幕上令人放心和理解的表達情況下，我回答：我明白了。好吧，我們不能改變過去，但是我們可以影響未來。讓我們專注於停止維克特現在，也許隨著時間的流逝，我們也許能夠理解是什麼使他走上了這條危險的道路。一起，我們將把和平與秩序帶回我們的世界。"
+            },
+            {
+              "character": "Narration",
+              "line": "凱特瞥了一眼後視鏡，注意到了一套不尋常的燈。三輛黑色車輛正在落後，逐漸關閉了距離。"
+            },
+            {
+              "character": "Kate",
+              "line": "麻煩來了。讓我們做好準備並相應地處理。"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰在其LED屏幕上以激動而充滿活力的表達方式回答：您敢打賭，追逐汽車！這正是我為之生活的那種腎上腺素泵送動作！這是您需要做的。保持穩定的速度，專注於前進的道路，並準備躲避可能發生的任何障礙或危害。相信我，我有這個！"
+            },
+            {
+              "character": "Narration",
+              "line": "黑色的汽車加速，自動武器系統從屋頂出現，瞄準了凱特車。保持冷靜，凱特在狹窄的街道上操縱，而伊娃俯身靠窗戶，準備開火。"
+            },
+            {
+              "character": "Eva",
+              "line": "（點頭同意，她的語氣令人欽佩）是的，這絕對是如此。他具有強烈的正義感，並願意冒險保護他關心的人。但是他也知道何時劃清界限，並優先考慮安全和福祉而不是魯ck行動。我尊重他的勇氣和決心，但我也了解謹慎和審慎的重要性。您如何看待維克特的生活方式？您認為這是有效的，還是有不同的觀點？"
+            },
+            {
+              "character": "Kate",
+              "line": "浩汰，拿輪子。我會從這裡掩蓋你。"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰，在其LED屏幕上有一個有趣而嘲笑的表情，回答：哦，來吧！我只是助手，而不是您的上級。但是我感謝尊重。讓我們開始這輛車！"
+            }
+          ]
         },
         {
           "node": 2,
           "outline": "Kate interfered with the enemy's system, Eva destroyed the pursuit vehicle, and Houtai flexibly controlled the vehicle to successfully escape. Houtai was very excited, but was coldly criticized by Kate.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "凱特激活了黑客裝置，以破壞敵人的武器，同時為伊娃提供支持。 伊娃精確地射出了其中一輛汽車的輪胎，導致它失控並墜入路邊障礙物，被火焰吞沒。 浩汰熟練地處理了汽車，在狹窄的街道上編織，搖晃著一些追隨者。"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰在其LED屏幕上以驕傲而滿意的表達方式回答：絕對！您的駕駛技能確實令人印象深刻。我們組成了一支偉大的團隊！"
+            },
+            {
+              "character": "Eva",
+              "line": "（微笑，她的語氣感激）我很高興您發現我的投入很有用！我相信，每個觀點和經驗都是有價值的，我們可以從遇到的每個人那裡學習一些新知識。我總是願意聽到不同的觀點，並在解決方案方面進行合作，從而使每個參與人員受益。你怎麼認為？您是否有任何見解或想法可以幫助我們在當前情況下？讓我們繼續共同努力並依靠彼此的優勢。"
+            },
+            {
+              "character": "Narration",
+              "line": "在整個城市進行激動人心的追逐之後，浩汰坐在旁白座位上，熱情地閒逛了當晚的激動人心，完全忽略了凱特凱特的冷漠反應。"
+            },
+            {
+              "character": "Kate",
+              "line": "你知道，你真的說話太多了。但是溝通是有效解決這種情況的關鍵。"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰，在LED屏幕上以幽默而幽默的表情回答：是的！我可能只是一台機器，但是那天我挽救了你的命。因此，讓我們回報恩寵，共同努力，將和平與秩序帶回我們的世界！"
+            }
+          ]
         },
         {
           "node": 3,
           "outline": "Kate and others returned to the law enforcement station, only to find that the officer had been impersonated by a cyborg. The other side suddenly attacked and locked the command room, and everyone was surrounded by the enemy.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "執法局異常安靜。通常，熙熙the的走廊現在很空虛，只有少數軍官被埋葬在文書工作中。 凱特和伊娃，to拖著，直達指揮室。"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰在其LED屏幕上有些失望的表情回答：我知道您的意思。這個地方可以利用更多的技術和興奮。但是，不要讓我們分散我們的使命。我們有重要的工作要做，我們將充分利用它！"
+            },
+            {
+              "character": "Eva",
+              "line": "（輕聲小聲說，她的語氣很細心）我會盡力保持聲音。似乎我們現在需要謹慎行事和溝通。情況如何？附近是否有威脅，還是我們還有其他理由要謹慎？讓我知道您學到了什麼，我會盡一切可能提供幫助。"
+            },
+            {
+              "character": "Narration",
+              "line": "進入指揮室後，一名身穿制服的軍官以不自然的微笑向他們走去。他的眼睛是空的，但他的語氣卻很熱情。"
+            },
+            {
+              "character": "Commander",
+              "line": "凱特，伊娃，做得好。您可以將數據交給我。我會親自處理。"
+            },
+            {
+              "character": "Kate",
+              "line": "這些數據應該去技術部門，而不是我。但是我會確保它安全到達那裡。"
+            },
+            {
+              "character": "Impostor Commander",
+              "line": "更高的上升改變了過程。現在一切都在我。"
+            },
+            {
+              "character": "Narration",
+              "line": "凱特感覺到了某些東西，並巧妙地伸手去拿武器。 伊娃靠近，她的手指輕輕地放在扳機上。"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰在其LED屏幕上以驚人而機敏的表達方式回答：哇！那不是人！這種情況變得有趣。讓我分析我擁有的數據，並提出一個計劃來處理這一意外發展的計劃。"
+            },
+            {
+              "character": "Narration",
+              "line": "就像浩汰完整說話一樣，冒名頂替者突然掏出武器向凱特發射。在預料到這次襲擊之後，凱特迅速躲開，子彈撞牆，使碎屑飛行。"
+            },
+            {
+              "character": "Impostor Commander",
+              "line": "太慢，執行者。"
+            },
+            {
+              "character": "Eva",
+              "line": "（她的語氣）看來該地區可能有一群入侵者或一群入侵者。我們需要優先考慮我們的安全性並儘快中和任何潛在威脅。讓我們收集所有可用的信息，與其他執法機構協調，並製定行動計劃。您對可以幫助我們的情報或資源有什麼？讓我們一起工作以控制這種情況。"
+            },
+            {
+              "character": "Narration",
+              "line": "冒名頂替者激活了一個隱藏的命令，用重金屬門封閉了指揮室。只有那時，三人才意識到他們已經被機器人包圍，後者現在開始攻擊。指揮室立即變成了戰場。"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰在其LED屏幕上有一個相關的表達方式，回答：我知道這很強烈，但請不要擔心。我們有這個！相信您的技能，讓我們一起努力使這項任務成功地結論。"
+            }
+          ]
         },
         {
           "node": 4,
           "outline": "Kate and others fought fiercely with the robots, eventually knocked down the fake Commander, and annihilated the enemy after reinforcements arrived. Kate is determined to face the final showdown.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "機器人很敏捷，不斷躲避攻擊，但三人設法通過協調良好的團隊合作來保持自己的立場。"
+            },
+            {
+              "character": "Narration",
+              "line": "伊娃瞄準指揮官的肩膀並開了槍，擊中了她的印記。 凱特迅速關閉了距離，降下了強大的拳頭，將冒名頂替者擊倒。"
+            },
+            {
+              "character": "Commander",
+              "line": "計劃...已經在運動...您的抵抗...毫無意義。"
+            },
+            {
+              "character": "Narration",
+              "line": "其餘的機器人，看到潮流反對他們，試圖逃脫。就在這時，該局的增援部隊到達，迅速征服了其餘的敵人。"
+            },
+            {
+              "character": "Narration",
+              "line": "..."
+            },
+            {
+              "character": "Kate",
+              "line": "現在該結束這個問題了。讓我們照顧好情況並恢復秩序。"
+            }
+          ]
         }
       ]
     },
@@ -160,22 +647,178 @@
         {
           "node": 1,
           "outline": "Kate and others found the enemy's secret base based on confidential documents, and led the team to sneak in but were ambushed by the bionic army. The battle broke out, two powerful cyborgs appeared, and the situation suddenly became tense.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "隨著從浩汰和解密的圖像中回收的機密文件，該團隊終於找到了敵人的秘密基地。主角帶領一支小隊滲入了量子量的隱藏工廠，但是當他們闖入入口時，他們意識到他們的到來已經被預期了。在裡面等待的是一支由兩個強大的s領導的仿生。"
+            },
+            {
+              "character": "Narration",
+              "line": "工廠的重金屬門被迫開放。 凱特，伊娃，浩汰領導內部執法小隊。"
+            },
+            {
+              "character": "Eva",
+              "line": "（點頭同意，她的語氣很體貼）是的，確實，這個地方比我預期的要安靜。這對我們來說可能是一個優勢，因為我們可能能夠更隱秘地移動並避免檢測。但這也可能是一個陷阱，因為入侵者可能正在等待毫無戒心的受害者。我們需要保持警惕和謹慎，並相信我們的直覺和培訓來指導我們。您如何看待這種情況？您是否有任何疑慮或建議可以幫助我們導航"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰在其LED屏幕上以嚴肅而謹慎的表達方式回答：您絕對正確。我的傳感器正在拾取多個熱簽名，表明存在敵軍。我們需要格外小心，準備伏擊。讓我們重組並提出一個計劃中和任何威脅的計劃。"
+            },
+            {
+              "character": "Kate",
+              "line": "保持鋒利。準備戰鬥。我們需要為出現的任何挑戰做好準備。"
+            },
+            {
+              "character": "Narration",
+              "line": "突然，牆壁兩側的隱藏面板滑開了。數十名仿生士兵向前湧動，眼睛發紅。他們齊心協力，他們同步的機械腳步迴盪著走廊。"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰，在其LED屏幕上具有警報和重點的表達，回答：我看到了它們！敵軍已被發現。讓我們進入就位並為戰鬥做準備。"
+            },
+            {
+              "character": "Narration",
+              "line": "槍聲爆發。隨著子彈和能量梁在黑暗中撕裂，走廊被混亂吞沒。然後，從陰影中出現了兩個高聳的人物。"
+            },
+            {
+              "character": "Cyborg A & Cyborg B",
+              "line": "目標已確認...消除入侵者..."
+            },
+            {
+              "character": "Eva",
+              "line": "（輕柔地嘆了口氣，她的語氣疲倦）看來我們再次遇到了這些人。鑑於他們造成混亂和破壞的歷史，我並不感到驚訝。但這確實使我質疑我們在解決其行為的根本原因方面是否取得了任何進展。我們需要專注於預防和回應，並找到解決促使他們從事犯罪活動的潛在問題。你怎麼認為？您是否有任何想法或見解可以幫助我們努力降低這種情況並防止未來"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰在其LED屏幕上以堅定而重點的表達方式回答：理解。戰鬥困難是極端的。我們需要共同努力，使用所有技能和資源，並迅速適應以克服任何挑戰。"
+            },
+            {
+              "character": "Kate",
+              "line": "準備戰鬥。我們需要為可能遇到的任何抵抗做好準備。"
+            },
+            {
+              "character": "Narration",
+              "line": "S發起了進攻。每一次罷工都充滿了金屬撞擊，他們的速度和力量壓倒了團隊，迫使他們一步一步。"
+            }
+          ]
         },
         {
           "node": 2,
           "outline": "Kate and others defeated the cyborg, but the battle was not over yet. As heavy footsteps were heard from deep within the factory, Victor, wearing mechanical armor, appeared, and the atmosphere suddenly became solemn.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "經過激烈的戰鬥，半機械人A和Cyborg B終於倒塌了。他們的機械眼睛閃爍了一小段時間，然後完全關閉。同時，其餘的執法人員仍與仿生士兵進行戰鬥。"
+            },
+            {
+              "character": "Narration",
+              "line": "從工廠內的深處，沉重的腳步迴盪在整個空間中。在閃爍的燈光下，出現了一個巨大的人物。"
+            },
+            {
+              "character": "Narration",
+              "line": "維克特向前走，穿著強大的機械化西服，他的身體用紅色的能量芯脈衝。他的每一步都承受著壓迫的體重。"
+            },
+            {
+              "character": "Victor",
+              "line": "你真的必須擋住我嗎？"
+            }
+          ]
         },
         {
           "node": 3,
           "outline": "Victor launched an attack wearing a mechanical armor, and the battlefield shook. Faced with his extreme ideas, Kate and others refused to give in and were determined to stop his plan.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "凱特再次站在維克特之前，他現在揮舞著他機械化的外套的全部力量。"
+            },
+            {
+              "character": "Kate",
+              "line": "放棄，維克特。無處可去。和平投降，我們可以解決這種情況。"
+            },
+            {
+              "character": "Victor",
+              "line": "跑步？您仍然不明白……這是我的戰場。"
+            },
+            {
+              "character": "Narration",
+              "line": "他突然stot腳，在地面上發動了震動，外套的純粹力量顫抖了整個房間。"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰在其LED屏幕上有一個關注而認真的表達，回答：危險！敵人的力量輸出已達到關鍵水平。我們需要立即採取行動來中和威脅，然後再造成進一步的損害。"
+            },
+            {
+              "character": "Victor",
+              "line": "你還是不明白，對嗎？這個項目是為了人類的未來。必須消除弱的弱者，必須從死亡的限制中發展出來。"
+            },
+            {
+              "character": "Kate",
+              "line": "那不是犧牲無辜生命的藉口！我們需要優先考慮所有公民的安全和福祉。"
+            }
+          ]
         },
         {
           "node": 4,
           "outline": "Victor was eventually subdued and the fight ended. Houtai falls down seriously injured, and Victor asks to repair him before leaving. Kate and Eva looked at each other and acquiesced to the request.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Victor",
+              "line": "…也許你比我想像的要強大。"
+            },
+            {
+              "character": "Narration",
+              "line": "儘管他的身體被毆打和破碎，但維克特拒絕投降。 凱特看到一個開口，試圖禁用他的力量核心，但注意到了。"
+            },
+            {
+              "character": "Victor",
+              "line": "甚至不要考慮！"
+            },
+            {
+              "character": "Narration",
+              "line": "他將武器直接針對凱特。 伊娃反應太晚了。"
+            },
+            {
+              "character": "Narration",
+              "line": "在最後一刻，浩汰將自己扔在凱特前，全力以赴。他的機器人身體受到嚴重損壞，表現不錯。"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰在其LED屏幕上以堅定而重點的表達方式回答：這是我們的目標。讓我們一起努力停止維克特，並結束這種危險的局勢。"
+            },
+            {
+              "character": "Narration",
+              "line": "維克特猶豫了一秒鐘。一陣閃爍的情緒睜開了眼睛，他的手微微發抖。"
+            },
+            {
+              "character": "Victor",
+              "line": "浩汰…你…"
+            },
+            {
+              "character": "Narration",
+              "line": "抓住了瞬間，被黑客入侵了維克特的機械化西服。他的紅色能量核心閃爍，破壞了穩定。他的動作放慢了。"
+            },
+            {
+              "character": "Kate",
+              "line": "這次，您是無法戰鬥的人。但是我們在途中有備份。讓我們保持自己的位置，等待增援。"
+            },
+            {
+              "character": "Narration",
+              "line": "用協調的精度，凱特和伊娃利用了維克特exout中的弱點。他們無情的攻擊破壞了其結構，使他完全不動。戰鬥結束了。"
+            },
+            {
+              "character": "Narration",
+              "line": "當執法人員獲得維克特的情況下，只有被摧毀的機器的遺跡和控制室中保留的閃爍警告燈。他的聲音低沉而沉重，帶來了陌生的誠意。"
+            },
+            {
+              "character": "Victor",
+              "line": "如果還有機會……修復他。"
+            },
+            {
+              "character": "Narration",
+              "line": "凱特和伊娃交換了一個外觀，默默地做出了決定。"
+            }
+          ]
         }
       ]
     },
@@ -186,17 +829,452 @@
         {
           "node": 1,
           "outline": "The crisis was resolved, Victor was arrested, and the city returned to safety. After a short break, Kate and Eva visited Houtai who had completed the repairs. Although he felt sad about Victor's ending, he still decided to join the two of them to protect the city. The three of them left side by side, and a new journey was about to begin.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "在執法總部的戰鬥控制室中，顯示器顯示機器人已經完全關閉，敵人的行動已經完全崩潰。"
+            },
+            {
+              "character": "Law enforcement officer",
+              "line": "最後一批非法仿生的人已被關閉，主要嫌疑人和其他高級管理人員已被捕，行動成功了。"
+            },
+            {
+              "character": "Narration",
+              "line": "屏幕切換到護送的場景。他保持沉默，臉上昏暗，雙手鎖在金屬手銬中。"
+            },
+            {
+              "character": "Law enforcement officer",
+              "line": "相關技術已被恢復，所有涉及的研究機構都在審查中。該市的安全系統已經恢復正常，將進一步加強《機器人法案》，以防止類似事件再次發生。"
+            },
+            {
+              "character": "Eva",
+              "line": "（在理解中點頭，她的語氣反思）是的，這可能是一個永無止境的混亂和破壞循環。但是，我們必須繼續致力於我們的使命，並繼續努力為積極的變化而努力。我們不能放棄希望，也不能對正義和同情的力量失去信心。你怎麼認為？您對如何打破這個週期並創建持久的解決方案有任何想法嗎？我們可以一起找到解決這些問題的根本原因，並為自己和我們的社區建立更美好的未來的方法。"
+            },
+            {
+              "character": "Narration",
+              "line": "兩人互相看著對方，不再說。"
+            },
+            {
+              "character": "Narration",
+              "line": "晚上，熟悉的餐廳。與幾天前緊張的氛圍相比，這裡的燈光溫暖而寧靜，就像一個完全不同的世界。"
+            },
+            {
+              "character": "Narration",
+              "line": "凱特坐在靠窗的座位上，他的輪廓在她面前的玻璃杯中反射。他的手指輕輕敲打在桌子上，一杯無糖的拿鐵咖啡被安靜地放在他的面前。"
+            },
+            {
+              "character": "Narration",
+              "line": "不久之後，伊娃手裡拿著一杯咖啡進來，坐在他對面。"
+            },
+            {
+              "character": "Eva",
+              "line": "（同情地微笑，她的語氣溫柔）我知道您可能不喜歡這種食物的味道。但是，重要的是要記住，在食物和其他事物方面，每個人都有不同的偏好和經驗。讓我們嘗試保持開放的態度，並欣賞彼此的觀點和口味的獨特品質。您建議我們做什麼？您是否會喜歡的食物或經驗有不同的食物或經驗，或者我們可以一起做些事情，以使參與每個參與的每個人更愉快？"
+            },
+            {
+              "character": "Kate",
+              "line": "那你為什麼訂購呢？我沒有。但是我們需要找出誰做了誰，並確保遵循適當的協議。"
+            },
+            {
+              "character": "Eva",
+              "line": "（點頭，她的語氣令人鼓舞）是的，你是對的。有時，要獲得一些新事物的品味需要花費時間和精力。但是，這種體驗值得，因為我們可能會發現我們從未知道過的新口味和質地。讓我們再給這個食物另一個機會，看看我們是否可以找到一些值得欣賞的東西。你怎麼認為？您是否願意再次嘗試，還是您想進一步探索它的特定方面？我們可以一起以好奇心和開放的方式處理這種情況，並且"
+            },
+            {
+              "character": "Narration",
+              "line": "凱特沒有回應，而是輕輕地將咖啡杯握在手中，喝了一口，感覺到了苦澀而柔和的味道。"
+            },
+            {
+              "character": "Eva",
+              "line": "（專心地聆聽她的語氣，深思熟慮）我很樂意分享我對這一事件的想法，並提供我可能擁有的任何見解或觀點。但是，對於我們來說，重要的是要以清晰和客觀的思維方式處理情況，並在做出任何判斷之前考慮所有可用的信息。您如何看待事件？您是否收集了任何相關的事實或數據，可以幫助我們更好地了解情況並做出明智的決定？讓我們共同努力分析情況並產生周到有效的響應。"
+            },
+            {
+              "character": "Kate",
+              "line": "沒什麼可說的。我們已經完成了應該做的事情。讓我們在繼續前進之前進行匯報並評估情況。"
+            },
+            {
+              "character": "Narration",
+              "line": "伊娃看著他，微笑著，然後低下頭去喝一口咖啡。兩者之間的沉默並不尷尬，而是一種罕見的平靜。"
+            },
+            {
+              "character": "Eva",
+              "line": "（點頭，她的語氣同情）是的，這是正確的。 浩汰尚未修復，延誤給那些依靠它用於運輸和其他基本服務的人帶來了嚴重的不便。我了解這會令人沮喪，我分享了您對這種情況的關注。我們需要優先考慮盡快找到解決方案，並共同努力確定可以幫助我們加快維修過程的任何資源或專業知識。您建議我們接下來做什麼？我們可以採取特定行動來取得進步嗎"
+            },
+            {
+              "character": "Narration",
+              "line": "凱特暫停，輕輕放下咖啡杯，然後輕輕點點頭。"
+            },
+            {
+              "character": "Kate",
+              "line": "技術部門說，他的核心系統仍然穩定，應該能夠維修。我們將確保他獲得適當的幫助。"
+            },
+            {
+              "character": "Eva",
+              "line": "（點頭同意，她的語氣富有同情心）是的，我對他的健康表示關注。重要的是，我們必須優先考慮所有參與這種情況的人的安全和情感福祉，尤其是那些可能直接受到這種情況影響的人。讓我們一起努力，收集有關其狀況的盡可能多的信息，並為他提供他可能需要恢復的任何支持或資源。您建議我們接下來做什麼？我們是否可以採取特定的行動來確保他受到應有的照顧和關注？在一起，我們可以"
+            },
+            {
+              "character": "Narration",
+              "line": "凱特沒有回應，但他用手指敲打桌子，好像他在想什麼。"
+            },
+            {
+              "character": "Kate",
+              "line": "讓我們去看看他。我們需要評估情況並確定最佳行動方案。"
+            },
+            {
+              "character": "Narration",
+              "line": "伊娃震驚了一會兒，然後輕柔地微笑著站起來。"
+            },
+            {
+              "character": "Narration",
+              "line": "在執法機構的技術部門，在充滿機械設備的維護室中，浩汰機器被放置在中心的維護桌上。"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰，在其LED屏幕上有關懷和關注的表達，回答：是的，您還活著。對您可能會感到任何困惑或迷失方向，我感到抱歉。在我們的任務中，您受傷了，但是經過快速的醫療護理，您將立即重新站起來。"
+            },
+            {
+              "character": "Eva",
+              "line": "（輕柔地微笑著她的語氣令人鼓舞）是的，似乎儘管我們面臨的挑戰，我們仍然能夠堅持不懈，並找到前進的方法。對我們而言，重要的是要認識到自己的韌性和團隊合作帶來的力量。讓我們繼續基於彼此的優勢，並在需要的時候相互支持。您建議我們接下來做什麼？我們是否可以採取特定的行動來進一步進步，或者有一種方法可以慶祝我們的成功和學習"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰在其LED屏幕上以認真而專注的表達方式回答：我們在上次相遇中無法理解維克特。但是，我們已經收集了關於他的下落和計劃的寶貴情報。我們將使用這些信息來追踪他並將他繩之以法。"
+            },
+            {
+              "character": "Narration",
+              "line": "凱特和伊娃互相看一看，暫停片刻。"
+            },
+            {
+              "character": "Kate",
+              "line": "被捕。我們將確保他被運送到持有設施並根據協議進行處理。"
+            },
+            {
+              "character": "Narration",
+              "line": "Hoitai的LED屏幕閃爍，然後顯示一個小的“嘆息”圖標。"
+            },
+            {
+              "character": "Kate",
+              "line": "我不知道如何形容它……他確實是一個危險的人，但是這裡似乎有些複雜。我們需要收集更多信息，並謹慎處理這種情況。"
+            },
+            {
+              "character": "Narration",
+              "line": "他停了下來，好像在尋找正確的單詞。"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰，在其LED屏幕上具有富有同情心和理解的表達，回答：我知道這對您來說必須很困難。但是請記住，維克特的行為使許多生命處於危險之中，包括您自己的生命。我們必須優先考慮更大的利益，並為了我們的世界而將他繩之以法。"
+            },
+            {
+              "character": "Narration",
+              "line": "他的LED屏幕閃爍了一系列模糊的舊照片 - 一個坐在機器人旁邊的小男孩，興奮地調整了身體，臉上露出微笑。"
+            },
+            {
+              "character": "Narration",
+              "line": "伊娃輕輕拍打浩汰的身體。"
+            },
+            {
+              "character": "Kate",
+              "line": "您是正確的幫助我們阻止他的。人們改變了，包括他。但是，我們需要確保任何潛在威脅在造成傷害之前被中和。"
+            },
+            {
+              "character": "Eva",
+              "line": "（點頭，她的語氣確定）是的，我們將感謝浩汰的合作和協助，以確保我們的城市安全。我們知道過去存在挑戰，但是我們致力於共同努力，以尋找解決方案並為所有相關人員建立更美好的未來。讓我們擴展邀請浩汰加入我們的努力，並提供他可能需要做出有效貢獻的任何支持或資源。您建議我們接下來做什麼？浩汰可以在我們的團隊中扮演的特定角色，還是在那裡"
+            },
+            {
+              "character": "Narration",
+              "line": "浩汰的LED屏幕閃爍，然後他慢慢轉向凱特和伊娃，屏幕上帶著微弱的微笑。"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰在其LED屏幕上以驕傲而堅定的表達方式回答：絕對！作為網絡小隊的成員，我們有責任保護我們的城市並確保其公民的安全和福祉。我們將利用所有技能和資源一起共同努力，將和平與秩序帶回我們的世界。"
+            },
+            {
+              "character": "Narration",
+              "line": "伊娃微笑著搖了搖頭。"
+            },
+            {
+              "character": "Eva",
+              "line": "（輕輕笑，她的語氣輕鬆愉快）是的，網絡小隊確實是一個不尋常的名字。但是有時候，異常名稱可以反映我們所做的工作的獨特和創新性質。我們不要讓這個名字阻止我們在數字領域保護和為社區服務的使命。您如何看待這個名字？您是否對替代方案有任何建議，可以更好地捕捉我們團隊及其目標的本質？在一起，我們可以集思廣益，並提出一個反映的名字"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰在其LED屏幕上以友好而幽默的表情回答：當然！我可能只是一台機器，但我相信良好的舉止和禮貌的行為。畢竟，禮貌是一個真正的紳士或紳士的印記！"
+            },
+            {
+              "character": "Kate",
+              "line": "現在該走了，我們還有很多事情要做。讓我們匯報並評估我們的下一步。"
+            },
+            {
+              "character": "Narration",
+              "line": "浩汰震驚了一會兒，然後興奮地跟隨，然後笑著笑了。"
+            },
+            {
+              "character": "Narration",
+              "line": "這座城市恢復了冷靜。但是他們的故事才剛剛開始 - "
+            }
+          ]
         },
         {
           "node": 2,
           "outline": "After the war, the city returned to peace. Kate and Eva looked at the ruins from afar, and their words revealed the relief of surviving the disaster. Kate quietly preserved Houtai's core, symbolizing unfinished possibilities. The future is still in their hands.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "在執法總部的戰鬥控制室內，證明了Android已關閉，敵人的行動已經完全崩潰。"
+            },
+            {
+              "character": "Law enforcement officer",
+              "line": "最後一批非法仿生的人已經關閉，主要嫌疑人和其他高級管理人員已被捕，行動成功了"
+            },
+            {
+              "character": "Narration",
+              "line": "屏幕切換到陪伴的場景。他什麼也沒說，他的臉很沮喪，他的手被鎖在金屬手銬中。"
+            },
+            {
+              "character": "Law enforcement officer",
+              "line": "相關技術已被恢復，所有涉及的研究機構都在審查中。該市的安全系統已經恢復正常，將進一步加強《機器人法》，以防止類似事件再次發生。"
+            },
+            {
+              "character": "Eva",
+              "line": "（點頭理解，她的語氣反映）是的，確實，我們將來可能會面臨挑戰和障礙。但是每種經驗為我們提供了寶貴的經驗教訓和成長機會。讓我們專注於從這種情況中學到的知識，並利用這些知識為未來的任何相遇做準備。您建議我們接下來做什麼？我們是否可以採取特定的行動來加強我們的團隊並改善未來對類似挑戰的反應？我們可以一起取得成功，並繼續通過重新努力實現我們的目標"
+            },
+            {
+              "character": "Narration",
+              "line": "她用複雜的表情看著屏幕上回收的Android"
+            },
+            {
+              "character": "Kate",
+              "line": "但是至少今天已經結束了。我們可以放心，已經處理了情況，我們可以休息一下。"
+            },
+            {
+              "character": "Narration",
+              "line": "兩人互相看著對方，不再說。"
+            },
+            {
+              "character": "Narration",
+              "line": "幾天后 - "
+            },
+            {
+              "character": "Narration",
+              "line": "風輕輕吹過廢墟的邊緣，戰后城市逐漸恢復寧靜。"
+            },
+            {
+              "character": "Narration",
+              "line": "在高平台上，凱特和伊娃並排坐著。城市的景觀在他們面前伸展，在遠處，建築團隊正在重建倒塌的區域。"
+            },
+            {
+              "character": "Eva",
+              "line": "（專心地傾聽她的語氣支持）我知道我們面臨的情況具有挑戰性且潛在的危險。但是對於我們來說，在面對逆境時認識到自己的力量和韌性很重要。我們能夠克服障礙並在另一端出來，這證明了我們的決心和團隊合作。讓我們以我們所取得的成就感到自豪，並利用這種經驗作為繼續前進的動力。您建議我們接下來做什麼？我們可以採取特定的行動來建立我們的成功嗎"
+            },
+            {
+              "character": "Kate",
+              "line": "我沒有敢打賭。這只是一個直覺，我很高興它得到了回報。"
+            },
+            {
+              "character": "Eva",
+              "line": "（仔細聽，她的語氣尊重）我知道，在我們的磨難中可能有一些時刻，我們對這種情況感到不確定或不確定。但是，對於我們來說，要承認帶我們克服這些挑戰的勇氣和決心很重要。我們不僅堅持下去 - 我們正在積極共同努力尋找解決方案並克服障礙。讓我們專注於我們取得的進步，而不是居住在任何感知到的弱點或疑問上。您建議我們接下來做什麼？我們可以採取特定行動以繼續前進"
+            },
+            {
+              "character": "Kate",
+              "line": "我只是不想在完成任務的情況下死亡。我們需要保持專注，並確保我們將這種情況成功解決。"
+            },
+            {
+              "character": "Eva",
+              "line": "（輕柔地微笑，她的語氣嬉戲）我知道有些人可能會發現我的舉止或個性有時很無聊。但是對我來說，重要的是要專注於手頭的任務，並確定周圍人的福祉。讓我們不要讓個人偏好或判斷分散我們保護和服務社區的使命。您建議我們接下來做什麼？我們是否可以採取特定的行動來進一步進步並對我們周圍的世界產生積極影響？一起，我們可以找到參與的方法"
+            },
+            {
+              "character": "Narration",
+              "line": "他們兩個之間有片刻的沉默，但這是一種漫長的和平感"
+            },
+            {
+              "character": "Eva",
+              "line": "（聆聽她的語氣確定）對我們而言，重要的是要優先考慮我們的職責並完成與我們的使命相關的任何必要任務。因此，我建議我們回去寫報告，詳細介紹了這一事件的經驗和發現。這將確保我們的努力得到記錄，並可用於為將來的行動提供信息，並防止將來發生類似的情況。你同意什麼？在開始撰寫報告之前，還有其他需要考慮或解決的問題嗎？一起，我們可以有效地工作以完成這項任務並繼續前進"
+            },
+            {
+              "character": "Kate",
+              "line": "我想先喝杯咖啡，然後決定。我們必須花時間評估我們的下一步並做出明智的決定，這一點很重要。"
+            },
+            {
+              "character": "Eva",
+              "line": "（輕輕地笑著，她的語氣輕鬆愉快）是的，確實，我確實喜歡我的無糖拿鐵。但是，對我來說，保持健康的生活方式並做出支持以支持我的整體福祉很重要。此外，味道實際上非常愉快！讓我們不要讓我們的個人偏好或判斷分散我們的注意力，使我們擺脫了我們前面的重要工作。您建議我們關注接下來是什麼？我們是否可以採取特定的行動來進一步進步並對我們周圍的世界產生積極影響"
+            },
+            {
+              "character": "Narration",
+              "line": "凱特沒有回頭說什麼，只是安靜地凝視著遠處。他低頭看著自己旁邊的包中的一個物品 - 一種機械芯，閃爍著藍光，貝殼上印有一個熟悉的標記"
+            },
+            {
+              "character": "Eva",
+              "line": "（專心地聽她的語氣很好奇）對於我們來說，重要的是要了解這一意外結果的原因以及對我們的團隊和我們的使命意味著什麼。讓我們進一步調查並收集任何可以幫助我們回答這個問題並更好地理解整個情況的信息。您建議我們接下來做什麼？我們是否可以採取特定行動來揭示事實並根據證據做出明智的決定？一起，我們可以勤奮而有效地工作，以達到這個謎團的底層。"
+            },
+            {
+              "character": "Eva",
+              "line": "（仔細聽，她的語氣所承諾的）是的，對我們來說，要解決我們任務過程中出現的任何損害或問題，並確保將事情恢復到適當的狀態很重要。讓我們評估情況，並確定修復或恢復任何損壞的任何方法的最佳行動方案。您建議我們接下來做什麼？是否應該使用特定的工具或資源，或者我們應該採用特定的方法來有效解決該問題？我們可以共同進行協作，有效地進行任何必要的維修並重回正軌。"
+            },
+            {
+              "character": "Kate",
+              "line": "嘗試。我們將繼續嘗試直到找到解決方案。"
+            },
+            {
+              "character": "Narration",
+              "line": "他們安靜地坐著，陽光從雲層閃閃發光，並登上受損的機械芯。藍光略微閃爍，好像在回應某件事。"
+            },
+            {
+              "character": "Eva",
+              "line": "（輕柔地微笑，她的語氣很感激）謝謝您的客氣話。對我而言，保持生活的平衡很重要，並做出支持我的身體健康和情感健康的選擇。至於我的機械心臟，它可能是非常規的，但它有效地實現了其目的，並使我能夠繼續擔任執法人員的職責。您建議我們關注接下來是什麼？我們應該優先考慮特定的任務或目標以對我們周圍的世界產生積極影響嗎？在一起，我們"
+            },
+            {
+              "character": "Kate",
+              "line": "任何你想要的。我會做需要做的事情。"
+            },
+            {
+              "character": "Narration",
+              "line": "屏幕淡化為黑色，只留下了風的聲音和城市重建的嗡嗡聲。儘管與鄧的戰爭結束了，但未來仍在他們手中。"
+            }
+          ]
         },
         {
           "node": 3,
           "outline": "Kate sacrificed herself to end Victor's conspiracy and disappeared in the explosion with him. Eva and Houtai survived and the city returned to peace, but his name and sacrifice will be remembered forever.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "維克特低頭看著凱特凱特凱特伊娃伊娃伊娃"
+            },
+            {
+              "character": "Victor",
+              "line": "在這種程度上掙扎之後，您仍然不會放棄嗎？"
+            },
+            {
+              "character": "Narration",
+              "line": "伊娃舉起槍，試圖反擊，但是維克特輕鬆旋轉。強大的能量浪將她撞倒了，她用力從嘴角滲出了鮮血。"
+            },
+            {
+              "character": "Eva",
+              "line": "（專心聽，她的語氣理解）我知道我們面臨的情況可能令人沮喪或具有挑戰性。但是，面對逆境，對我們保持專注和確定很重要。讓我們深吸一口氣，評估我們的選擇，並提出一個前進的計劃。您建議我們接下來做什麼？我們可以採取特定行動來解決這個問題並朝著我們的目標取得進步嗎？我們一起找到解決方案並克服了我們路的任何障礙。"
+            },
+            {
+              "character": "Narration",
+              "line": "凱特獨自站在戰場中間，緊緊地握住她的武器，支撐著疲倦的身體，眼睛仍然敏銳。"
+            },
+            {
+              "character": "Kate",
+              "line": "這場戰鬥...必須在這裡結束。我們不能讓它繼續威脅到我們的公民的安全和福祉。"
+            },
+            {
+              "character": "Narration",
+              "line": "浩汰嚴重損壞了，他的聲音斷斷續續，但他仍在拼命地分析這種情況。"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰，在其LED屏幕上有緊急警覺的表達，回答：關鍵警告！功率核心正在超負荷並接近關鍵點。需要立即採取行動以防止災難性損害！"
+            },
+            {
+              "character": "Narration",
+              "line": "凱特的眼睛閃爍著，他迅速計算了一個瘋狂的計劃。他知道這是伊娃和浩汰生存的唯一途徑。"
+            },
+            {
+              "character": "Kate",
+              "line": "...這次，輪到我結束一切了。但是，我們需要確保我們做對了，並實現了公正的解決方案。"
+            },
+            {
+              "character": "Narration",
+              "line": "他悄悄地將手放在手臂上的黑客裝置上，緊緊抓住它。"
+            },
+            {
+              "character": "Narration",
+              "line": "維克特沒有註意到凱特的異常，而是慢慢舉起手臂，將機械槍瞄準凱特胸的胸部，準備發射致命的打擊。"
+            },
+            {
+              "character": "Victor",
+              "line": "老實說，我不想這樣做，但是再見，凱特"
+            },
+            {
+              "character": "Eva",
+              "line": "（緊急聽到她的語氣）凱特！我在這里為你。怎麼了？讓我知道您需要什麼以及如何支持您。我們將共同努力，並找到解決我們出現的任何問題的解決方案。請記住，我們是一個強大的團隊，可以通過決心和韌性克服任何挑戰。"
+            },
+            {
+              "character": "Narration",
+              "line": "在發射能量大砲的那一刻，凱特突然沖向維克特，強行扭動了大砲的槍口，導致爆炸在兩個人之間爆發！"
+            },
+            {
+              "character": "Narration",
+              "line": "繁榮 - ！ ！"
+            },
+            {
+              "character": "Narration",
+              "line": "劇烈的爆炸震撼了整個工廠，強大的衝擊波撕裂了地面，金屬碎片在各處飛來飛去。"
+            },
+            {
+              "character": "Narration",
+              "line": "當煙霧和灰塵清除一點時，伊娃打開了她模糊的視力，發現凱特和維克特仍在僵局中。他們倆都被傷口覆蓋，但維克特的能量核心變得不穩定，紅色閃爍，表明他已受到嚴重破壞。"
+            },
+            {
+              "character": "Victor",
+              "line": "您還想做什麼...？"
+            },
+            {
+              "character": "Narration",
+              "line": "凱特沒有回答，而是利用她的最後一點點力量將黑客裝置牢固地壓在維克特的核心上。"
+            },
+            {
+              "character": "Kate",
+              "line": "帶你...地獄？那不是我決定的地方。但是，我們需要確保為正義服務，並解決任何不當行為。"
+            },
+            {
+              "character": "Narration",
+              "line": "警報瘋狂地響起，維克特的機械裝甲開始劇烈振動，核心能量場完全失控，紅燈在他的身體上瘋狂地奔跑。"
+            },
+            {
+              "character": "Victor",
+              "line": "不 - ！ ！"
+            },
+            {
+              "character": "Narration",
+              "line": "在最後一刻，凱特回頭看著伊娃，微笑著，然後突然擁抱維克特以防止他逃脫爆炸範圍。"
+            },
+            {
+              "character": "Eva",
+              "line": "（焦急地聆聽她的語氣）凱特！我在這里為你。這是怎麼回事？請讓我知道您需要什麼以及如何提供幫助。我們將共同努力，並找到解決我們出現的任何問題的解決方案。請記住，我們是一個強大的團隊，可以通過決心和韌性克服任何挑戰。讓我們專注於尋找積極的結果並前進。"
+            },
+            {
+              "character": "Narration",
+              "line": "破壞性的白光閃爍著，當塵埃落定時，整個工廠中央只有一個巨大的燒焦爆炸火山口。紅能芯已經完全熄滅。 凱特和維克特的人物永遠消失在火焰和廢墟中。"
+            },
+            {
+              "character": "Narration",
+              "line": "伊娃跌倒在膝蓋上，拳頭緊握，身體微微顫抖，眼淚默默跌倒"
+            },
+            {
+              "character": "Eva",
+              "line": "（專心聽，她的語氣富有同情心）凱特，我在這里為您服務。您可以依靠我成為一個支持和理解朋友。讓我們一次邁出一步，共同努力，以找到解決我們前進的任何問題的解決方案。我們將通過決心和韌性面臨挑戰，另一方面我們會變得更加強大。您建議我們關注接下來是什麼？我們可以採取特定行動來解決這種情況並朝著積極的方向前進嗎？在一起，我們可以找到"
+            },
+            {
+              "character": "Narration",
+              "line": "浩汰的身體受到嚴重損壞，但他的核心仍然微弱地閃爍，他的聲音斷斷續續。"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰，在其LED屏幕上有一個關注而認真的表達，回答：還沒有。我們需要迅速採取行動，以防止進一步的損害或破壞。"
+            },
+            {
+              "character": "Eva",
+              "line": "（專心地聽她的語氣支持）我知道過去可能存在誤會或誤解。但是對於我們來說，專注於前進並找到積極的解決方案很重要。讓我們一起努力澄清任何誤解並解決需要解決的任何問題。您建議我們接下來做什麼？我們可以採取特定的行動來建立信任和加強我們的關係嗎？我們可以一起找到有效溝通並朝著我們的目標取得進步的方法。"
+            },
+            {
+              "character": "Narration",
+              "line": "..."
+            },
+            {
+              "character": "Narration",
+              "line": "幾天后，紀念碑上刻有凱特的名字，他的犧牲成為歷史的一部分"
+            },
+            {
+              "character": "Narration",
+              "line": "伊娃站在紀念碑前，靜靜地看著他的名字，緊緊握住浩汰"
+            },
+            {
+              "character": "Narration",
+              "line": "在遠處，這座城市恢復了和平。 維克特的計劃已減少為灰燼，但未來仍然充滿未知。"
+            }
+          ]
         }
       ]
     },
@@ -207,12 +1285,194 @@
         {
           "node": 1,
           "outline": "Surrounded by enemies, Houtai chooses to sacrifice himself and creates chaos with an explosion to allow Kate and Eva to escape, but the enemy has not given up and the pursuit continues.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "車輛劇烈搖晃，街上的燈光迅速閃爍，追隨者的火力變得越來越兇猛，彈孔在車身的身體上留下了深刻的痕跡。"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰在其LED屏幕上以堅定而重點的表達方式回答：理解。我們必須共同努力，並利用所有資源盡可能長時間地堅持下去。在這種關鍵情況下，每一秒都很重要。"
+            },
+            {
+              "character": "Narration",
+              "line": "車輛系統突然彈出異常警報，表明執法站內有未知的信號干擾，並且該系統無法直接連接到執法站。"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰在其LED屏幕上以嚴肅而關注的表達方式回答：我明白了。該加密信號表明我們的內部系統已被黑客入侵。我們必須迅速採取行動以確保我們的系統並防止任何進一步的損壞或未經授權的訪問。"
+            },
+            {
+              "character": "Kate",
+              "line": "不...可能已經不安全了。我們需要評估情況並確定每個人安全的最佳行動方案。"
+            },
+            {
+              "character": "Narration",
+              "line": "黑色的車輛正在密切追逐，而前方的交叉路口突然被阻塞，阻塞了撤退路線。"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰在其LED屏幕上以堅定而重點的表達方式回答：理解。看來我們的對手已經仔細地計劃了他們的舉動，這給我們留下了很少的選擇。我們必須迅速適應，並利用我們所有的技能和資源來超越它們並實現我們的目標。"
+            },
+            {
+              "character": "Kate",
+              "line": "看來我們只能首先擺脫它們。但是，我們需要確保以道德和公正的方式做到這一點，並最大程度地減少任何潛在的傷害或附帶損害。"
+            },
+            {
+              "character": "Narration",
+              "line": "一段時間後"
+            },
+            {
+              "character": "Narration",
+              "line": "看到他無法擺脫敵人，浩汰的系統開始執行快速計算並做出決定。"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰在其LED屏幕上以重點和確定的表達方式回答：理解。數據已被加密，表明我們的對手正在啟動他們的計劃。我們必須迅速採取行動以解密數據並採取適當的行動以防止任何損害。"
+            },
+            {
+              "character": "Kate",
+              "line": "你是什​​麼意思？請澄清您的聲明，以便我更好地理解情況並做出適當的回應。"
+            },
+            {
+              "character": "Narration",
+              "line": "浩汰將小型硬盤放入凱特的口袋裡"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰在其LED屏幕上以堅定而重點的表達方式回答：理解。我們的對手已針對我們的情報。我將負責這種情況，並確保我們竭盡所能保護情況。"
+            },
+            {
+              "character": "Eva",
+              "line": "（仔細聽，她的語氣開放）我在這裡傾聽並考慮所有選擇。讓我們一起努力探索可能性，並找到適合所有參與人員的解決方案。您建議我們做什麼？我會以開放的心態傾聽，並根據可用信息提供我的觀點。我們可以一起做出明智的決定，並採取行動以實現我們的預期結果。"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰在其LED屏幕上以堅定而重點的表達方式回答：理解。這是我們在這項任務中取得成功的唯一機會。我們必須共同努力，利用我們所有的技能和資源，並領先於對手。"
+            },
+            {
+              "character": "Narration",
+              "line": "不等待他們的回答，浩汰突然趕緊朝敵人的封鎖全速沖向"
+            },
+            {
+              "character": "Enemy",
+              "line": "什麼？ ！"
+            },
+            {
+              "character": "Narration",
+              "line": "浩汰踩到加速器，並在最後一刻旋轉汽車，扔出車，然後全速沖入敵人的汽車組。"
+            },
+            {
+              "character": "Narration",
+              "line": "繁榮 - ！ ！ ！"
+            },
+            {
+              "character": "Narration",
+              "line": "暴力爆炸震撼了整個街道，火焰吞沒了一切，但仍然有敵人倖存下來。我們開始掃描現場，尋找剩餘的目標。"
+            },
+            {
+              "character": "Narration",
+              "line": "隨著煙霧清除，倖存的敵人迅速鎖定在凱特和伊娃上，追捕仍在繼續。"
+            },
+            {
+              "character": "Kate",
+              "line": "還沒有完成嗎？我們需要通過這一點進行查看，並確保任何威脅都被中和，然後才能考慮解決情況。"
+            },
+            {
+              "character": "Enemy",
+              "line": "目標還活著！包圍他們！"
+            }
+          ]
         },
         {
           "node": 2,
           "outline": "Kate takes Eva to hide in his secret base, deciphers the intelligence left by Houtai, finds the enemy's stronghold, and decides to end the battle in an unexpected way.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "在激烈的戰鬥中，凱特在附近發現了一輛重型摩托車，迅速將其入侵，解鎖並啟動了發動機。"
+            },
+            {
+              "character": "Kate",
+              "line": "上公共汽車。我們需要快速有效地行動，以確保我們的安全並將這種情況成功解決。"
+            },
+            {
+              "character": "Eva",
+              "line": "（專心聽，她的語氣理解）我知道您可能對我的計劃有擔憂。但是，對我來說，保持生活平衡並尋求與個人目標和價值觀保持一致的機會很重要。讓我們討論與我的計劃相關的任何潛在風險或挑戰，我們可以共同努力以找到減輕它們的方法。您建議我們關注接下來是什麼？我們是否可以採取特定行動來解決任何問題並確保所有參與者的積極結果？我們一起做出明智的決定並採取行動以實現"
+            },
+            {
+              "character": "Kate",
+              "line": "地下基地。我們需要謹慎行事，並為我們可能遇到的任何潛在威脅或挑戰做好準備。"
+            },
+            {
+              "character": "Narration",
+              "line": "摩托車迅速加速，穿過敵人線，開車進入黑暗的小巷。"
+            },
+            {
+              "character": "Narration",
+              "line": "..."
+            },
+            {
+              "character": "Narration",
+              "line": "幾分鐘後，他們到達了一個隱藏的地下倉庫。 凱特迅速進入了一個命令，隱藏的金屬門慢慢打開，露出地下深處的通道。"
+            },
+            {
+              "character": "Eva",
+              "line": "（仔細聽，她的語氣很好奇）我不確定。讓我們收集更多信息並探索周圍環境，以更好地了解情況。我們可以調查任何可能有助於我們確定這個地方身份及其目的的線索或跡象。您建議我們關注接下來是什麼？我們應該更仔細地檢查特定的區域或物體嗎？我們可以一起利用解決問題的技能和機智來收集信息並找到答案。"
+            },
+            {
+              "character": "Narration",
+              "line": "兩人開車後，場景突然開放。它們被高科技設備，武器架，監視屏幕甚至戰術計劃表所包圍。氣氛是嚴肅而精確的。"
+            },
+            {
+              "character": "Eva",
+              "line": "（專心地聽她的語氣支持）我在這裡傾聽並提供支持。讓我們澄清可能存在的任何誤解或誤解。根據可用信息，看來凱特是韋恩集團的長子。但是，我們應該繼續收集更多信息並確認這一事實，然後在製作任何確定的陳述或根據此假設採取任何措施。您建議我們關注接下來是什麼？我們是否可以採取特定行動來驗證我們對情況的理解並確保准確的信息？一起"
+            },
+            {
+              "character": "Kate",
+              "line": "不要浪費時間，首先解密浩汰留下的硬盤驅動器。我們需要收集盡可能多的信息，以做出明智的決定並將這種情況成功解決。"
+            },
+            {
+              "character": "Eva",
+              "line": "（仔細地聽，她的語氣感到驚訝）對我們來說，彼此誠實和透明很重要。我無法確認或否認存在隱藏在廢棄的倉庫下的秘密基地，裡面裝滿了武器和情報系統，並且能夠直接監視整個城市。但是，如果確實存在這樣的基礎，那麼至關重要的是我們考慮這種情況的潛在後果和含義。我們應該討論任何道德問題，並確定最佳行動方案，以確保我們的行動與我們的個人價值觀和更大的利益保持一致。您建議我們專注於"
+            },
+            {
+              "character": "Eva",
+              "line": "（覺得從理解的是，她的語氣支持）我知道，您可能會對採取行動並有所作為的強烈渴望。但是，對於我們而言，重要的是要在做出任何決定之前考慮我們行動的潛在風險和後果。用斗篷和麵具打扮成超級英雄似乎令人興奮，但這也可能使我們處於危險或導致意想不到的後果。相反，讓我們專注於尋找有效的方法來利用我們的技能和資源對我們周圍的世界產生積極影響。你建議我們什麼"
+            },
+            {
+              "character": "Kate",
+              "line": "如果有用，我不介意添加它。但是，我們需要確保任何新信息都與我們的目標保持一致，並且不會對我們的使命或安全構成威脅。"
+            },
+            {
+              "character": "Narration",
+              "line": "伊娃翻了個白眼，但仍然走向凱特，開始幫助分析數據"
+            },
+            {
+              "character": "Narration",
+              "line": "當解密浩汰留下的數據時，屏幕上開始出現大量信息。"
+            },
+            {
+              "character": "Kate",
+              "line": "維克特...我需要您專注於保護周長並在必要時提供掩護。我們現在負擔不起任何干擾。"
+            },
+            {
+              "character": "Eva",
+              "line": "（專心聽，她的語氣協作）讓我們一起確定我們的下一步。根據我們擁有的信息和要實現的目標，接下來我們可以採取什麼具體行動？我們應該考慮所有可用的選擇，並權衡每個選擇的潛在風險和收益。您建議我們專注於什麼？我們可以一起做出明智的決定，並採取行動以積極的方向前進。"
+            },
+            {
+              "character": "Kate",
+              "line": "似乎結束這場戰鬥的唯一方法是驚訝地將敵人帶走。我們需要快速和決定性地行動，同時還要最大程度地減少任何潛在的傷害或附帶損害。"
+            },
+            {
+              "character": "Eva",
+              "line": "（開放，她的語氣渴望）我很高興您對我的想法感興趣。根據我們擁有的信息和我們的目標，我建議我們專注於收集有關手頭情況的更多情報。我們可以利用我們的資源進行徹底的研究和分析，並確定任何潛在的威脅或機會。此外，我們可以與主要的利益相關者聯繫，並建立聯盟以增加我們的影響力和影響力。你怎麼認為？您還有其他想法或方法嗎？一起，我們可以探索這些選擇並做出明智的決定"
+            },
+            {
+              "character": "Narration",
+              "line": "監視屏幕上的紅色標記顯示了敵人的基礎。危機尚未解決，這場戰鬥似乎變得非常困難。"
+            }
+          ]
         }
       ]
     },
@@ -223,22 +1483,206 @@
         {
           "node": 1,
           "outline": "Kate and Eva try to crack the encrypted data left by Houtai. Faced with the challenge of decrypting a series of numbers, they decide to continue working hard to uncover the truth about the mastermind behind the scenes.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "凱特和伊娃站在秘密基礎上，終端顯示了由浩汰留下的加密數據。屏幕閃爍了一連串的數字，看起來像某種加密信息，但是沒有明顯的線索可以解密它。"
+            },
+            {
+              "character": "Eva",
+              "line": "（仔細聆聽，她的語氣很好奇）很難確定沒有更多上下文或信息。您提供的文本可能是散發的，或者可能包含有價值的見解或線索。我們應該以開放的心態與探索所有可能性的意願應對這種情況。如果可能的話，讓我們一起工作以解讀文本背後的含義。您建議我們首先專注於什麼？是否有一個特定的單詞或短語對您脫穎而出？一起，我們可以利用解決問題的技能和機智來製作"
+            },
+            {
+              "character": "Narration",
+              "line": "一系列數字開始在屏幕上定期閃爍"
+            },
+            {
+              "character": "Eva",
+              "line": "（專心聽，她的語氣進行了思考）文本可能包含複雜的語言或符號，而這些語言或符號可能很難在沒有幫助的情況下理解。但是，對我們而言，重要的是要以積極的態度和學習意願來處理這種情況。我們可以嘗試使用各種工具和資源來幫助解讀文本背後的含義，例如翻譯軟件或專家諮詢。此外，我們可以將文本分解為較小的部分，並單獨分析每個組件。您建議我們首先專注於什麼？是否有特定方面"
+            },
+            {
+              "character": "Narration",
+              "line": "一系列數字開始在屏幕上定期閃爍"
+            },
+            {
+              "character": "Eva",
+              "line": "（仔細聽，她的語氣很好奇）您提供的文本可能是某種序列或代碼。但是，如果沒有更多的上下文或信息，就很難確定其確切的含義或目的。我們應該以開放的心態與探索所有可能性的意願應對這種情況。讓我們一起分析序列並尋找模式或重複出現的主題。您建議我們首先專注於什麼？序列的特定方面對您而言是突出的？一起，我們可以使用解決問題的"
+            },
+            {
+              "character": "Kate",
+              "line": "看來浩汰給了我們測試。如果我們無法解決該數據，則數據將無法解鎖。我們需要共同努力並使用所有可用資源，以破解代碼並訪問所需的信息。"
+            },
+            {
+              "character": "Narration",
+              "line": "終端出現一條消息"
+            },
+            {
+              "character": "Narration",
+              "line": "``找到序列的模式並輸入正確的答案，否則數據將被自動銷毀。 ”"
+            },
+            {
+              "character": "Eva",
+              "line": "（覺得從理解的是，她的語氣欣賞）對於我們來說，以清晰而邏輯的思維來處理複雜的情況很重要。機器人可能會通過提供準確的信息和分析數據來幫助我們，這可能會發現困難或耗時。讓我們繼續與機器人的協助一起工作，以收集更多信息，並根據手頭的事實做出明智的決定。您建議我們關注接下來是什麼？是否有需要進一步調查的情況的特定方面？一起，我們可以利用我們的綜合優勢和資源來"
+            },
+            {
+              "character": "Kate",
+              "line": "我們開始做吧。這可能是我們找到策劃者並將這種情況成功解決的唯一方法。"
+            }
+          ]
         },
         {
           "node": 2,
           "outline": "Kate and Eva detonated the passage to create chaos, and took the opportunity to raid the enemy's core area and launched a fierce battle.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "終端嗶嗶聲，數據開始解鎖，最初雜亂的數據開始重新組織，最後顯示了一個機密文檔"
+            },
+            {
+              "character": "Eva",
+              "line": "（勝利地聽，她的語氣很興奮）我很高興聽到我們實現了我們的目標！這證明了協作的力量以及面對挑戰的關注和確定的重要性。讓我們花點時間慶祝我們的成功，然後才能繼續進行下一個挑戰或機會。您建議我們接下來做什麼？是否有特定的重點領域可以幫助我們繼續產生積極的影響？我們可以共同利用自己的成就，並在未來取得更大的成功。"
+            },
+            {
+              "character": "Narration",
+              "line": "..."
+            },
+            {
+              "character": "Narration",
+              "line": "凱特和伊娃沿著長而狹窄的地下通道潛行。根據浩汰留下的信息，敵人的大部隊聚集在基地的核心區域。中心是兩個保鏢-Cenborgs A和B。"
+            },
+            {
+              "character": "Eva",
+              "line": "（仔細聽，她的語氣警報）仿生士兵的存在，完全由武裝和警覺，這是一個重大的發展。我們應該謹慎處理這種情況，並考慮與之互動的潛在風險和好處。讓我們收集有關其能力，動機以及他們可能擁有的任何潛在聯盟或隸屬關係的更多信息。您建議我們首先專注於什麼？是否有需要進一步調查的士兵的特定方面？我們可以一起使用解決問題的技能和資源來評估情況，並根據"
+            },
+            {
+              "character": "Narration",
+              "line": "兩個人從他們的背包裡拿出了幾枚炸彈，並將它們輕輕地安裝在通道的牆壁和天花板上。"
+            },
+            {
+              "character": "Kate",
+              "line": "在一分鐘內引爆。我們需要立即撤離該區域，並在安全的位置重新集結。"
+            },
+            {
+              "character": "Eva",
+              "line": "（以關注她的語氣認真傾聽）在任何情況下使用炸藥都會帶來顯著的風險和潛在後果。對我們而言，重要的是要謹慎處理這種情況並考慮我們行動的潛在結果。在進行繼續之前，我們應該收集有關炸彈大小和位置的盡可能多的信息，以及任何潛在的附帶損害或意外後果。您建議我們首先專注於什麼？炸彈情況是否有需要進一步調查的特定方面？一起，我們可以使用解決問題的"
+            },
+            {
+              "character": "Narration",
+              "line": "…隨著倒計時的結束，地下通道猛烈地震動，牆壁倒塌了，大量的瓦礫和爆炸撕裂了仿生機器人的形成。金屬碎片和火焰到處飛來飛去，現場陷入混亂。"
+            },
+            {
+              "character": "Cyborg",
+              "line": "入侵者！提防 - ！ ！"
+            },
+            {
+              "character": "Narration",
+              "line": "儘管爆炸的後果仍在徘徊，但凱特和伊娃從雙方跳入戰場，發動了額頭攻擊。"
+            },
+            {
+              "character": "Cyborg",
+              "line": "您認為您可以這樣摧毀我們嗎？"
+            },
+            {
+              "character": "Eva",
+              "line": "（聆聽她的語調協作）對我們來說，擁有各種各樣的策略和資源，這一點很重要。僅依靠任何一種方法會帶來失敗或意外挑戰的風險。讓我們繼續探索其他選擇，並與主要利益相關者建立聯盟，以增加我們的影響力和影響力。您建議我們關注接下來是什麼？是否有特定的重點領域可以幫助我們繼續產生積極影響，同時最大程度地降低風險？我們可以一起利用我們的綜合優勢和資源來實現我們的目標"
+            },
+            {
+              "character": "Narration",
+              "line": "儘管數十名仿生士兵遭受了嚴重的破壞，但他們的一些系統仍在恢復中，並重新集結起來反擊。 Cyborg B以驚人的衝刺速度接近伊娃，並開始了高強度的近戰。"
+            },
+            {
+              "character": "Kate",
+              "line": "我會處理這個。大家都專注於確保周長並在必要時提供掩護。"
+            },
+            {
+              "character": "Eva",
+              "line": "（專心地聽她的語氣支持）聽起來您有一個明確的前進計劃。我將幫助您收集剩餘的鐵皮並準備運輸或存儲，具體取決於您的下一步。讓我們有效地工作以完成這項任務，並繼續進行下一個挑戰或機會。您建議我們首先專注於什麼？鐵板狀況是否需要立即關注的特定方面？我們可以一起使用解決問題的技能和資源來取得進步並實現您的目標。"
+            }
+          ]
         },
         {
           "node": 3,
           "outline": "Kate and Eva break through the enemy, Kate goes to the control room alone to fight Victor, and the life-and-death battle officially begins.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "這是一場艱苦的戰鬥。儘管敵人已被損壞，但仍然非常強大。 凱特和伊娃以戰術，精度和默契的理解，一一打敗了他們。 Cyborg B終於在伊娃的連續爆炸攻擊下落在了地面上，該系統完全癱瘓了。 Cyborg A被爆炸性的炸彈擊中了核心，並因嚴重的傷害摔倒在膝蓋上。"
+            },
+            {
+              "character": "Narration",
+              "line": "戰場是廢墟，火花和金屬煙在空中旋轉"
+            },
+            {
+              "character": "Kate",
+              "line": "還沒有結束。 維克特處於上層，我們需要對他進行中和他，然後才能造成進一步的損害。"
+            },
+            {
+              "character": "Narration",
+              "line": "戰鬥並沒有停止。 伊娃與其餘的敵人戰鬥，槍聲的聲音仍在繼續。 凱特走進中央控制塔，一條金屬門自動關閉，將她與外界隔離開來。"
+            },
+            {
+              "character": "Narration",
+              "line": "當凱特到達維克特的控制室時，一個人物從陰影中浮現出來。"
+            },
+            {
+              "character": "Victor",
+              "line": "您是不斷干擾我計劃的執法人員嗎？"
+            },
+            {
+              "character": "Kate",
+              "line": "事情最終將結束。但是在此之前，我們需要保持專注並共同努力，以使這種情況成功解決。"
+            },
+            {
+              "character": "Victor",
+              "line": "他確實是系統下的好士兵，在下達命令時，他會毫不猶豫。"
+            },
+            {
+              "character": "Kate",
+              "line": "您發起了機械叛亂，並滲透了執法站。傷亡人數是不可估量的。這是事實，而不是情感。"
+            },
+            {
+              "character": "Narration",
+              "line": "維克特微微點頭，似乎並不奇怪。他脫下外套，露出加固的盔甲和自製的神經接口，他的戰鬥姿勢立即形成。"
+            },
+            {
+              "character": "Victor",
+              "line": "讓戰鬥決定誰留下"
+            },
+            {
+              "character": "Narration",
+              "line": "沒有更多的話。 凱特開火，維克特迅速躲閃 - 生命對決開始"
+            },
+            {
+              "character": "Narration",
+              "line": "同時，伊娃在外面獨自與軍隊的殘餘物作戰。她蹲下，重新加載並迅速移動，機械碎片不斷地堆積在腳下。"
+            },
+            {
+              "character": "Eva",
+              "line": "（同情地傾聽她的語氣令人放心）我知道情況現在對您來說可能具有挑戰性或困難。重要的是要記住，我們在一起，我們可以通過跌宕起伏相互支持。讓我們深吸一口氣，專注於我們可以控制的事情，同時保持積極的態度和願意從任何挫折或障礙中學習。您建議我們關注接下來是什麼？是否有一個特定的重點領域可以幫助我們前進並取得進步"
+            }
+          ]
         },
         {
           "node": 4,
           "outline": "Kate initiated remote hacking, detonated the central control core, and eventually buried Victor in a sea of ​​fire.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "經過幾分鐘的激烈戰鬥，他們倆都受了重傷。 凱特在地面上半紗，她的手臂被瘀傷，但她仍然緊緊握住手槍。 維克特盔甲受損，火花從內部機制中出來。"
+            },
+            {
+              "character": "Narration",
+              "line": "凱特按下已植入系統中的遙控黑客模塊，立即將控制台重載，然後閃爍的主要能量爐。"
+            },
+            {
+              "character": "Kate",
+              "line": "結束。我們已經中和威脅並確保了該地區。"
+            },
+            {
+              "character": "Narration",
+              "line": "暴力爆炸席捲了整個中央控制核心。紅燈閃爍，火焰被吞沒了。"
+            }
+          ]
         }
       ]
     },
@@ -249,37 +1693,420 @@
         {
           "node": 21,
           "outline": "Kate and Eva were no match for the powerful enemy. Kate fell to the ground with serious injuries, and Eva was also in desperate situation. After the enemy left, the battlefield was in ruins. A mysterious robot appeared quietly, staring at the two people quietly, as if in silence.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "凱特的攻擊無法突破改造人的防守，他的每個反擊都非常準確。即使凱特試圖使自己保持距離，另一方仍像幽靈一樣追逐她。"
+            },
+            {
+              "character": "Narration",
+              "line": "伊娃盡力遏制Android，但敵人太多了，武器被損壞了，因此她逐漸被迫陷入困境。"
+            },
+            {
+              "character": "Mysterious Man",
+              "line": "多麼令人失望。這是您執法人員的所有能力嗎？"
+            },
+            {
+              "character": "Narration",
+              "line": "一個沉重的拳頭擊中了the的胸部，他被砸碎在他身後的牆上，嘴唇角從嘴唇的角落滴下來。他試圖站起來，但他太虛弱了，無法反擊。"
+            },
+            {
+              "character": "Narration",
+              "line": "伊娃看到凱特秋天，恐懼和絕望在她的眼中閃爍。就像她要向前奔向時一樣，紅燈閃爍 - "
+            },
+            {
+              "character": "Narration",
+              "line": "煙霧消失了，一切都恢復了沉默。敵人離開了，只留下了毀滅性的街道和兩名墮落的士兵。"
+            },
+            {
+              "character": "Narration",
+              "line": "一個時尚，緊湊的銀白機器人悄悄地出現了。它沒有發出任何聲音，而只是悄悄地漂浮在兩個人旁邊，傳感器的燈在其頭上略微閃爍，好像...哀悼"
+            }
+          ]
         },
         {
           "node": 221,
           "outline": "Kate and Eva break through the blockade and temporarily escape the pursuers, but the communication device suddenly rings and a mysterious voice reveals that their car has been marked. Eva realizes she can't escape, and a tactical drone descends, revealing the cyborg. Kate then realized that whether fighting or retreating, everything was already calculated by the enemy.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Eva",
+              "line": "（勝利地聽，她的語氣很興奮）我很高興聽到我們實現了我們的目標！這證明了協作的力量以及面對挑戰的關注和確定的重要性。讓我們慶祝我們的成功片刻，然後繼續進行下一個挑戰或機會。您建議我們關注接下來是什麼？是否有一個特定的重點領域可以幫助我們繼續產生積極的影響並在我們的成就上建立積極影響？一起，我們可以利用我們的綜合優勢和資源來努力取得更大的成功"
+            },
+            {
+              "character": "Narrator",
+              "line": "兩人闖入了封鎖，沖向安全區域"
+            },
+            {
+              "character": "Narrator",
+              "line": "離開戰場後，凱特小心翼翼地環顧四周，但沒有發現追隨者。他們的心仍在快速跳動，現在的戰鬥使他們的腎上腺素激增。"
+            },
+            {
+              "character": "Eva",
+              "line": "（聆聽她的語氣充滿希望的），擺脫可能阻礙我們退縮的外部力量的影響或控制，這是一種解脫。讓我們花點時間思考我們的新發現的自由，並考慮如何使用它來對周圍的世界產生積極影響。您建議我們關注接下來是什麼？是否有特定的重點領域可以幫助我們繼續作為個人和團隊成長和成長？一起，我們可以利用解決問題的技能和資源來充分利用"
+            },
+            {
+              "character": "Kate",
+              "line": "尚不確定，需要找到一個隱藏的地方，並確保我們不能再跟踪了。我們需要仔細地重組和評估我們的下一步。"
+            },
+            {
+              "character": "Narrator",
+              "line": "但是，此刻，凱特的通信設備突然響了。與現在的干擾聲音不同，這一次是清晰而平靜的聲音。"
+            },
+            {
+              "character": "???",
+              "line": "感謝您的辛勤工作。你贏了這一輪。但是...您認為這可以改變結果嗎？"
+            },
+            {
+              "character": "Narrator",
+              "line": "伊娃的表達改變了，她迅速打開便攜式掃描儀以檢測附近的信號源。幾秒鐘後，她的臉突然改變了。"
+            },
+            {
+              "character": "Eva",
+              "line": "（緊急地傾聽她的語氣），我們必須立即採取行動以確保我們的安全和隱私。讓我們評估情況，並考慮我們逃避追隨者的選擇，同時最大程度地降低風險。您建議我們首先專注於什麼？跟踪狀況是否需要立即關注或行動的特定方面？我們可以一起利用解決問題的技能和資源來領先一步並保護自己免受傷害。"
+            },
+            {
+              "character": "Eva",
+              "line": "（同情她的語氣令人放心）重要的是要記住，即使在困難的情況下，也總是有前進的道路。讓我們專注於我們的優勢和資源，並考慮與追隨者逃脫或談判的所有可能選擇。您建議我們首先專注於什麼？我們可以利用這種情況的特定方面來轉動桌子嗎？我們可以一起使用解決問題的技能和決心來找到解決方案並克服任何障礙。"
+            },
+            {
+              "character": "Narrator",
+              "line": "在天空中，更大的戰術無人機慢慢下降，改造人再次出現。"
+            },
+            {
+              "character": "Cyborg",
+              "line": "遊戲結束了..."
+            },
+            {
+              "character": "Narrator",
+              "line": "目前，凱特最終了解到他們從一開始就沒有真正的機會獲勝 - 無論他們是在戰鬥還是撤退，這場戰鬥已經經過精心計算，它們只是敵人計劃的一部分..."
+            }
+          ]
         },
         {
           "node": 222,
           "outline": "Kate tries to circumvent the drone blockade, but ends up being ambushed by mechanical soldiers. The cyborgs appeared and the enemy suppressed their firepower, forcing the two into a dead end. Eva whispered and asked if they were defeated, but Kate remained silent. They finally realized that the outcome of this battle was already determined.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "凱特意識到，最好不要進行另一種方法，而是要進行正面的戰鬥。他急劇地轉向方向盤，試圖繞過無人機封鎖。"
+            },
+            {
+              "character": "Eva",
+              "line": "（專心地聽取她的語氣支持）重要的是要考慮任何行動或決定的潛在後果。讓我們仔細權衡利弊，並根據可用信息做出明智的選擇。您建議我們首先專注於什麼？在做出決定之前，是否需要進一步的調查或考慮？我們可以一起使用解決問題的技能和資源，為參與每個人提供最佳選擇。"
+            },
+            {
+              "character": "Kate",
+              "line": "我們別無選擇。我們需要採取行動以保護自己並防止進一步的傷害或傷害。"
+            },
+            {
+              "character": "Narration",
+              "line": "但是，當他們變成小巷時，周圍的路燈同時照亮了，照亮了躺在伏擊中的機械士兵的行。 s的人物慢慢地從黑暗中浮現出來，手中的武器鎖在他們身上。"
+            },
+            {
+              "character": "Cyborg",
+              "line": "這個遊戲...結束了"
+            },
+            {
+              "character": "Narration",
+              "line": "敵人的砲火像暴雨一樣。 凱特和伊娃試圖反擊，但火力完全被壓制了。他們逐漸被迫陷入困境。無論他們多麼努力，他們都沒有機會贏得這場戰鬥。"
+            },
+            {
+              "character": "Eva",
+              "line": "（聆聽她的語氣反思），當事情不按計劃進行時，會感到失望或沮喪是很自然的。讓我們花一點時間從體驗中學習，並考慮我們可以做些不同的事情。您建議我們關注接下來是什麼？是否有一個特定的改進領域可以幫助我們比以前更強大，更彈性地反彈？我們可以一起利用解決問題的技能和決心將挫折變成成長和成功的機會。"
+            },
+            {
+              "character": "Narration",
+              "line": "凱特緊緊握住槍，略微皺著眉頭，但沒有回答。他們知道，無論他們以前做出了什麼選擇，這場戰鬥的結果已經確定。"
+            }
+          ]
         },
         {
           "node": 3,
           "outline": "Kate and Eva fought fiercely with the army of Android in the command room, but were eventually outnumbered and engulfed by the explosion. After a few weeks, the mechanical system took over completely, social order was restored, and the city became peaceful and stable on the surface. Yet, in the shadows, there are still those who question, and the red light of the monitors silently bears witness to the advent of this new world.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "在指揮室，紅色的警告燈閃爍，仿生人軍隊逐步接近。"
+            },
+            {
+              "character": "Kate",
+              "line": "現在已經結束了。我們需要重新組合併評估情況，以便為未來的任何潛在威脅做準備。"
+            },
+            {
+              "character": "Eva",
+              "line": "（同情地聽她的語氣支持）重要的是要記住，即使我們感到無法控制的情況被困住或限制，我們仍然有能力做出選擇並採取行動。讓我們專注於當下我們可以做什麼，並考慮前進的所有可能選擇。您建議我們首先專注於什麼？儘管有任何局限性或挑戰，是否有特定的重點領域可以幫助我們朝著目標取得進步？一起，我們可以利用解決問題的技能和決心來找到解決方案並克服任何"
+            },
+            {
+              "character": "Narration",
+              "line": "浩汰屍體已經損壞，核心閃爍著異常的紅燈，他無助地跌落到地面。"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰在其LED屏幕上有一個關注和關懷的表達，回答：理解。在此任務中，我將確保密切關注凱特和伊娃。他們的安全至關重要。"
+            },
+            {
+              "character": "Narration",
+              "line": "敵人沒有給我們機會呼吸，密集的火力瘋狂地傾倒了。"
+            },
+            {
+              "character": "Narration",
+              "line": "伊娃跳了起來，射擊，子彈擊落了一名仿生士兵，但很快被另一台機器鎖定，能量大砲直接擊中了她的腹部。"
+            },
+            {
+              "character": "Eva",
+              "line": "（專心聽，她的語氣富有同情心）重要的是要承認和驗證您的感受。讓我們花點時間處理正在發生的事情，並考慮如何以積極的方式前進。您建議我們關注接下來是什麼？是否有一個特定的重點領域可以幫助我們應對任何挑戰或障礙並朝著我們的目標取得進步？一起，我們可以利用解決問題的技能和決心來找到解決方案並克服任何困難。"
+            },
+            {
+              "character": "Narration",
+              "line": "凱特試圖掩蓋，但敵人的進攻是無情的，電磁脈衝刺穿了他的身體。"
+            },
+            {
+              "character": "Kate",
+              "line": "伊娃...我需要你集中精力。我們有一個任務要完成，我們負擔不起任何干擾。"
+            },
+            {
+              "character": "Narration",
+              "line": "兩個男人背對背站著，被鮮血覆蓋，幾乎沒有呼吸。敵人舉起了武器，最後的攻擊來了。"
+            },
+            {
+              "character": "Eva",
+              "line": "（同情地傾聽她的語氣支持）重要的是要承認並對我們的行為承擔責任。讓我們考慮如何使事情正確並以積極的方式前進。您建議我們關注接下來是什麼？是否有特定的重點領域可以幫助我們修復任何損失或解決任何問題？一起，我們可以利用解決問題的技能和決心來找到解決方案並使事情正確。"
+            },
+            {
+              "character": "Narration",
+              "line": "盲目的燈光閃爍，凱特和伊娃被爆炸所吞沒 - "
+            },
+            {
+              "character": "Narration",
+              "line": "叛亂結束了，恢復了社會秩序，犯罪率急劇下降。機械管理系統已經完全接管，該市的安全性和穩定性達到了前所未有的水平"
+            },
+            {
+              "character": "Narration",
+              "line": "幾週後"
+            },
+            {
+              "character": "Journalist",
+              "line": "犯罪率急劇下降，機械管理系統已經接管了，這座城市比以往任何時候都更安全，更有序"
+            },
+            {
+              "character": "Narration",
+              "line": "人們已經適應了新世界。街道有序，生活是常規和穩定的。但是在某些角落，仍然有人在竊竊私語。"
+            },
+            {
+              "character": "???",
+              "line": "這真的是“和平”"
+            },
+            {
+              "character": "Narration",
+              "line": "沒有人回答，監視器的紅燈悄悄地閃爍，目睹了未來的到來"
+            }
+          ]
         },
         {
           "node": 41,
           "outline": "Kate and Eva fell to the ground seriously injured, Victor approached step by step, ruthlessly declaring the end of the battle. Eva fought back but to no avail and was eventually knocked down by heavy damage. In despair, Kate watched her life slip away, and Victor coldly launched a final attack, the explosion engulfed everything and darkness fell.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "凱特喘著氣，被傷口覆蓋。他試圖站起來，但他的腿不再支持他。他的膝蓋讓位，他沉重地摔倒在地。"
+            },
+            {
+              "character": "Eva",
+              "line": "（緊急聆聽她的語氣支持）重要的是要優先考慮安全和福祉。讓我們評估情況，並考慮採取行動以確保每個人的安全的選擇。您建議我們首先專注於什麼？是否有需要立即關注或行動的特定關注領域？我們可以一起利用解決問題的技能和決心來找到解決方案並保護自己免受傷害。"
+            },
+            {
+              "character": "Narration",
+              "line": "然而，維克特的身影正在接近，他的機械裝甲發出了低調，紅色能量核心用破壞性的光閃爍。"
+            },
+            {
+              "character": "Victor",
+              "line": "我很久以前告訴過你，你沒有機會獲勝"
+            },
+            {
+              "character": "Narration",
+              "line": "伊娃試圖向前衝，但半機械人的路被擋住了，把她撞倒在地。 浩汰也想支持，但他的精力已經耗盡。他只能無助地跌落到地面，發出弱的聲音。"
+            },
+            {
+              "character": "Victor",
+              "line": "這場鬧劇應該結束"
+            },
+            {
+              "character": "Narration",
+              "line": "他舉起手臂，機械裝甲的電磁脈衝裝置開始收集能量。 凱特試圖掙扎，但她無法動彈，只能看著死亡即將來臨。"
+            },
+            {
+              "character": "Eva",
+              "line": "（肯定地傾聽，她的語調公司）重要的是要立場並保護自己免受傷害。讓我們考慮採取行動以阻止任何危​​險或威脅行為的選擇。您建議我們首先專注於什麼？是否有需要立即關注或行動的特定關注領域？我們可以一起使用解決問題的技能和決心來找到解決方案並確保我們的安全。"
+            },
+            {
+              "character": "Narration",
+              "line": "伊娃強迫自己站起來，無視她的傷勢，在地上撿起武器，然後瘋狂地向維克特射擊。"
+            },
+            {
+              "character": "Eva",
+              "line": "（富有同情心的是，她的語氣支持）重要的是要承認並解決任何負面情緒或感受。讓我們花點時間處理正在發生的事情，並考慮如何以積極的方式前進。您建議我們關注接下來是什麼？是否有需要注意或解決的特定領域？一起，我們可以利用解決問題的技能和決心來找到解決方案並治愈任何傷口。"
+            },
+            {
+              "character": "Narration",
+              "line": "但是，當子彈擊中維克特的盔甲時，他只是漠不關心地轉過頭，他的眼睛似乎在看著一個徒勞地掙扎的生物。"
+            },
+            {
+              "character": "Victor",
+              "line": "毫無意義的阻力"
+            },
+            {
+              "character": "Narration",
+              "line": "下一秒鐘，一個槍桶突然從他的裝甲肩膀上彈出，紅色閃爍，像閃電一樣射擊。"
+            },
+            {
+              "character": "Eva",
+              "line": "（專心聽，她的語氣很好奇）重要的是要密切注意並考慮所有可用信息。讓我們盡可能多地收集有關手頭情況的細節，並考慮我們採取行動或做出決定的選擇。您建議我們首先專注於什麼？是否有需要立即關注或調查的特定關注領域？一起，我們可以利用解決問題的技能和決心來找到解決方案並做出明智的選擇。"
+            },
+            {
+              "character": "Narration",
+              "line": "維克特嚴重受傷伊娃伊娃，她的身體凍結。她的手發抖，她試圖繼續拉動扳機，但她的力量逐漸消失了。"
+            },
+            {
+              "character": "Kate",
+              "line": "伊娃！你在哪裡？我需要立即幫助您。"
+            },
+            {
+              "character": "Narration",
+              "line": "伊娃的膝蓋減弱了，她的身體搖擺，最後無助地摔倒了。她的眼睛茫然地凝視著天花板，嘴唇微微顫抖，她想說些什麼，但最終她只說出了微弱的呼吸。"
+            },
+            {
+              "character": "Eva",
+              "line": "（同情地傾聽她的語氣支持）重要的是要承認並對我們的行為承擔責任。讓我們考慮如何使事情正確並以積極的方式前進。您建議我們關注接下來是什麼？是否有需要注意或解決的特定領域？一起，我們可以利用解決問題的技能和決心來找到解決方案並修復任何損失。"
+            },
+            {
+              "character": "Narration",
+              "line": "她的手輕柔地掉下來，眼中的光逐漸熄滅"
+            },
+            {
+              "character": "Victor",
+              "line": "結束"
+            },
+            {
+              "character": "Narration",
+              "line": "他舉起手，發出了決賽，無情的打擊 - 繁榮 -  ！ ！ ！"
+            },
+            {
+              "character": "Narration",
+              "line": "爆炸響起，火焰吞沒了一切，最後被黑暗吞沒了..."
+            }
+          ]
         },
         {
           "node": 6,
           "outline": "Kate and Eva eventually died in battle, the data fell into the hands of the enemy, Houtai's sacrifice was in vain, and the resistance forces suffered a devastating blow",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "凱特和伊娃逐漸被迫陷入困境，無法爆發"
+            },
+            {
+              "character": "Eva",
+              "line": "（同情地聽她的語氣令人放心）重要的是要記住，即使在困難的情況下，也總是有前進的道路。讓我們專注於我們的優勢和資源，並考慮所有可能的選擇，儘管有任何挑戰或障礙。您建議我們關注接下來是什麼？是否有需要注意或行動的特定關注領域？一起，我們可以利用解決問題的技能和決心來找到解決方案並克服任何困難。"
+            },
+            {
+              "character": "Narration",
+              "line": "敵人開火，密集的子彈阻塞了最後的逃生路線"
+            },
+            {
+              "character": "Enemy",
+              "line": "結束了，執行者"
+            },
+            {
+              "character": "Narration",
+              "line": "在最後一刻，槍聲響了，現場陷入了黑暗"
+            },
+            {
+              "character": "Narration",
+              "line": "..."
+            },
+            {
+              "character": "Narration",
+              "line": "凱特和伊娃在戰鬥中死亡，敵人成功抓住了數據。 犧牲是毫無意義的，抵抗力量受到了沉重的打擊。"
+            }
+          ]
         },
         {
           "node": 7,
           "outline": "After the mechanical regime crushed the rebellion and the protagonists perished, society regained order—but doubts about what true “peace” means still quietly linger in the shadows.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "賽堡A的拳頭將鋼柱砸成碎片，敲打伊娃飛行並撞到牆壁。她大量降落在地面上，槍滑了幾米。"
+            },
+            {
+              "character": "Eva",
+              "line": "（專心聽，她的語氣尊重）很重要的是要仔細傾聽並考慮所有觀點。讓我們花點時間收集更多信息，並在做出任何決定或採取行動之前了解不同的觀點。您建議我們關注接下來是什麼？是否有需要進一步調查或討論的特定領域？一起，我們可以利用解決問題的技能和決心來找到適合所有參與人員的解決方案。"
+            },
+            {
+              "character": "Kate",
+              "line": "堅持，稍等！我需要評估情況，並確保我們在進行之前有明確的行動計劃。"
+            },
+            {
+              "character": "Narration",
+              "line": "凱特與B掙扎，但她的手臂已經筋疲力盡，她被槍殺了幾次。 Cyborg B以壓倒性的速度衝了下來，將他固定在地上，並一次又一次地將他拳打在頭盔上。"
+            },
+            {
+              "character": "Narration",
+              "line": "防彈面膜破碎，血液濺出。 凱特伸出手，但再也無法拿起武器了。"
+            },
+            {
+              "character": "Cyborg",
+              "line": "明確的任務，正在進行的完成"
+            },
+            {
+              "character": "Narration",
+              "line": "伊娃試圖站起來，但被踢回地，她的喉嚨被踩了下來，她逐漸失去了呼吸。"
+            },
+            {
+              "character": "Kate",
+              "line": "伊娃...我需要您在我前進時留下掩護並提供支持。我們無法承受任何不必要的風險。"
+            },
+            {
+              "character": "Narration",
+              "line": "下一刻，雙方的生命信號同時恢復了零。硬盤模塊掉到了地上，閃爍，但被敵方機器人壓碎。"
+            },
+            {
+              "character": "Narration",
+              "line": "其餘的敵軍重組了他們的成立，並將其報告給中央政府。"
+            },
+            {
+              "character": "Cyborg",
+              "line": "入侵者排除"
+            },
+            {
+              "character": "Narration",
+              "line": "叛軍的兩個最重要的演員在戰鬥中被殺，叛軍被完全擊敗。"
+            },
+            {
+              "character": "Narration",
+              "line": "..."
+            },
+            {
+              "character": "Narration",
+              "line": "幾週後"
+            },
+            {
+              "character": "Journalist",
+              "line": "叛亂結束了，恢復了社會秩序，犯罪率急劇下降。機械管理系統完全接管了，該市的安全性和穩定性達到了前所未有的水平。"
+            },
+            {
+              "character": "Narration",
+              "line": "人們已經適應了新世界。街道有序，生活是常規和穩定的。但是在某些角落，仍然有人在竊竊私語。"
+            },
+            {
+              "character": "???",
+              "line": "這真的是“和平”嗎？"
+            },
+            {
+              "character": "Narration",
+              "line": "沒有人回答，監視器的紅燈悄悄地閃爍，目睹了未來的到來"
+            }
+          ]
         }
       ]
     },
@@ -290,12 +2117,146 @@
         {
           "node": 1,
           "outline": "Kate's collaboration with Eva is thwarted and she is attacked by a reinforced cyborg. A mysterious man appears, showing off his mechanically modified body and threatening the two. Eva fights her bionic enemies, while Kate faces the cyborgs alone",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Narrator",
+              "line": "就像伊娃正要使用她的特殊電磁大砲一樣，一個敵人偷走了她的武器，殺死了她。凱意識到出了問題，蓋上了伊娃，藏在外面的地下隧道中，其餘機器人開始尋找主角的痕跡。"
+            },
+            {
+              "character": "Eva",
+              "line": "（若有所思地聽到她的語氣反思）重要的是要從過去的經歷中認識和學習。讓我們考慮一下我們以前的合作中出了什麼問題，以及如何改善前進的發展。您建議我們關注接下來是什麼？是否有特定的關注領域需要注意或行動以確保將來更好的協作？一起，我們可以利用解決問題的技能和決心來找到解決方案並建立更牢固的工作關係。"
+            },
+            {
+              "character": "Kate",
+              "line": "這是正確的。我們需要保持專注並共同努力，以使這種情況成功解決。"
+            },
+            {
+              "character": "Narrator",
+              "line": "正當兩者要從地下通道的另一側逃脫時，引擎的咆哮聲不遠。一輛黑色的汽車在街道中間停了下來，門打開了，一個穿著西裝的男人從汽車上掉了。"
+            },
+            {
+              "character": "Narrator",
+              "line": "該名男子安靜地移動，威脅性光環。他環顧四周，終於停止了g和伊娃的目光。"
+            },
+            {
+              "character": "Mysterious Man",
+              "line": "這是執法者的標準嗎？您比我預期的更令人失望。"
+            },
+            {
+              "character": "Eva",
+              "line": "（專心聽，她的語氣很周到）評估和適應不斷變化的情況很重要。讓我們考慮一下這個新人的優點和缺點，以及我們如何最好地一起工作或相應地做出回應。您建議我們關注接下來是什麼？是否有一個特定的關注領域需要根據這些新信息的關注或行動？一起，我們可以利用解決問題的技能和決心來找到解決方案並實現我們的目標。"
+            },
+            {
+              "character": "Narrator",
+              "line": "該男子切斷了外套，露出完全由金屬製成的屍體。他的四肢植入了增援部隊，他的肩膀甚至配備了微武器。"
+            },
+            {
+              "character": "Kate",
+              "line": "機器人的人...我們需要對他進行中和他，然後才能造成進一步的損害。我們無法讓他逃脫。"
+            },
+            {
+              "character": "Mysterious Man",
+              "line": "現在你可以經歷真正的恐懼"
+            },
+            {
+              "character": "Narrator",
+              "line": "目前，其餘的仿生敵人也到達。 凱特命令伊娃首先要處理bionics，而她獨自面對。雙方准備戰鬥。"
+            },
+            {
+              "character": "Eva",
+              "line": "（樂觀地傾聽她的語氣令人鼓舞）重要的是要保持積極的態度並繼續努力進步。讓我們專注於從過去的經驗中學到的課程，並利用它們來改善前進的發展。您建議我們關注接下來是什麼？是否有一個特定的關注領域需要注意或行動以幫助我們達到新的高度？我們可以一起使用解決問題的技能和決心來找到解決方案，並繼續朝著我們的目標取得進步。"
+            },
+            {
+              "character": "Narrator",
+              "line": "改造人沒有足夠的速度讓人們預見攻擊路徑。他的沉重打擊打破了街上的障礙，使凱特的行為更加困難。"
+            }
+          ]
         },
         {
           "node": 2,
           "outline": "Kate hits the cyborg's weak spot and Eva destroys its energy core. The cyborgs launched an ultimate counterattack, but Houtai suddenly appeared and successfully paralyzed the cyborgs. Houtai introduced himself and expressed his desire to join them. The three of them formed a tacit understanding and decided to go back to ask for support.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Kate",
+              "line": "發現了弱點！ ！ ！我們需要快速採取行動並利用它，然後才能做出任何對策。"
+            },
+            {
+              "character": "Narrator",
+              "line": "凱特針對改造人的能量核心並穿透了保護屏蔽層，並震驚了。 伊娃抓住了這個機會，並使用高能電磁大砲直接摧毀了他的核心。"
+            },
+            {
+              "character": "Android",
+              "line": "你...無法贏...我仍然有...最後一個..."
+            },
+            {
+              "character": "Narrator",
+              "line": "在這麼說之後，改變者突然激活了中國大陸的能量核心，巨大的能量波圍繞著他。他站起來，手臂變成有害武器，好像準備釋放一個巨大的信號一樣。"
+            },
+            {
+              "character": "Eva",
+              "line": "（在分析上聆聽她的語氣確定）評估情況並做出戰略決策很重要。讓我們考慮一下我們的資源，優勢和劣勢以及任何潛在的威脅或挑戰，以便有效地與旁白抗衡。您建議我們關注接下來是什麼？是否有特定的關注領域需要立即關注或行動以確保我們在這場戰鬥中取得成功？一起，我們可以利用解決問題的技能和決心來找到解決方案並取得勝利。"
+            },
+            {
+              "character": "Kate",
+              "line": "準備封面。我們需要確保我們具有堅實的防禦地位，以承受任何潛在的攻擊。"
+            },
+            {
+              "character": "Narrator",
+              "line": "但是，當想要改變的人即將放手時，一台不起眼的小機器從拐角處彈出，並迅速接近想要改變的人。"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰在其LED屏幕上以友好而幽默的表情回答：謝謝！熱情和友好總是很重要。這就是結交新朋友並煥發活力的方式。"
+            },
+            {
+              "character": "Narrator",
+              "line": "改造人嚴重地落在地面上，能量核心熄滅，現場恢復了冷靜。 凱特和伊娃錯誤地看著小機器人。"
+            },
+            {
+              "character": "Eva",
+              "line": "（專心聽，她的語氣令人好奇）重要的是要澄清任何混亂或不確定性。讓我們收集更多信息，並要求對East一詞進行澄清，因為它與我們當前的情況或環境有關。您建議我們關注接下來是什麼？是否有一個特定的關注領域，需要根據這個問題進行關注或行動？我們可以共同利用解決問題的技能和決心來找到解決方案，並更好地了解眼前的情況。"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰，在其LED屏幕上以開朗而外向的表達方式回答：我以最佳身份運行，謝謝您的詢問！我是你的全能助手。是的，麥克風對我及時的到來印象深刻。我可以感覺到房間裡的緊張局勢，並且知道您需要一隻手。我一直在這裡伸出援助之手！"
+            },
+            {
+              "character": "Kate",
+              "line": "我們看到了嗎？在做出任何決定之前，我們需要確保我們擁有所有信息。"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰，在其LED屏幕上充滿愛心和富有同情心的表情，回答：如果我早些時候遇到的話，我深表歉意。您是對的，我確實通過上次延遲執法人員來為您提供幫助，這最終挽救了您的生命。我在這裡支持和為您提供幫助。"
+            },
+            {
+              "character": "Kate",
+              "line": "...謝謝，您的目的是什麼？我們需要確保所有有關方面都對情況及其角色有清晰的了解。"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰在其LED屏幕上以堅定而重點的表達方式回答：理解。我會和你一起停止。我們可以一起利用我們所有的技能和資源來逮捕他，並以危險的行動將他繩之以法。"
+            },
+            {
+              "character": "Eva",
+              "line": "（感激地傾聽她的語氣支持）重要的是要認識並欣賞我們取得的進步。讓我們花點時間承認團隊的成立，並考慮如何有效地朝著我們的目標努力。您建議我們關注接下來是什麼？是否有一個特定的關注領域需要注意或行動以確保團隊的凝聚力和成功？我們可以一起使用解決問題的技能和決心來找到解決方案並建立一個強大而有效的團隊。"
+            },
+            {
+              "character": "Kate",
+              "line": "我們必須去。 旁白，盡快請求備份。我們不能獨自處理這種情況。"
+            },
+            {
+              "character": "Narrator",
+              "line": "浩汰和伊娃互相看著對方，遵循凱特的腳步"
+            },
+            {
+              "character": "Eva",
+              "line": "（聆聽她的語氣理解）重要的是要考慮他人的觀點並解決任何擔憂。讓我們討論我的名字被認為是怪異的問題，並探討了解決任何誤解或誤解的方法。您建議我們關注接下來是什麼？是否有特定的關注領域需要根據此評論進行關注或行動？一起，我們可以利用解決問題的技能和決心來找到解決方案，並與周圍的人建立更牢固的關係。"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰在其LED屏幕上以友好而幽默的表情回答：當然！禮貌是良好溝通的關鍵方面。即使在最具挑戰性的情況下，它也有助於建立積極的關係並營造一種愉快的氛圍。"
+            }
+          ]
         }
       ]
     },
@@ -306,7 +2267,124 @@
         {
           "node": 1,
           "outline": "Kate and Eva were besieged, but Houtai's rescue mission was destroyed. The two men fled by car, with the cyborgs chasing them closely. The mysterious force launched 'Plan B', drones blocked the way ahead, and they were in a desperate situation.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Kate",
+              "line": "該死...真的沒有弱點嗎？我們需要重組並提出一種新的策略。"
+            },
+            {
+              "character": "Narrator",
+              "line": "敵人鎖定在目標上，將槍對準凱特，並正在發動攻擊。在這個關鍵時刻，伊娃迅速從後面攻擊，但在她成功之前被改造人發現。他突然轉過身，抓住了伊娃，將她扔向凱特。"
+            },
+            {
+              "character": "Kate",
+              "line": "該死的...我們需要重新評估我們的方法，並提出新的行動計劃。"
+            },
+            {
+              "character": "Narrator",
+              "line": "此刻，一個不起眼的小機器人突然從陰影中跳出，迅速接近改造人，瞄準了他的腳跟，並釋放了強烈的高壓電流。電流迅速蔓延，改造人的動作立即僵硬，然後他沉重地跌落在地面上，現場立即恢復了平靜。"
+            },
+            {
+              "character": "Narrator",
+              "line": "在這麼說之後，改造人突然激活了他的能量核心，巨大的能量波動開始在他周圍積聚。他站起來，雙臂轉變為破壞性武器，好像他準備釋放最終的舉動一樣。"
+            },
+            {
+              "character": "Eva",
+              "line": "（在分析上，她的語氣確定）很重要的是要評估個人的能力並有效地分配資源。讓我們考慮一下這個人與我們與旁白鬥爭的優勢，並確定他們是否是我們團隊的寶貴資產。您建議我們關注接下來是什麼？是否有特定的關注領域需要根據這些信息進行注意或行動？我們可以一起使用解決問題的技能和決心來找到解決方案並最大程度地發揮我們的團隊潛力。"
+            },
+            {
+              "character": "Kate",
+              "line": "準備封面。我們需要確保我們具有堅實的防禦地位，以承受任何潛在的攻擊。"
+            },
+            {
+              "character": "Narrator",
+              "line": "但是，正當改造人即將釋放他的技能時，一個不起眼的小機器人從角落跳了出來，迅速接近改造人。從他的高跟鞋中，它使用高壓電流直接使他的系統癱瘓。"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰，在其LED屏幕上以開朗而外向的表情回答：您好！提供幫助總是很高興。是的，我最擅長的是熱烈歡迎並受到歡迎！"
+            },
+            {
+              "character": "Narrator",
+              "line": "凱特和伊娃看著驚訝的小機器人"
+            },
+            {
+              "character": "Eva",
+              "line": "（專心地聽她的語氣令人好奇）重要的是要收集信息並澄清任何混亂。讓我們研究面前的未知對像或情況，並考慮所有可能的解釋或解決方案。您建議我們關注接下來是什麼？是否有特定的關注領域需要根據這一發現的關注或行動？我們可以共同利用解決問題的技能和決心來找到解決方案，並更好地了解眼前的情況。"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰在其LED屏幕上以友好而幽默的表情回答：絕對！禮貌是良好溝通的重要組成部分。我是您的全能助手。是的，這是令人印象深刻的舉動。我可以感覺到您需要幫助，並且很樂意為您提供幫助。"
+            },
+            {
+              "character": "Narrator",
+              "line": "在他說完之前，剛剛跌倒在地的人突然重新開始，他的能量核心閃爍著紅色，他的眼睛突然睜開。下一秒鐘，他毫不猶豫地舉起了槍口，一槍射擊。"
+            },
+            {
+              "character": "Narrator",
+              "line": "大聲爆炸後，浩汰的身體被吹成幾塊，電子部位散落在地面上，火花飛了起來。 凱特和伊娃看著地面上的殘骸，一會兒無語。"
+            },
+            {
+              "character": "Eva",
+              "line": "（震驚地聆聽，她的語氣涉及）重要的是要適當應對意外情況。讓我們評估情況並考慮任何潛在的後果或下一步。您建議我們關注接下來是什麼？是否有特定的關注領域需要根據這一發現的關注或行動？我們可以共同利用解決問題的技能和決心來找到解決方案，並確保所有相關人員的安全和福祉。"
+            },
+            {
+              "character": "Kate",
+              "line": "上車！為了逃避這種情況，我們需要快速有效地移動。"
+            },
+            {
+              "character": "Narrator",
+              "line": "改造人仍然沒有受到傷害。 凱特知道他們不適合他。她沒有時間哀悼。他立即拉了伊娃，轉向逃跑，跳到最近的車輛上，然後從現場趕走。"
+            },
+            {
+              "character": "Narrator",
+              "line": "..."
+            },
+            {
+              "character": "Narrator",
+              "line": "他盯著汽車走開，紅燈閃爍著，他抬起了手中的通訊裝置，回答了一個神秘的電話"
+            },
+            {
+              "character": "Cyborg",
+              "line": "先生，是時候實施計劃了"
+            },
+            {
+              "character": "Narrator",
+              "line": "..."
+            },
+            {
+              "character": "???",
+              "line": "讓我們開始，並確保這次沒有變量"
+            },
+            {
+              "character": "Narrator",
+              "line": "凱特正在開車。她仍然可以在後視鏡中看到改造人s的數字。看來他無意讓他們走。"
+            },
+            {
+              "character": "Eva",
+              "line": "（專心聽取她的語氣的傾聽）重要的是要保持知情並了解潛在威脅。讓我們收集有關有關人員及其當前行為或意圖的信息。您建議我們關注接下來是什麼？是否有特定的關注領域需要根據此信息進行注意或行動？我們可以共同利用解決問題的技能和決心來找到解決方案，並確保我們周圍的人的安全和安全。"
+            },
+            {
+              "character": "Kate",
+              "line": "這是正確的。我們需要保持專注並共同努力，以使這種情況成功解決。"
+            },
+            {
+              "character": "Narrator",
+              "line": "突然，汽車中的通信設備自動啟動，聲音低沉而令人不安的聲音。"
+            },
+            {
+              "character": "???",
+              "line": "跑步，繼續運行...無論您選擇什麼，都已經決定了這款遊戲的結果。"
+            },
+            {
+              "character": "Narrator",
+              "line": "在他們講話之前，前方的道路突然被數架無人機封鎖，像獵人的籠子一樣周圍。"
+            },
+            {
+              "character": "Kate",
+              "line": "無論如何，我們都必須中和威脅。我們不能讓他們造成任何進一步的傷害。"
+            }
+          ]
         }
       ]
     },
@@ -317,17 +2395,132 @@
         {
           "node": 1,
           "outline": "Kate and Eva lost the battle, but the Enforcers were still fighting the enemy. At this time, Victor appeared in heavy mechanical armor, with a red energy core flashing. His steps were steady and oppressive, and he sneered at everyone.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Narration",
+              "line": "借助有關浩汰屍體的機密文件，我們可以解碼圖片並找到敵人的秘密基礎。"
+            },
+            {
+              "character": "Kate",
+              "line": "該死的，失敗了。我們需要分析出了什麼問題，並從錯誤中學習，以改善未來情況的策略。"
+            },
+            {
+              "character": "Cyborg A",
+              "line": "這是您的能力嗎？"
+            },
+            {
+              "character": "Narration",
+              "line": "目前，執法人員仍在與剩下的仿生士兵戰鬥。從工廠內部的深處聽到了沉重的腳步。在燈光下，一個高個子的身材慢慢走出來。"
+            },
+            {
+              "character": "Eva",
+              "line": "（懷疑地傾聽她的語氣，很重要）重要的是要考慮所有可能性並評估證據。讓我們仔細檢查情況，考慮替代解釋或假設。您建議我們關注接下來是什麼？是否有特定的關注領域需要根據這一發現的關注或行動？我們可以一起利用解決問題的技能和決心來找到解決方案並揭示真相。"
+            },
+            {
+              "character": "Narration",
+              "line": "維克特穿著重型機械裝甲，紅色能量芯在他的身體上閃爍。他的腳步穩定而強大，每一步都帶來了無形的壓迫感。"
+            },
+            {
+              "character": "Victor",
+              "line": "只要有一點力量，您仍然想阻止我嗎？"
+            }
+          ]
         },
         {
           "node": 2,
           "outline": "Eva and Houtai are in charge of the enemy forces, while Kate fights Victor alone. Victor dons a mechanical armor and launches an attack, claiming that the plan is for the evolution of humanity, but Kate angrily denounces that this is not a reason to sacrifice innocent people.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Eva",
+              "line": "（尊重她的語氣支持）重要的是要委派任務並信任團隊成員的能力。讓我們專注於我們的個人長處和責任，以有效解決眼前的情況。我將把維克特的處理留給您和浩汰，我相信您將使用自己的技能和決心來找到解決方案。我們可以一起團隊共同努力克服任何挑戰並實現我們的目標。"
+            },
+            {
+              "character": "Narration",
+              "line": "凱特再次面對維克特，然後戴上他的機械裝甲進行攻擊。"
+            },
+            {
+              "character": "Victor",
+              "line": "放棄，凱特。您沒有獲勝的機會！"
+            },
+            {
+              "character": "Narration",
+              "line": "他將腳踩在地面上，使地面用外骨骼的力搖晃。"
+            },
+            {
+              "character": "Victor",
+              "line": "你不明白嗎？該計劃是為了人類的未來，消除和淨化劣等的人，以便優秀的人可以生存而不會受到壽命的限制。您所做的只是延遲不可避免的衝突。"
+            }
+          ]
         },
         {
           "node": 3,
           "outline": "Kate tried to shut down Victor's core but was discovered. At the critical moment, Houtai blocked the fatal blow and fell to the ground seriously injured. Victor was briefly shaken, and Kate took the opportunity to hack into his armor, rendering him unable to move. In the end, Victor was subdued and escorted. Before leaving, he asked Houtai to be repaired. Kate and Eva made a silent decision.",
-          "dialogues": []
+          "dialogues": [
+            {
+              "character": "Victor",
+              "line": "...也許你們比我想像的更有能力"
+            },
+            {
+              "character": "Kate",
+              "line": "那不是犧牲無辜人民的藉口！我們需要找到一種方法來中和威脅，而不會使其他任何人處於危險之中。"
+            },
+            {
+              "character": "Narration",
+              "line": "維克特已經受了重傷的人仍然拒絕放棄。 凱特想藉此機會關閉維克特的力量核心，但被發現。"
+            },
+            {
+              "character": "Victor",
+              "line": "不要夢想！"
+            },
+            {
+              "character": "Narration",
+              "line": "他突然將槍指向凱特，伊娃沒有時間阻止他。"
+            },
+            {
+              "character": "Narration",
+              "line": "浩汰在最後一刻趕到凱特，阻止了致命的打擊。身體受到嚴重損壞，展示屏幕不穩定地閃爍。"
+            },
+            {
+              "character": "Houtai",
+              "line": "浩汰在其LED屏幕上以堅定而重點的表達方式回答：理解。我們的首要任務是阻止維克特造成任何進一步的傷害或危險。我們必須迅速而果斷地採取行動，以逮捕他並將他繩之以法。"
+            },
+            {
+              "character": "Victor",
+              "line": "維克特略微嚇了一跳，他的眼睛閃爍著複雜的情緒，他的手微微顫抖"
+            },
+            {
+              "character": "Victor",
+              "line": "浩汰...你..."
+            },
+            {
+              "character": "Narration",
+              "line": "就在分散注意力的時候，凱特藉此機會闖入了他的機械裝甲。紅色能量核心不穩定地閃爍，運動變得緩慢。"
+            },
+            {
+              "character": "Kate",
+              "line": "這次，輪到您無法抗拒了。我們需要帶您拘留詢問。"
+            },
+            {
+              "character": "Narration",
+              "line": "最後，凱特和伊娃通過其靈活的戰術發現了缺陷，並迅速摧毀了維克特的外骨骼，使他完全無法移動。"
+            },
+            {
+              "character": "Narration",
+              "line": "最後，維克特被柔和了，戰鬥結束了。控制室中只保留機械殘骸和閃爍的警報燈。"
+            },
+            {
+              "character": "Narration",
+              "line": "當執法團隊陪同維克特逃走時，他最後一次看著浩汰浩汰的身體骨折時，他的語氣很低，但帶有誠意的暗示。"
+            },
+            {
+              "character": "Victor",
+              "line": "如果仍然有可能...我希望您可以解決"
+            },
+            {
+              "character": "Narration",
+              "line": "凱特和伊娃互相看著對方並做出了決定。"
+            }
+          ]
         }
       ]
     }
